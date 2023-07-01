@@ -1,0 +1,6 @@
+data/io.github.idevecore.CurrencyConverter.desktop.in
+data/io.github.idevecore.CurrencyConverter.appdata.xml.in
+data/io.github.idevecore.CurrencyConverter.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
