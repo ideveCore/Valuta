@@ -24,7 +24,7 @@ from gi.repository import Gtk
 class CurrencyconverterWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'CurrencyconverterWindow'
 
-    label = Gtk.Template.Child()
+    # label = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

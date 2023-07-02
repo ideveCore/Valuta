@@ -23,8 +23,9 @@ import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw
+from gi.repository import Gio, Adw
 from .window import CurrencyconverterWindow
+from .api import Api
 
 
 class CurrencyconverterApplication(Adw.Application):
@@ -36,6 +37,7 @@ class CurrencyconverterApplication(Adw.Application):
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
+        Api.test(self)
 
     def do_activate(self):
         """Called when the application is activated.
@@ -51,12 +53,12 @@ class CurrencyconverterApplication(Adw.Application):
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
-                                application_name='currencyconverter',
+                                application_name='Currency Converter',
                                 application_icon='io.github.idevecore.CurrencyConverter',
-                                developer_name='Francisco Jeferson dos Santos Freires',
-                                version='0.1.0',
-                                developers=['Francisco Jeferson dos Santos Freires'],
-                                copyright='© 2023 Francisco Jeferson dos Santos Freires')
+                                developer_name='Ideve Core',
+                                version='1.0.0',
+                                developers=['Ideve Core'],
+                                copyright='© 2023 Ideve Core')
         about.present()
 
     def on_preferences_action(self, widget, _):

@@ -1,0 +1,80 @@
+using Gtk 4.0;
+using Adw 1;
+
+template CurrencyconverterWindow : Adw.ApplicationWindow {
+  default-width: 400;
+  default-height: 500;
+  title: _("Currency Converter");
+
+  Box {
+  orientation: vertical;
+    [titlebar]
+    Adw.HeaderBar {
+      styles [
+        "flat",
+      ]
+
+      [end]
+      MenuButton {
+        icon-name: "open-menu-symbolic";
+        menu-model: primary_menu;
+      }
+    }
+    Adw.Clamp {
+      orientation: vertical;
+      Box {
+        orientation: vertical;
+        halign: center;
+        valign: center;
+        spacing: 20;
+        styles ["m", "card"]
+        Box {
+          styles ["gp", "pd"]
+          homogeneous: true;
+          vexpand: true;
+          Entry {
+            styles ["pd", "m-e", "title-3"]
+          }
+          Entry {
+            styles ["pd", "title-3"]
+          }
+        }
+        Box {
+          styles ["gp", "pd"]
+          homogeneous: true;
+          Adw.SplitButton {
+            styles ["m-e"]
+            label: "USD";
+          }
+          Button {
+            styles ["custom", "circular", "accent"]
+            icon-name: "system-reboot-symbolic";
+          }
+          Adw.SplitButton {
+            styles ["m-s"]
+            label: "BRL";
+          }
+        }
+        Label {
+          styles ["m", "caption"]
+          halign: start;
+          label: "1 USD ≈ 4,18 BRL · 30 June. 13:00 · Data from XE";
+        }
+      }
+    }
+  }
+}
+
+menu primary_menu {
+  section {
+    item {
+      label: _("_Preferences");
+      action: "app.prefs";
+    }
+
+    item {
+      label: _("_About");
+      action: "app.about";
+    }
+  }
+}

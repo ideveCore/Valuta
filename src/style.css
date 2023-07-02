@@ -1,0 +1,20 @@
+ .pd {
+   padding: 0.5em;
+ }
+ 
+ .m {
+   margin: 0.5em;
+}
+ 
+ .m-s {
+  margin-left: 0.5em;
+ } 
+
+ .m-e {
+  margin-right: 0.5em;
+ }
+ 
+ .m-se {
+   margin-left: 0.5em;
+   margin-right: 0.5em;
+ }
