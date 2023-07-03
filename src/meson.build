@@ -2,27 +2,18 @@ pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.proje
 moduledir = join_paths(pkgdatadir, 'currencyconverter')
 gnome = import('gnome')
 
-# gnome.compile_resources('currencyconverter',
-#   'currencyconverter.gresource.xml',
-#   gresource_bundle: true,
-#   install: true,
-#   install_dir: pkgdatadir,
-# )
+define = configuration_data()
 
-blueprints = custom_target('blueprints',
-  input: files(
-    'window.blp',
-  ),
-  output: '.',
-  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
-)
+define.set('APPID', application_id)
+define.set('PROFILE', profile)
+define.set('PYTHON', python.find_installation('python3').full_path())
 
-gnome.compile_resources('currencyconverter',
-  'currencyconverter.gresource.xml',
-  gresource_bundle: true,
+configure_file(
+  input: 'define.in',
+  output: 'define.py',
+  configuration: define,
   install: true,
-  install_dir: pkgdatadir,
-  dependencies: blueprints,
+  install_dir: moduledir
 )
 
 python = import('python')

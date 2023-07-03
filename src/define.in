@@ -1,0 +1,7 @@
+#!@PYTHON@
+# SPDX-License-Identifier: GPL-3.0-only
+
+APP_ID = "@APPID@"
+PROFILE = "@PROFILE@"
+IS_DEVEL = PROFILE == "Devel"
+SUFFIX = " (Devel)" if IS_DEVEL else ""

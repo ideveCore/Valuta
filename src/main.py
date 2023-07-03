@@ -26,14 +26,16 @@ gi.require_version('Adw', '1')
 from gi.repository import Gio, Adw
 from .window import CurrencyconverterWindow
 from .api import Api
+from .define import APP_ID
 
 
 class CurrencyconverterApplication(Adw.Application):
     """The main application singleton class."""
 
     def __init__(self):
-        super().__init__(application_id='io.github.idevecore.CurrencyConverter',
+        super().__init__(application_id=APP_ID,
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
+        self.set_resource_base_path('/io/github/idevecore/CurrencyConverter')
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)

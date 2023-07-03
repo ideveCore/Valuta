@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Currency Converter
+Comment=A currency converter using up-to-dates from network
+Exec=currencyconverter
+Icon=@ICON@
+Terminal=false
+Type=Application
+Categories=Utility;GTK;GNOME;
+StartupNotify=true
+X-Purism-FormFactor=Workstation;Mobile;
+X-GNOME-SingleWindow=true

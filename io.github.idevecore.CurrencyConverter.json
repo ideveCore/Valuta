@@ -1,5 +1,5 @@
 {
-  "app-id": "io.github.idevecore.CurrencyConverter",
+  "app-id": "io.github.idevecore.CurrencyConverter.Devel",
   "runtime": "org.gnome.Platform",
   "runtime-version": "44",
   "sdk": "org.gnome.Sdk",
@@ -34,21 +34,6 @@
           "type": "file",
           "url": "https://files.pythonhosted.org/packages/49/37/673d6490efc51ec46d198c75903d99de59baffdd47aea3d071b80a9e4e89/soupsieve-2.4.1-py3-none-any.whl",
           "sha256": "1c1bfee6819544a3447586c889157365a27e10d88cde3ad3da0cf0ddf646feb8"
-        },
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/04/a2/d918dcd22354d8958fe113e1a3630137e0fc8b44859ade3063982eacd2a4/idna-3.3-py3-none-any.whl",
-          "sha256": "84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"
-        },
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/06/b3/24afc8868eba069a7f03650ac750a778862dc34941a4bebeb58706715726/charset_normalizer-2.0.12-py3-none-any.whl",
-          "sha256": "6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df"
-        },
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/11/dd/e015f3780f42dd9af62cf0107b44ea1298926627ecd70c17b0e484e95bcd/certifi-2022.5.18.1-py3-none-any.whl",
-          "sha256": "f1d53542ee8cbedbe2118b5686372fb33c297fcd6379b050cca0ef13a597382a"
         },
         {
           "type": "file",
@@ -107,10 +92,13 @@
       "name": "currencyconverter",
       "builddir": true,
       "buildsystem": "meson",
+      "config-opts": [
+        "-Dprofile=development"
+      ],
       "sources": [
         {
-          "type": "git",
-          "url": "file:///home/francisco/Projetos"
+          "type": "dir",
+          "url": ".."
         }
       ]
     }
