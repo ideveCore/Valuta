@@ -1,0 +1,5 @@
+# NOTE 20230320: This script originally ran both the Python 2 and
+# Python 3 tests.  Now that Beautiful Soup only supports Python 3,
+# it's not very useful and I will be removing it soon. If you are
+# relying on this script as part of your workflow, please speak up.
+python -m pytest bs4

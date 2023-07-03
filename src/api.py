@@ -20,6 +20,7 @@ import logging
 import json
 import re
 import requests
+from bs4 import BeautifulSoup
 
 class Api():
 
@@ -188,10 +189,15 @@ class Api():
             "ZMW": "Zambian Kwacha",
         }
     def test(self):
-        url = "http://216.58.221.46/search?q=convert+{amount}+{frm}+to+{to}&hl=en&lr=lang_en".format(amount = str('1'), frm = 'USD', to = 'BRL')
-        response = requests.get(url, headers={"Range": "bytes=0-1"})
+        url = "https://www.google.com/finance/quote/BRL-USD?sa=X&ved=2ahUKEwiR-7TM5vD_AhUhD7kGHd8TCPoQmY0JegQIDRAc"
+        response = requests.get(url)
         html = response.text
-        results = re.findall("[\d*\,]*\.\d* {currency_to_name}".format(currency_to_name="BRL"), html)
-        converted_amount_str = results[0]
-        converted_currency = re.findall('[\d*\,]*\.\d*', converted_amount_str)[0]
-        print(converted_currency)
+        soup = BeautifulSoup(html, 'html.parser')
+        print(soup)
+        # print(html)
+        # results = re.findall("[\d*\,]*\.\d* jsname='LXPcOd'".format(currency_to_name="USD"), html)
+        # results = re.findall("[\d*\,]*\.\d* class='LXPcOd'".format(classs='LXPcOd'), html)
+        # print(results)
+        # converted_amount_str = results[0]
+        # converted_currency = re.findall('[\d*\,]*\.\d*', converted_amount_str)[0]
+        # print(converted_currency)
