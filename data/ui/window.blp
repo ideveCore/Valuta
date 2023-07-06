@@ -42,17 +42,21 @@ template CurrencyconverterWindow : Adw.ApplicationWindow {
         Box {
           styles ["gp", "pd"]
           homogeneous: true;
-          Adw.SplitButton {
+          .CurrencySelector src_currency_selector_m {
             styles ["m-e"]
-            label: "USD";
+            // selected: bind src_lang_selector.selected bidirectional;
+            // tooltip-text: _("Change Source Language");
+            // user-selection-changed => translation();
           }
           Button {
             styles ["custom", "circular", "accent"]
             icon-name: "system-reboot-symbolic";
           }
-          Adw.SplitButton {
+          .CurrencySelector dest_currency_selector_m {
             styles ["m-s"]
-            label: "BRL";
+            // selected: bind src_lang_selector.selected bidirectional;
+            // tooltip-text: _("Change Source Language");
+            // user-selection-changed => translation();
           }
         }
         Label {

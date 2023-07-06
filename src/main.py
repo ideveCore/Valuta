@@ -25,9 +25,7 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gio, Adw
 from .window import CurrencyconverterWindow
-from .api import Api
 from .define import APP_ID
-
 
 class CurrencyconverterApplication(Adw.Application):
     """The main application singleton class."""
@@ -39,7 +37,6 @@ class CurrencyconverterApplication(Adw.Application):
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
-        Api.test(self)
 
     def do_activate(self):
         """Called when the application is activated.

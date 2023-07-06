@@ -19,11 +19,67 @@
 import logging
 import json
 import re
+from gi.repository import Gio, GObject
 import requests
 from bs4 import BeautifulSoup
 
-class Api():
+from currencyconverter.define import CODES
 
+def get_currency_name(code):
+    name = gettext(CODES.get(code, ''))
+    return name if name else None
+
+class CurrencyObject(GObject.Object):
+    __gtype_name__ = 'CurrencyObject'
+
+    code = GObject.Property(type=str)
+    name = GObject.Property(type=str)
+    selected = GObject.Property(type=bool, default=False)
+
+    def __init__(self, code, name, selected=False):
+        super().__init__()
+        self.code = code
+        self.name = name
+        self.selected = selected
+
+    def __str__(self):
+        return self.code
+
+class CurrenciesListModel(GObject.GObject, Gio.ListModel):
+    __gtype_name__ = 'CurrenciesListModel'
+
+    def __init__(self, names_func=get_currency_name):
+        super().__init__()
+
+        self.names_func = names_func
+        self.currencies = []
+
+    def __iter__(self):
+        return iter(self.currencies)
+
+    def do_get_item(self, position):
+        return self.currencies[position]
+
+    def do_get_item_type(self):
+        return CurrencyObject
+
+    def do_get_n_items(self):
+        return len(self.currencies)
+
+    def set_langs(self, currencies, auto=False):
+        removed = len(self.currencies)
+        self.currencies.clear()
+        if auto:
+            self.currencies.append(CurrencyObject('auto', _('Auto')))
+        for code in currencies:
+            self.currencies.append(CurrencyObject(code, self.names_func(code)))
+        self.items_changed(0, removed, len(self.currencies))
+
+    def set_selected(self, code):
+        for item in self.currencies:
+            item.props.selected = (item.code == code)
+
+class Api():
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.codes = {
@@ -190,10 +246,10 @@ class Api():
         }
     def test(self):
         url = "https://www.google.com/finance/quote/BRL-USD?sa=X&ved=2ahUKEwiR-7TM5vD_AhUhD7kGHd8TCPoQmY0JegQIDRAc"
-        response = requests.get(url)
-        html = response.text
-        soup = BeautifulSoup(html, 'html.parser')
-        print(soup)
+        # response = requests.get(url)
+        # html = response.text
+        # soup = BeautifulSoup(html, 'html.parser')
+        # print(soup)
         # print(html)
         # results = re.findall("[\d*\,]*\.\d* jsname='LXPcOd'".format(currency_to_name="USD"), html)
         # results = re.findall("[\d*\,]*\.\d* class='LXPcOd'".format(classs='LXPcOd'), html)

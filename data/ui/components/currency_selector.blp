@@ -1,0 +1,59 @@
+using Gtk 4.0;
+using Adw 1;
+
+template CurrencySelector: Adw.Bin {
+
+  notify::selected => _on_selected_changed();
+
+  MenuButton button {
+    always-show-arrow: true;
+    styles [ "raised"]
+
+    child: Box {
+      spacing: 3;
+
+      Label label {
+        ellipsize: end;
+        xalign: 0;
+      }
+
+      Label insight {
+        ellipsize: end;
+        xalign: 0;
+      }
+    };
+
+    popover: Popover popover {
+      height-request: 300;
+      styles ["curency-selector", "menu"]
+
+      show => _popover_show();
+      closed => _popover_closed();
+
+      Box {
+        orientation: vertical;
+
+        Box search_box {
+          orientation: vertical;
+          SearchEntry search {
+            placeholder-text: _("Search Languages…");
+            changed => _on_search();
+            activate => _on_search_activate();
+          }
+
+          styles [
+            "search-box",
+          ]
+        }
+
+        ScrolledWindow scroll {
+          vexpand: true;
+          ListBox currency_list {
+            selection-mode: single;
+            row-activated => _activated();
+          }
+        }
+      }
+    };
+  }
+}
