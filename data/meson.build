@@ -52,7 +52,13 @@ if appstream_util.found()
   test('Validate appstream file', appstream_util, args: ['validate', appstream_file])
 endif
 
-install_data('io.github.idevecore.CurrencyConverter.gschema.xml',
+gschema_conf = configuration_data()
+gschema_conf.set('app-id', application_id)
+configure_file(
+  input: '@0@.gschema.xml.in'.format(base_id),
+  output: '@0@.gschema.xml'.format(application_id),
+  configuration: gschema_conf,
+  install: true,
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 

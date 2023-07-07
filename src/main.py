@@ -53,7 +53,7 @@ class CurrencyconverterApplication(Adw.Application):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
                                 application_name='Currency Converter',
-                                application_icon='io.github.idevecore.CurrencyConverter',
+                                application_icon=APP_ID,
                                 developer_name='Ideve Core',
                                 version='1.0.0',
                                 developers=['Ideve Core'],

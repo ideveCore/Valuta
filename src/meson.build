@@ -38,6 +38,7 @@ currencyconverter_sources = [
   'api.py',
   'main.py',
   'window.py',
+  'settings.py',
   'components/currency_selector.py',
 ]
 

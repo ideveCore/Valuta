@@ -48,6 +48,14 @@ class CurrencySelector(Adw.Bin):
             self.label.props.label = self._get_currency_name(self.selected)
             self.insight.props.label = ''
 
+    def set_selected(self, code):
+        if self.model is not None:
+            self.selected = code
+            self.model.set_selected(self.selected)
+            self.label.props.label = self._get_currency_name(self.selected)
+            self.insight.props.label = ''
+
+
     @Gtk.Template.Callback()
     def _activated(self, _list, row):
         self.popover.popdown()

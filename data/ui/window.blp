@@ -212,8 +212,9 @@ template CurrencyconverterWindow : Adw.ApplicationWindow {
           Box {
             styles ["gp", "pd"]
             homogeneous: true;
-            .CurrencySelector src_currency_selector_m {
+            .CurrencySelector src_currency_selector {
               styles ["m-e"]
+              notify::selected => _on_src_currency_changed();
               // selected: bind src_lang_selector.selected bidirectional;
               // tooltip-text: _("Change Source Language");
               // user-selection-changed => translation();
@@ -222,8 +223,9 @@ template CurrencyconverterWindow : Adw.ApplicationWindow {
               styles ["custom", "circular", "accent"]
               icon-name: "system-reboot-symbolic";
             }
-            .CurrencySelector dest_currency_selector_m {
+            .CurrencySelector dest_currency_selector {
               styles ["m-s"]
+              notify::selected =>  _on_dest_currency_changed();
               // selected: bind src_lang_selector.selected bidirectional;
               // tooltip-text: _("Change Source Language");
               // user-selection-changed => translation();
