@@ -19,6 +19,13 @@
    margin-right: 0.5em;
  }
 
+.bg-error {
+  background-color: alpha(@destructive_color, 0.3);
+}
+
+.bg-accent {
+  background-color: alpha(@accent_bg_color, 0.3);
+}
 
 .search-box {
   background: @popover_bg_color;

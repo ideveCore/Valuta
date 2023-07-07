@@ -45,12 +45,7 @@ class CurrencySelector(Adw.Bin):
     def _on_selected_changed(self, _self, _pspec):
         if self.model is not None:
             self.model.set_selected(self.selected)
-
-            if self.selected == 'auto':
-                self.label.props.label = _('Auto')
-            else:
-                self.label.props.label = self._get_currency_name(self.selected)
-
+            self.label.props.label = self._get_currency_name(self.selected)
             self.insight.props.label = ''
 
     @Gtk.Template.Callback()
