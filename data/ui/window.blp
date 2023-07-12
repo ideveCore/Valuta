@@ -86,6 +86,7 @@ template CurrencyconverterWindow : Adw.ApplicationWindow {
             Button {
               styles ["custom", "circular", "accent"]
               icon-name: "system-reboot-symbolic";
+              clicked => _invert_currencies();
             }
             .CurrencySelector dest_currency_selector {
               styles ["m-s"]

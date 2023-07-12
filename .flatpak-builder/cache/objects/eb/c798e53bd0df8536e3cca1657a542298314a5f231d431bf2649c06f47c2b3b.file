@@ -1,0 +1,15 @@
+money-1.3.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+money-1.3.0.dist-info/LICENSE,sha256=xDFzothJVhzKNN0c4EpX6rblTjcXJQueR_v5zgZ0kxc,1055
+money-1.3.0.dist-info/METADATA,sha256=uEKdfCAmba6MEN9QQezw0l406Ds-UfzdPhwvYzkbeHU,663
+money-1.3.0.dist-info/RECORD,,
+money-1.3.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+money-1.3.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+money-1.3.0.dist-info/top_level.txt,sha256=vdBw5Trtkfk7dPoYJznUTYn612ctlznGUhzl8NNh0tE,6
+money/__init__.py,sha256=frT_smpecdKcGHl99mj-mIAEdlmysyW5LlWKmdxDXXw,226
+money/__pycache__/__init__.cpython-310.pyc,,
+money/__pycache__/exceptions.cpython-310.pyc,,
+money/__pycache__/exchange.cpython-310.pyc,,
+money/__pycache__/money.cpython-310.pyc,,
+money/exceptions.py,sha256=fk60hITXQIkc0tIfmhL8cJ-xbJdYAD8Z7OspmTKEtNA,1535
+money/exchange.py,sha256=5nvQQhGR_v4JAT1mmFkCRPtR7XJehHaNeJCT6hMfDgE,3639
+money/money.py,sha256=KvDVPu_TrmSeqGxn2OXbi5hTfQEIIixvRPlbyEHJu40,10957

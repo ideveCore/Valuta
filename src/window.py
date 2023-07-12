@@ -16,7 +16,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
-import numbers
 from gi.repository import Adw
 from gi.repository import Gtk
 from gi.repository import GObject
@@ -30,7 +29,6 @@ from currencyconverter.define import APP_ID
 class CurrencyconverterWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'CurrencyconverterWindow'
 
-    # lang_list = Gtk.Template.Child()
     src_currency_selector: CurrencySelector = Gtk.Template.Child()
     dest_currency_selector: CurrencySelector = Gtk.Template.Child()
     stack = Gtk.Template.Child()
@@ -40,12 +38,6 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
     disclaimer = Gtk.Template.Child()
     src_currencies = []
     dest_currencies = []
-    # search = Gtk.Template.Child()
-    # provider = {
-    #     'trans': None,
-    #     'tts': None
-    # }
-
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -75,14 +67,15 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
         self.from_value.set_text(str(self.currency_data["from_value"]))
         if self.currency_data["to_value"]:
             value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
-            self.to_value.set_text(str(value))
+            self.to_value.set_text(str(str("{:,}".format(value))))
             self.info.set_text(self.currency_data["currency_value"]["info"])
             self.disclaimer.set_uri(self.currency_data["currency_value"]["disclaimer"])
 
     def finish_callback(self):
         self.stack.set_visible_child_name("result")
-        self.currency_data["to_value"] = self.currency_data["currency_value"]["value"]
-        self.load_data()
+        if self.currency_data["currency_value"]:
+            self.currency_data["to_value"] = self.currency_data["currency_value"]["value"]
+            self.load_data()
 
     @staticmethod
     def _thread_cb (task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
@@ -109,10 +102,11 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
         code = self.src_currency_selector.selected
         if code != self.src_currencies:
             self.src_currencies = code
-            self.stack.set_visible_child_name("loading")
-            finish_callback = lambda self, task, nothing: self.finish_callback()
-            task = Gio.Task.new(self, None, finish_callback, None)
-            task.run_in_thread(self._thread_cb)
+            if self.src_currencies == self.dest_currencies:
+                self.stack.set_visible_child_name("loading")
+                finish_callback = lambda self, task, nothing: self.finish_callback()
+                task = Gio.Task.new(self, None, finish_callback, None)
+                task.run_in_thread(self._thread_cb)
         
     @Gtk.Template.Callback()
     def _on_dest_currency_changed(self, _obj, _param):
@@ -133,7 +127,8 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
                 value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
             else:
                 value = self.currency_data["to_value"]
-            self.to_value.set_text(str(value))
+
+            self.to_value.set_text(str("{:,}".format(value)))
 
     def is_float(self, v):
         if not v:
@@ -143,4 +138,11 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
             return True
         except ValueError:
             return False
-    
+
+    @Gtk.Template.Callback()
+    def _invert_currencies(self, _button):
+        src = self.src_currencies
+        dest = self.dest_currencies
+        self.src_currency_selector.set_selected(dest)
+        self.dest_currency_selector.set_selected(src)
+
