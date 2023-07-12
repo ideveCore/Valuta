@@ -244,16 +244,16 @@ class Api():
             "YER": "Yemeni Rial",
             "ZMW": "Zambian Kwacha",
         }
-    def test(self):
-        url = "https://www.google.com/finance/quote/BRL-USD?sa=X&ved=2ahUKEwiR-7TM5vD_AhUhD7kGHd8TCPoQmY0JegQIDRAc"
-        # response = requests.get(url)
-        # html = response.text
-        # soup = BeautifulSoup(html, 'html.parser')
-        # print(soup)
-        # print(html)
-        # results = re.findall("[\d*\,]*\.\d* jsname='LXPcOd'".format(currency_to_name="USD"), html)
-        # results = re.findall("[\d*\,]*\.\d* class='LXPcOd'".format(classs='LXPcOd'), html)
-        # print(results)
-        # converted_amount_str = results[0]
-        # converted_currency = re.findall('[\d*\,]*\.\d*', converted_amount_str)[0]
-        # print(converted_currency)
+    def request(self, src, dest):
+        url = f'https://www.google.com/finance/quote/{src}-{dest}'
+        page = requests.get(url)
+        soup = BeautifulSoup(page.text, 'html.parser')
+        value = soup.find(class_="YMlKec fxKbKc")
+        info = soup.find(class_="ygUjEc")
+        if value and info:
+            return {
+                "value": value.get_text(),
+                "info": info.get_text().replace("Disclaimer", ""),
+                "disclaimer": info.a["href"]
+            }
+

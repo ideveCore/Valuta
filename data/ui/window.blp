@@ -24,173 +24,6 @@ template CurrencyconverterWindow : Adw.ApplicationWindow {
       orientation: vertical;
       Box {
         orientation: vertical;
-        Label {
-          styles ["heading"]
-          margin-start: 10;
-          halign: start;
-          label: "Markets";
-        }
-        ScrolledWindow {
-          height-request: 70;
-          Box {
-            margin-start: 10;
-            margin-end: 10;
-            spacing: 10;
-            halign: center;
-            Grid {
-              styles ["card", "pd"]
-              column-spacing: 6;
-              valign: center;
-              Box {
-                styles ["card", "bg-error"]
-                width-request: 50;
-                height-request: 50;
-                Image {
-                  styles ["error"]
-                  width-request: 50;
-                  icon-name: "arrow1-down-symbolic";
-                }
-              }
-              Box {
-                orientation: vertical;
-                valign: center;
-                Label {
-                  styles ["heading"]
-                  label: "Dow Jones";
-                }
-                Label {
-                  label: "44.000000";
-                }
-              }
-              Box {
-                orientation: vertical;
-                valign: center;
-                Label {
-                  styles ["error"]
-                  label: '-1.0%';
-                }
-                Label {
-                  styles ["error"]
-                  label: '-320.00';
-                }
-              }
-            }
-            Grid {
-              styles ["card", "pd"]
-              column-spacing: 6;
-              valign: center;
-              Box {
-                styles ["card", "bg-accent"]
-                width-request: 50;
-                height-request: 50;
-                Image {
-                  styles ["accent"]
-                  width-request: 50;
-                  icon-name: "arrow1-up-symbolic";
-                }
-              }
-              Box {
-                orientation: vertical;
-                valign: center;
-                Label {
-                  styles ["heading"]
-                  label: "Dow Jones";
-                }
-                Label {
-                  label: "44.000000";
-                }
-              }
-              Box {
-                orientation: vertical;
-                valign: center;
-                Label {
-                  styles ["accent"]
-                  label: '1.0%';
-                }
-                Label {
-                  styles ["accent"]
-                  label: '320.00';
-                }
-              }
-            }
-            Grid {
-              styles ["card", "pd"]
-              column-spacing: 6;
-              valign: center;
-              Box {
-                styles ["card", "bg-error"]
-                width-request: 50;
-                height-request: 50;
-                Image {
-                  styles ["error"]
-                  width-request: 50;
-                  icon-name: "arrow1-down-symbolic";
-                }
-              }
-              Box {
-                orientation: vertical;
-                valign: center;
-                Label {
-                  styles ["heading"]
-                  label: "Dow Jones";
-                }
-                Label {
-                  label: "44.000000";
-                }
-              }
-              Box {
-                orientation: vertical;
-                valign: center;
-                Label {
-                  styles ["error"]
-                  label: '-1.0%';
-                }
-                Label {
-                  styles ["error"]
-                  label: '-320.00';
-                }
-              }
-            }
-            Grid {
-              styles ["card", "pd"]
-              column-spacing: 6;
-              valign: center;
-              Box {
-                styles ["card", "bg-error"]
-                width-request: 50;
-                height-request: 50;
-                Image {
-                  styles ["error"]
-                  width-request: 50;
-                  icon-name: "arrow1-down-symbolic";
-                }
-              }
-              Box {
-                orientation: vertical;
-                valign: center;
-                Label {
-                  styles ["heading"]
-                  label: "Dow Jones";
-                }
-                Label {
-                  label: "44.000000";
-                }
-              }
-              Box {
-                orientation: vertical;
-                valign: center;
-                Label {
-                  styles ["error"]
-                  label: '-1.0%';
-                }
-                Label {
-                  styles ["error"]
-                  label: '-320.00';
-                }
-              }
-            }
-          }
-        }
         Box {
           orientation: vertical;
           halign: center;
@@ -202,11 +35,42 @@ template CurrencyconverterWindow : Adw.ApplicationWindow {
             styles ["gp", "pd"]
             homogeneous: true;
             vexpand: true;
-            Entry {
+            Entry from_value {
+              changed => _test();
               styles ["pd", "m-e", "title-3"]
             }
-            Entry {
-              styles ["pd", "title-3"]
+            Stack stack {
+              transition-type: crossfade;
+              StackPage {
+                name: "loading";
+                child: WindowHandle {
+                  Box {
+                    orientation: vertical;
+                    spacing: 12;
+                    margin-top: 12;
+                    margin-bottom: 12;
+                    margin-start: 12;
+                    margin-end: 12;
+                    halign: center;
+                    valign: center;
+
+                    Spinner {
+                      spinning: true;
+                      width-request: 25;
+                      height-request: 25;
+                    }
+                  }
+                };
+              }
+              StackPage {
+                name: "result";
+                child: WindowHandle {
+                  Entry to_value {
+                    styles ["pd", "title-3"]
+                    editable: false;
+                  }
+                };
+              }
             }
           }
           Box {
@@ -231,157 +95,16 @@ template CurrencyconverterWindow : Adw.ApplicationWindow {
               // user-selection-changed => translation();
             }
           }
-          Label {
-            styles ["m", "caption"]
-            halign: start;
-            label: "1 USD ≈ 4,18 BRL · 30 June. 13:00 · Data from XE";
-          }
-        }
-        Label {
-          styles ["heading"]
-          margin-start: 10;
-          halign: start;
-          label: "Current actions of companies";
-        }
-        ScrolledWindow {
-          height-request: 140;
           Box {
-            margin-start: 10;
-            margin-end: 10;
-            spacing: 10;
-            halign: center;
-            valign: center;
-            Frame {
-              width-request: 120;
-              height-request: 60;
-              Box {
-                styles ["pd"]
-                orientation: vertical;
-                valign: end;
-                spacing: 6;
-                Label {
-                  styles ["heading"]
-                  halign: start;
-                  label: "Ibovespa";
-                }
-                Label {
-                  styles ["title-4"]
-                  halign: start;
-                  label: "111.00000";
-                }
-                Box {
-                  styles ["card", "bg-error"]
-                  width-request: 50;
-                  height-request: 50;
-                  Image {
-                    styles ["desctructive"]
-                    width-request: 50;
-                    icon-name: "arrow1-down-symbolic";
-                  }
-                  Label {
-                    label: "1,78%";
-                  }
-                }
-              }
+            Label info {
+              styles ["m-s", "caption"]
+              halign: start;
             }
-            Frame {
-              width-request: 120;
-              height-request: 60;
-              Box {
-                styles ["pd"]
-                orientation: vertical;
-                valign: end;
-                spacing: 6;
-                Label {
-                  styles ["heading"]
-                  halign: start;
-                  label: "Ibovespa";
-                }
-                Label {
-                  styles ["title-4"]
-                  halign: start;
-                  label: "111.00000";
-                }
-                Box {
-                  styles ["card", "bg-accent"]
-                  width-request: 50;
-                  height-request: 50;
-                  Image {
-                    styles ["accent"]
-                    width-request: 50;
-                    icon-name: "arrow1-up-symbolic";
-                  }
-                  Label {
-                    label: "1,78%";
-                  }
-                }
-              }
-            }
-            Frame {
-              width-request: 120;
-              height-request: 60;
-              Box {
-                styles ["pd"]
-                orientation: vertical;
-                valign: end;
-                spacing: 6;
-                Label {
-                  styles ["heading"]
-                  halign: start;
-                  label: "Ibovespa";
-                }
-                Label {
-                  styles ["title-4"]
-                  halign: start;
-                  label: "111.00000";
-                }
-                Box {
-                  styles ["card", "bg-error"]
-                  width-request: 50;
-                  height-request: 50;
-                  Image {
-                    styles ["desctructive"]
-                    width-request: 50;
-                    icon-name: "arrow1-down-symbolic";
-                  }
-                  Label {
-                    label: "1,78%";
-                  }
-                }
-              }
-            }
-            Frame {
-              width-request: 120;
-              height-request: 60;
-              Box {
-                styles ["pd"]
-                orientation: vertical;
-                valign: end;
-                spacing: 6;
-                Label {
-                  styles ["heading"]
-                  halign: start;
-                  label: "Ibovespa";
-                }
-                Label {
-                  styles ["title-4"]
-                  halign: start;
-                  label: "111.00000";
-                }
-                Box {
-                  styles ["card", "bg-accent"]
-                  width-request: 50;
-                  height-request: 50;
-                  Image {
-                    styles ["accent"]
-                    width-request: 50;
-                    icon-name: "arrow1-up-symbolic";
-                  }
-                  Label {
-                    label: "1,78%";
-                  }
-                }
-              }
+            LinkButton disclaimer {
+              styles [
+                "caption",
+              ]
+              label: _("disclaimer");
             }
           }
         }
