@@ -8,6 +8,10 @@
   <description>
     <p>The currency converter is simple and fast, ideal for those who need to convert currencies repeatedly.</p>
   </description>
+  <url type="homepage">https://github.com/ideveCore/currency-converter</url>
+  <url type="bugtracker">https://github.com/ideveCore/currency-converter/issues</url>
+  <url type="donation">https://ko-fi.com/idevecore</url>
+
   <releases>
     <release version="1.0.0" date="2023-07-14">
       <description>
