@@ -1,5 +1,5 @@
 {
-  "app-id": "io.github.idevecore.CurrencyConverter",
+  "app-id": "io.github.idevecore.CurrencyConverter.Devel",
   "runtime": "org.gnome.Platform",
   "runtime-version": "44",
   "sdk": "org.gnome.Sdk",
@@ -104,10 +104,13 @@
       "name": "currencyconverter",
       "builddir": true,
       "buildsystem": "meson",
+      "config-opts": [
+        "-Dprofile=development"
+      ],
       "sources": [
         {
-          "type": "dir",
-          "url": ".."
+          "type": "git",
+          "url": "https://github.com/ideveCore/currency-converter.git"
         }
       ]
     }
