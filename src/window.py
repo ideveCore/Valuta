@@ -1,6 +1,6 @@
 # window.py
 #
-# Copyright 2023 Francisco Jeferson dos Santos Freires
+# Copyright 2023 Ideve Core
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@ from gi.repository import Gtk
 from gi.repository import Gio
 from currencyconverter.components import CurrencySelector
 from currencyconverter.api import Api, CurrenciesListModel
-from currencyconverter.define import APP_ID
+from currencyconverter.define import APP_ID, CODES
 
 @Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/ui/window.ui')
 class CurrencyconverterWindow(Adw.ApplicationWindow):
@@ -48,8 +48,8 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
         self.dest_currency_model = CurrenciesListModel(self._currency_names_func)
         self.src_currency_selector.bind_models(self.src_currency_model)
         self.dest_currency_selector.bind_models(self.dest_currency_model)
-        self.src_currency_model.set_langs(Api().codes)
-        self.dest_currency_model.set_langs(Api().codes)
+        self.src_currency_model.set_langs(CODES)
+        self.dest_currency_model.set_langs(CODES)
         self.connect('unrealize', self.save_settings)
         self.src_currencies = self.src_currency_model
         self.load_settings(APP_ID)
@@ -61,6 +61,7 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
         finish_callback = lambda self, task, nothing: self.finish_callback()
         task = Gio.Task.new(self, None, finish_callback, None)
         task.run_in_thread(self._thread_cb)
+
     def load_data(self):
         self.from_value.set_text(str(self.currency_data["from_value"]))
         if self.currency_data["to_value"]:
@@ -89,7 +90,7 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
         self.dest_currencies = self.settings.get_string('dest-currencies')
 
     def _currency_names_func(self, code):
-        return Api().codes[code]
+        return CODES[code]
 
     def save_settings(self, *args, **kwargs):
         self.settings.set_string('src-currencies', self.src_currencies)
@@ -104,6 +105,7 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
             finish_callback = lambda self, task, nothing: self.finish_callback()
             task = Gio.Task.new(self, None, finish_callback, None)
             task.run_in_thread(self._thread_cb)
+        self.save_settings()
     
     @Gtk.Template.Callback()
     def _on_dest_currency_changed(self, _obj, _param):
@@ -114,9 +116,10 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
             finish_callback = lambda self, task, nothing: self.finish_callback()
             task = Gio.Task.new(self, None, finish_callback, None)
             task.run_in_thread(self._thread_cb)
+        self.save_settings()
 
     @Gtk.Template.Callback()
-    def _test(self, _entry):
+    def _calculate(self, _entry):
         entry_text = _entry.get_text()
         if self.is_float(entry_text) and self.is_float(self.currency_data["to_value"]):
             value = float(entry_text)

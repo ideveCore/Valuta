@@ -1,6 +1,6 @@
 # main.py
 #
-# Copyright 2023 Francisco Jeferson dos Santos Freires
+# Copyright 2023 Ideve Core
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -24,9 +24,9 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gio, Adw
-from .window import CurrencyconverterWindow
+from currencyconverter.window import CurrencyconverterWindow
 from currencyconverter.components import CurrencyConverterPreferences
-from .define import APP_ID
+from currencyconverter.define import APP_ID, VERSION
 
 class CurrencyconverterApplication(Adw.Application):
     """The main application singleton class."""
@@ -53,12 +53,13 @@ class CurrencyconverterApplication(Adw.Application):
         win.present()
 
     def on_about_action(self, widget, _):
+        print(VERSION)
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
                                 application_name='Currency Converter',
                                 application_icon=APP_ID,
                                 developer_name='Ideve Core',
-                                version='1.0.0',
+                                version=VERSION,
                                 developers=['Ideve Core'],
                                 copyright='© 2023 Ideve Core')
         about.present()

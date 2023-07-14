@@ -36,7 +36,7 @@ template CurrencyconverterWindow : Adw.ApplicationWindow {
             homogeneous: true;
             vexpand: true;
             Entry from_value {
-              changed => _test();
+              changed => _calculate();
               styles ["pd", "m-e", "title-3"]
             }
             Stack stack {

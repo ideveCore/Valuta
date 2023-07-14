@@ -1,6 +1,6 @@
 project('currencyconverter',
-          version: '0.1.0',
-    meson_version: '>= 0.62.0',
+          version: '1.0.0',
+    meson_version: '>= 0.63.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
 )
 
@@ -9,9 +9,7 @@ python = import('python')
 gnome = import('gnome')
 
 base_id = 'io.github.idevecore.CurrencyConverter'
-package_url = 'https://github.com/fkinoshita/Telegraph'
 
-# Profiles
 if get_option('profile') == 'development'
     profile = 'Devel'
     application_id = '@0@.@1@'.format(base_id, profile)

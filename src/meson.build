@@ -6,6 +6,7 @@ define = configuration_data()
 
 define.set('APPID', application_id)
 define.set('PROFILE', profile)
+define.set('VERSION', meson.project_version())
 define.set('PYTHON', python.find_installation('python3').full_path())
 
 configure_file(
