@@ -89,18 +89,6 @@
       ]
     },
     {
-      "name": "GOffice",
-      "buildsystem": "meson",
-      "source": [
-        {
-          "type": "git",
-          "url": "https://github.com/GNOME/goffice.git",
-          "tag": "GOFFICE_0_10_55",
-          "commit": "29c5bfe6333b499a051f969464c6804e28616736"
-        }
-      ]
-    },
-    {
       "name": "currencyconverter",
       "builddir": true,
       "buildsystem": "meson",
