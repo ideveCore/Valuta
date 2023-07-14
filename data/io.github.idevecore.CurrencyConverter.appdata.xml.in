@@ -25,19 +25,16 @@
   </recommends>
   <screenshots>
     <screenshot type="default">
-      <image>https://gitlab.com/idevecore/pomodoro/-/raw/main/data/screenshots/01.png</image>
+      <image>https://raw.githubusercontent.com/ideveCore/currency-converter/developer/data/screenshots/01.png</image>
     </screenshot>
-    <screenshot>
-      <image>https://gitlab.com/idevecore/pomodoro/-/raw/main/data/screenshots/02.png</image>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/ideveCore/currency-converter/developer/data/screenshots/02.png</image>
     </screenshot>
-    <screenshot>
-      <image>https://gitlab.com/idevecore/pomodoro/-/raw/main/data/screenshots/03.png</image>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/ideveCore/currency-converter/developer/data/screenshots/03.png</image>
     </screenshot>
-    <screenshot>
-      <image>https://gitlab.com/idevecore/pomodoro/-/raw/main/data/screenshots/04.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://gitlab.com/idevecore/pomodoro/-/raw/main/data/screenshots/05.png</image>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/ideveCore/currency-converter/developer/data/screenshots/04.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
