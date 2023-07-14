@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="currencyconverter">
   <schema id="@app-id@" path="/io/github/idevecore/CurrencyConverter/">
+    <key type="s" name="theme">
+      <default>"light"</default>
+    </key>
     <key type="s" name="src-currencies">
         <default>'USD'</default>
     </key>

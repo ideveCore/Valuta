@@ -1,0 +1,22 @@
+using Gtk 4.0;
+using Adw 1;
+
+template CurrencyConverterPreferences: Adw.PreferencesWindow {
+  modal: true;
+  default-height: 450;
+  default-width: 350;
+  Adw.PreferencesPage {
+    title: _("Preferences");
+    Adw.PreferencesGroup {
+      title: _("User interface");
+      Adw.ComboRow select_theme {
+        title: _("Theme");
+        icon-name: 'dark-mode-symbolic';
+        model: StringList list {
+          strings [_("Ligth"), _("Dark"), _("System")]
+        };
+      }
+    }
+  }
+}
+
