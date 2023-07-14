@@ -12,7 +12,7 @@ class CurrencyConverterPreferences(Adw.PreferencesWindow):
         self.app = Gtk.Application.get_default();
         self.settings = Gio.Settings.new(APP_ID);
         self.select_theme.connect('notify::selected-item', self._select_theme)
-        self.load_theme();
+        self.load_theme_data();
         self.set_transient_for(self.app.props.active_window)
 
     def _select_theme(self, _sender, _e):
@@ -28,7 +28,7 @@ class CurrencyConverterPreferences(Adw.PreferencesWindow):
         self.app.load_theme()
         
 
-    def load_theme(self):
+    def load_theme_data(self):
         if self.settings.get_string('theme') == 'default':
             self.select_theme.set_selected(2)
         elif self.settings.get_string('theme') == 'dark':

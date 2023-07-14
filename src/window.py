@@ -100,12 +100,11 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
         code = self.src_currency_selector.selected
         if code != self.src_currencies:
             self.src_currencies = code
-            if self.src_currencies == self.dest_currencies:
-                self.stack.set_visible_child_name("loading")
-                finish_callback = lambda self, task, nothing: self.finish_callback()
-                task = Gio.Task.new(self, None, finish_callback, None)
-                task.run_in_thread(self._thread_cb)
-        
+            self.stack.set_visible_child_name("loading")
+            finish_callback = lambda self, task, nothing: self.finish_callback()
+            task = Gio.Task.new(self, None, finish_callback, None)
+            task.run_in_thread(self._thread_cb)
+    
     @Gtk.Template.Callback()
     def _on_dest_currency_changed(self, _obj, _param):
         code = self.dest_currency_selector.selected
