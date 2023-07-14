@@ -25,6 +25,7 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gio, Adw
 from .window import CurrencyconverterWindow
+from currencyconverter.components import CurrencyConverterPreferences
 from .define import APP_ID
 
 class CurrencyconverterApplication(Adw.Application):
@@ -37,6 +38,8 @@ class CurrencyconverterApplication(Adw.Application):
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
+        self.settings = Gio.Settings.new(APP_ID);
+        self.load_theme()
 
     def do_activate(self):
         """Called when the application is activated.
@@ -61,8 +64,18 @@ class CurrencyconverterApplication(Adw.Application):
         about.present()
 
     def on_preferences_action(self, widget, _):
-        """Callback for the app.preferences action."""
-        print('app.preferences action activated')
+        CurrencyConverterPreferences().present()
+
+    def load_theme(self):
+        style_manager = Adw.StyleManager.get_default()
+        if self.settings.get_string('theme') == 'default':
+            style_manager.set_color_scheme(Adw.ColorScheme.DEFAULT)
+        elif self.settings.get_string('theme') == 'dark':
+            style_manager.set_color_scheme(Adw.ColorScheme.FORCE_DARK)
+        else:
+            style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
+
+
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.

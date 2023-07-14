@@ -38,8 +38,8 @@ currencyconverter_sources = [
   'api.py',
   'main.py',
   'window.py',
-  'settings.py',
   'components/currency_selector.py',
+  'components/preferences.py',
 ]
 
 install_data(currencyconverter_sources, install_dir: moduledir)

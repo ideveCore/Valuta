@@ -1,2 +1,2 @@
 from currencyconverter.components.currency_selector import CurrencySelector
-
+from currencyconverter.components.preferences import CurrencyConverterPreferences

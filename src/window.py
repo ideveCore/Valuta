@@ -18,11 +18,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 from gi.repository import Adw
 from gi.repository import Gtk
-from gi.repository import GObject
 from gi.repository import Gio
 from currencyconverter.components import CurrencySelector
 from currencyconverter.api import Api, CurrenciesListModel
-from currencyconverter.settings import Settings
 from currencyconverter.define import APP_ID
 
 @Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/ui/window.ui')
@@ -120,8 +118,9 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
 
     @Gtk.Template.Callback()
     def _test(self, _entry):
-        if self.is_float(_entry.get_text()) and self.is_float(self.currency_data["to_value"]):
-            value = float(_entry.get_text())
+        entry_text = _entry.get_text()
+        if self.is_float(entry_text) and self.is_float(self.currency_data["to_value"]):
+            value = float(entry_text)
             self.currency_data["from_value"] = value
             if not self.currency_data["to_value"] == None:
                 value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
