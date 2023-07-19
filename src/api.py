@@ -17,13 +17,9 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import logging
 import json
-import re
-from gi.repository import Gio, GObject
-import requests
-from bs4 import BeautifulSoup
-
+from gi.repository import Gio, GObject, GLib
+from google_currency import convert
 from currencyconverter.define import CODES
 
 def get_currency_name(code):
@@ -85,15 +81,14 @@ class Api():
         super().__init__(**kwargs)
 
     def request(self, src, dest):
-        url = f'https://www.google.com/finance/quote/{src}-{dest}'
-        page = requests.get(url)
-        soup = BeautifulSoup(page.text, 'html.parser')
-        value = soup.find(class_="YMlKec fxKbKc")
-        info = soup.find(class_="ygUjEc")
-        if value and info:
-            return {
-                "value": value.get_text().replace(',', ''),
-                "info": info.get_text().replace("Disclaimer", ""),
-                "disclaimer": info.a["href"]
-            }
+        data = convert(src.lower(), dest.lower(), 1)
+        amount = json.loads(data)["amount"]
+        current_date = GLib.DateTime.new_now_local()
+        date = f'{current_date.get_day_of_month()} of {current_date.format("%B")}'
+        time = current_date.format("%H:%M:%S")
+        return {
+                "value": amount,
+                "info": f'{date} - {time}',
+                "disclaimer": f'https://www.google.com/search?q=convert+{src}+to+{src}&sxsrf=AB5stBjJ1ZFiMqiTSZjE3-tTVcPqsxGQRg%3A1689771398260&source=hp&ei=ht23ZJbQDMDI1sQPl6Qi&iflsig=AD69kcEAAAAAZLfrlm0A6WrBjrZAbH9lDRg-zojW_Y0q&ved=0ahUKEwiWq8T_6JqAAxVApJUCHReSCAAQ4dUDCAg&uact=5&oq=convert+dollar+to+euro&gs_lp=Egdnd3Mtd2l6IhZjb252ZXJ0IGRvbGxhciB0byBldXJvMg0QABiABBjLARhGGIICMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBSLgpUP0CWPgmcAN4AJABAJgBoAOgAdsvqgEKMC4yLjE0LjUuMrgBA8gBAPgBAagCCsICBxAjGOoCGCfCAgcQIxiKBRgnwgIEECMYJ8ICCxAuGIAEGLEDGIMBwgILEAAYgAQYsQMYgwHCAgUQLhiABMICERAuGIAEGLEDGIMBGMcBGNEDwgIFEAAYgATCAgwQIxiKBRgnGEYYggLCAgsQLhiDARixAxiABMICCxAAGIoFGLEDGIMBwgIOEAAYgAQYsQMYgwEYyQPCAg0QABiKBRixAxiDARgKwgIIEAAYgAQYsQPCAg0QABiABBixAxiDARgKwgIHEAAYgAQYCsICBhAAGBYYHsICBxAjGLACGCfCAgcQABgNGIAEwgIGEAAYAxgK&sclient=gws-wiz'
+        }
 
