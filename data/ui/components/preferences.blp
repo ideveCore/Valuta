@@ -3,7 +3,7 @@ using Adw 1;
 
 template CurrencyConverterPreferences: Adw.PreferencesWindow {
   modal: true;
-  default-height: 450;
+  default-height: 250;
   default-width: 350;
   Adw.PreferencesPage {
     title: _("Preferences");
@@ -13,7 +13,7 @@ template CurrencyConverterPreferences: Adw.PreferencesWindow {
         title: _("Theme");
         icon-name: 'dark-mode-symbolic';
         model: StringList list {
-          strings [_("Ligth"), _("Dark"), _("System")]
+          strings [_("Light"), _("Dark"), _("System")]
         };
       }
     }

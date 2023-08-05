@@ -16,6 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+
 from gi.repository import Adw
 from gi.repository import Gtk
 from gi.repository import Gio
@@ -101,10 +102,11 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
         code = self.src_currency_selector.selected
         if code != self.src_currencies:
             self.src_currencies = code
-            self.stack.set_visible_child_name("loading")
-            finish_callback = lambda self, task, nothing: self.finish_callback()
-            task = Gio.Task.new(self, None, finish_callback, None)
-            task.run_in_thread(self._thread_cb)
+            if self.src_currencies != self.dest_currencies:
+                self.stack.set_visible_child_name("loading")
+                finish_callback = lambda self, task, nothing: self.finish_callback()
+                task = Gio.Task.new(self, None, finish_callback, None)
+                task.run_in_thread(self._thread_cb)
         self.save_settings()
     
     @Gtk.Template.Callback()
