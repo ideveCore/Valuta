@@ -2,6 +2,8 @@ pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.proje
 moduledir = join_paths(pkgdatadir, 'currencyconverter')
 gnome = import('gnome')
 
+subdir('search_provider')
+
 define = configuration_data()
 
 define.set('APPID', application_id)
