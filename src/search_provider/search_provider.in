@@ -1,18 +1,27 @@
 #!@PYTHON@
+
 import os
-import subprocess
-import functools
+import logging
+import gettext
 
 from dbus.mainloop.glib import DBusGMainLoop
 DBusGMainLoop(set_as_default=True)
 import dbus.service
+# from currencyconverter.api import Api
 
 from gi.repository import GLib
 
-sbn = dict(dbus_interface='org.gnome.Shell.SearchProvider2')
+SEARCH_BUS_NAME = 'org.gnome.Shell.SearchProvider2'
+SBN = dict(dbus_interface=SEARCH_BUS_NAME)
+
+CLIPBOARD_PREFIX = 'copy-to-clipboard'
+ERROR_PREFIX = 'converter-error'
+
+gettext.install('currencyconverter', '@localedir@')
+_ = gettext.gettext
 
 class SearchService(dbus.service.Object):
-    bus_name = "io.github.idevecore.CurrencyConverter.SearchProvider"
+    bus_name = '@APP_ID@.SearchProvider'
     object_path = "/" + bus_name.replace(".", "/")
 
     def __init__(self):
@@ -21,47 +30,112 @@ class SearchService(dbus.service.Object):
         bus_name = dbus.service.BusName(self.bus_name, bus=self.session_bus)
         dbus.service.Object.__init__(self, bus_name, self.object_path)
 
-    @dbus.service.method(in_signature='sasu', **sbn)
-    def ActivateResult(self, id, terms, timestamp):
-        command = id
-        os.system(f"{command} &")
+        self.src_currency = ''
+        self.dest_currency = ''
+        self.currency_data = {
+        "from_value": 1,
+        "to_value": None,
+        "currency_value": None,
+        }
+        # self.settings = Gio.Settings.new('@APP_ID@')
+        self.dest_currencies = {}
+        self._load_converter()
 
-    @dbus.service.method(in_signature='as', out_signature='as', **sbn)
+    def _load_converter(self):
+        # self.src_currency = self.settings.get_string('src-currencies')
+        self.src_currency = 'USD'
+        # self.dest_currency = self.settings.get_string('dest-currencies')
+        self.dest_currency = 'BRL'
+        # self.currency_data["currency_value"] = Api().request(self.src_currency, self.dest_currency)
+        self.currency_data["to_value"] = 10
+
+    def _is_number(self, value):
+        if not value:
+            return False
+        try:
+            f=float(value)
+            return True
+        except ValueError:
+            return False
+
+    def _converter(self, src_currency_value):
+        if self.src_currency != self.dest_currency:
+          error_id = ERROR_PREFIX
+
+          try:
+            dest_currency_value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
+            self.dest_currencies[src_currency_value] = dest_currency_value
+            return src_currency_value
+          except Exception as exc:
+            logging.error(exc)
+
+    @dbus.service.method(in_signature='as', out_signature='as', **SBN)
     def GetInitialResultSet(self, terms):
-        commands=[line.decode("utf-8") for line in subprocess.check_output(['dmenu_path']).splitlines()]
-        return self.GetSubsearchResultSet(commands,terms)
+        value = ' '.join(terms)
+        if self._is_number(value):
+            src_currency_value = float(value)
+            if not self.currency_data['to_value']:
+                return self.GetInitialResultSet(terms)
+            converter_id = self._converter(src_currency_value)
+            results = [converter_id]
+            return results
+        return [
+                _('{value}').format(
+                    value=value
+                )
+        ]
 
-    @dbus.service.method(in_signature='as', out_signature='aa{sv}', **sbn)
+    @dbus.service.method(in_signature='asas', out_signature='as', **SBN)
+    def GetSubsearchResultSet(self, _previous_results, new_terms):
+        return self.GetInitialResultSet(new_terms)
+
+    @dbus.service.method(in_signature='as', out_signature='aa{sv}', **SBN)
     def GetResultMetas(self, ids):
-        return [dict(id=id, name=id, description=subprocess.check_output(['which',id.split(' ')[0]])) for id in ids]
+        converter_id = ids[0]
+        if len(ids) == 1:
+            value = converter_id
+            if converter_id in self.dest_currencies:
+              value = self.dest_currencies[converter_id]
+            return [{
+            'id': converter_id,
+            'name': value,
+            }]
+        elif (
+            len(ids) == 2 and converter_id in self.dest_currencies
+            and ids[1] == CLIPBOARD_PREFIX + ids[0]
+        ):
+            value = self.dest_currencies[converter_id]
+            description = 'ola'
+            self.dest_currencies.clear()
+            return [
+                {
+                  'id': converter_id,
+                  'name': value,
+                  'description': description,
+                },
+                {
+                  'id': ids[1],
+                  'name': _('Copy'),
+                  'description': _('Copy currency to clipboard'),
+                  'clipboardText': value
+                }
+            ]
 
-    @dbus.service.method(in_signature='asas', out_signature='as', **sbn)
-    def GetSubsearchResultSet(self, previous_results, new_terms):
-        search = " ".join(new_terms)
-        results=''
-        def useSort(element1,element2):
-            searchLen=len(search)
-            e1Len=len(element1)
-            e2Len=len(element2)
-
-            e1i=0
-            while(e1i<e1Len and e1i<searchLen and element1[e1i]==search[e1i]):
-                e1i+=1
-            e2i=0
-            while(e2i<e2Len and e2i<searchLen and element2[e2i]==search[e2i]):
-                e2i+=1
-            return e2i-e1i
-
-        self.is_with_argument=len(search.split(' '))>1
-        if self.is_with_argument:
-            results=[search]
         else:
-            results = [command for command in previous_results if search in command]
-            results.sort(key=functools.cmp_to_key(useSort))
+            return [
+                dict(
+                    id=id,
+                    name=id,
+                )
+                for id in ids
+            ]
 
-        return results
+    @dbus.service.method(in_signature='sasu', **SBN)
+    def ActivateResult(self, result_id, terms, timestamp):
+        if not result_id.startswith(CLIPBOARD_PREFIX):
+            self.LaunchSearch(terms, timestamp)
 
-    @dbus.service.method(in_signature='asu', terms='as', timestamp='u', **sbn)
+    @dbus.service.method(in_signature='asu', terms='as', timestamp='u', **SBN)
     def LaunchSearch(self, terms, timestamp):
         pass
 

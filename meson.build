@@ -9,12 +9,24 @@ i18n = import('i18n')
 
 base_id = 'io.github.idevecore.CurrencyConverter'
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-moduledir = join_paths(pkgdatadir, 'dialect')
+moduledir = join_paths(pkgdatadir, 'currencyconverter')
 
-profile = ''
-version_suffix = ''
-application_id = base_id
-object_path = '/io/github/idevecore/CurrencyConverter/SearchProvider'
+if get_option('profile') == 'development'
+  profile = 'Devel'
+  vcs_tag = run_command('git', 'rev-parse', '--short', 'HEAD').stdout().strip()
+  if vcs_tag == ''
+    version_suffix = '-devel'
+  else
+    version_suffix = '-@0@'.format(vcs_tag)
+  endif
+  application_id = '@0@.@1@'.format(base_id, profile)
+  object_path = '/io/github/idevecore/CurrencyConverter/Devel/SearchProvider'
+else
+  profile = ''
+  version_suffix = ''
+  application_id = base_id
+  object_path = '/io/github/idevecore/CurrencyConverter/SearchProvider'
+endif
 
 conf = configuration_data()
 conf.set('PYTHON', python.find_installation('python3').full_path())
