@@ -7,9 +7,9 @@ import gettext
 from dbus.mainloop.glib import DBusGMainLoop
 DBusGMainLoop(set_as_default=True)
 import dbus.service
-# from currencyconverter.api import Api
+from currencyconverter.api import Api
 
-from gi.repository import GLib
+from gi.repository import GLib, Gio
 
 SEARCH_BUS_NAME = 'org.gnome.Shell.SearchProvider2'
 SBN = dict(dbus_interface=SEARCH_BUS_NAME)
@@ -33,21 +33,19 @@ class SearchService(dbus.service.Object):
         self.src_currency = ''
         self.dest_currency = ''
         self.currency_data = {
-        "from_value": 1,
-        "to_value": None,
-        "currency_value": None,
+            "from_value": 1,
+            "to_value": None,
+            "currency_value": None,
         }
-        # self.settings = Gio.Settings.new('@APP_ID@')
+        self.settings = Gio.Settings.new('@APP_ID@')
         self.dest_currencies = {}
         self._load_converter()
 
     def _load_converter(self):
-        # self.src_currency = self.settings.get_string('src-currencies')
-        self.src_currency = 'USD'
-        # self.dest_currency = self.settings.get_string('dest-currencies')
-        self.dest_currency = 'BRL'
-        # self.currency_data["currency_value"] = Api().request(self.src_currency, self.dest_currency)
-        self.currency_data["to_value"] = 10
+        self.src_currency = self.settings.get_string('src-currencies')
+        self.dest_currency = self.settings.get_string('dest-currencies')
+        self.currency_data["currency_value"] = Api().request(self.src_currency, self.dest_currency)
+        self.currency_data['to_value'] = self.currency_data["currency_value"]["value"]
 
     def _is_number(self, value):
         if not value:
@@ -60,29 +58,26 @@ class SearchService(dbus.service.Object):
 
     def _converter(self, src_currency_value):
         if self.src_currency != self.dest_currency:
-          error_id = ERROR_PREFIX
-
-          try:
-            dest_currency_value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
-            self.dest_currencies[src_currency_value] = dest_currency_value
-            return src_currency_value
-          except Exception as exc:
-            logging.error(exc)
+            error_id = ERROR_PREFIX
+            try:
+                dest_currency_value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
+                self.dest_currencies[src_currency_value] = str(dest_currency_value)
+                return src_currency_value
+            except Exception as exc:
+                logging.error(exc)
 
     @dbus.service.method(in_signature='as', out_signature='as', **SBN)
     def GetInitialResultSet(self, terms):
         value = ' '.join(terms)
         if self._is_number(value):
-            src_currency_value = float(value)
             if not self.currency_data['to_value']:
                 return self.GetInitialResultSet(terms)
-            converter_id = self._converter(src_currency_value)
+            self.currency_data['from_value'] = float(value)
+            converter_id = self._converter(value)
             results = [converter_id]
             return results
         return [
-                _('{value}').format(
-                    value=value
-                )
+                _(value)
         ]
 
     @dbus.service.method(in_signature='asas', out_signature='as', **SBN)
@@ -125,7 +120,7 @@ class SearchService(dbus.service.Object):
             return [
                 dict(
                     id=id,
-                    name=id,
+                    name='Rapaz',
                 )
                 for id in ids
             ]

@@ -8,9 +8,6 @@ configure_file(
   install_dir: search_provider_dir,
 )
 
-message('==========================================')
-message(application_id)
-
 configure_file(
   input: 'io.github.idevecore.CurrencyConverter.SearchProvider.service.in',
   output: '@0@.SearchProvider.service'.format(application_id),
@@ -24,4 +21,7 @@ configure_file(
   configuration: conf,
   install_dir: pkgdatadir,
 )
+
+message('==========================================')
+message(search_provider_dir)
 
