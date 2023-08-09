@@ -4,10 +4,10 @@
     <key type="s" name="theme">
       <default>'default'</default>
     </key>
-    <key type="s" name="src-currencies">
+    <key type="s" name="src-currency">
         <default>'USD'</default>
     </key>
-    <key type="s" name="dest-currencies">
+    <key type="s" name="dest-currency">
         <default>'EUR'</default>
     </key>
   </schema>

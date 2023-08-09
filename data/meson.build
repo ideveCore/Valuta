@@ -1,5 +1,6 @@
 gnome = import('gnome')
 
+# ===== Install desktop file =====
 desktop_conf = configuration_data()
 desktop_conf.set('icon', application_id)
 desktop_file = i18n.merge_file(
@@ -20,7 +21,7 @@ if desktop_utils.found()
   test('Validate desktop file', desktop_utils, args: [desktop_file])
 endif
 
-# Install metainfo
+# ===== Install appdata ===== 
 appdata_conf = configuration_data()
 appdata_conf.set('app-id', application_id)
 appstream_file = i18n.merge_file(
@@ -42,7 +43,7 @@ if appstream_util.found()
   )
 endif
 
-# Install gsettings schema
+# ===== Install gsettings schema =====
 gschema_conf = configuration_data()
 gschema_conf.set('app-id', application_id)
 configure_file(
@@ -59,25 +60,5 @@ if compile_schemas.found()
        compile_schemas,
        args: ['--strict', '--dry-run', meson.current_source_dir()])
 endif
-
-
-blueprints = custom_target('blueprints',
-  input: files(
-    'ui/window.blp',
-    'ui/components/currency_row.blp',
-    'ui/components/currency_selector.blp',
-    'ui/components/preferences.blp',
-  ),
-  output: '.',
-  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
-)
-
-gnome.compile_resources('currencyconverter',
-  'currencyconverter.gresource.xml',
-  dependencies: blueprints,
-  gresource_bundle: true,
-  install: true,
-  install_dir: pkgdatadir,
-)
 
 subdir('icons')

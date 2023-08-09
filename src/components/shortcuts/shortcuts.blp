@@ -1,0 +1,28 @@
+using Gtk 4.0;
+
+template CurrencyConverterShortcutsWindow : ShortcutsWindow {
+  modal: true;
+
+  ShortcutsSection {
+    section-name: "shortcuts";
+    max-height: 10;
+
+    ShortcutsGroup {
+      title: C_("shortcut window", "General");
+      ShortcutsShortcut {
+        title: C_("shortcuts window", "Preferences");
+        action-name: "app.preferences";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Shortcuts");
+        action-name: "win.show-help-overlay";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcuts window", "Quit");
+        action-name: "app.quit";
+      }
+    }
+  }
+}

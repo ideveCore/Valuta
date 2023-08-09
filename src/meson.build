@@ -1,5 +1,6 @@
 python = import('python')
 
+# ===== Generate Currency Convert bin ===== 
 configure_file(
   input: 'currencyconverter.in',
   output: 'currencyconverter',
@@ -8,6 +9,7 @@ configure_file(
   install_dir: get_option('bindir'),
 )
 
+# ===== Generate define module
 configure_file(
   input: 'define.in',
   output: 'define.py',
@@ -21,16 +23,46 @@ run_target('run',
   command: [launcher]
 )
 
-subdir('search_provider')
+# ===== Blueprint compiler =====
+blueprints = custom_target('blueprints',
+  input: files(
+    'components/currency_selector_row/currency_selector_row.blp',
+    'components/currency_selector/currency_selector.blp',
+    'components/preferences/preferences.blp',
+    'components/shortcuts/shortcuts.blp',
+    'window.blp',
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
 
-currencyconverter_sources = [
+# ===== Compile Currence Converter gresource =====
+gnome.compile_resources('currencyconverter',
+  'currencyconverter.gresource.xml',
+  dependencies: blueprints,
+  gresource_bundle: true,
+  install: true,
+  install_dir: pkgdatadir,
+)
+
+# ===== Python sources =====
+sources = [
+  './components/currency_selector/currency_selector.py',
+  './components/preferences/preferences.py',
   '__init__.py',
   'api.py',
   'main.py',
   'window.py',
-  'components/currency_selector.py',
-  'components/preferences.py',
 ]
 
-install_data(currencyconverter_sources, install_dir: moduledir)
+# ===== Install python sources =====
+install_data(sources, install_dir: moduledir)
+
+# ===== Install components sources =====
 install_subdir('components', install_dir: moduledir)
+
+# ===== Install assets sources =====
+install_subdir('assets', install_dir: moduledir)
+
+# ===== Install provider =====
+subdir('search_provider')

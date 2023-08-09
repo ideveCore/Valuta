@@ -21,7 +21,3 @@ configure_file(
   configuration: conf,
   install_dir: pkgdatadir,
 )
-
-message('==========================================')
-message(search_provider_dir)
-

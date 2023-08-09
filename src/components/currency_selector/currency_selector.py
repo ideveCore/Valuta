@@ -20,9 +20,10 @@
 
 
 import re
-from gi.repository import Adw, Gdk, Gtk, GObject
+from gi.repository import Adw, Gdk, GObject, Gtk
+from ..currency_selector_row.currency_selector_row import CurrencySelectorRow
 
-@Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/ui/components/currency_selector.ui')
+@Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/components/currency_selector/currency_selector.ui')
 class CurrencySelector(Adw.Bin):
     __gtype_name__ = 'CurrencySelector'
     __gsignals__ = {
@@ -103,7 +104,7 @@ class CurrencySelector(Adw.Bin):
         return (a > b) - (a < b)
 
     def create_currency_row(self, currency):
-        return CurrencyRow(currency)
+        return CurrencySelectorRow(currency)
 
     @Gtk.Template.Callback()
     def _on_search(self, _entry):
@@ -122,23 +123,4 @@ class CurrencySelector(Adw.Bin):
             self.popover.popdown()
         elif keyval == Gdk.KEY_Down:
             return Gdk.EVENT_STOP
-
-@Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/ui/components/currency_row.ui')
-class CurrencyRow(Gtk.ListBoxRow):
-    __gtype_name__ = 'CurrencyRow'
-
-    name = Gtk.Template.Child()
-    selection = Gtk.Template.Child()
-    
-    def __init__(self, currency):
-        super().__init__()
-        self.currency = currency
-        self.name.props.label = self.currency.name
-
-        self.currency.bind_property(
-            'selected',
-            self.selection,
-            'visible',
-            GObject.BindingFlags.SYNC_CREATE
-        )
 

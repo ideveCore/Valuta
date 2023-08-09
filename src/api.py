@@ -63,7 +63,7 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
     def do_get_n_items(self):
         return len(self.currencies)
 
-    def set_langs(self, currencies, auto=False):
+    def set_currencies(self, currencies, auto=False):
         removed = len(self.currencies)
         self.currencies.clear()
         if auto:

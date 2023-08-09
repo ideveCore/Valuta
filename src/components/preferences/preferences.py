@@ -21,7 +21,7 @@
 from gi.repository import Adw, Gtk, Gio
 from currencyconverter.define import APP_ID
 
-@Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/ui/components/preferences.ui')
+@Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/components/preferences/preferences.ui')
 class CurrencyConverterPreferences(Adw.PreferencesWindow):
     __gtype_name__ = 'CurrencyConverterPreferences'
 

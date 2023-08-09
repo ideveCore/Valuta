@@ -1,7 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template CurrencyconverterWindow : Adw.ApplicationWindow {
+template CurrencyConverterWindow : Adw.ApplicationWindow {
   default-width: 400;
   default-height: 400;
   title: _("Currency Converter");
@@ -36,7 +36,7 @@ template CurrencyconverterWindow : Adw.ApplicationWindow {
             homogeneous: true;
             vexpand: true;
             Entry from_value {
-              changed => _calculate();
+              changed => _on_from_value_changed();
               styles ["pd", "m-e", "title-3"]
             }
             Stack stack {
@@ -122,7 +122,12 @@ menu primary_menu {
     }
 
     item {
-      label: _("_About currency converter");
+      label: _("Keyboard Shortcuts");
+      action: "win.show-help-overlay";
+    }
+
+    item {
+      label: _("_About Currency Converter");
       action: "app.about";
     }
   }

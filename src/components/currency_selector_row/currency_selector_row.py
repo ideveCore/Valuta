@@ -1,4 +1,4 @@
-# __init__.py
+# currency_selector_row.py
 #
 # Copyright 2023 Ideve Core
 #
@@ -17,6 +17,24 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from .currency_selector.currency_selector import CurrencySelector
-from .preferences.preferences import CurrencyConverterPreferences
-from .shortcuts.shortcuts import CurrencyConverterShortcutsWindow
+from gi.repository import GObject, Gtk
+
+@Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/components/currency_selector_row/currency_selector_row.ui')
+class CurrencySelectorRow(Gtk.ListBoxRow):
+    __gtype_name__ = 'CurrencySelectorRow'
+
+    name = Gtk.Template.Child()
+    selection = Gtk.Template.Child()
+    
+    def __init__(self, currency):
+        super().__init__()
+        self.currency = currency
+        self.name.props.label = self.currency.name
+
+        self.currency.bind_property(
+            'selected',
+            self.selection,
+            'visible',
+            GObject.BindingFlags.SYNC_CREATE
+        )
+
