@@ -38,13 +38,14 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
     src_currencies = []
     dest_currencies = []
 
-    def __init__(self, **kwargs):
+    def __init__(self, value, **kwargs):
         super().__init__(**kwargs)
         self.currency_data = {
             "from_value": 1,
             "to_value": None,
             "currency_value": None,
         }
+        self.launch_value = value
         self.src_currency_model = CurrenciesListModel(self._currency_names_func)
         self.dest_currency_model = CurrenciesListModel(self._currency_names_func)
         self.src_currency_selector.bind_models(self.src_currency_model)
@@ -76,6 +77,8 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
         if self.currency_data["currency_value"]:
             self.currency_data["to_value"] = self.currency_data["currency_value"]["value"]
             self.load_data()
+            if self.is_float(self.launch_value):
+                self.calculate(self.launch_value)
 
     @staticmethod
     def _thread_cb (task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
@@ -89,6 +92,9 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
         self.settings = Gio.Settings.new(id);
         self.src_currencies = self.settings.get_string('src-currencies')
         self.dest_currencies = self.settings.get_string('dest-currencies')
+        if self.src_currencies is not None:
+            self.src_currency_selector.set_selected(self.src_currencies)
+            self.dest_currency_selector.set_selected(self.dest_currencies)
 
     def _currency_names_func(self, code):
         return CODES[code]
@@ -132,6 +138,18 @@ class CurrencyconverterWindow(Adw.ApplicationWindow):
                 value = self.currency_data["to_value"]
 
             self.to_value.set_text(str("{:,}".format(value)))
+    def calculate(self, value):
+        if self.is_float(value) and self.is_float(self.currency_data["to_value"]):
+            from_value = float(value)
+            self.currency_data["from_value"] = from_value
+            if not self.currency_data["to_value"] == None:
+                from_value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
+            else:
+                from_value = self.currency_data["to_value"]
+
+            self.from_value.set_text(value)
+            self.to_value.set_text(str("{:,}".format(from_value)))
+
 
     def is_float(self, v):
         if not v:

@@ -23,7 +23,7 @@ import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gio, Adw
+from gi.repository import GLib, Gio, Adw
 from currencyconverter.window import CurrencyconverterWindow
 from currencyconverter.components import CurrencyConverterPreferences
 from currencyconverter.define import APP_ID, VERSION
@@ -32,14 +32,22 @@ class CurrencyconverterApplication(Adw.Application):
     """The main application singleton class."""
 
     def __init__(self):
-        super().__init__(application_id=APP_ID,
-                         flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
+        Adw.ApplicationWindow.__init__(
+                self,
+                application_id=APP_ID,
+                flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE
+            )
         self.set_resource_base_path('/io/github/idevecore/CurrencyConverter')
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
         self.settings = Gio.Settings.new(APP_ID);
+        self.window = None
+        self.launch_value = ''
+        self.add_main_option('value', b't', GLib.OptionFlags.NONE,
+                             GLib.OptionArg.STRING, 'Value to converte currencies', None)
         self.load_theme()
+
 
     def do_activate(self):
         """Called when the application is activated.
@@ -47,10 +55,36 @@ class CurrencyconverterApplication(Adw.Application):
         We raise the application's main window, creating it if
         necessary.
         """
-        win = self.props.active_window
-        if not win:
-            win = CurrencyconverterWindow(application=self)
-        win.present()
+        self.window = self.props.active_window
+
+        if not self.window:
+            self.window = CurrencyconverterWindow(
+                application=self,
+                title=_('Currency Converter'),
+                value=self.launch_value,
+            )
+
+        self.window.present()
+
+    def do_command_line(self, command_line):
+        options = command_line.get_options_dict()
+        options = options.end().unpack()
+        value = ''
+
+        if 'value' in options:
+            value = options['value']
+
+        if self.window is not None:
+            self.window.load_settings(APP_ID)
+            self.window.calculate(value)
+        else:
+            self.launch_value = value
+
+        self.activate()
+        return 0
+
+    def do_startup(self):
+        Adw.Application.do_startup(self)
 
     def on_about_action(self, widget, _):
         print(VERSION)

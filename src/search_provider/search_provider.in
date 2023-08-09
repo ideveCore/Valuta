@@ -3,13 +3,14 @@
 import os
 import logging
 import gettext
+import json
 
 from dbus.mainloop.glib import DBusGMainLoop
 DBusGMainLoop(set_as_default=True)
 import dbus.service
-from currencyconverter.api import Api
-
 from gi.repository import GLib, Gio
+from google_currency import convert
+from currencyconverter.define import CODES
 
 SEARCH_BUS_NAME = 'org.gnome.Shell.SearchProvider2'
 SBN = dict(dbus_interface=SEARCH_BUS_NAME)
@@ -30,8 +31,7 @@ class SearchService(dbus.service.Object):
         bus_name = dbus.service.BusName(self.bus_name, bus=self.session_bus)
         dbus.service.Object.__init__(self, bus_name, self.object_path)
 
-        self.src_currency = ''
-        self.dest_currency = ''
+
         self.currency_data = {
             "from_value": 1,
             "to_value": None,
@@ -39,14 +39,16 @@ class SearchService(dbus.service.Object):
         }
         self.settings = Gio.Settings.new('@APP_ID@')
         self.dest_currencies = {}
-        self._load_converter()
-
-    def _load_converter(self):
         self.src_currency = self.settings.get_string('src-currencies')
         self.dest_currency = self.settings.get_string('dest-currencies')
-        self.currency_data["currency_value"] = Api().request(self.src_currency, self.dest_currency)
-        self.currency_data['to_value'] = self.currency_data["currency_value"]["value"]
+        self.settings.connect("changed::src-currencies", self._on_currencies_changed);
+        self.settings.connect("changed::dest-currencies", self._on_currencies_changed);
 
+    def _on_currencies_changed(self, widget, state):
+        self.src_currency = self.settings.get_string('src-currencies')
+        self.dest_currency = self.settings.get_string('dest-currencies')
+        self.currency_data['to_value'] = None
+        
     def _is_number(self, value):
         if not value:
             return False
@@ -58,27 +60,51 @@ class SearchService(dbus.service.Object):
 
     def _converter(self, src_currency_value):
         if self.src_currency != self.dest_currency:
-            error_id = ERROR_PREFIX
-            try:
-                dest_currency_value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
-                self.dest_currencies[src_currency_value] = str(dest_currency_value)
-                return src_currency_value
-            except Exception as exc:
-                logging.error(exc)
+            error_id = ERROR_PREFIX + src_currency_value
+            if not self.currency_data['to_value']:
+              data = convert(self.src_currency.lower(), self.dest_currency.lower(), 1)
+              amount = json.loads(data)["amount"]
+              self.currency_data['to_value'] = amount
+
+            if self.currency_data['to_value']:
+                try:
+                    dest_currency_value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
+                    self.dest_currencies[src_currency_value] = str(dest_currency_value)
+                    return src_currency_value
+                except Exception as exc:
+                    logging.error(exc)
+            else:
+                self.translations[error_id] = _('Convertion failed, check for network issues')
+
+            return error_id
 
     @dbus.service.method(in_signature='as', out_signature='as', **SBN)
     def GetInitialResultSet(self, terms):
         value = ' '.join(terms)
         if self._is_number(value):
-            if not self.currency_data['to_value']:
-                return self.GetInitialResultSet(terms)
             self.currency_data['from_value'] = float(value)
             converter_id = self._converter(value)
             results = [converter_id]
             return results
-        return [
-                _(value)
-        ]
+
+        value_splited = value.upper().split(' ')
+        if len(value_splited) == 4:
+            if value_splited[0] in CODES and value_splited[2] in CODES:
+                if self._is_number(value_splited[3]):
+                    if value_splited[0] != self.src_currency or value_splited[2] != self.dest_currency:
+                        self.settings.set_string('src-currencies', value_splited[0])
+                        self.settings.set_string('dest-currencies', value_splited[2])
+                        self._on_currencies_changed('', '')
+                        self.currency_data['from_value'] = float(value_splited[3])
+                        converter_id = self._converter(value)
+                        results = [converter_id]
+                        return results
+                    else:
+                        self.currency_data['from_value'] = float(value_splited[3])
+                        converter_id = self._converter(value)
+                        results = [converter_id]
+                        return results
+
 
     @dbus.service.method(in_signature='asas', out_signature='as', **SBN)
     def GetSubsearchResultSet(self, _previous_results, new_terms):
@@ -90,11 +116,12 @@ class SearchService(dbus.service.Object):
         if len(ids) == 1:
             value = converter_id
             if converter_id in self.dest_currencies:
-              value = self.dest_currencies[converter_id]
+                value = self.dest_currencies[converter_id]
             return [{
             'id': converter_id,
             'name': value,
             }]
+
         elif (
             len(ids) == 2 and converter_id in self.dest_currencies
             and ids[1] == CLIPBOARD_PREFIX + ids[0]
@@ -102,6 +129,7 @@ class SearchService(dbus.service.Object):
             value = self.dest_currencies[converter_id]
             description = 'ola'
             self.dest_currencies.clear()
+
             return [
                 {
                   'id': converter_id,
@@ -120,7 +148,7 @@ class SearchService(dbus.service.Object):
             return [
                 dict(
                     id=id,
-                    name='Rapaz',
+                    name=name,
                 )
                 for id in ids
             ]
@@ -132,7 +160,18 @@ class SearchService(dbus.service.Object):
 
     @dbus.service.method(in_signature='asu', terms='as', timestamp='u', **SBN)
     def LaunchSearch(self, terms, timestamp):
-        pass
+        value = ' '.join(terms)
+        splited_value = value.split(' ')
+        if len(splited_value) == 4:
+            GLib.spawn_async_with_pipes(
+                None, ['@BIN@', '--value', splited_value[3]], None,
+                GLib.SpawnFlags.SEARCH_PATH, None
+            )
+            
+        GLib.spawn_async_with_pipes(
+            None, ['@BIN@', '--value', value], None,
+            GLib.SpawnFlags.SEARCH_PATH, None
+        )
 
 if __name__ == "__main__":
     SearchService()
