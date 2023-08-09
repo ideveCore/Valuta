@@ -5,9 +5,10 @@ import logging
 import gettext
 import json
 
-from dbus.mainloop.glib import DBusGMainLoop
-DBusGMainLoop(set_as_default=True)
+import dbus
 import dbus.service
+from dbus.mainloop.glib import DBusGMainLoop
+
 from gi.repository import GLib, Gio
 from google_currency import convert
 from currencyconverter.define import CODES
@@ -85,6 +86,8 @@ class SearchService(dbus.service.Object):
             self.currency_data['from_value'] = float(value)
             converter_id = self._converter(value)
             results = [converter_id]
+            if not converter_id.startswith(ERROR_PREFIX):
+                results.append(CLIPBOARD_PREFIX + value)
             return results
 
         value_splited = value.upper().split(' ')
@@ -98,11 +101,15 @@ class SearchService(dbus.service.Object):
                         self.currency_data['from_value'] = float(value_splited[3])
                         converter_id = self._converter(value)
                         results = [converter_id]
+                        if not converter_id.startswith(ERROR_PREFIX):
+                            results.append(CLIPBOARD_PREFIX + value)
                         return results
                     else:
                         self.currency_data['from_value'] = float(value_splited[3])
                         converter_id = self._converter(value)
                         results = [converter_id]
+                        if not converter_id.startswith(ERROR_PREFIX):
+                            results.append(CLIPBOARD_PREFIX + value)
                         return results
 
 
@@ -112,14 +119,15 @@ class SearchService(dbus.service.Object):
 
     @dbus.service.method(in_signature='as', out_signature='aa{sv}', **SBN)
     def GetResultMetas(self, ids):
+        """Send destination currency value"""
         converter_id = ids[0]
         if len(ids) == 1:
             value = converter_id
             if converter_id in self.dest_currencies:
                 value = self.dest_currencies[converter_id]
             return [{
-            'id': converter_id,
-            'name': value,
+                'id': converter_id,
+                'name': value,
             }]
 
         elif (
@@ -127,20 +135,21 @@ class SearchService(dbus.service.Object):
             and ids[1] == CLIPBOARD_PREFIX + ids[0]
         ):
             value = self.dest_currencies[converter_id]
-            description = 'ola'
+            description = self.dest_currency
+
             self.dest_currencies.clear()
 
             return [
                 {
-                  'id': converter_id,
-                  'name': value,
-                  'description': description,
+                    'id': converter_id,
+                    'name': value,
+                    'description': description,
                 },
                 {
-                  'id': ids[1],
-                  'name': _('Copy'),
-                  'description': _('Copy currency to clipboard'),
-                  'clipboardText': value
+                    'id': ids[1],
+                    'name': _('Copy'),
+                    'description': _('Copy currency to clipboard'),
+                    'clipboardText': value
                 }
             ]
 
@@ -174,5 +183,6 @@ class SearchService(dbus.service.Object):
         )
 
 if __name__ == "__main__":
+    DBusGMainLoop(set_as_default=True)
     SearchService()
     GLib.MainLoop().run()
