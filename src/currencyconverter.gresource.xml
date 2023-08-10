@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/io/github/idevecore/CurrencyConverter">
-    <file compressed="true">style.css</file>
+    <file compressed="true" alias="style.css">assets/style.css</file>
     <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector_row/currency_selector_row.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector/currency_selector.ui</file>
