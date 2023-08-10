@@ -21,7 +21,7 @@ from gi.repository import Adw, Gio, Gtk
 
 from .components import CurrencySelector
 from .components import CurrencyConverterShortcutsWindow
-from .utils import Api, CurrenciesListModel
+from .utils import Api, CurrenciesListModel, SoupSession
 from .define import APP_ID, CODES
 
 @Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/window.ui')
@@ -73,7 +73,7 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
     def finish_callback(self):
         self.stack.set_visible_child_name("result")
         if self.currency_data["currency_value"]:
-            self.currency_data["to_value"] = self.currency_data["currency_value"]["value"]
+            self.currency_data["to_value"] = self.currency_data["currency_value"]["dest_currency_value"]
             self.load_data()
             if self.is_float(self.launch_src_currency_value):
                 self.calculate(self.launch_src_currency_value)
@@ -81,8 +81,12 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
     @staticmethod
     def _thread_cb (task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
         try:
-            self.currency_data["currency_value"] = Api().request(self.src_currency, self.dest_currency)
-            task.return_value(self.currency_dataa)
+            session = SoupSession.get()
+            message = session.format_request(self.src_currency, self.dest_currency)
+            response_data = session.get_response(message)
+            self.currency_data['currency_value'] = response_data
+
+            task.return_value(self.currency_data)
         except Exception as e:
             task.return_value(e)
 

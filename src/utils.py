@@ -211,12 +211,3 @@ class SoupSession(Soup.Session):
 
         return SoupSession._formated_response
 
-def test_soup():
-    test = SoupSession.get()
-    message = test.format_request('BRL', 'USD')
-    print(test.get_response(message))
-    # result = test.get_currency_value(response)
-    # print(result)
-
-
-test_soup()
