@@ -26,6 +26,8 @@ PROFILE = "@PROFILE@"
 IS_DEVEL = PROFILE == "Devel"
 RES_PATH = '/io/github/idevecore/CurrencyConverter/'
 SUFFIX = " (Devel)" if IS_DEVEL else ""
+BASE_URL = 'https://www.google.com/search?q=convert'
+BASE_URL_LANG_PREFIX = '&hl=en&lr=lang_en'
 
 CODES = {
   "AFN": "Afghan Afghani",

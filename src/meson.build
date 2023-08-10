@@ -50,7 +50,7 @@ sources = [
   './components/currency_selector/currency_selector.py',
   './components/preferences/preferences.py',
   '__init__.py',
-  'api.py',
+  'utils.py',
   'main.py',
   'window.py',
 ]

@@ -17,14 +17,12 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw
-from gi.repository import Gtk
-from gi.repository import Gio
+from gi.repository import Adw, Gio, Gtk
 
 from .components import CurrencySelector
 from .components import CurrencyConverterShortcutsWindow
-from currencyconverter.api import Api, CurrenciesListModel
-from currencyconverter.define import APP_ID, CODES
+from .utils import Api, CurrenciesListModel
+from .define import APP_ID, CODES
 
 @Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/window.ui')
 class CurrencyConverterWindow(Adw.ApplicationWindow):
