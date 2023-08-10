@@ -179,7 +179,6 @@ class SoupSession(Soup.Session):
         try:
             response = self.send_and_read(message, None)
             data = response.get_data()
-            print(data)
             return self.get_currency_value(data)
         except GLib.GError as exc:
             return exc.message
@@ -194,21 +193,19 @@ class SoupSession(Soup.Session):
                 converted_currency = re.findall('[\d*\,]*\.\d*', converted_amount_str)[0]
                 SoupSession._default_response["amount"]    = converted_currency
                 SoupSession._default_response["converted"] = True
-                # return json.dumps(SoupSession._default_response)
-                return SoupSession.default_response(SoupSession._default_response)
+                return SoupSession.format_response(SoupSession._default_response)
             else:
                 raise Exception("Unable to convert currency, failed to fetch results from Google")
         except Exception as error:
             return SoupSession._default_response
 
     @staticmethod
-    def format_response(default_response: SoupSession._default_response) -> SoupSession._formated_response:
-        url = SoupSession.__mount_url(default_response.amount)
-        print(url)
+    def format_response(default_response: Dict[str, Any]) -> Dict[str, Any]:
+        url = SoupSession.__mount_url(default_response['amount'])
         current_date = GLib.DateTime.new_now_local()
         date = f'{current_date.get_day_of_month()} of {current_date.format("%B")}'
         time = current_date.format("%H:%M:%S")
-        SoupSession._formated_response['dest_currency_value'] = default_response.amount
+        SoupSession._formated_response['dest_currency_value'] = default_response['amount']
         SoupSession._formated_response['info'] = f'{date} - {time}'
         SoupSession._formated_response['disclaimer'] = url
 
@@ -222,4 +219,4 @@ def test_soup():
     # print(result)
 
 
-# test_soup()
+test_soup()
