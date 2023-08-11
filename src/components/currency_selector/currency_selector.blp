@@ -2,12 +2,13 @@ using Gtk 4.0;
 using Adw 1;
 
 template CurrencySelector: Adw.Bin {
-
   notify::selected => _on_selected_changed();
 
   MenuButton button {
     always-show-arrow: true;
-    styles [ "raised"]
+    valign: center;
+    halign: center;
+    styles ["rised", "flat"]
 
     child: Box {
       spacing: 3;
@@ -25,6 +26,7 @@ template CurrencySelector: Adw.Bin {
 
     popover: Popover popover {
       height-request: 300;
+      width-request: 300;
       styles ["curency-selector", "menu"]
 
       show => _popover_show();

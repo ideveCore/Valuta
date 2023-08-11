@@ -24,89 +24,61 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
       orientation: vertical;
       Box {
         orientation: vertical;
-        Box {
-          orientation: vertical;
-          halign: center;
-          valign: center;
-          spacing: 20;
-          styles ["m", "card"]
-          
-          Box {
-            styles ["gp", "pd"]
-            homogeneous: true;
-            vexpand: true;
-            Entry from_value {
-              changed => _on_from_value_changed();
-              styles ["pd", "m-e", "title-3"]
+        spacing: 24;
+        Adw.PreferencesGroup {
+          styles ['pd']
+          title: "convert";
+            header-suffix: Gtk.Box {
+            orientation: horizontal;
+            spacing: 6;
+            
+            Gtk.Button {
+              valign: center;
+            
+              child: Adw.ButtonContent {
+                icon-name: "emblem-synchronizing-symbolic";
+                label: "Switch";
+              };
+              
+              styles ["flat"]
             }
-            Stack stack {
-              transition-type: crossfade;
-              StackPage {
-                name: "loading";
-                child: WindowHandle {
-                  Box {
-                    orientation: vertical;
-                    spacing: 12;
-                    margin-top: 12;
-                    margin-bottom: 12;
-                    margin-start: 12;
-                    margin-end: 12;
-                    halign: center;
-                    valign: center;
-
-                    Spinner {
-                      spinning: true;
-                      width-request: 25;
-                      height-request: 25;
-                    }
-                  }
-                };
-              }
-              StackPage {
-                name: "result";
-                child: WindowHandle {
-                  Entry to_value {
-                    styles ["pd", "title-3"]
-                    editable: false;
-                  }
-                };
-              }
-            }
-          }
-          Box {
-            styles ["gp", "pd"]
-            homogeneous: true;
+          };
+          Adw.ActionRow src_currency {
+            title: _('From currency');
             .CurrencySelector src_currency_selector {
               styles ["m-e"]
               notify::selected => _on_src_currency_changed();
-              // selected: bind src_lang_selector.selected bidirectional;
-              // tooltip-text: _("Change Source Language");
-              // user-selection-changed => translation();
-            }
-            Button {
-              styles ["custom", "circular", "accent"]
-              icon-name: "system-reboot-symbolic";
-              clicked => _invert_currencies();
-            }
-            .CurrencySelector dest_currency_selector {
-              styles ["m-s"]
-              notify::selected =>  _on_dest_currency_changed();
-              // selected: bind src_lang_selector.selected bidirectional;
-              // tooltip-text: _("Change Source Language");
-              // user-selection-changed => translation();
             }
           }
-          Box {
-            Label info {
-              styles ["m-s", "caption"]
-              halign: start;
+          Adw.ActionRow dest_currency {
+            title: _('To currency');
+            .CurrencySelector dest_currency_selector {
+              styles ["m-e"]
+              notify::selected => _on_dest_currency_changed();
             }
-            LinkButton disclaimer {
-              styles [
-                "caption",
-              ]
-              label: _("disclaimer");
-            }
+          }
+          Adw.EntryRow src_currency_entry {
+            title: 'USD';
+          }
+        }
+        Gtk.Button convert_button {
+          styles ["pill", "suggested-action"]
+          halign: center;
+          label: "Convert";
+        }
+        Label dest_currency_label {
+          label: "£ 10";
+        }
+        Box {
+          Label info {
+            styles ["m-s", "caption"]
+            halign: start;
+          }
+          LinkButton disclaimer {
+            styles [
+              "caption",
+            ]
+            label: _("disclaimer");
           }
         }
       }

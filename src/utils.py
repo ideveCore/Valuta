@@ -187,7 +187,7 @@ class SoupSession(Soup.Session):
     def get_currency_value(data):
         data = data.decode('utf-8')
         try:
-            results = re.findall(f'[\d*\,]*\.\d* {CODES[SoupSession._dest_currency]}', data)
+            results = re.findall(f'[\d*\,]*\.\d* {CODES[SoupSession._dest_currency]["name"]}', data)
             if results.__len__() > 0:
                 converted_amount_str = results[0]
                 converted_currency = re.findall('[\d*\,]*\.\d*', converted_amount_str)[0]

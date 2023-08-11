@@ -17,11 +17,12 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gio, Gtk
+from gi.repository import Adw, Gio, Gtk, Pango
 
 from .components import CurrencySelector
 from .components import CurrencyConverterShortcutsWindow
 from .utils import Api, CurrenciesListModel, SoupSession
+import re
 from .define import APP_ID, CODES
 
 @Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/window.ui')
@@ -30,11 +31,11 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
 
     src_currency_selector: CurrencySelector = Gtk.Template.Child()
     dest_currency_selector: CurrencySelector = Gtk.Template.Child()
-    stack = Gtk.Template.Child()
-    from_value = Gtk.Template.Child()
-    to_value = Gtk.Template.Child()
-    info = Gtk.Template.Child()
+    dest_currency_label = Gtk.Template.Child()
+    src_currency_entry = Gtk.Template.Child()
+    convert_button = Gtk.Template.Child()
     disclaimer = Gtk.Template.Child()
+    info = Gtk.Template.Child()
     src_currencies = []
     dest_currencies = []
 
@@ -42,9 +43,13 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
         self.set_help_overlay(CurrencyConverterShortcutsWindow())
         self.currency_data = {
-            "from_value": 1,
-            "to_value": None,
-            "currency_value": None,
+            "src_currency_value": 1,
+            "dest_currency_value": None,
+            "src_currency": None,
+            "dest_currency": None,
+            "info": None,
+            "disclaimer": None,
+            "convertion_value": None,
         }
         self.launch_src_currency_value = src_currency_value
         self.src_currency_model = CurrenciesListModel(self._currency_names_func)
@@ -57,26 +62,28 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         self.dest_currency = None
         self.connect('unrealize', self.save_settings)
         self.load_settings(APP_ID)
+        self.src_currency_entry.connect('changed', self._on_src_currency_entry_changed)
         self.load_data()
         finish_callback = lambda self, task, nothing: self.finish_callback()
         task = Gio.Task.new(self, None, finish_callback, None)
         task.run_in_thread(self._thread_cb)
+        self.convert_button.connect('clicked', lambda button: self._calculate())
+        self.src_currency_entry.connect('entry-activated', lambda entry: self._calculate())
+
 
     def load_data(self):
-        self.from_value.set_text(str(self.currency_data["from_value"]))
-        if self.currency_data["to_value"]:
-            value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
-            self.to_value.set_text(str(str("{:,}".format(value))))
-            self.info.set_text(self.currency_data["currency_value"]["info"])
-            self.disclaimer.set_uri(self.currency_data["currency_value"]["disclaimer"])
+        self.src_currency_entry.set_title(self.src_currency)
+        src_value = self.src_currency_entry.get_text()
+        self.src_currency_entry.set_text('1' if  src_value == '' else src_value)
+        self.dest_currency_label.set_text(CODES[self.dest_currency]["symbol"])
+        if self.currency_data['convertion_value']:
+            formatted_value = str("{:,}".format(self.currency_data['convertion_value']))
+            self.dest_currency_label.set_text(f'{CODES[self.dest_currency]["symbol"]} {formatted_value}')
+            self.info.set_text(self.currency_data['info'])
+            self.disclaimer.set_uri(self.currency_data['disclaimer'])
 
     def finish_callback(self):
-        self.stack.set_visible_child_name("result")
-        if self.currency_data["currency_value"]:
-            self.currency_data["to_value"] = self.currency_data["currency_value"]["dest_currency_value"]
-            self.load_data()
-            if self.is_float(self.launch_src_currency_value):
-                self.calculate(self.launch_src_currency_value)
+        self._calculate()
 
     @staticmethod
     def _thread_cb (task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
@@ -84,7 +91,11 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
             session = SoupSession.get()
             message = session.format_request(self.src_currency, self.dest_currency)
             response_data = session.get_response(message)
-            self.currency_data['currency_value'] = response_data
+            self.currency_data['dest_currency_value'] = response_data['dest_currency_value']
+            self.currency_data['info'] = response_data['info']
+            self.currency_data['disclaimer'] = response_data['disclaimer']
+            self.currency_data['src_currency'] = self.src_currency
+            self.currency_data['dest_currency'] = self.dest_currency
 
             task.return_value(self.currency_data)
         except Exception as e:
@@ -99,7 +110,7 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
             self.dest_currency_selector.set_selected(self.dest_currency)
 
     def _currency_names_func(self, code):
-        return CODES[code]
+        return CODES[code]['name']
 
     def save_settings(self, *args, **kwargs):
         self.settings.set_string('src-currency', self.src_currency)
@@ -108,46 +119,35 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
     @Gtk.Template.Callback()
     def _on_src_currency_changed(self, _obj, _param):
         code = self.src_currency_selector.selected
-        if code != self.src_currency:
-            self.src_currency = code
-            if self.src_currency != self.dest_currency:
-                self.stack.set_visible_child_name("loading")
-                finish_callback = lambda self, task, nothing: self.finish_callback()
-                task = Gio.Task.new(self, None, finish_callback, None)
-                task.run_in_thread(self._thread_cb)
+        self.src_currency = code
         self.save_settings()
+        self.load_data()
     
     @Gtk.Template.Callback()
     def _on_dest_currency_changed(self, _obj, _param):
         code = self.dest_currency_selector.selected
-        if code != self.dest_currency:
-            self.dest_currency = code
-            self.stack.set_visible_child_name("loading")
-            finish_callback = lambda self, task, nothing: self.finish_callback()
-            task = Gio.Task.new(self, None, finish_callback, None)
-            task.run_in_thread(self._thread_cb)
+        self.dest_currency = code
         self.save_settings()
+        self.load_data()
 
-    @Gtk.Template.Callback()
-    def _on_from_value_changed(self, _entry):
-        entry_text = _entry.get_text()
-        self._calculate(entry_text)
+    def _on_src_currency_entry_changed(self, _entry):
+        text = _entry.get_text()
+        digits_only = re.sub(r'[^\d.]', '', text)
+        formatted_str = f"{CODES[self.src_currency]['symbol']} {digits_only}"
+        _entry.handler_block_by_func(self._on_src_currency_entry_changed)
+        _entry.set_text(formatted_str)
+        _entry.handler_unblock_by_func(self._on_src_currency_entry_changed)
+        _entry.set_position(len(text) + 2)
 
-    def _calculate(self, value):
-        if self.is_float(value) and self.is_float(self.currency_data["to_value"]):
-            from_value = float(value)
-            self.currency_data["from_value"] = from_value
-            if not self.currency_data["to_value"] == None:
-                from_value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
-            else:
-                from_value = self.currency_data["to_value"]
+    def _calculate(self):
+        src_value = re.sub(r'[^\d.]', '', self.src_currency_entry.get_text())
+        if self.is_number(src_value) and self.is_number(self.currency_data['dest_currency_value']):
+            self.currency_data['src_currency_value'] = float(src_value)
+            convertion_value = float(self.currency_data["src_currency_value"]) * float(self.currency_data["dest_currency_value"])
+            self.currency_data['convertion_value'] = convertion_value
+            self.load_data()
 
-            if self.from_value.get_text() != value:
-                self.from_value.set_text(value)
-            self.to_value.set_text(str("{:,}".format(from_value)))
-
-
-    def is_float(self, v):
+    def is_number(self, v):
         if not v:
             return False
         try:
@@ -156,10 +156,10 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         except ValueError:
             return False
 
-    @Gtk.Template.Callback()
-    def _invert_currencies(self, _button):
-        src = self.src_currency
-        dest = self.dest_currency
-        self.src_currency_selector.set_selected(dest)
-        self.dest_currency_selector.set_selected(src)
+    # @Gtk.Template.Callback()
+    # def _invert_currencies(self, _button):
+    #     src = self.src_currency
+    #     dest = self.dest_currency
+    #     self.src_currency_selector.set_selected(dest)
+    #     self.dest_currency_selector.set_selected(src)
 

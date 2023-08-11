@@ -67,14 +67,14 @@ class CurrencySelector(Adw.Bin):
     def _on_selected_changed(self, _self, _pspec):
         if self.model is not None:
             self.model.set_selected(self.selected)
-            self.label.props.label = self._get_currency_name(self.selected)
+            self.label.props.label = self.selected
             self.insight.props.label = ''
 
     def set_selected(self, code):
         if self.model is not None:
             self.selected = code
             self.model.set_selected(self.selected)
-            self.label.props.label = self._get_currency_name(self.selected)
+            self.label.props.label = self.selected
             self.insight.props.label = ''
 
 
@@ -96,7 +96,7 @@ class CurrencySelector(Adw.Bin):
   
     def filter_currencies(self, item):
         search = self.search.get_text()
-        return bool(re.search(search, item.name, re.IGNORECASE))
+        return bool(re.search(search, f'{item} - {item.name}', re.IGNORECASE))
 
     def sort_currencies(self, currency_a, currency_b, _data):
         a = currency_a.name.lower()

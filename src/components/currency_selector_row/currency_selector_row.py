@@ -18,6 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import GObject, Gtk
+from ...define import CODES
 
 @Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/components/currency_selector_row/currency_selector_row.ui')
 class CurrencySelectorRow(Gtk.ListBoxRow):
@@ -29,7 +30,7 @@ class CurrencySelectorRow(Gtk.ListBoxRow):
     def __init__(self, currency):
         super().__init__()
         self.currency = currency
-        self.name.props.label = self.currency.name
+        self.name.props.label = f'{CODES[str(self.currency)]["flag"]}   {self.currency} - {self.currency.name}'
 
         self.currency.bind_property(
             'selected',

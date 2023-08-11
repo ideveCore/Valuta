@@ -11,6 +11,5 @@
   <gresource prefix="/io/github/idevecore/CurrencyConverter/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="arrow1-down-symbolic.svg">assets/icons/arrow1-down-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="arrow1-up-symbolic.svg">assets/icons/arrow1-up-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="dark-mode-symbolic.svg">assets/icons/dark-mode-symbolic.svg</file>
   </gresource>
 </gresources>
