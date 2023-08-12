@@ -17,11 +17,11 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gio, Gtk, Pango
+from gi.repository import Adw, Gio, Gtk
 import gettext, re
 from .components import CurrencySelector
 from .components import CurrencyConverterShortcutsWindow
-from .utils import Api, CurrenciesListModel, SoupSession
+from .utils import CurrenciesListModel, SoupSession
 from .define import APP_ID, CODES
 
 gettext.install('currencyconverter', '@localedir@')
@@ -46,6 +46,7 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
     def __init__(self, src_currency_value, **kwargs):
         super().__init__(**kwargs)
         self.set_help_overlay(CurrencyConverterShortcutsWindow())
+        self.is_loading = True
         self.currency_data = {
             "src_currency_value": 1,
             "dest_currency_value": None,
@@ -55,7 +56,6 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
             "disclaimer": None,
             "convertion_value": None,
         }
-        self.is_loading = True
         self.launch_src_currency_value = src_currency_value
         self.src_currency_model = CurrenciesListModel(self._currency_names_func)
         self.dest_currency_model = CurrenciesListModel(self._currency_names_func)
@@ -68,6 +68,8 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         self.load_settings(APP_ID)
         self.connect('unrealize', self.save_settings)
         self.src_currency_entry.connect('changed', self._on_src_currency_entry_changed)
+        if self.launch_src_currency_value:
+            self.src_currency_entry.set_text(self.launch_src_currency_value)
         task = Gio.Task.new(self, None, self.finish_callback, None)
         task.run_in_thread(self._thread_cb)
         self.convert_button.connect('clicked', lambda button: self._convert_currencies())

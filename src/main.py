@@ -72,7 +72,9 @@ class CurrencyconverterApplication(Adw.Application):
 
         if self.window is not None:
             self.window.load_settings(APP_ID)
-            self.window._calculate(src_currency_value)
+            self.window.src_currency_entry.set_text(src_currency_value)
+            self.window.load_data()
+            self.window._convert_currencies()
         else:
             self.launch_src_currency_value = src_currency_value
 

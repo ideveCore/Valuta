@@ -18,7 +18,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-
+import gettext
 
 APP_ID = "@APP_ID@"
 VERSION = '@VERSION@'
@@ -29,6 +29,8 @@ SUFFIX = " (Devel)" if IS_DEVEL else ""
 BASE_URL = 'https://www.google.com/search?q=convert'
 BASE_URL_LANG_PREFIX = '&hl=en&lr=lang_en'
 
+gettext.install('currencyconverter', '@localedir@')
+_ = gettext.gettext
 
 #The symbols is in Latin mode (based on dataset from wikipedia)
 

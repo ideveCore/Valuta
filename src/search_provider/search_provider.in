@@ -11,9 +11,11 @@ import dbus
 import dbus.service
 from dbus.mainloop.glib import DBusGMainLoop
 
+import gi
+gi.require_version('Soup', '3.0')
 from gi.repository import GLib, Gio
-from google_currency import convert
 from currencyconverter.define import CODES
+from currencyconverter.utils import SoupSession
 
 SEARCH_BUS_NAME = 'org.gnome.Shell.SearchProvider2'
 SBN = dict(dbus_interface=SEARCH_BUS_NAME)
@@ -36,8 +38,8 @@ class SearchService(dbus.service.Object):
 
 
         self.currency_data = {
-            "from_value": 1,
-            "to_value": None,
+            "src_currency_value": 1,
+            "dest_currency_value": None,
             "currency_value": None,
         }
         self.settings = Gio.Settings.new('@APP_ID@')
@@ -50,7 +52,7 @@ class SearchService(dbus.service.Object):
     def _on_currencies_changed(self, widget, state):
         self.src_currency = self.settings.get_string('src-currency')
         self.dest_currency = self.settings.get_string('dest-currency')
-        self.currency_data['to_value'] = None
+        self.currency_data['dest_currency_value'] = None
         
     def _is_number(self, value):
         if not value:
@@ -64,14 +66,15 @@ class SearchService(dbus.service.Object):
     def _converter(self, src_currency_value):
         if self.src_currency != self.dest_currency:
             error_id = ERROR_PREFIX + src_currency_value
-            if not self.currency_data['to_value']:
-              data = convert(self.src_currency.lower(), self.dest_currency.lower(), 1)
-              amount = json.loads(data)["amount"]
-              self.currency_data['to_value'] = amount
+            if not self.currency_data['dest_currency_value']:
+                session = SoupSession.get()
+                message = session.format_request(self.src_currency, self.dest_currency)
+                response_data = session.get_response(message)
+                self.currency_data['dest_currency_value'] = response_data['dest_currency_value']
 
-            if self.currency_data['to_value']:
+            if self.currency_data['dest_currency_value']:
                 try:
-                    dest_currency_value = float(self.currency_data["to_value"]) * float(self.currency_data["from_value"])
+                    dest_currency_value = float(self.currency_data["dest_currency_value"]) * float(self.currency_data["src_currency_value"])
                     self.dest_currencies[src_currency_value] = str(dest_currency_value)
                     return src_currency_value
                 except Exception as exc:
@@ -85,7 +88,7 @@ class SearchService(dbus.service.Object):
     def GetInitialResultSet(self, terms):
         value = ' '.join(terms)
         if self._is_number(value):
-            self.currency_data['from_value'] = float(value)
+            self.currency_data['src_currency_value'] = float(value)
             converter_id = self._converter(value)
             results = [converter_id]
             if not converter_id.startswith(ERROR_PREFIX):
@@ -100,14 +103,14 @@ class SearchService(dbus.service.Object):
                         self.settings.set_string('src-currency', value_splited[0])
                         self.settings.set_string('dest-currency', value_splited[2])
                         self._on_currencies_changed('', '')
-                        self.currency_data['from_value'] = float(value_splited[3])
+                        self.currency_data['src_currency_value'] = float(value_splited[3])
                         converter_id = self._converter(value)
                         results = [converter_id]
                         if not converter_id.startswith(ERROR_PREFIX):
                             results.append(CLIPBOARD_PREFIX + value)
                         return results
                     else:
-                        self.currency_data['from_value'] = float(value_splited[3])
+                        self.currency_data['src_currency_value'] = float(value_splited[3])
                         converter_id = self._converter(value)
                         results = [converter_id]
                         if not converter_id.startswith(ERROR_PREFIX):
