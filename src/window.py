@@ -18,12 +18,14 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Adw, Gio, Gtk, Pango
-
+import gettext, re
 from .components import CurrencySelector
 from .components import CurrencyConverterShortcutsWindow
 from .utils import Api, CurrenciesListModel, SoupSession
-import re
 from .define import APP_ID, CODES
+
+gettext.install('currencyconverter', '@localedir@')
+_ = gettext.gettext
 
 @Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/window.ui')
 class CurrencyConverterWindow(Adw.ApplicationWindow):
@@ -34,8 +36,10 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
     dest_currency_label = Gtk.Template.Child()
     src_currency_entry = Gtk.Template.Child()
     convert_button = Gtk.Template.Child()
+    convert_button_spinner = Gtk.Template.Child()
     disclaimer = Gtk.Template.Child()
     info = Gtk.Template.Child()
+    overlay = Gtk.Template.Child()
     src_currencies = []
     dest_currencies = []
 
@@ -51,6 +55,7 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
             "disclaimer": None,
             "convertion_value": None,
         }
+        self.is_loading = True
         self.launch_src_currency_value = src_currency_value
         self.src_currency_model = CurrenciesListModel(self._currency_names_func)
         self.dest_currency_model = CurrenciesListModel(self._currency_names_func)
@@ -60,15 +65,27 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         self.dest_currency_model.set_currencies(CODES)
         self.src_currency = None
         self.dest_currency = None
-        self.connect('unrealize', self.save_settings)
         self.load_settings(APP_ID)
+        self.connect('unrealize', self.save_settings)
         self.src_currency_entry.connect('changed', self._on_src_currency_entry_changed)
-        self.load_data()
-        finish_callback = lambda self, task, nothing: self.finish_callback()
-        task = Gio.Task.new(self, None, finish_callback, None)
+        task = Gio.Task.new(self, None, self.finish_callback, None)
         task.run_in_thread(self._thread_cb)
-        self.convert_button.connect('clicked', lambda button: self._calculate())
-        self.src_currency_entry.connect('entry-activated', lambda entry: self._calculate())
+        self.convert_button.connect('clicked', lambda button: self._convert_currencies())
+        self.src_currency_entry.connect('entry-activated', lambda entry: self._convert_currencies())
+        action_try_again = Gio.SimpleAction.new(
+            name = "try_again",
+        )
+        
+        action_try_again.connect('activate', self.try_again_get_data)
+        self.add_action(action_try_again)
+
+    def try_again_get_data(self, _target, _data):
+        self.convert_button.set_sensitive(False)
+        spinner = Gtk.Spinner.new()
+        self.convert_button.set_child(spinner)
+        spinner.set_spinning(True)
+        task = Gio.Task.new(self, None, self.finish_callback, None)
+        task.run_in_thread(self._thread_cb)
 
 
     def load_data(self):
@@ -82,12 +99,43 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
             self.info.set_text(self.currency_data['info'])
             self.disclaimer.set_uri(self.currency_data['disclaimer'])
 
-    def finish_callback(self):
-        self._calculate()
+    def finish_callback(self, task, nothing, data):
+        self.is_loading = False
+        self.convert_button.set_sensitive(True)
+        self.convert_button.set_label(_('Convert'))
+
+        if self.currency_data['dest_currency_value']:
+            self._convert_currencies()
+        else:
+            toast = Adw.Toast.new(
+                title = 'Error in get currencies data',
+            )
+            toast.props.button_label = 'Try again'
+            toast.props.priority = Adw.ToastPriority.HIGH
+            toast.set_action_name('win.try_again')
+            self.overlay.add_toast(toast);
+
+
+    def create_dialog_error(self):
+        dialog = Adw.MessageDialog(
+            heading = 'Error in get currencies data',
+            body = 'Error in get currencies from server, verify your connection and try again!',
+            modal = True,
+            transient_for = self,
+        )
+        dialog.add_response("exit", "Exit");
+        dialog.add_response("try_again", "Try again");
+        dialog.set_response_appearance("try_again", Adw.ResponseAppearance.SUGGESTED);
+        dialog.connect("response", lambda self, response: 
+            print(response)
+        )
+        dialog.present()
+
 
     @staticmethod
     def _thread_cb (task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
         try:
+            self.is_loading = True
             session = SoupSession.get()
             message = session.format_request(self.src_currency, self.dest_currency)
             response_data = session.get_response(message)
@@ -99,6 +147,8 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
 
             task.return_value(self.currency_data)
         except Exception as e:
+            print(e)
+            self.is_loading = False
             task.return_value(e)
 
     def load_settings(self, id):
@@ -108,6 +158,7 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         if self.src_currency is not None:
             self.src_currency_selector.set_selected(self.src_currency)
             self.dest_currency_selector.set_selected(self.dest_currency)
+        self.load_data()
 
     def _currency_names_func(self, code):
         return CODES[code]['name']
@@ -139,13 +190,23 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         _entry.handler_unblock_by_func(self._on_src_currency_entry_changed)
         _entry.set_position(len(text) + 2)
 
-    def _calculate(self):
-        src_value = re.sub(r'[^\d.]', '', self.src_currency_entry.get_text())
-        if self.is_number(src_value) and self.is_number(self.currency_data['dest_currency_value']):
-            self.currency_data['src_currency_value'] = float(src_value)
-            convertion_value = float(self.currency_data["src_currency_value"]) * float(self.currency_data["dest_currency_value"])
-            self.currency_data['convertion_value'] = convertion_value
-            self.load_data()
+    def _convert_currencies(self):
+        if not self.is_loading:
+            if self.src_currency == self.currency_data['src_currency'] and self.dest_currency == self.currency_data['dest_currency']:
+                src_value = re.sub(r'[^\d.]', '', self.src_currency_entry.get_text())
+                if self.is_number(src_value) and self.is_number(self.currency_data['dest_currency_value']):
+                    self.currency_data['src_currency_value'] = float(src_value)
+                    convertion_value = float(self.currency_data["src_currency_value"]) * float(self.currency_data["dest_currency_value"])
+                    self.currency_data['convertion_value'] = convertion_value
+                    self.load_data()
+            else:
+                self.convert_button.set_sensitive(False)
+                spinner = Gtk.Spinner.new()
+                self.convert_button.set_child(spinner)
+                spinner.set_spinning(True)
+
+                task = Gio.Task.new(self, None, self.finish_callback, None)
+                task.run_in_thread(self._thread_cb)
 
     def is_number(self, v):
         if not v:
@@ -156,10 +217,11 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         except ValueError:
             return False
 
-    # @Gtk.Template.Callback()
-    # def _invert_currencies(self, _button):
-    #     src = self.src_currency
-    #     dest = self.dest_currency
-    #     self.src_currency_selector.set_selected(dest)
-    #     self.dest_currency_selector.set_selected(src)
-
+    @Gtk.Template.Callback()
+    def _switch_currencies(self, _button):
+        src_currency = self.src_currency
+        dest_currency = self.dest_currency
+        self.src_currency = dest_currency
+        self.dest_currency = src_currency
+        self.save_settings()
+        self.load_settings(APP_ID)

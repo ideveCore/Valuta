@@ -33,14 +33,13 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
             spacing: 6;
             
             Gtk.Button {
+              styles ["flat"]
               valign: center;
-            
               child: Adw.ButtonContent {
                 icon-name: "emblem-synchronizing-symbolic";
                 label: "Switch";
               };
-              
-              styles ["flat"]
+              clicked => _switch_currencies();
             }
           };
           Adw.ActionRow src_currency {
@@ -63,10 +62,15 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
         }
         Gtk.Button convert_button {
           styles ["pill", "suggested-action"]
+          sensitive: false;
           halign: center;
-          label: "Convert";
+          child: 
+            Spinner convert_button_spinner {
+            spinning: true;
+          };
         }
         Label dest_currency_label {
+          styles ['title-1']
           label: "£ 10";
         }
         Box {
@@ -81,6 +85,7 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
             label: _("disclaimer");
           }
         }
+        Adw.ToastOverlay overlay {}
       }
     }
   }
