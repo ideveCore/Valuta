@@ -5,7 +5,10 @@
     <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector_row/currency_selector_row.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector/currency_selector.ui</file>
-    <file preprocess="xml-stripblanks">components/preferences/preferences.ui</file>
+    <!-- ================================================== -->
+    <!-- ====== This component temporarily is unused ====== -->
+    <!-- <file preprocess="xml-stripblanks">components/preferences/preferences.ui</file> -->
+    <!-- ================================================== -->
     <file preprocess="xml-stripblanks">components/shortcuts/shortcuts.ui</file>
     <file preprocess="xml-stripblanks">components/theme_switcher/theme_switcher.ui</file>
   </gresource>
