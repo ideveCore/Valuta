@@ -50,14 +50,12 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
             title: _('From currency');
             .CurrencySelector src_currency_selector {
               styles ["m-e"]
-              notify::selected => _on_src_currency_changed();
             }
           }
           Adw.ActionRow dest_currency {
             title: _('To currency');
             .CurrencySelector dest_currency_selector {
               styles ["m-e"]
-              notify::selected => _on_dest_currency_changed();
             }
           }
           Adw.EntryRow src_currency_entry {

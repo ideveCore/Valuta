@@ -71,12 +71,15 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         self.load_settings(APP_ID)
         self.connect('unrealize', self.save_settings)
         self.src_currency_entry.connect('changed', self._on_src_currency_entry_changed)
-        if self.launch_src_currency_value:
-            self.src_currency_entry.set_text(self.launch_src_currency_value)
-        task = Gio.Task.new(self, None, self.finish_callback, None)
-        task.run_in_thread(self._thread_cb)
         self.convert_button.connect('clicked', lambda button: self._convert_currencies())
         self.src_currency_entry.connect('entry-activated', lambda entry: self._convert_currencies())
+        self.src_currency_selector.connect('notify::selected', self.on_currency_selectors_changed)
+        self.dest_currency_selector.connect('notify::selected', self.on_currency_selectors_changed)
+        task = Gio.Task.new(self, None, self.finish_callback, None)
+        task.run_in_thread(self._thread_cb)
+
+        if self.launch_src_currency_value:
+            self.src_currency_entry.set_text(self.launch_src_currency_value)
         action_try_again = Gio.SimpleAction.new(
             name = "try_again",
         )
@@ -172,19 +175,20 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         self.settings.set_string('src-currency', self.src_currency)
         self.settings.set_string('dest-currency', self.dest_currency)
 
-    @Gtk.Template.Callback()
-    def _on_src_currency_changed(self, _obj, _param):
-        code = self.src_currency_selector.selected
-        self.src_currency = code
+    def on_currency_selectors_changed(self, _obj, _param):
+        print('ok')
+        src_code = self.src_currency_selector.selected
+        dest_code = self.dest_currency_selector.selected
+        self.src_currency = src_code
+        self.dest_currency = dest_code
         self.save_settings()
         self.load_data()
-    
-    @Gtk.Template.Callback()
-    def _on_dest_currency_changed(self, _obj, _param):
-        code = self.dest_currency_selector.selected
-        self.dest_currency = code
-        self.save_settings()
-        self.load_data()
+        self.convert_button.set_sensitive(False)
+        spinner = Gtk.Spinner.new()
+        self.convert_button.set_child(spinner)
+        spinner.set_spinning(True)
+        task = Gio.Task.new(self, None, self.finish_callback, None)
+        task.run_in_thread(self._thread_cb)
 
     def _on_src_currency_entry_changed(self, _entry):
         text = _entry.get_text()
@@ -209,7 +213,6 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
                 spinner = Gtk.Spinner.new()
                 self.convert_button.set_child(spinner)
                 spinner.set_spinning(True)
-
                 task = Gio.Task.new(self, None, self.finish_callback, None)
                 task.run_in_thread(self._thread_cb)
 
@@ -224,9 +227,11 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
 
     @Gtk.Template.Callback()
     def _switch_currencies(self, _button):
+        self.src_currency_selector.handler_block_by_func(self.on_currency_selectors_changed)
         src_currency = self.src_currency
         dest_currency = self.dest_currency
         self.src_currency = dest_currency
         self.dest_currency = src_currency
         self.save_settings()
         self.load_settings(APP_ID)
+        self.src_currency_selector.handler_unblock_by_func(self.on_currency_selectors_changed)
