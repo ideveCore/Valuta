@@ -25,7 +25,7 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Adw, GObject, Gio, GLib, Gtk
 from .window import CurrencyConverterWindow
-from .components import CurrencyConverterPreferences
+# from .components import CurrencyConverterPreferences
 from .define import APP_ID, VERSION, RES_PATH
 
 class CurrencyconverterApplication(Adw.Application):
