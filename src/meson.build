@@ -28,8 +28,12 @@ blueprints = custom_target('blueprints',
   input: files(
     'components/currency_selector_row/currency_selector_row.blp',
     'components/currency_selector/currency_selector.blp',
-    'components/preferences/preferences.blp',
+    # ==================================================
+    # ====== This component temporarily is unused ======
+    #'components/preferences/preferences.blp',
+    # ==================================================
     'components/shortcuts/shortcuts.blp',
+    'components/theme_switcher/theme_switcher.blp',
     'window.blp',
   ),
   output: '.',
@@ -48,7 +52,11 @@ gnome.compile_resources('currencyconverter',
 # ===== Python sources =====
 sources = [
   './components/currency_selector/currency_selector.py',
-  './components/preferences/preferences.py',
+  # ==================================================
+  # ====== This component temporarily is unused ======
+  # './components/preferences/preferences.py',
+  # ==================================================
+  'components/theme_switcher/theme_switcher.py',
   '__init__.py',
   'utils.py',
   'main.py',

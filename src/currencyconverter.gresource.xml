@@ -7,6 +7,7 @@
     <file preprocess="xml-stripblanks">components/currency_selector/currency_selector.ui</file>
     <file preprocess="xml-stripblanks">components/preferences/preferences.ui</file>
     <file preprocess="xml-stripblanks">components/shortcuts/shortcuts.ui</file>
+    <file preprocess="xml-stripblanks">components/theme_switcher/theme_switcher.ui</file>
   </gresource>
   <gresource prefix="/io/github/idevecore/CurrencyConverter/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="arrow1-down-symbolic.svg">assets/icons/arrow1-down-symbolic.svg</file>

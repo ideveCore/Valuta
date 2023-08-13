@@ -20,7 +20,7 @@
 from gi.repository import Adw, Gio, Gtk
 import gettext, re
 from .components import CurrencySelector
-from .components import CurrencyConverterShortcutsWindow
+from .components import CurrencyConverterShortcutsWindow, ThemeSwitcher
 from .utils import CurrenciesListModel, SoupSession
 from .define import APP_ID, CODES
 
@@ -39,12 +39,15 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
     convert_button_spinner = Gtk.Template.Child()
     disclaimer = Gtk.Template.Child()
     info = Gtk.Template.Child()
+    menu_btn = Gtk.Template.Child()
     overlay = Gtk.Template.Child()
     src_currencies = []
     dest_currencies = []
 
     def __init__(self, src_currency_value, **kwargs):
         super().__init__(**kwargs)
+        theme_switcher = ThemeSwitcher()
+        self.menu_btn.props.popover.add_child(theme_switcher, 'theme')
         self.set_help_overlay(CurrencyConverterShortcutsWindow())
         self.is_loading = True
         self.currency_data = {

@@ -44,7 +44,6 @@ class CurrencyconverterApplication(Adw.Application):
         self.add_main_option('src-currency-value', b't', GLib.OptionFlags.NONE,
                              GLib.OptionArg.STRING, 'Value to converte currencies', None)
         self.setup_actions()
-        self.load_theme()
 
     def do_activate(self):
         """Called when the application is activated.
@@ -87,7 +86,10 @@ class CurrencyconverterApplication(Adw.Application):
     def setup_actions(self):
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
-        self.create_action('preferences', self.on_preferences_action, ['<Primary>comma'])
+        # ==================================================
+        # ====== This component temporarily is unused ======
+        # self.create_action('preferences', self.on_preferences_action, ['<Primary>comma'])
+        # ==================================================
         self.set_accels_for_action('win.show-help-overlay', ['<Primary>question'])
 
     def on_about_action(self, widget, _):
@@ -116,15 +118,6 @@ class CurrencyconverterApplication(Adw.Application):
 
     def on_preferences_action(self, widget, _):
         CurrencyConverterPreferences().present()
-
-    def load_theme(self):
-        style_manager = Adw.StyleManager.get_default()
-        if self.settings.get_string('theme') == 'default':
-            style_manager.set_color_scheme(Adw.ColorScheme.DEFAULT)
-        elif self.settings.get_string('theme') == 'dark':
-            style_manager.set_color_scheme(Adw.ColorScheme.FORCE_DARK)
-        else:
-            style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.

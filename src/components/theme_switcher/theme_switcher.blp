@@ -1,0 +1,43 @@
+using Gtk 4.0;
+using Adw 1;
+
+template ThemeSwitcher : Gtk.Box {
+  hexpand: true;
+  
+  styles ['themeswitcher',]
+
+  Gtk.Box box {
+    hexpand: true;
+    orientation: horizontal;
+    spacing: 12;
+
+    Gtk.CheckButton system {
+      styles ['theme-selector', 'system']
+      visible: bind ThemeSwitcher.show-system;
+      hexpand: true;
+      halign: center;
+      focus-on-click: false;
+      tooltip-text: _("Follow sytem Style");
+      notify::active => _on_color_scheme_changed();
+    }
+    Gtk.CheckButton light {
+      styles ['theme-selector', 'light']
+      hexpand: true;
+      halign: center;
+      group: system;
+      focus-on-click: false;
+      tooltip-text: _("Light Style");
+      notify::active => _on_color_scheme_changed();
+    }
+
+    CheckButton dark {
+      styles ['theme-selector', 'dark']
+      hexpand: true;
+      halign: center;
+      group: system;
+      focus-on-click: false;
+      tooltip-text: _("Dark Style");
+      notify::active => _on_color_scheme_changed();
+    }
+  }
+}

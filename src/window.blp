@@ -7,7 +7,7 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
   title: _("Currency Converter");
 
   Box {
-  orientation: vertical;
+    orientation: vertical;
     [titlebar]
     Adw.HeaderBar {
       styles [
@@ -15,13 +15,17 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
       ]
 
       [end]
-      MenuButton {
+      MenuButton menu_btn {
         icon-name: "open-menu-symbolic";
         menu-model: primary_menu;
       }
     }
     Adw.Clamp {
-      orientation: vertical;
+      maximum-size: 400;
+      vexpand: true;
+      halign: center;
+      valign: center;
+
       Box {
         orientation: vertical;
         spacing: 24;
@@ -94,10 +98,10 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
 menu primary_menu {
   section {
     item {
-      label: _("_Preferences");
-      action: "app.preferences";
+      custom: "theme";
     }
-
+  }
+  section {
     item {
       label: _("Keyboard Shortcuts");
       action: "win.show-help-overlay";

@@ -17,6 +17,9 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+# ==================================================
+# ====== This component temporarily is unused ======
+# ==================================================
 
 from gi.repository import Adw, Gtk, Gio
 from currencyconverter.define import APP_ID
