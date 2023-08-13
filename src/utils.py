@@ -19,17 +19,10 @@
 
 from __future__ import annotations
 from typing import Union, Any, Dict
-import json
-import logging
-import re
-import gi
+import gi, json, logging, re
 gi.require_version('Soup', '3.0')
 from gi.repository import Gio, GObject, GLib, Soup
 from .define import CODES, BASE_URL, BASE_URL_LANG_PREFIX
-
-def get_currency_name(code):
-    name = gettext(CODES.get(code, ''))
-    return name if name else None
 
 class CurrencyObject(GObject.Object):
     __gtype_name__ = 'CurrencyObject'
@@ -50,7 +43,7 @@ class CurrencyObject(GObject.Object):
 class CurrenciesListModel(GObject.GObject, Gio.ListModel):
     __gtype_name__ = 'CurrenciesListModel'
 
-    def __init__(self, names_func=get_currency_name):
+    def __init__(self, names_func):
         super().__init__()
 
         self.names_func = names_func
@@ -71,8 +64,6 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
     def set_currencies(self, currencies, auto=False):
         removed = len(self.currencies)
         self.currencies.clear()
-        if auto:
-            self.currencies.append(CurrencyObject('auto', _('Auto')))
         for code in currencies:
             self.currencies.append(CurrencyObject(code, self.names_func(code)))
         self.items_changed(0, removed, len(self.currencies))

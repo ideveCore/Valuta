@@ -51,13 +51,13 @@ gnome.compile_resources('currencyconverter',
 
 # ===== Python sources =====
 sources = [
+  '__init__.py',
   './components/currency_selector/currency_selector.py',
   # ==================================================
   # ====== This component temporarily is unused ======
   # './components/preferences/preferences.py',
   # ==================================================
   'components/theme_switcher/theme_switcher.py',
-  '__init__.py',
   'utils.py',
   'main.py',
   'window.py',

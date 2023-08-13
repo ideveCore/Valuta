@@ -18,14 +18,11 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Adw, Gio, Gtk
-import gettext, re
+import re
 from .components import CurrencySelector
 from .components import CurrencyConverterShortcutsWindow, ThemeSwitcher
 from .utils import CurrenciesListModel, SoupSession
 from .define import APP_ID, CODES
-
-gettext.install('currencyconverter', '@localedir@')
-_ = gettext.gettext
 
 @Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/window.ui')
 class CurrencyConverterWindow(Adw.ApplicationWindow):
@@ -169,7 +166,8 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         self.load_data()
 
     def _currency_names_func(self, code):
-        return CODES[code]['name']
+        name = gettext(CODES.get(code, '')['name'])
+        return name if name else None
 
     def save_settings(self, *args, **kwargs):
         self.settings.set_string('src-currency', self.src_currency)
