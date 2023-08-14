@@ -157,6 +157,16 @@ class SoupSession(Soup.Session):
         except GLib.GError as exc:
             return exc.message
 
+    def get_raw_value(self, message: Soup.Message) -> Union[Soup._formated_response, Any]:
+        response = None
+        try:
+            response = self.send_and_read(message, None)
+            data = response.get_data()
+            return self.get_currency_raw_value(data)
+        except GLib.GError as exc:
+            return exc.message
+
+
     @staticmethod
     def get_currency_value(data):
         data = data.decode('utf-8')
@@ -168,6 +178,20 @@ class SoupSession(Soup.Session):
                 SoupSession._default_response["amount"]    = converted_currency
                 SoupSession._default_response["converted"] = True
                 return SoupSession.format_response(SoupSession._default_response)
+            else:
+                raise Exception(gettext("Unable to convert currency, failed to fetch results from Google"))
+        except Exception as error:
+            return SoupSession._default_response
+
+    @staticmethod
+    def get_currency_raw_value(data):
+        data = data.decode('utf-8')
+        try:
+            results = re.findall(f'[\d*\,]*\.\d* {CODES[SoupSession._dest_currency]["name"]}', data)
+            if results.__len__() > 0:
+                converted_amount_str = results[0]
+                converted_currency = re.findall('[\d*\,]*\.\d*', converted_amount_str)[0]
+                return converted_currency
             else:
                 raise Exception(gettext("Unable to convert currency, failed to fetch results from Google"))
         except Exception as error:

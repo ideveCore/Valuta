@@ -69,8 +69,8 @@ class SearchService(dbus.service.Object):
             if not self.currency_data['dest_currency_value']:
                 session = SoupSession.get()
                 message = session.format_request(self.src_currency, self.dest_currency)
-                response_data = session.get_response(message)
-                self.currency_data['dest_currency_value'] = response_data['dest_currency_value']
+                response_data = session.get_raw_value(message)
+                self.currency_data['dest_currency_value'] = response_data
 
             if self.currency_data['dest_currency_value']:
                 try:
