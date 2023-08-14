@@ -1,47 +1,76 @@
-pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-moduledir = join_paths(pkgdatadir, 'currencyconverter')
-gnome = import('gnome')
-
-define = configuration_data()
-
-define.set('APPID', application_id)
-define.set('PROFILE', profile)
-define.set('VERSION', meson.project_version())
-define.set('PYTHON', python.find_installation('python3').full_path())
-
-configure_file(
-  input: 'define.in',
-  output: 'define.py',
-  configuration: define,
-  install: true,
-  install_dir: moduledir
-)
-
 python = import('python')
 
-conf = configuration_data()
-conf.set('PYTHON', python.find_installation('python3').path())
-conf.set('VERSION', meson.project_version())
-conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
-conf.set('pkgdatadir', pkgdatadir)
-
+# ===== Generate Currency Convert bin ===== 
 configure_file(
   input: 'currencyconverter.in',
   output: 'currencyconverter',
   configuration: conf,
   install: true,
   install_dir: get_option('bindir'),
-  install_mode: 'r-xr--r--'
 )
 
-currencyconverter_sources = [
+# ===== Generate define module
+configure_file(
+  input: 'define.in',
+  output: 'define.py',
+  configuration: conf,
+  install: true,
+  install_dir: moduledir
+)
+
+launcher = join_paths(meson.project_build_root(), 'src', meson.project_name())
+run_target('run',
+  command: [launcher]
+)
+
+# ===== Blueprint compiler =====
+blueprints = custom_target('blueprints',
+  input: files(
+    'components/currency_selector_row/currency_selector_row.blp',
+    'components/currency_selector/currency_selector.blp',
+    # ==================================================
+    # ====== This component temporarily is unused ======
+    #'components/preferences/preferences.blp',
+    # ==================================================
+    'components/shortcuts/shortcuts.blp',
+    'components/theme_switcher/theme_switcher.blp',
+    'window.blp',
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
+
+# ===== Compile Currence Converter gresource =====
+gnome.compile_resources('currencyconverter',
+  'currencyconverter.gresource.xml',
+  dependencies: blueprints,
+  gresource_bundle: true,
+  install: true,
+  install_dir: pkgdatadir,
+)
+
+# ===== Python sources =====
+sources = [
   '__init__.py',
-  'api.py',
+  './components/currency_selector/currency_selector.py',
+  # ==================================================
+  # ====== This component temporarily is unused ======
+  # './components/preferences/preferences.py',
+  # ==================================================
+  'components/theme_switcher/theme_switcher.py',
+  'utils.py',
   'main.py',
   'window.py',
-  'components/currency_selector.py',
-  'components/preferences.py',
 ]
 
-install_data(currencyconverter_sources, install_dir: moduledir)
+# ===== Install python sources =====
+install_data(sources, install_dir: moduledir)
+
+# ===== Install components sources =====
 install_subdir('components', install_dir: moduledir)
+
+# ===== Install assets sources =====
+install_subdir('assets', install_dir: moduledir)
+
+# ===== Install provider =====
+subdir('search_provider')

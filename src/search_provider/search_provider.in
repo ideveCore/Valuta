@@ -1,0 +1,193 @@
+#!@PYTHON@
+# Copyright 2023 Ideve Core
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+import os
+import logging
+import gettext
+import json
+
+import dbus
+import dbus.service
+from dbus.mainloop.glib import DBusGMainLoop
+
+import gi
+gi.require_version('Soup', '3.0')
+from gi.repository import GLib, Gio
+from currencyconverter.define import CODES
+from currencyconverter.utils import SoupSession
+
+SEARCH_BUS_NAME = 'org.gnome.Shell.SearchProvider2'
+SBN = dict(dbus_interface=SEARCH_BUS_NAME)
+
+CLIPBOARD_PREFIX = 'copy-to-clipboard'
+ERROR_PREFIX = 'converter-error'
+
+gettext.install('currencyconverter', '@localedir@')
+_ = gettext.gettext
+
+class SearchService(dbus.service.Object):
+    bus_name = '@APP_ID@.SearchProvider'
+    object_path = "/" + bus_name.replace(".", "/")
+
+    def __init__(self):
+        self.session_bus = dbus.SessionBus()
+        self.is_with_argument=False
+        bus_name = dbus.service.BusName(self.bus_name, bus=self.session_bus)
+        dbus.service.Object.__init__(self, bus_name, self.object_path)
+
+
+        self.currency_data = {
+            "src_currency_value": 1,
+            "dest_currency_value": None,
+            "currency_value": None,
+        }
+        self.settings = Gio.Settings.new('@APP_ID@')
+        self.dest_currencies = {}
+        self.src_currency = self.settings.get_string('src-currency')
+        self.dest_currency = self.settings.get_string('dest-currency')
+        self.settings.connect("changed::src-currency", self._on_currencies_changed);
+        self.settings.connect("changed::dest-currency", self._on_currencies_changed);
+
+    def _on_currencies_changed(self, widget, state):
+        self.src_currency = self.settings.get_string('src-currency')
+        self.dest_currency = self.settings.get_string('dest-currency')
+        self.currency_data['dest_currency_value'] = None
+        
+    def _is_number(self, value):
+        if not value:
+            return False
+        try:
+            f=float(value)
+            return True
+        except ValueError:
+            return False
+
+    def _converter(self, src_currency_value):
+        if self.src_currency != self.dest_currency:
+            error_id = ERROR_PREFIX + src_currency_value
+            if not self.currency_data['dest_currency_value']:
+                session = SoupSession.get()
+                message = session.format_request(self.src_currency, self.dest_currency)
+                response_data = session.get_raw_value(message)
+                self.currency_data['dest_currency_value'] = response_data
+
+            if self.currency_data['dest_currency_value']:
+                try:
+                    dest_currency_value = float(self.currency_data["dest_currency_value"]) * float(self.currency_data["src_currency_value"])
+                    self.dest_currencies[src_currency_value] = str(dest_currency_value)
+                    return src_currency_value
+                except Exception as exc:
+                    logging.error(exc)
+            else:
+                self.translations[error_id] = _('Conversion failed, check for network issues')
+
+            return error_id
+
+    @dbus.service.method(in_signature='as', out_signature='as', **SBN)
+    def GetInitialResultSet(self, terms):
+        value = ' '.join(terms)
+        if self._is_number(value):
+            self.currency_data['src_currency_value'] = float(value)
+            converter_id = self._converter(value)
+            results = [converter_id]
+            if not converter_id.startswith(ERROR_PREFIX):
+                results.append(CLIPBOARD_PREFIX + value)
+            return results
+
+        value_splited = value.upper().split(' ')
+        if len(value_splited) == 4:
+            if value_splited[0] in CODES and value_splited[2] in CODES:
+                if self._is_number(value_splited[3]):
+                    if value_splited[0] != self.src_currency or value_splited[2] != self.dest_currency:
+                        self.settings.set_string('src-currency', value_splited[0])
+                        self.settings.set_string('dest-currency', value_splited[2])
+                        self._on_currencies_changed('', '')
+                        self.currency_data['src_currency_value'] = float(value_splited[3])
+                        converter_id = self._converter(value)
+                        results = [converter_id]
+                        if not converter_id.startswith(ERROR_PREFIX):
+                            results.append(CLIPBOARD_PREFIX + value)
+                        return results
+                    else:
+                        self.currency_data['src_currency_value'] = float(value_splited[3])
+                        converter_id = self._converter(value)
+                        results = [converter_id]
+                        if not converter_id.startswith(ERROR_PREFIX):
+                            results.append(CLIPBOARD_PREFIX + value)
+                        return results
+
+
+    @dbus.service.method(in_signature='asas', out_signature='as', **SBN)
+    def GetSubsearchResultSet(self, _previous_results, new_terms):
+        return self.GetInitialResultSet(new_terms)
+
+    @dbus.service.method(in_signature='as', out_signature='aa{sv}', **SBN)
+    def GetResultMetas(self, ids):
+        """Send destination currency value"""
+        converter_id = ids[0]
+        if len(ids) == 1:
+            value = converter_id
+            if converter_id in self.dest_currencies:
+                value = self.dest_currencies[converter_id]
+            return [{
+                'id': converter_id,
+                'name': value,
+            }]
+
+        elif (
+            len(ids) == 2 and converter_id in self.dest_currencies
+            and ids[1] == CLIPBOARD_PREFIX + ids[0]
+        ):
+            value = self.dest_currencies[converter_id]
+            description = self.dest_currency
+
+            self.dest_currencies.clear()
+
+            return [
+                {
+                    'id': converter_id,
+                    'name': value,
+                    'description': description,
+                },
+                {
+                    'id': ids[1],
+                    'name': _('Copy'),
+                    'description': _('Copy currency to clipboard'),
+                    'clipboardText': value
+                }
+            ]
+
+        else:
+            return [
+                dict(
+                    id=id,
+                    name=name,
+                )
+                for id in ids
+            ]
+
+    @dbus.service.method(in_signature='sasu', **SBN)
+    def ActivateResult(self, result_id, terms, timestamp):
+        if not result_id.startswith(CLIPBOARD_PREFIX):
+            self.LaunchSearch(terms, timestamp)
+
+    @dbus.service.method(in_signature='asu', terms='as', timestamp='u', **SBN)
+    def LaunchSearch(self, terms, timestamp):
+        value = ' '.join(terms)
+        splited_value = value.split(' ')
+        if len(splited_value) == 4:
+            GLib.spawn_async_with_pipes(
+                None, ['@BIN@', '--src-currency-value', splited_value[3]], None,
+                GLib.SpawnFlags.SEARCH_PATH, None
+            )
+            
+        GLib.spawn_async_with_pipes(
+            None, ['@BIN@', '--src-currency-value', value], None,
+            GLib.SpawnFlags.SEARCH_PATH, None
+        )
+
+if __name__ == "__main__":
+    DBusGMainLoop(set_as_default=True)
+    SearchService()
+    GLib.MainLoop().run()

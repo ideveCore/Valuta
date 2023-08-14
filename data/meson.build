@@ -1,36 +1,17 @@
-pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
 gnome = import('gnome')
 
-blueprints = custom_target('blueprints',
-  input: files(
-    'ui/window.blp',
-    'ui/components/currency_row.blp',
-    'ui/components/currency_selector.blp',
-    'ui/components/preferences.blp',
-  ),
-  output: '.',
-  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
-)
-
-gnome.compile_resources('currencyconverter',
-  'currencyconverter.gresource.xml',
-  dependencies: blueprints,
-  gresource_bundle: true,
-  install: true,
-  install_dir: pkgdatadir,
-)
-
+# ===== Install desktop file =====
 desktop_conf = configuration_data()
-desktop_conf.set('ICON', application_id)
+desktop_conf.set('icon', application_id)
 desktop_file = i18n.merge_file(
   input: configure_file(
-    input: files('io.github.idevecore.CurrencyConverter.desktop.in.in'),
-    output: 'io.github.idevecore.CurrencyConverter.desktop.in',
+    input: '@0@.desktop.in.in'.format(base_id),
+    output: '@BASENAME@',
     configuration: desktop_conf
   ),
   output: '@0@.desktop'.format(application_id),
-  po_dir: join_paths(meson.project_source_root(), 'po'),
-  type: 'desktop',  po_dir: '../po',
+  type: 'desktop',
+  po_dir: '../po',
   install: true,
   install_dir: join_paths(get_option('datadir'), 'applications')
 )
@@ -40,19 +21,29 @@ if desktop_utils.found()
   test('Validate desktop file', desktop_utils, args: [desktop_file])
 endif
 
+# ===== Install appdata ===== 
+appdata_conf = configuration_data()
+appdata_conf.set('app-id', application_id)
 appstream_file = i18n.merge_file(
-        input: 'io.github.idevecore.CurrencyConverter.appdata.xml.in',
-       output: 'io.github.idevecore.CurrencyConverter.appdata.xml',
-       po_dir: '../po',
-      install: true,
+  input: configure_file(
+    input: '@0@.appdata.xml.in.in'.format(base_id),
+    output: '@BASENAME@',
+    configuration: appdata_conf
+  ),
+  output: '@0@.appdata.xml'.format(application_id),
+  po_dir: '../po',
+  install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
 )
 
 appstream_util = find_program('appstream-util', required: false)
 if appstream_util.found()
-  test('Validate appstream file', appstream_util, args: ['validate', appstream_file])
+  test('Validate appstream file', appstream_util,
+    args: ['validate-relax', appstream_file.full_path()]
+  )
 endif
 
+# ===== Install gsettings schema =====
 gschema_conf = configuration_data()
 gschema_conf.set('app-id', application_id)
 configure_file(
