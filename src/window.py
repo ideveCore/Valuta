@@ -107,36 +107,19 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
     def finish_callback(self, task, nothing, data):
         self.is_loading = False
         self.convert_button.set_sensitive(True)
-        self.convert_button.set_label(_('Convert'))
+        self.convert_button.set_label(gettext('Convert'))
 
         if self.currency_data['dest_currency_value']:
             self._convert_currencies()
         else:
             toast = Adw.Toast.new(
-                title = 'Error in get currencies data',
+                title = gettext('Error when get currencies data'),
             )
-            toast.props.button_label = 'Try again'
+            toast.props.button_label = gettext('Try again')
             toast.props.priority = Adw.ToastPriority.HIGH
             toast.set_action_name('win.try_again')
             self.overlay.add_toast(toast);
-
-
-    def create_dialog_error(self):
-        dialog = Adw.MessageDialog(
-            heading = 'Error in get currencies data',
-            body = 'Error in get currencies from server, verify your connection and try again!',
-            modal = True,
-            transient_for = self,
-        )
-        dialog.add_response("exit", "Exit");
-        dialog.add_response("try_again", "Try again");
-        dialog.set_response_appearance("try_again", Adw.ResponseAppearance.SUGGESTED);
-        dialog.connect("response", lambda self, response: 
-            print(response)
-        )
-        dialog.present()
-
-
+    
     @staticmethod
     def _thread_cb (task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
         try:

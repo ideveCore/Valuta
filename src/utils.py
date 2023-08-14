@@ -72,22 +72,6 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
         for item in self.currencies:
             item.props.selected = (item.code == code)
 
-# class Api():
-#     def __init__(self, **kwargs):
-#         super().__init__(**kwargs)
-
-#     def request(self, src, dest):
-#         # data = convert(src.lower(), dest.lower(), 1)
-#         amount = json.loads(data)["amount"]
-#         current_date = GLib.DateTime.new_now_local()
-#         date = f'{current_date.get_day_of_month()} of {current_date.format("%B")}'
-#         time = current_date.format("%H:%M:%S")
-#         return {
-#                 "value": amount,
-#                 "info": f'{date} - {time}',
-#                 "disclaimer": f'https://www.google.com/search?q=convert+{src}+to+{src}&sxsrf=AB5stBjJ1ZFiMqiTSZjE3-tTVcPqsxGQRg%3A1689771398260&source=hp&ei=ht23ZJbQDMDI1sQPl6Qi&iflsig=AD69kcEAAAAAZLfrlm0A6WrBjrZAbH9lDRg-zojW_Y0q&ved=0ahUKEwiWq8T_6JqAAxVApJUCHReSCAAQ4dUDCAg&uact=5&oq=convert+dollar+to+euro&gs_lp=Egdnd3Mtd2l6IhZjb252ZXJ0IGRvbGxhciB0byBldXJvMg0QABiABBjLARhGGIICMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBSLgpUP0CWPgmcAN4AJABAJgBoAOgAdsvqgEKMC4yLjE0LjUuMrgBA8gBAPgBAagCCsICBxAjGOoCGCfCAgcQIxiKBRgnwgIEECMYJ8ICCxAuGIAEGLEDGIMBwgILEAAYgAQYsQMYgwHCAgUQLhiABMICERAuGIAEGLEDGIMBGMcBGNEDwgIFEAAYgATCAgwQIxiKBRgnGEYYggLCAgsQLhiDARixAxiABMICCxAAGIoFGLEDGIMBwgIOEAAYgAQYsQMYgwEYyQPCAg0QABiKBRixAxiDARgKwgIIEAAYgAQYsQPCAg0QABiABBixAxiDARgKwgIHEAAYgAQYCsICBhAAGBYYHsICBxAjGLACGCfCAgcQABgNGIAEwgIGEAAYAxgK&sclient=gws-wiz'
-#         }
-
 class SoupSession(Soup.Session):
     """
         Currency Converter soup session handler
@@ -185,7 +169,7 @@ class SoupSession(Soup.Session):
                 SoupSession._default_response["converted"] = True
                 return SoupSession.format_response(SoupSession._default_response)
             else:
-                raise Exception("Unable to convert currency, failed to fetch results from Google")
+                raise Exception(gettext("Unable to convert currency, failed to fetch results from Google"))
         except Exception as error:
             return SoupSession._default_response
 
@@ -193,7 +177,7 @@ class SoupSession(Soup.Session):
     def format_response(default_response: Dict[str, Any]) -> Dict[str, Any]:
         url = SoupSession.__mount_url(default_response['amount'])
         current_date = GLib.DateTime.new_now_local()
-        date = f'{current_date.get_day_of_month()} of {current_date.format("%B")}'
+        date = f'{current_date.get_day_of_month()} {gettext("of")} {current_date.format("%B")}'
         time = current_date.format("%H:%M:%S")
         SoupSession._formated_response['dest_currency_value'] = default_response['amount']
         SoupSession._formated_response['info'] = f'{date} - {time}'

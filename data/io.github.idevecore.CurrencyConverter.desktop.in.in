@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Currency Converter
 GenericName=Converter
-TryExec = currencyconverter
+TryExec=currencyconverter
 Exec=currencyconverter
-Comment=A currency converter using up-to-dates from network
+Comment=A simple currency converter using Google-based data
 Icon=@icon@
 Terminal=false
 Type=Application

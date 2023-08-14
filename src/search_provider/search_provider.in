@@ -80,7 +80,7 @@ class SearchService(dbus.service.Object):
                 except Exception as exc:
                     logging.error(exc)
             else:
-                self.translations[error_id] = _('Convertion failed, check for network issues')
+                self.translations[error_id] = _('Conversion failed, check for network issues')
 
             return error_id
 

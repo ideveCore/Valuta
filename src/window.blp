@@ -18,6 +18,7 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
       MenuButton menu_btn {
         icon-name: "open-menu-symbolic";
         menu-model: primary_menu;
+        tooltip-text: _("Main menu");
       }
     }
     Adw.Clamp {
@@ -31,7 +32,7 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
         spacing: 24;
         Adw.PreferencesGroup {
           styles ['pd']
-          title: "convert";
+          title: _("Converter");
             header-suffix: Gtk.Box {
             orientation: horizontal;
             spacing: 6;
@@ -41,7 +42,7 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
               valign: center;
               child: Adw.ButtonContent {
                 icon-name: "emblem-synchronizing-symbolic";
-                label: "Switch";
+                label: _("Switch");
               };
               clicked => _switch_currencies();
             }
@@ -106,7 +107,7 @@ menu primary_menu {
     }
 
     item {
-      label: _("_About Currency Converter");
+      label: _("About Currency Converter");
       action: "app.about";
     }
   }
