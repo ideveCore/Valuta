@@ -9,7 +9,8 @@
     "--share=ipc",
     "--socket=fallback-x11",
     "--device=dri",
-    "--socket=wayland"
+    "--socket=wayland",
+    "--own-name=io.github.idevecore.CurrencyConverter.SearchProvider"
   ],
   "cleanup": [
     "/include",
@@ -34,54 +35,6 @@
           "type": "file",
           "url": "https://files.pythonhosted.org/packages/b1/5c/ccfc167485806c1936f7d3ba97db6c448d0089c5746ba105b6eb22dba60e/dbus-python-1.2.18.tar.gz",
           "sha256": "92bdd1e68b45596c833307a5ff4b217ee6929a1502f5341bae28fd120acf7260"
-        }
-      ]
-    },
-    {
-      "name": "python3-requests",
-      "buildsystem": "simple",
-      "build-commands": [
-        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"requests\" --no-build-isolation"
-      ],
-      "sources": [
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/ec/03/062e6444ce4baf1eac17a6a0ebfe36bb1ad05e1df0e20b110de59c278498/urllib3-1.26.9-py2.py3-none-any.whl",
-          "sha256": "44ece4d53fb1706f667c9bd1c648f5469a2ec925fcf3a776667042d645472c14"
-        },
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/04/a2/d918dcd22354d8958fe113e1a3630137e0fc8b44859ade3063982eacd2a4/idna-3.3-py3-none-any.whl",
-          "sha256": "84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"
-        },
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/06/b3/24afc8868eba069a7f03650ac750a778862dc34941a4bebeb58706715726/charset_normalizer-2.0.12-py3-none-any.whl",
-          "sha256": "6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df"
-        },
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/11/dd/e015f3780f42dd9af62cf0107b44ea1298926627ecd70c17b0e484e95bcd/certifi-2022.5.18.1-py3-none-any.whl",
-          "sha256": "f1d53542ee8cbedbe2118b5686372fb33c297fcd6379b050cca0ef13a597382a"
-        },
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/2d/61/08076519c80041bc0ffa1a8af0cbd3bf3e2b62af10435d269a9d0f40564d/requests-2.27.1-py2.py3-none-any.whl",
-          "sha256": "f22fa1e554c9ddfd16e6e41ac79759e17be9e492b3587efa038054674760e72d"
-        }
-      ]
-    },
-    {
-      "name": "python3-google-currency",
-      "buildsystem": "simple",
-      "build-commands": [
-        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"google-currency\" --no-build-isolation"
-      ],
-      "sources": [
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/d0/0b/49ebba0bd4f798d99680fda4180cb1d9ec92c26e5b5cc7f4f1c27e5e9efc/google_currency-1.0.10.tar.gz",
-          "sha256": "b6c7488fc8fa0b24c9c9c27487b4f061e9a78596dbb45b4bbf1cf0f4174a73ba"
         }
       ]
     },
