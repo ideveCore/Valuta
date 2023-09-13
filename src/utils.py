@@ -79,8 +79,8 @@ class SoupSession(Soup.Session):
 
     instance = None
     _headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-        'Referer': 'https://www.google.com.ac',
+        'User-Agent': ' 	Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0',
+        'Referer': 'https://www.google.com',
     }
 
     _src_currency: str = ''
@@ -145,7 +145,7 @@ class SoupSession(Soup.Session):
             for name, value in headers.items():
                 message.get_request_headers().append(name, value)
         if 'User-Agent' not in headers:
-            message.get_request_headers().append('User-Agent', 'Dialect App')
+            message.get_request_headers().append('User-Agent', 'Currency Converter')
         return message
 
     def get_response(self, message: Soup.Message) -> Union[Soup._formated_response, Any]:
@@ -208,4 +208,3 @@ class SoupSession(Soup.Session):
         SoupSession._formated_response['disclaimer'] = url
 
         return SoupSession._formated_response
-
