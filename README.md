@@ -34,8 +34,9 @@ A simple currency converter using Google-based data
 ## Donate
 If you like this project and have some spare money left, consider donating:
 
-### Ko-fi
+### Ko-fi and Github Sponsors
 <a href='https://ko-fi.com/idevecore'><img width='86' alt='Download on Flathub' src='https://storage.ko-fi.com/cdn/nav-logo-stroke.png'/></a>
+<a href='https://github.com/sponsors/ideveCore'><img width='60' alt='Download on Flathub' src='https://github.githubassets.com/images/email/sponsors/mona.png'/></a>
 
 ## License 
  [GNU General Public License 3 or later](https://www.gnu.org/licenses/gpl-3.0.en.html)
