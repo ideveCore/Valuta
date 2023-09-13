@@ -204,7 +204,7 @@ class SoupSession(Soup.Session):
         date = gettext("{0} of {1}").format(current_date.get_day_of_month(), current_date.format("%B"))
         time = current_date.format("%H:%M:%S")
         SoupSession._formated_response['dest_currency_value'] = default_response['amount']
-        SoupSession._formated_response['info'] = f'{date} - {time}'
+        SoupSession._formated_response['info'] =s f'{date} - {time}'
         SoupSession._formated_response['disclaimer'] = url
 
         return SoupSession._formated_response
