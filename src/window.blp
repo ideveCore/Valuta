@@ -1,7 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template CurrencyConverterWindow : Adw.ApplicationWindow {
+template $CurrencyConverterWindow : Adw.ApplicationWindow {
   default-width: 400;
   default-height: 400;
   title: _("Currency Converter");
@@ -44,18 +44,18 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
                 icon-name: "emblem-synchronizing-symbolic";
                 label: _("Switch");
               };
-              clicked => _switch_currencies();
+              clicked => $_switch_currencies();
             }
           };
           Adw.ActionRow src_currency {
             title: _('From currency');
-            .CurrencySelector src_currency_selector {
+            $CurrencySelector src_currency_selector {
               styles ["m-e"]
             }
           }
           Adw.ActionRow dest_currency {
             title: _('To currency');
-            .CurrencySelector dest_currency_selector {
+            $CurrencySelector dest_currency_selector {
               styles ["m-e"]
             }
           }

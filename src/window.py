@@ -67,7 +67,6 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         self.dest_currency = None
         self.load_settings(APP_ID)
         self.connect('unrealize', self.save_settings)
-        self.src_currency_entry.connect('changed', self._on_src_currency_entry_changed)
         self.convert_button.connect('clicked', lambda button: self._convert_currencies())
         self.src_currency_entry.connect('entry-activated', lambda entry: self._convert_currencies())
         self.src_currency_selector.connect('notify::selected', self.on_currency_selectors_changed)
@@ -135,7 +134,6 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
 
             task.return_value(self.currency_data)
         except Exception as e:
-            print(e)
             self.is_loading = False
             task.return_value(e)
 
@@ -157,7 +155,6 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         self.settings.set_string('dest-currency', self.dest_currency)
 
     def on_currency_selectors_changed(self, _obj, _param):
-        print('ok')
         src_code = self.src_currency_selector.selected
         dest_code = self.dest_currency_selector.selected
         self.src_currency = src_code
@@ -170,15 +167,6 @@ class CurrencyConverterWindow(Adw.ApplicationWindow):
         spinner.set_spinning(True)
         task = Gio.Task.new(self, None, self.finish_callback, None)
         task.run_in_thread(self._thread_cb)
-
-    def _on_src_currency_entry_changed(self, _entry):
-        text = _entry.get_text()
-        digits_only = re.sub(r'[^\d.]', '', text)
-        formatted_str = f"{CODES[self.src_currency]['symbol']} {digits_only}"
-        _entry.handler_block_by_func(self._on_src_currency_entry_changed)
-        _entry.set_text(formatted_str)
-        _entry.handler_unblock_by_func(self._on_src_currency_entry_changed)
-        _entry.set_position(len(text) + 2)
 
     def _convert_currencies(self):
         if not self.is_loading:
