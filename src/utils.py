@@ -18,10 +18,10 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from __future__ import annotations
-from typing import Union, Any, Dict
+from typing import Union, Any, Dict, Callable
 import gi, json, logging, re
 gi.require_version('Soup', '3.0')
-from gi.repository import Gio, GObject, GLib, Soup
+from gi.repository import Adw, Gio, GObject, GLib, Soup
 from .define import CODES, BASE_URL, BASE_URL_LANG_PREFIX
 
 class CurrencyObject(GObject.Object):
@@ -66,7 +66,7 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
         self.currencies.clear()
         for code in currencies:
             self.currencies.append(CurrencyObject(code, self.names_func(code)))
-        self.items_changed(0, removed, len(self.currencies))
+            self.items_changed(0, removed, len(self.currencies))
 
     def set_selected(self, code):
         for item in self.currencies:
@@ -208,3 +208,23 @@ class SoupSession(Soup.Session):
         SoupSession._formated_response['disclaimer'] = url
 
         return SoupSession._formated_response
+
+
+def settings(application: Adw.Application):
+    gsettings = Gio.Settings(
+        schema_id= application.get_application_id(),
+    )
+
+    bind: Callable[[str, GObject.Object, str, Gio.SettingsBindFlags], Dict[any, any]] = lambda key, object, property, flags: gsettings.bind(key, object, property, flags)
+
+    return {
+        "bind": bind,
+    }
+
+
+def utils(application: Adw.Application) -> Dict[any, any]:
+    settings_instance = settings(application)
+
+    return {
+        'settings': settings_instance,
+    }

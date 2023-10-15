@@ -60,6 +60,7 @@ sources = [
   'components/theme_switcher/theme_switcher.py',
   'utils.py',
   'main.py',
+  'application.py',
   'window.py',
 ]
 
