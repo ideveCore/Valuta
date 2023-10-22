@@ -16,14 +16,10 @@ Adw.ApplicationWindow window {
       }
     }
 
-    content: Gtk.Box {
+    content: Gtk.Box graph_view {
       hexpand: true;
       vexpand: true;
       orientation: vertical;
-
-      Gtk.Label {
-        label: _("Hello");
-      }
     };
   };
 }

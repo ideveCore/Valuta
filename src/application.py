@@ -47,3 +47,5 @@ def load_main_window(application: Adw.Application):
 
 application.connect("startup", startup)
 application.connect("activate", load_main_window)
+
+# TODO: Add provider FrankFurter open-source api https://www.frankfurter.app/docs/

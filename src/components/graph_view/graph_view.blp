@@ -1,0 +1,48 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $GraphView : Adw.Bin {
+  child: Overlay {
+    child: DrawingArea drawing_area {
+      height-request: 279;
+    };
+
+    [overlay]
+    Box label_box {
+      valign: end;
+      spacing: 12;
+      opacity: 0;
+
+      Label duration_label {
+        hexpand: true;
+        halign: start;
+        margin-top: 6;
+        margin-bottom: 6;
+        margin-start: 6;
+
+        styles [
+          "numeric",
+        ]
+      }
+
+      Label min_label {
+        margin-top: 6;
+        margin-bottom: 6;
+
+        styles [
+          "numeric",
+        ]
+      }
+
+      Label max_label {
+        margin-top: 6;
+        margin-bottom: 6;
+        margin-end: 6;
+
+        styles [
+          "numeric",
+        ]
+      }
+    }
+  };
+}

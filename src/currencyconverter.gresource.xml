@@ -5,6 +5,7 @@
     <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector_row/currency_selector_row.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector/currency_selector.ui</file>
+    <file preprocess="xml-stripblanks">components/graph_view/graph_view.ui</file>
     <!-- ================================================== -->
     <!-- ====== This component temporarily is unused ====== -->
     <!-- <file preprocess="xml-stripblanks">components/preferences/preferences.ui</file> -->
