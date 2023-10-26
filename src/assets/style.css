@@ -1,4 +1,6 @@
- .pd {
+@define-color weather_temp_chart_fill_color rgba(248, 228, 92, 0.5);
+@define-color weather_temp_chart_stroke_color rgba(246, 211, 45, 1.0);
+.pd {
    padding: 0.5em;
  }
  

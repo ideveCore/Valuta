@@ -16,10 +16,9 @@ Adw.ApplicationWindow window {
       }
     }
 
-    content: Gtk.Box graph_view {
-      hexpand: true;
-      vexpand: true;
-      orientation: vertical;
+    content: Gtk.Viewport graph_view {
+      hscroll-policy: natural;
+      vscroll-policy: natural;
     };
   };
 }

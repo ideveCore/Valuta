@@ -19,7 +19,7 @@
 
 from __future__ import annotations
 
-import gi
+import gi, math
 
 gi.require_version("Adw", "1")
 gi.require_version("Gtk", "4.0")
@@ -48,6 +48,7 @@ class GraphView(Gtk.Box):
         rect.init(0, 0, allocation.width, allocation.height)
 
         cr = snapshot.append_cairo(rect)
+        cr.save()
         # temps is a array with graph position values
         temps = [
             83.12,
@@ -82,12 +83,12 @@ class GraphView(Gtk.Box):
         values = None
 
         if not min_temp == max_temp:
-            value = map(lambda t: (t - min_temp) / (max_temp - min_temp), temps)
+            values = list(map(lambda t: (t - min_temp) / (max_temp - min_temp), temps))
         else:
-            value = map(lambda t: t / 2, temps)
+            values = list(map(lambda t: t / 2, temps))
 
         width = self.get_allocated_width()
-        height = self.get_allocated_heigth()
+        height = self.get_allocated_height()
 
         entry_width = 75
         separator_width = 1
@@ -105,8 +106,79 @@ class GraphView(Gtk.Box):
         )
         graph_height = graph_max_y - grap_min_y
 
-        # TODO: i stoped here
+        points_gap = entry_width + separator_width
 
+        stroke_color = self.get_style_context().lookup_color('weather_temp_chart_stroke_color')
+        stroke_color = stroke_color.color
+        Gdk.cairo_set_source_rgba(cr, stroke_color)
+        # print(stroke_color.color)
+        # TODO: i stoped here
+        y_cords = []
+        for i in range(len(values)):
+            print(i)
+            y_cords.append((grap_min_y + ((1 - values[i]) * graph_height)))
+
+
+        gradients = []
+        gradient_angles = []
+        for i in range(len(y_cords)):
+            prev_val = y_cords[i]
+            next_val = prev_val
+            if i > 0:
+                prev_val = y_cords[i - 1]
+            if i < len(y_cords) - 1:
+                next_val = y_cords[i + 1]
+
+            gradients.append((next_val - prev_val) / (2 * points_gap))
+            gradient_angles.append(math.atan((next_val - prev_val) / (points_gap * 2)))
+
+        x = -points_gap / 2
+
+        cr.move_to(x, y_cords[0])
+        smoothness_val = 0.4
+
+        for i in range(len(y_cords)):
+            x_dist_prev = points_gap * smoothness_val
+            if i > 0:
+                x_dist_prev = math.cos(gradient_angles[i - 1]) * points_gap * smoothness_val
+
+            x_dist_current = points_gap * smoothness_val
+            if i < len(y_cords):
+                x_dist_current = math.cos(gradient_angles[i]) * points_gap * smoothness_val
+
+            test = False
+
+            prev_y_cord = (y_cords[i - 1]) if i > 0 else y_cords[i]
+            prev_grad = (gradients[i - 1]) if i > 0 else  0
+
+            curr_y_cord = (y_cords[i]) if i < len(y_cords) else y_cords[i - 1]
+            curr_g_rad = (gradients[i]) if i < len(y_cords) else 0
+
+            pt1 = [x + x_dist_prev, prev_y_cord + prev_grad * x_dist_prev]
+            pt2 = [x + points_gap - x_dist_current, curr_y_cord - curr_g_rad * x_dist_current]
+
+            cr.curve_to(
+                pt1[0], pt1[1],
+                pt2[0], pt2[1],
+                x + points_gap, curr_y_cord
+            )
+
+            x += points_gap
+
+        cr.line_to(width, grap_min_y + ((1 - values[len(values) - 1]) * graph_height))
+
+        cr.set_line_width(line_width);
+        cr.stroke_preserve()
+
+        fill_color = self.get_style_context().lookup_color('weather_temp_chart_fill_color');
+        fill_color = fill_color.color
+
+        Gdk.cairo_set_source_rgba(cr, fill_color)
+
+        cr.line_to(width, height)
+        cr.line_to(0, height)
+        cr.fill()
+        cr.restore();
 
 def create_main_window(application: Adw.Application):
     builder = Gtk.Builder.new_from_resource(resource)
@@ -114,7 +186,7 @@ def create_main_window(application: Adw.Application):
     window = builder.get_object("window")
     graph_view = GraphView()
     add_graph = builder.get_object("graph_view")
-    add_graph.append(graph_view)
+    add_graph.set_child(graph_view)
 
     def load_window_state():
         settings["bind"](
