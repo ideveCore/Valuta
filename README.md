@@ -28,8 +28,11 @@ A simple currency converter using Google-based data
  git clone --recurse-submodules https://github.com/idevecore/currency-converter.git
  cd currency-converter
  meson builddir --prefix=/usr/local 
- sudo ninja -C builddir install 
+ sudo ninja -C builddir install
  ```
+
+### Important
+For legal reasons, in version 1.2.0, this app will likely no longer have Google as a provider. We will probably use the open-source API (Frankfurter) as the initial option, and other proprietary APIs with the option to add a key. We are open to any questions, or suggestions.
 
 ## Donate
 If you like this project and have some spare money left, consider donating:
