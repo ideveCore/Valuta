@@ -25,6 +25,22 @@
   ],
   "modules": [
     {
+      "name" : "libpanel",
+      "buildsystem" : "meson",
+      "builddir" : true,
+      "config-opts" : [
+        "-Ddocs=disabled",
+        "-Dinstall-examples=true"
+      ],
+      "sources" : [
+      {
+      "type" : "git",
+	  "url" : "https://gitlab.gnome.org/GNOME/libpanel.git",
+	  "branch" : "main"
+	}
+      ]
+    },
+    {
       "name": "python3-dbus-python",
       "buildsystem": "simple",
       "build-commands": [

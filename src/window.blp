@@ -2,27 +2,27 @@ using Gtk 4.0;
 using Adw 1;
 
 Adw.ApplicationWindow window {
-  default-width: 400;
+  width-request: 350;
+  height-request: 300;
+  default-width: 420;
   default-height: 600;
+  hide-on-close: true;
   title: _("Currency Converter");
   content: Adw.ToolbarView {
     [top]
     Adw.HeaderBar {
       [end]
-      MenuButton menu_btn {
-        icon-name: "open-menu-symbolic";
+      MenuButton menu_button {
         menu-model: primary_menu;
+        icon-name: "open-menu-symbolic";
         tooltip-text: _("Main menu");
       }
     }
-
-    content: Gtk.Viewport graph_view {
-      hscroll-policy: natural;
-      vscroll-policy: natural;
+    content: Gtk.Label {
+      label: "Hello";
     };
   };
 }
-
 
 menu primary_menu {
   section {
@@ -32,13 +32,22 @@ menu primary_menu {
   }
   section {
     item {
-      label: _("Keyboard Shortcuts");
-      action: "win.show-help-overlay";
+      label: _("_Preferences");
+      action: "app.preferences";
     }
 
     item {
-      label: _("About Currency Converter");
+      label: _("_Keyboard shortcuts");
+      action: "win.show-help-overlay";
+    }
+    item {
+      label: _("_About Currency Converter");
       action: "app.about";
+    }
+    item {
+      label: _("_Quit");
+      action: "app.quit";
     }
   }
 }
+

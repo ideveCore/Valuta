@@ -209,6 +209,10 @@ class SoupSession(Soup.Session):
 
         return SoupSession._formated_response
 
+class Settings(Gio.Settings):
+    def __init__(self, *args):
+        super().__init__(*args)
+
 
 def settings(application: Adw.Application):
     gsettings = Gio.Settings(
@@ -223,7 +227,7 @@ def settings(application: Adw.Application):
 
 
 def utils(application: Adw.Application) -> Dict[any, any]:
-    settings_instance = settings(application)
+    settings_instance = Settings(application.get_application_id())
 
     return {
         'settings': settings_instance,

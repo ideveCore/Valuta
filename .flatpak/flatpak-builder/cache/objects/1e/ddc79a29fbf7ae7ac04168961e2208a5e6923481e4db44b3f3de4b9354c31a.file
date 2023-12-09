@@ -1,0 +1,7 @@
+#ifndef __RESOURCE_panel_H__
+#define __RESOURCE_panel_H__
+
+#include <gio/gio.h>
+
+G_GNUC_INTERNAL GResource *panel_get_resource (void);
+#endif

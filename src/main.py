@@ -17,7 +17,13 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import sys
+import gi, sys
+
+gi.require_version("Panel", "1")
+
+from gi.repository import Panel
 from .application import application
+
+Panel.init()
 
 main = lambda version: application.run(sys.argv)

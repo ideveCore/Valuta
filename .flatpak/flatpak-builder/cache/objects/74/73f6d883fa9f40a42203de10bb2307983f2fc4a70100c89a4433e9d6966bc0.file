@@ -1,0 +1,11 @@
+prefix=/app
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libpanel-1
+Description: Panel library for GTK 4
+Version: 1.4.0
+Requires: glib-2.0 >=  2.74, gobject-2.0 >=  2.74, gio-2.0 >=  2.74, gtk4 >=  4.8
+Requires.private: libadwaita-1 >=  1.2
+Libs: -L${libdir} -lpanel-1
+Cflags: -I${includedir}/libpanel-1
