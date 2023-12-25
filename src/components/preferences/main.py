@@ -1,4 +1,4 @@
-# __init__.py
+# main.py
 #
 # Copyright 2023 Ideve Core
 #
@@ -17,5 +17,24 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from .shortcuts.shortcuts import CurrencyConverterShortcutsWindow
-from .currency_selector.currency_selector import CurrencySelector
+from gi.repository import Adw, Gtk, Gio
+from currencyconverter.define import RES_PATH
+
+resource = f'{RES_PATH}/components/preferences/index.ui'
+
+def preferences(application: Adw.Application, settings: Gio.Settings):
+    builder = Gtk.Builder.new_from_resource(resource)
+    component = builder.get_object('component')
+    providers = builder.get_object('providers')
+    component.set_transient_for(application.get_active_window())
+
+    settings.bind(
+        key="providers",
+        object=providers,
+        property="selected",
+        flags=Gio.SettingsBindFlags.DEFAULT,
+    )
+
+    #providers.connect('notify::selected-item', lambda user_data : print('change'))
+
+    return component

@@ -9,20 +9,14 @@ template $CurrencyConverterShortcutsWindow : ShortcutsWindow {
 
     ShortcutsGroup {
       title: C_("shortcut window", "General");
-
-      // ==================================================
-      // ====== This component temporarily is unused ======
-        //ShortcutsShortcut {
-          //title: C_("shortcuts window", "Preferences");
-          //action-name: "app.preferences";
-        //}
-      // ==================================================
-
+      ShortcutsShortcut {
+        title: C_("shortcuts window", "Preferences");
+        action-name: "app.preferences";
+      }
       ShortcutsShortcut {
         title: C_("shortcut window", "Shortcuts");
         action-name: "win.show-help-overlay";
       }
-
       ShortcutsShortcut {
         title: C_("shortcuts window", "Quit");
         action-name: "app.quit";

@@ -6,11 +6,16 @@ Adw.ApplicationWindow window {
   height-request: 300;
   default-width: 420;
   default-height: 600;
-  hide-on-close: true;
   title: _("Currency Converter");
   content: Adw.ToolbarView {
     [top]
     Adw.HeaderBar {
+      [start]
+      Gtk.Button disclaimer {
+        icon-name: "lightbulb-symbolic";
+        tooltip-text: _("Disclaimer");
+        visible: false;
+      }
       [end]
       MenuButton menu_button {
         menu-model: primary_menu;
@@ -18,9 +23,16 @@ Adw.ApplicationWindow window {
         tooltip-text: _("Main menu");
       }
     }
-    content: Gtk.Label {
-      label: "Hello";
-    };
+    content: Adw.Bin content {};
+    [bottom]
+    Gtk.Box {
+      halign: center;
+      margin-bottom: 10;
+      Gtk.Label {
+        styles ["dim-label"]
+        label: _("Results for 8th September 2023 23:28");
+      }
+    }
   };
 }
 
@@ -50,4 +62,3 @@ menu primary_menu {
     }
   }
 }
-

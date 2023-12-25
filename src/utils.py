@@ -17,12 +17,10 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from __future__ import annotations
-from typing import Union, Any, Dict, Callable
-import gi, json, logging, re
-gi.require_version('Soup', '3.0')
-from gi.repository import Adw, Gio, GObject, GLib, Soup
-from .define import CODES, BASE_URL, BASE_URL_LANG_PREFIX
+from typing import Any, Dict, Union
+from gi.repository import Adw, Gio, GObject
+from .requests import Requests
+
 
 class CurrencyObject(GObject.Object):
     __gtype_name__ = 'CurrencyObject'
@@ -66,169 +64,39 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
         self.currencies.clear()
         for code in currencies:
             self.currencies.append(CurrencyObject(code, self.names_func(code)))
-            self.items_changed(0, removed, len(self.currencies))
+        self.items_changed(0, removed, len(self.currencies))
 
     def set_selected(self, code):
         for item in self.currencies:
             item.props.selected = (item.code == code)
 
-class SoupSession(Soup.Session):
-    """
-        Currency Converter soup session handler
-    """
 
-    instance = None
-    _headers = {
-        'User-Agent': ' 	Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0',
-        'Referer': 'https://www.google.com',
-    }
-
-    _src_currency: str = ''
-    _dest_currency: str = ''
-    _default_response: Dict[str, Any] = {
-        "from"     : _src_currency,
-        "to"       : _dest_currency,
-        "amount"   : 0,
-        "converted": False
-    }
-    _formated_response: Dict[str, Any] = {
-        "dest_currency_value": 0,
-        "info": '',
-        "disclaimer": '',
-    }
-
+class Convertion:
     def __init__(self):
-        Soup.Session.__init__(self)
+        self.__converted_data: Dict[str, Union[str, int]] = {
+            "from": "",
+            "to": "",
+            "amount": 1,
+            "info": "",
+            "disclaimer": "",
+        }
+    def convert(self, from_currency_value: int, from_currency: str, to_currency: str, provider: int) -> Dict[str, Union[str, int]]:
+        if not self.match_data(from_currency, from_currency, provider):
+            self.__converted_data = Requests(provider, from_currency, to_currency, 1).get()
+        return {**self.__converted_data, "amount": from_currency_value * self.__converted_data["amount"]}
 
-    @staticmethod
-    def new() -> SoupSession:
-        """Create a new instance of Session."""
-        session = Soup.Session()
-        session.__class__ = SoupSession
-        return session
-
-    @staticmethod
-    def get() -> SoupSession:
-        """Return an active instance of Session."""
-        if SoupSession.instance is None:
-            SoupSession.instance = SoupSession.new()
-        return SoupSession.instance
-
-    @staticmethod
-    def format_request(src_currency: str, dest_currency: str) -> SoupSession.create_request:
-        SoupSession._src_currency = src_currency
-        SoupSession._dest_currency = dest_currency
-        return SoupSession.create_request('GET', SoupSession.__mount_url(), SoupSession._headers)
-
-    @staticmethod
-    def __mount_url(src_currency_value = 1) -> str:
-        url = f'{BASE_URL}+{src_currency_value}+{SoupSession._src_currency}+to+{SoupSession._dest_currency}{BASE_URL_LANG_PREFIX}'
-        return url
-    
-    @staticmethod
-    def encode_data(data) -> GLib.Bytes | None:
-        """ Convert dict to JSON and bytes """
-        data_glib_bytes = None
-        try:
-            data_bytes = json.dumps(data).encode('utf-8')
-            data_glib_bytes = GLib.Bytes.new(data_bytes)
-        except Exception as exc:
-            logging.warning(exc)
-        return data_glib_bytes
-
-    @staticmethod
-    def create_request(method: str, url: str, headers: dict = {}) -> Soup.Message:
-        """ Helper for creating Soup.Message """
-
-        message = Soup.Message.new(method, url)
-        if headers:
-            for name, value in headers.items():
-                message.get_request_headers().append(name, value)
-        if 'User-Agent' not in headers:
-            message.get_request_headers().append('User-Agent', 'Currency Converter')
-        return message
-
-    def get_response(self, message: Soup.Message) -> Union[Soup._formated_response, Any]:
-        response = None
-        try:
-            response = self.send_and_read(message, None)
-            data = response.get_data()
-            return self.get_currency_value(data)
-        except GLib.GError as exc:
-            return exc.message
-
-    def get_raw_value(self, message: Soup.Message) -> Union[Soup._formated_response, Any]:
-        response = None
-        try:
-            response = self.send_and_read(message, None)
-            data = response.get_data()
-            return self.get_currency_raw_value(data)
-        except GLib.GError as exc:
-            return exc.message
-
-
-    @staticmethod
-    def get_currency_value(data):
-        data = data.decode('utf-8')
-        try:
-            results = re.findall(f'[\d*\,]*\.\d* {CODES[SoupSession._dest_currency]["name"]}', data)
-            if results.__len__() > 0:
-                converted_amount_str = results[0]
-                converted_currency = re.findall('[\d*\,]*\.\d*', converted_amount_str)[0]
-                SoupSession._default_response["amount"]    = converted_currency
-                SoupSession._default_response["converted"] = True
-                return SoupSession.format_response(SoupSession._default_response)
-            else:
-                raise Exception(gettext("Unable to convert currency, failed to fetch results from Google"))
-        except Exception as error:
-            return SoupSession._default_response
-
-    @staticmethod
-    def get_currency_raw_value(data):
-        data = data.decode('utf-8')
-        try:
-            results = re.findall(f'[\d*\,]*\.\d* {CODES[SoupSession._dest_currency]["name"]}', data)
-            if results.__len__() > 0:
-                converted_amount_str = results[0]
-                converted_currency = re.findall('[\d*\,]*\.\d*', converted_amount_str)[0]
-                return converted_currency
-            else:
-                raise Exception(gettext("Unable to convert currency, failed to fetch results from Google"))
-        except Exception as error:
-            return SoupSession._default_response
-
-    @staticmethod
-    def format_response(default_response: Dict[str, Any]) -> Dict[str, Any]:
-        url = SoupSession.__mount_url(default_response['amount'])
-        current_date = GLib.DateTime.new_now_local()
-        date = f'{current_date.get_day_of_month()} {gettext("of")} {current_date.format("%B")}'
-        time = current_date.format("%H:%M:%S")
-        SoupSession._formated_response['dest_currency_value'] = default_response['amount']
-        SoupSession._formated_response['info'] = f'{date} - {time}'
-        SoupSession._formated_response['disclaimer'] = url
-
-        return SoupSession._formated_response
+    def match_data(self, from_currency: str, to_currency: str, provider: int) -> bool:
+        if self.__converted_data["from"] == from_currency and self.__converted_data["to"] == to_currency and self.__converted_data["provider"] == provider:
+            return True
+        else:
+            return False
 
 class Settings(Gio.Settings):
     def __init__(self, *args):
         super().__init__(*args)
 
+class Utils:
+    def __init__(self, application: Adw.Application):
+        self.settings = Settings(application.get_application_id())
+        self.convertion = Convertion()
 
-def settings(application: Adw.Application):
-    gsettings = Gio.Settings(
-        schema_id= application.get_application_id(),
-    )
-
-    bind: Callable[[str, GObject.Object, str, Gio.SettingsBindFlags], Dict[any, any]] = lambda key, object, property, flags: gsettings.bind(key, object, property, flags)
-
-    return {
-        "bind": bind,
-    }
-
-
-def utils(application: Adw.Application) -> Dict[any, any]:
-    settings_instance = Settings(application.get_application_id())
-
-    return {
-        'settings': settings_instance,
-    }

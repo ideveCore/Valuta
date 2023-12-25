@@ -11,6 +11,9 @@
       <summary>Color Scheme</summary>
       <description>Use the light or dark variant of the GTK theme</description>
     </key>
+    <key name="providers" type="i">
+      <default>0</default>
+    </key>
     <key name="width" type="i">
 			<default>420</default>
 		</key>

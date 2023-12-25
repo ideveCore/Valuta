@@ -24,10 +24,10 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 
 from gi.repository import Adw, GObject, Gio, GLib, Gtk
-from .utils import utils
+from .utils import Utils
 from .window import create_main_window
+from .actions import application_actions
 
-# from .components import CurrencyConverterPreferences
 from .define import APP_ID, VERSION, RES_PATH
 
 application = Adw.Application(
@@ -36,16 +36,12 @@ application = Adw.Application(
     flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
 )
 
-
 def startup(application: Adw.Application):
-    application.utils = utils(application)
-
+    application.utils = Utils(application)
+    application_actions(application=application)
 
 def load_main_window(application: Adw.Application):
     create_main_window(application).present()
 
-
 application.connect("startup", startup)
 application.connect("activate", load_main_window)
-
-# TODO: Add provider FrankFurter open-source api https://www.frankfurter.app/docs/

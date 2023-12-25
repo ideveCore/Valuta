@@ -17,5 +17,4 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from .shortcuts.shortcuts import CurrencyConverterShortcutsWindow
-from .currency_selector.currency_selector import CurrencySelector
+from .convertion.convertion import convertion_page

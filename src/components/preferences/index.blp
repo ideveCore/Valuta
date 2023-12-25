@@ -1,0 +1,25 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.PreferencesWindow component {
+  modal: true;
+  default-height: 250;
+  default-width: 350;
+  Adw.PreferencesPage {
+    title: _("Preferences");
+    Adw.PreferencesGroup {
+      title: _("Application");
+      ListBox list_box {
+        styles [ "boxed-list" ]
+        selection-mode: none;
+        Adw.ComboRow providers {
+          title: _("Providers");
+          model: Gtk.StringList {
+            strings [_("Google"), _("European Central Bank")]
+          };
+        }
+      }
+    }
+  }
+}
+

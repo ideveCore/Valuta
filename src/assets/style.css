@@ -92,3 +92,19 @@
   background-color: @theme_selected_bg_color;
   color: @theme_selected_fg_color;
 }
+
+.f-l {
+  font-size: 28px;
+}
+
+.text-light {
+  color: rgb(255, 255, 255);
+}
+
+.bg-accent-color {
+  background-color: @accent_bg_color;
+}
+
+.top-transform {
+  transform: translateY(-40px);
+}

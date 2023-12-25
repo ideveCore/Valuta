@@ -26,10 +26,9 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Panel", "1")
 
 from typing import Union, Any, Dict
-from gi.repository import Adw, Gdk, Gio, GLib, Graphene, Gtk, Panel
+from gi.repository import Adw, Gdk, Gio, GLib, Gtk, Panel
 from .define import RES_PATH
-
-# from .components import GraphView
+from .pages import convertion_page
 
 resource = f"{RES_PATH}/window.ui"
 
@@ -43,8 +42,9 @@ def string_to_color(string: str):
 
 def create_main_window(application: Adw.Application):
     builder = Gtk.Builder.new_from_resource(resource)
-    settings = application.utils["settings"]
+    settings = application.utils.settings
     window = builder.get_object("window")
+    content = builder.get_object("content")
     menu_button = builder.get_object("menu_button")
 
     def set_color_scheme(color: str):
@@ -83,5 +83,7 @@ def create_main_window(application: Adw.Application):
         menu_button.props.popover.add_child(theme_selector_wg, 'theme')
 
     load_window_state()
+    content.set_child(convertion_page(application))
     window.set_application(application)
+    # window.connect('show', lambda user_data: print(application.utils.convertion.convert(2, "USD", "EUR", settings.get_int("providers"))))
     return window

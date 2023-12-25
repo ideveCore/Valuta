@@ -7,9 +7,11 @@ project('currencyconverter',
 python = import('python')
 i18n = import('i18n')
 
+prefix = get_option('prefix')
 base_id = 'io.github.idevecore.CurrencyConverter'
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
 moduledir = join_paths(pkgdatadir, 'currencyconverter')
+datadir = prefix / get_option('datadir')
 
 if get_option('profile') == 'development'
   profile = 'Devel'

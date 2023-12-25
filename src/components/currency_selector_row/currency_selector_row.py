@@ -20,7 +20,7 @@
 from gi.repository import GObject, Gtk
 from ...define import CODES
 
-@Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/components/currency_selector_row/currency_selector_row.ui')
+@Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/components/currency_selector_row/index.ui')
 class CurrencySelectorRow(Gtk.ListBoxRow):
     __gtype_name__ = 'CurrencySelectorRow'
 

@@ -1,0 +1,51 @@
+using Gtk 4.0;
+using Adw 1;
+
+Gtk.Box page {
+  orientation: vertical;
+  valign: center;
+  Adw.PreferencesPage {
+    Adw.PreferencesGroup {
+      margin-start: 24;
+      margin-end: 24;
+      title: _("From");
+      header-suffix: Gtk.Box {
+        orientation: horizontal;
+        $CurrencySelector from_currency_selector {}
+      };
+      Gtk.Entry from_currency_value {
+        styles ["f-l"]
+        xalign: 0.50;
+        text: "200 000";
+        height-request: 70;
+      }
+    }
+    Adw.PreferencesGroup {
+      halign: center;
+      valign: center;
+      Gtk.Button invert_currencies {
+        styles ["circular"]
+        width-request: 50;
+        height-request: 50;
+        icon-name: "vertical-arrows-symbolic";
+      }
+    }
+    Adw.PreferencesGroup {
+      styles ["top-transform"]
+      margin-start: 24;
+      margin-end: 24;
+      title: _("To");
+      header-suffix: Gtk.Box {
+        orientation: horizontal;
+        $CurrencySelector to_currency_selector {}
+      };
+      Gtk.Entry to_currency_value {
+        styles ["f-l", "text-light", "bg-accent-color"]
+        xalign: 0.50;
+        text: "350 000";
+        height-request: 70;
+        editable: false;
+      }
+    }
+  }
+}
