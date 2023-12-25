@@ -36,6 +36,24 @@ application = Adw.Application(
     flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
 )
 
+def do_command_line(command_line) :
+    options = command_line.get_options_dict()
+    options = options.end().unpack()
+    src_currency_value = ''
+    if 'src-currency-value' in options:
+        src_currency_value = options['src-currency-value']
+    if application.get_active_window() is not None:
+        print("open")
+        # application.get_active_window().load_settings(APP_ID)
+        # application.get_active_window().src_currency_entry.set_text(src_currency_value)
+        # application.window.load_data()
+        # application.window._convert_currencies()
+    else:
+        application.launch_src_currency_value = src_currency_value
+
+    application.activate()
+    return 0
+
 def startup(application: Adw.Application):
     application.utils = Utils(application)
     application_actions(application=application)
@@ -45,3 +63,6 @@ def load_main_window(application: Adw.Application):
 
 application.connect("startup", startup)
 application.connect("activate", load_main_window)
+application.add_main_option('src-currency-value', b't', GLib.OptionFlags.NONE,
+GLib.OptionArg.STRING, 'Value to converte currencies', None)
+application.do_command_line = do_command_line

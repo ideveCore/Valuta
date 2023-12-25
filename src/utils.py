@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from typing import Any, Dict, Union
+from typing import Any, Dict, Union, Callable
 from gi.repository import Adw, Gio, GObject
 from .requests import Requests
 
@@ -73,23 +73,39 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
 
 class Convertion:
     def __init__(self):
-        self.__converted_data: Dict[str, Union[str, int]] = {
+        self.converted_data: Dict[str, Union[str, int]] = {
             "from": "",
             "to": "",
             "amount": 1,
             "info": "",
             "disclaimer": "",
         }
+        self.__events = {
+            "converted": [],
+        }
     def convert(self, from_currency_value: int, from_currency: str, to_currency: str, provider: int) -> Dict[str, Union[str, int]]:
-        if not self.match_data(from_currency, from_currency, provider):
-            self.__converted_data = Requests(provider, from_currency, to_currency, 1).get()
-        return {**self.__converted_data, "amount": from_currency_value * self.__converted_data["amount"]}
+        if not self.match_data(from_currency, to_currency, provider):
+            self.converted_data = Requests(provider, from_currency, to_currency, 1).get()
+
+        data = {**self.converted_data, "amount": from_currency_value * self.converted_data["amount"]}
+        self.__event('converted', data)
 
     def match_data(self, from_currency: str, to_currency: str, provider: int) -> bool:
-        if self.__converted_data["from"] == from_currency and self.__converted_data["to"] == to_currency and self.__converted_data["provider"] == provider:
-            return True
-        else:
+        if self.converted_data["from"] != from_currency:
             return False
+        if self.converted_data["to"] != to_currency:
+            return False
+        if self.converted_data["provider"] != provider:
+            return False
+        else:
+            return True
+    def connect(self, event: str, callback: Callable):
+        self.__events[event].append(callback)
+
+    def __event(self, event: str, data: Dict[str, Union[str, int]]):
+        for listener in self.__events[event]:
+            listener(data)
+
 
 class Settings(Gio.Settings):
     def __init__(self, *args):

@@ -12,16 +12,16 @@ import dbus.service
 from dbus.mainloop.glib import DBusGMainLoop
 
 import gi
-gi.require_version('Soup', '3.0')
 from gi.repository import GLib, Gio
 from currencyconverter.define import CODES
-from currencyconverter.utils import SoupSession
+from currencyconverter.utils import Convertion
 
 SEARCH_BUS_NAME = 'org.gnome.Shell.SearchProvider2'
 SBN = dict(dbus_interface=SEARCH_BUS_NAME)
 
 CLIPBOARD_PREFIX = 'copy-to-clipboard'
 ERROR_PREFIX = 'converter-error'
+
 
 gettext.install('currencyconverter', '@localedir@')
 _ = gettext.gettext
@@ -35,6 +35,7 @@ class SearchService(dbus.service.Object):
         self.is_with_argument=False
         bus_name = dbus.service.BusName(self.bus_name, bus=self.session_bus)
         dbus.service.Object.__init__(self, bus_name, self.object_path)
+        self.session = Convertion()
 
 
         self.currency_data = {
@@ -67,15 +68,10 @@ class SearchService(dbus.service.Object):
         if self.src_currency != self.dest_currency:
             error_id = ERROR_PREFIX + src_currency_value
             if not self.currency_data['dest_currency_value']:
-                session = SoupSession.get()
-                message = session.format_request(self.src_currency, self.dest_currency)
-                response_data = session.get_raw_value(message)
-                self.currency_data['dest_currency_value'] = response_data
-
+                self.currency_data['dest_currency_value'] = self.session.convert(float(self.currency_data["src_currency_value"]), self.src_currency, self.dest_currency, self.settings.get_int("providers"))["amount"]
             if self.currency_data['dest_currency_value']:
                 try:
-                    dest_currency_value = float(self.currency_data["dest_currency_value"]) * float(self.currency_data["src_currency_value"])
-                    self.dest_currencies[src_currency_value] = str(dest_currency_value)
+                    self.dest_currencies[src_currency_value] = str(float(self.currency_data['dest_currency_value']))
                     return src_currency_value
                 except Exception as exc:
                     logging.error(exc)
@@ -97,20 +93,20 @@ class SearchService(dbus.service.Object):
 
         value_splited = value.upper().split(' ')
         if len(value_splited) == 4:
-            if value_splited[0] in CODES and value_splited[2] in CODES:
-                if self._is_number(value_splited[3]):
-                    if value_splited[0] != self.src_currency or value_splited[2] != self.dest_currency:
-                        self.settings.set_string('src-currency', value_splited[0])
-                        self.settings.set_string('dest-currency', value_splited[2])
+            if value_splited[1] in CODES and value_splited[3] in CODES:
+                if self._is_number(value_splited[0]):
+                    if value_splited[1] != self.src_currency or value_splited[3] != self.dest_currency:
+                        self.settings.set_string('src-currency', value_splited[1])
+                        self.settings.set_string('dest-currency', value_splited[3])
                         self._on_currencies_changed('', '')
-                        self.currency_data['src_currency_value'] = float(value_splited[3])
+                        self.currency_data['src_currency_value'] = float(value_splited[0])
                         converter_id = self._converter(value)
                         results = [converter_id]
                         if not converter_id.startswith(ERROR_PREFIX):
                             results.append(CLIPBOARD_PREFIX + value)
                         return results
                     else:
-                        self.currency_data['src_currency_value'] = float(value_splited[3])
+                        self.currency_data['src_currency_value'] = float(value_splited[0])
                         converter_id = self._converter(value)
                         results = [converter_id]
                         if not converter_id.startswith(ERROR_PREFIX):

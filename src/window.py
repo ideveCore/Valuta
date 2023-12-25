@@ -83,7 +83,7 @@ def create_main_window(application: Adw.Application):
         menu_button.props.popover.add_child(theme_selector_wg, 'theme')
 
     load_window_state()
-    content.set_child(convertion_page(application))
+    content.set_child(convertion_page(application, 0))
     window.set_application(application)
     # window.connect('show', lambda user_data: print(application.utils.convertion.convert(2, "USD", "EUR", settings.get_int("providers"))))
     return window

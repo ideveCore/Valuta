@@ -13,10 +13,9 @@ Gtk.Box page {
         orientation: horizontal;
         $CurrencySelector from_currency_selector {}
       };
-      Gtk.Entry from_currency_value {
+      Gtk.Entry from_currency_entry {
         styles ["f-l"]
         xalign: 0.50;
-        text: "200 000";
         height-request: 70;
       }
     }
@@ -39,12 +38,40 @@ Gtk.Box page {
         orientation: horizontal;
         $CurrencySelector to_currency_selector {}
       };
-      Gtk.Entry to_currency_value {
-        styles ["f-l", "text-light", "bg-accent-color"]
-        xalign: 0.50;
-        text: "350 000";
-        height-request: 70;
-        editable: false;
+      Gtk.Stack stack {
+        transition-type: crossfade;
+        Gtk.StackPage {
+          name: "result";
+          child: WindowHandle {
+            Gtk.Entry to_currency_entry {
+              styles ["f-l", "text-light", "bg-accent-color"]
+              xalign: 0.50;
+              height-request: 70;
+              editable: false;
+            }
+          };
+        }
+        Gtk.StackPage {
+          name: "loading";
+          child: WindowHandle {
+            Box {
+              orientation: vertical;
+              spacing: 12;
+              margin-top: 12;
+              margin-bottom: 12;
+              margin-start: 12;
+              margin-end: 12;
+              halign: center;
+              valign: center;
+
+              Spinner {
+                spinning: true;
+                width-request: 25;
+                height-request: 25;
+              }
+            }
+          };
+        }
       }
     }
   }
