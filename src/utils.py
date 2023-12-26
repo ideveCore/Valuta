@@ -201,7 +201,7 @@ class SoupSession(Soup.Session):
     def format_response(default_response: Dict[str, Any]) -> Dict[str, Any]:
         url = SoupSession.__mount_url(default_response['amount'])
         current_date = GLib.DateTime.new_now_local()
-        date = f'{current_date.get_day_of_month()} {gettext("of")} {current_date.format("%B")}'
+        date = gettext("{0} of {1}").format(current_date.get_day_of_month(), current_date.format("%B"))
         time = current_date.format("%H:%M:%S")
         SoupSession._formated_response['dest_currency_value'] = default_response['amount']
         SoupSession._formated_response['info'] = f'{date} - {time}'

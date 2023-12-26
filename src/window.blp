@@ -18,7 +18,7 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
       MenuButton menu_btn {
         icon-name: "open-menu-symbolic";
         menu-model: primary_menu;
-        tooltip-text: _("Main menu");
+        tooltip-text: _("Main Menu");
       }
     }
     Adw.Clamp {
@@ -48,19 +48,19 @@ template CurrencyConverterWindow : Adw.ApplicationWindow {
             }
           };
           Adw.ActionRow src_currency {
-            title: _('From currency');
+            title: _("From currency");
             .CurrencySelector src_currency_selector {
               styles ["m-e"]
             }
           }
           Adw.ActionRow dest_currency {
-            title: _('To currency');
+            title: _("To currency");
             .CurrencySelector dest_currency_selector {
               styles ["m-e"]
             }
           }
           Adw.EntryRow src_currency_entry {
-            title: '';
+            title: "";
           }
         }
         Gtk.Button convert_button {
