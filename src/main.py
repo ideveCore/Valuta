@@ -92,7 +92,7 @@ class CurrencyconverterApplication(Adw.Application):
         # ==================================================
         self.set_accels_for_action('win.show-help-overlay', ['<Primary>question'])
 
-    def on_about_action(self, widget, _):
+    def on_about_action(self, *args):
         app_info = f'{APP_ID} {VERSION}'
         glib_os_info = f'{GLib.get_os_info("ID")} {GLib.get_os_info("VERSION_ID")}'
         pygobject_info = f'PyGObject {".".join(map(str, GObject.pygobject_version))}'
@@ -114,6 +114,9 @@ class CurrencyconverterApplication(Adw.Application):
                                 issue_url='https://github.com/ideveCore/currency-converter/issues',
                                 debug_info=debug_info,
                                 copyright='© 2023 Ideve Core')
+        # Translator credits. Replace "translator-credits" with your name/username, and optionally an email or URL.
+        # One name per line, please do not remove previous names.
+        about.set_translator_credits(_("translator-credits"))
         about.present()
 
     def on_preferences_action(self, widget, _):
