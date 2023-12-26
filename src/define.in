@@ -31,802 +31,802 @@ BASE_URL_LANG_PREFIX = '&hl=en&lr=lang_en'
 #
 CODES = {
   "AFN": {
-    "name": "Afghan Afghani",
+    "name": _("Afghan Afghani"),
     "flag": "🇦🇫",
     "symbol": "AFN",
   },
   "ALL": {
-    "name": "Albanian Lek",
+    "name": _("Albanian Lek"),
     "flag": "🇦🇱",
     "symbol": "L",
   },
   "DZD": {
-    "name": "Algerian Dinar",
+    "name": _("Algerian Dinar"),
     "flag": "🇩🇿",
     "symbol": "DZD"
   },
   "AOA": {
-    "name": "Angolan Kwanza",
+    "name": _("Angolan Kwanza"),
     "flag": "🇦🇴",
     "symbol": "Kz",
   },
   "ARS": {
-    "name": "Argentine Peso",
+    "name": _("Argentine Peso"),
     "flag": "🇦🇷",
     "symbol": "$",
   },
   "AMD": {
-    "name": "Armenian Dram",
+    "name": _("Armenian Dram"),
     "flag": "🇦🇲",
     "symbol": "֏",
   },
   "AWG": {
-    "name": "Aruban Florin",
+    "name": _("Aruban Florin"),
     "flag": "🇦🇼",
     "symbol": "ƒ",
   },
   "AUD": {
-    "name": "Australian Dollar",
+    "name": _("Australian Dollar"),
     "flag": "🇦🇺",
     "symbol": "$",
   },
   "AZN": {
-    "name": "Azerbaijani Manat",
+    "name": _("Azerbaijani Manat"),
     "flag": "🇦🇿",
     "symbol": "₼",
   },
   "BSD": {
-    "name": "Bahamian Dollar",
+    "name": _("Bahamian Dollar"),
     "flag": "🇧🇸",
     "symbol": "$",
   },
   "BHD": {
-    "name": "Bahraini Dinar",
+    "name": _("Bahraini Dinar"),
     "flag": "🇧🇭",
     "symbol": "BHD",
   },
   "BBD": {
-    "name": "Bajan dollar",
+    "name": _("Bajan dollar"),
     "flag": "🇧🇧",
     "symbol": "$",
   },
   "BDT": {
-    "name": "Bangladeshi Taka",
+    "name": _("Bangladeshi Taka"),
     "flag": "🇧🇩",
     "symbol": "৳",
   },
   "BYR": {
-    "name": "Belarusian Ruble",
+    "name": _("Belarusian Ruble"),
     "flag": "🇧🇾",
     "symbol": "Rbl",
   },
   "BYN": {
-    "name": "Belarusian Ruble",
+    "name": _("Belarusian Ruble"),
     "flag": "🇧🇾",
     "symbol": "Rbl",
   },
   "BZD": {
-    "name": "Belize Dollar",
+    "name": _("Belize Dollar"),
     "flag": "🇧🇿",
     "symbol": "$",
   },
   "BMD": {
-    "name": "Bermudan Dollar",
+    "name": _("Bermudan Dollar"),
     "flag": "🇧🇲",
     "symbol": "$",
   },
   "BTN": {
-    "name": "Bhutan currency",
+    "name": _("Bhutan currency"),
     "flag": "🇧🇹",
     "symbol": "Nu.",
   },
   "BTC": {
-    "name": "Bitcoin",
+    "name": _("Bitcoin"),
     "flag": "₿",
     "symbol": "₿",
   },
   "BCH": {
-    "name": "Bitcoin Cash",
+    "name": _("Bitcoin Cash"),
     "flag": "₿",
     "symbol": "₿",
   },
   "BOB": {
-    "name": "Bolivian Boliviano",
+    "name": _("Bolivian Boliviano"),
     "flag": "🇧🇴",
     "symbol": "Bs",
   },
   "BAM": {
-    "name": "Bosnia-Herzegovina Convertible Mark",
+    "name": _("Bosnia-Herzegovina Convertible Mark"),
     "flag": "🇧🇦",
     "symbol": "KM",
   },
   "BWP": {
-    "name": "Botswanan Pula",
+    "name": _("Botswanan Pula"),
     "flag": "🇧🇼",
     "symbol": "P",
   },
   "BRL": {
-    "name": "Brazilian Real",
+    "name": _("Brazilian Real"),
     "flag": "🇧🇷",
     "symbol": "R$",
   },
   "BND": {
-    "name": "Brunei Dollar",
+    "name": _("Brunei Dollar"),
     "flag": "🇧🇳",
     "symbol": "$",
   },
   "BGN": {
-    "name": "Bulgarian Lev",
+    "name": _("Bulgarian Lev"),
     "flag": "🇧🇬",
     "symbol": "лв",
   },
   "BIF": {
-    "name": "Burundian Franc",
+    "name": _("Burundian Franc"),
     "flag": "🇧🇮",
     "symbol": "FBu",
   },
   "XPF": {
-    "name": "CFP Franc",
+    "name": _("CFP Franc"),
     "flag": "F",
     "symbol": "F",
   },
   "KHR": {
-    "name": "Cambodian riel",
+    "name": _("Cambodian riel"),
     "flag": "🇰🇭",
     "symbol": "៛",
   },
   "CAD": {
-    "name": "Canadian Dollar",
+    "name": _("Canadian Dollar"),
     "flag": "🇨🇦",
     "symbol": "$",
   },
   "CVE": {
-    "name": "Cape Verdean Escudo",
+    "name": _("Cape Verdean Escudo"),
     "flag": "🇨🇻",
     "symbol": "$",
   },
   "KYD": {
-    "name": "Cayman Islands Dollar",
+    "name": _("Cayman Islands Dollar"),
     "flag": "🇰🇾",
     "symbol": "$",
   },
   "XAF": {
-    "name": "Central African CFA franc",
+    "name": _("Central African CFA franc"),
     "flag": "F.CFA",
     "symbol": "F.CFA",
   },
   "CLP": {
-    "name": "Chilean Peso",
+    "name": _("Chilean Peso"),
     "flag": "🇨🇱",
     "symbol": "$",
   },
   "CLF": {
-    "name": "Chilean Unit of Account (UF)",
+    "name": _("Chilean Unit of Account (UF)"),
     "flag": "🇨🇱",
     "symbol": "$",
   },
   "CNY": {
-    "name": "Chinese Yuan",
+    "name": _("Chinese Yuan"),
     "flag": "🇨🇳",
     "symbol": "¥",
   },
   "CNH": {
-    "name": "Chinese Yuan (offshore)",
+    "name": _("Chinese Yuan (offshore)"),
     "flag": "🇨🇳",
     "symbol": "¥",
   },
   "COP": {
-    "name": "Colombian Peso",
+    "name": _("Colombian Peso"),
     "flag": "🇨🇴",
     "symbol": "$",
   },
   "KMF": {
-    "name": "Comorian franc",
+    "name": _("Comorian franc"),
     "flag": "🇰🇲",
     "symbol": "FC",
   },
   "CDF": {
-    "name": "Congolese Franc",
+    "name": _("Congolese Franc"),
     "flag": "🇨🇩",
     "symbol": "FC",
   },
   "CRC": {
-    "name": "Costa Rican Colón",
+    "name": _("Costa Rican Colón"),
     "flag": "🇨🇷",
     "symbol": "₡",
   },
   "HRK": {
-    "name": "Croatian Kuna",
+    "name": _("Croatian Kuna"),
     "flag": "🇭🇷",
     "symbol": "kn",
   },
   "CUP": {
-    "name": "Cuban Peso",
+    "name": _("Cuban Peso"),
     "flag": "🇨🇺",
     "symbol": "$",
   },
   "CZK": {
-    "name": "Czech Koruna",
+    "name": _("Czech Koruna"),
     "flag": "🇨🇿",
     "symbol": "Kč",
   },
   "DKK": {
-    "name": "Danish Krone",
+    "name": _("Danish Krone"),
     "flag": "🇩🇰",
     "symbol": "kr"
   },
   "DJF": {
-    "name": "Djiboutian Franc",
+    "name": _("Djiboutian Franc"),
     "flag": "🇩🇯",
     "symbol": "Fdj"
   },
   "DOP": {
-    "name": "Dominican Peso",
+    "name": _("Dominican Peso"),
     "flag": "🇩🇴",
     "symbol": "RD$"
   },
   "XCD": {
-    "name": "East Caribbean Dollar",
+    "name": _("East Caribbean Dollar"),
     "flag": "EC$",
     "symbol": "EC$"
   },
   "EGP": {
-    "name": "Egyptian Pound",
+    "name": _("Egyptian Pound"),
     "flag": "🇪🇬",
     "symbol": "EGP"
   },
   "ETH": {
-    "name": "Ether",
+    "name": _("Ether"),
     "flag": "ETH",
     "symbol": "ETH"
   },
   "ETB": {
-    "name": "Ethiopian Birr",
+    "name": _("Ethiopian Birr"),
     "flag": "🇪🇹",
     "symbol": "ETB"
   },
   "EUR": {
-    "name": "Euro",
+    "name": _("Euro"),
     "flag": "🇪🇺",
     "symbol": "€"
   },
   "FJD": {
-    "name": "Fijian Dollar",
+    "name": _("Fijian Dollar"),
     "flag": "🇫🇯",
     "symbol": "FJD"
   },
   "GMD": {
-    "name": "Gambian dalasi",
+    "name": _("Gambian dalasi"),
     "flag": "🇬🇲",
     "symbol": "GMD"
   },
   "GEL": {
-    "name": "Georgian Lari",
+    "name": _("Georgian Lari"),
     "flag": "🇬🇪",
     "symbol": "GEL"
   },
   "GHC": {
-    "name": "Ghanaian Cedi",
+    "name": _("Ghanaian Cedi"),
     "flag": "GHC",
     "symbol": "GHC"
   },
   "GHS": {
-    "name": "Ghanaian Cedi",
+    "name": _("Ghanaian Cedi"),
     "flag": "🇬🇭",
     "symbol": "GHS"
   },
   "GIP": {
-    "name": "Gibraltar Pound",
+    "name": _("Gibraltar Pound"),
     "flag": "🇬🇮",
     "symbol": "GIP"
   },
   "GTQ": {
-    "name": "Guatemalan Quetzal",
+    "name": _("Guatemalan Quetzal"),
     "flag": "🇬🇹",
     "symbol": "GTQ"
   },
   "GNF": {
-    "name": "Guinean Franc",
+    "name": _("Guinean Franc"),
     "flag": "🇬🇳",
     "symbol": "GNF"
   },
   "GYD": {
-    "name": "Guyanaese Dollar",
+    "name": _("Guyanaese Dollar"),
     "flag": "🇬🇾",
     "symbol": "GYD"
   },
   "HTG": {
-    "name": "Haitian Gourde",
+    "name": _("Haitian Gourde"),
     "flag": "🇭🇹",
     "symbol": "HTG"
   },
   "HNL": {
-    "name": "Honduran Lempira",
+    "name": _("Honduran Lempira"),
     "flag": "🇭🇳",
     "symbol": "HNL"
   },
   "HKD": {
-    "name": "Hong Kong Dollar",
+    "name": _("Hong Kong Dollar"),
     "flag": "🇭🇰",
     "symbol": "HKD"
   },
   "HUF": {
-    "name": "Hungarian Forint",
+    "name": _("Hungarian Forint"),
     "flag": "🇭🇺",
     "symbol": "HUF"
   },
   "ISK": {
-    "name": "Icelandic Króna",
+    "name": _("Icelandic Króna"),
     "flag": "🇮🇸",
     "symbol": "ISK"
   },
   "INR": {
-    "name": "Indian Rupee",
+    "name": _("Indian Rupee"),
     "flag": "🇮🇳",
     "symbol": "₹"
   },
   "IDR": {
-    "name": "Indonesian Rupiah",
+    "name": _("Indonesian Rupiah"),
     "flag": "🇮🇩",
     "symbol": "IDR"
   },
   "IRR": {
-    "name": "Iranian Rial",
+    "name": _("Iranian Rial"),
     "flag": "🇮🇷",
     "symbol": "IRR"
   },
   "IQD": {
-    "name": "Iraqi Dinar",
+    "name": _("Iraqi Dinar"),
     "flag": "🇮🇶",
     "symbol": "IQD"
   },
   "ILS": {
-    "name": "Israeli New Shekel",
+    "name": _("Israeli New Shekel"),
     "flag": "🇮🇱",
     "symbol": "₪"
   },
   "JMD": {
-    "name": "Jamaican Dollar",
+    "name": _("Jamaican Dollar"),
     "flag": "🇯🇲",
     "symbol": "JMD"
   },
   "JPY": {
-    "name": "Japanese Yen",
+    "name": _("Japanese Yen"),
     "flag": "🇯🇵",
     "symbol": "¥"
   },
   "JOD": {
-    "name": "Jordanian Dinar",
+    "name": _("Jordanian Dinar"),
     "flag": "🇯🇴",
     "symbol": "JOD"
   },
   "KZT": {
-    "name": "Kazakhstani Tenge",
+    "name": _("Kazakhstani Tenge"),
     "flag": "🇰🇿",
     "symbol": "KZT"
   },
   "KES": {
-    "name": "Kenyan Shilling",
+    "name": _("Kenyan Shilling"),
     "flag": "🇰🇪",
     "symbol": "KES"
   },
   "KWD": {
-    "name": "Kuwaiti Dinar",
+    "name": _("Kuwaiti Dinar"),
     "flag": "🇰🇼",
     "symbol": "KWD"
   },
   "KGS": {
-    "name": "Kyrgyzstani Som",
+    "name": _("Kyrgyzstani Som"),
     "flag": "🇰🇬",
     "symbol": "KGS"
   },
   "LAK": {
-    "name": "Laotian Kip",
+    "name": _("Laotian Kip"),
     "flag": "🇱🇦",
     "symbol": "LAK"
   },
   "LBP": {
-    "name": "Lebanese pound",
+    "name": _("Lebanese pound"),
     "flag": "🇱🇧",
     "symbol": "LBP"
   },
   "LSL": {
-    "name": "Lesotho loti",
+    "name": _("Lesotho loti"),
     "flag": "🇱🇸",
     "symbol": "LSL"
   },
   "LRD": {
-    "name": "Liberian Dollar",
+    "name": _("Liberian Dollar"),
     "flag": "🇱🇷",
     "symbol": "LRD"
   },
   "LYD": {
-    "name": "Libyan Dinar",
+    "name": _("Libyan Dinar"),
     "flag": "🇱🇾",
     "symbol": "LYD"
   },
   "LTC": {
-    "name": "Litecoin",
+    "name": _("Litecoin"),
     "flag": "LTC",
     "symbol": "LTC"
   },
   "MOP": {
-    "name": "Macanese Pataca",
+    "name": _("Macanese Pataca"),
     "flag": "🇲🇴",
     "symbol": "MOP"
   },
   "MKD": {
-    "name": "Macedonian Denar",
+    "name": _("Macedonian Denar"),
     "flag": "🇲🇰",
     "symbol": "MKD"
   },
   "MGA": {
-    "name": "Malagasy Ariary",
+    "name": _("Malagasy Ariary"),
     "flag": "🇲🇬",
     "symbol": "MGA"
   },
   "MWK": {
-    "name": "Malawian Kwacha",
+    "name": _("Malawian Kwacha"),
     "flag": "🇲🇼",
     "symbol": "MWK"
   },
   "MYR": {
-    "name": "Malaysian Ringgit",
+    "name": _("Malaysian Ringgit"),
     "flag": "🇲🇾",
     "symbol": "MYR"
   },
   "MVR": {
-    "name": "Maldivian Rufiyaa",
+    "name": _("Maldivian Rufiyaa"),
     "flag": "🇲🇻",
     "symbol": "MVR"
   },
   "MRO": {
-    "name": "Mauritanian Ouguiya (1973–2017)",
+    "name": _("Mauritanian Ouguiya (1973–2017)"),
     "flag": "MRO",
     "symbol": "MRO"
   },
   "MUR": {
-    "name": "Mauritian Rupee",
+    "name": _("Mauritian Rupee"),
     "flag": "🇲🇺",
     "symbol": "MUR"
   },
   "MXN": {
-    "name": "Mexican Peso",
+    "name": _("Mexican Peso"),
     "flag": "🇲🇽",
     "symbol": "MXN"
   },
   "MDL": {
-    "name": "Moldovan Leu",
+    "name": _("Moldovan Leu"),
     "flag": "🇲🇩",
     "symbol": "MDL"
   },
   "MAD": {
-    "name": "Moroccan Dirham",
+    "name": _("Moroccan Dirham"),
     "flag": "🇲🇦",
     "symbol": "MAD"
   },
   "MZM": {
-    "name": "Mozambican metical",
+    "name": _("Mozambican metical"),
     "flag": "MZM",
     "symbol": "MZM"
   },
   "MZN": {
-    "name": "Mozambican metical",
+    "name": _("Mozambican metical"),
     "flag": "🇲🇿",
     "symbol": "MZN"
   },
   "MMK": {
-    "name": "Myanmar Kyat",
+    "name": _("Myanmar Kyat"),
     "flag": "🇲🇲",
     "symbol": "MMK"
   },
   "TWD": {
-    "name": "New Taiwan dollar",
+    "name": _("New Taiwan dollar"),
     "flag": "🇹🇼",
     "symbol": "TWD"
   },
   "NAD": {
-    "name": "Namibian dollar",
+    "name": _("Namibian dollar"),
     "flag": "🇳🇦",
     "symbol": "NAD"
   },
   "NPR": {
-    "name": "Nepalese Rupee",
+    "name": _("Nepalese Rupee"),
     "flag": "🇳🇵",
     "symbol": "NPR"
   },
   "ANG": {
-    "name": "Netherlands Antillean Guilder",
+    "name": _("Netherlands Antillean Guilder"),
     "flag": "ANG",
     "symbol": "ANG"
   },
   "NZD": {
-    "name": "New Zealand Dollar",
+    "name": _("New Zealand Dollar"),
     "flag": "🇳🇿",
     "symbol": "NZD"
   },
   "NIO": {
-    "name": "Nicaraguan Córdoba",
+    "name": _("Nicaraguan Córdoba"),
     "flag": "🇳🇮",
     "symbol": "NIO"
   },
   "NGN": {
-    "name": "Nigerian Naira",
+    "name": _("Nigerian Naira"),
     "flag": "🇳🇬",
     "symbol": "NGN"
   },
   "NOK": {
-    "name": "Norwegian Krone",
+    "name": _("Norwegian Krone"),
     "flag": "🇳🇴",
     "symbol": "NOK"
   },
   "OMR": {
-    "name": "Omani Rial",
+    "name": _("Omani Rial"),
     "flag": "🇴🇲",
     "symbol": "OMR"
   },
   "PKR": {
-    "name": "Pakistani Rupee",
+    "name": _("Pakistani Rupee"),
     "flag": "🇵🇰",
     "symbol": "PKR"
   },
   "PAB": {
-    "name": "Panamanian Balboa",
+    "name": _("Panamanian Balboa"),
     "flag": "🇵🇦",
     "symbol": "PAB"
   },
   "PGK": {
-    "name": "Papua New Guinean Kina",
+    "name": _("Papua New Guinean Kina"),
     "flag": "🇵🇬",
     "symbol": "PGK"
   },
   "PYG": {
-    "name": "Paraguayan Guarani",
+    "name": _("Paraguayan Guarani"),
     "flag": "🇵🇾",
     "symbol": "PYG"
   },
   "PHP": {
-    "name": "Philippine Piso",
+    "name": _("Philippine Piso"),
     "flag": "🇵🇭",
     "symbol": "PHP"
   },
   "PLN": {
-    "name": "Poland złoty",
+    "name": _("Poland złoty"),
     "flag": "🇵🇱",
     "symbol": "PLN"
   },
   "GBP": {
-    "name": "Pound sterling",
+    "name": _("Pound sterling"),
     "flag": "🇬🇧",
     "symbol": "£"
   },
   "QAR": {
-    "name": "Qatari Rial",
+    "name": _("Qatari Rial"),
     "flag": "🇶🇦",
     "symbol": "QAR"
   },
   "ROL": {
-    "name": "Romanian Leu",
+    "name": _("Romanian Leu"),
     "flag": "ROL",
     "symbol": "ROL"
   },
   "RON": {
-    "name": "Romanian Leu",
+    "name": _("Romanian Leu"),
     "flag": "🇷🇴",
     "symbol": "RON"
   },
   "RUR": {
-    "name": "Russian Ruble",
+    "name": _("Russian Ruble"),
     "flag": "RUR",
     "symbol": "RUR"
   },
   "RUB": {
-    "name": "Russian Ruble",
+    "name": _("Russian Ruble"),
     "flag": "🇷🇺",
     "symbol": "RUB"
   },
   "RWF": {
-    "name": "Rwandan franc",
+    "name": _("Rwandan franc"),
     "flag": "🇷🇼",
     "symbol": "RWF"
   },
   "SVC": {
-    "name": "Salvadoran Colón",
+    "name": _("Salvadoran Colón"),
     "flag": "",
     "symbol": "SVC"
   },
   "SAR": {
-    "name": "Saudi Riyal",
+    "name": _("Saudi Riyal"),
     "flag": "🇸🇦",
     "symbol": "SAR"
   },
   "CSD": {
-    "name": "Serbian Dinar",
+    "name": _("Serbian Dinar"),
     "flag": "CSD",
     "symbol": "CSD"
   },
   "RSD": {
-    "name": "Serbian Dinar",
+    "name": _("Serbian Dinar"),
     "flag": "🇷🇸",
     "symbol": "RSD"
   },
   "SCR": {
-    "name": "Seychellois Rupee",
+    "name": _("Seychellois Rupee"),
     "flag": "🇸🇨",
     "symbol": "SCR"
   },
   "SLL": {
-    "name": "Sierra Leonean Leone",
+    "name": _("Sierra Leonean Leone"),
     "flag": "🇸🇱",
     "symbol": "SLL"
   },
   "SGD": {
-    "name": "Singapore Dollar",
+    "name": _("Singapore Dollar"),
     "flag": "🇸🇬",
     "symbol": "SGD"
   },
   "PEN": {
-    "name": "Sol",
+    "name": _("Sol"),
     "flag": "🇵🇪",
     "symbol": "PEN"
   },
   "SBD": {
-    "name": "Solomon Islands Dollar",
+    "name": _("Solomon Islands Dollar"),
     "flag": "🇸🇧",
     "symbol": "SBD"
   },
   "SOS": {
-    "name": "Somali Shilling",
+    "name": _("Somali Shilling"),
     "flag": "🇸🇴",
     "symbol": "SOS"
   },
   "ZAR": {
-    "name": "South African Rand",
+    "name": _("South African Rand"),
     "flag": "🇿🇦",
     "symbol": "ZAR"
   },
   "KRW": {
-    "name": "South Korean won",
+    "name": _("South Korean won"),
     "flag": "🇰🇷",
     "symbol": "₩"
   },
   "VEF": {
-    "name": "Sovereign Bolivar",
+    "name": _("Sovereign Bolivar"),
     "flag": "🇻🇪",
     "symbol": "VEF"
   },
   "XDR": {
-    "name": "Special Drawing Rights",
+    "name": _("Special Drawing Rights"),
     "flag": "XDR",
     "symbol": "XDR"
   },
   "LKR": {
-    "name": "Sri Lankan Rupee",
+    "name": _("Sri Lankan Rupee"),
     "flag": "🇱🇰",
     "symbol": "LKR"
   },
   "SSP": {
-    "name": "Sudanese pound",
+    "name": _("Sudanese pound"),
     "flag": "🇸🇸",
     "symbol": "SSP"
   },
   "SDG": {
-    "name": "Sudanese pound",
+    "name": _("Sudanese pound"),
     "flag": "🇸🇩",
     "symbol": "SDG"
   },
   "SRD": {
-    "name": "Surinamese Dollar",
+    "name": _("Surinamese Dollar"),
     "flag": "🇸🇷",
     "symbol": "SRD"
   },
   "SZL": {
-    "name": "Swazi Lilangeni",
+    "name": _("Swazi Lilangeni"),
     "flag": "🇸🇿",
     "symbol": "SZL"
   },
   "SEK": {
-    "name": "Swedish Krona",
+    "name": _("Swedish Krona"),
     "flag": "🇸🇪",
     "symbol": "SEK"
   },
   "CHF": {
-    "name": "Swiss Franc",
+    "name": _("Swiss Franc"),
     "flag": "🇨🇭",
     "symbol": "CHF"
   },
   "TJS": {
-    "name": "Tajikistani Somoni",
+    "name": _("Tajikistani Somoni"),
     "flag": "🇹🇯",
     "symbol": "TJS"
   },
   "TZS": {
-    "name": "Tanzanian Shilling",
+    "name": _("Tanzanian Shilling"),
     "flag": "🇹🇿",
     "symbol": "TZS"
   },
   "THB": {
-    "name": "Thai Baht",
+    "name": _("Thai Baht"),
     "flag": "🇹🇭",
     "symbol": "THB"
   },
   "TOP": {
-    "name": "Tongan Paʻanga",
+    "name": _("Tongan Paʻanga"),
     "flag": "🇹🇴",
     "symbol": "TOP"
   },
   "TTD": {
-    "name": "Trinidad & Tobago Dollar",
+    "name": _("Trinidad & Tobago Dollar"),
     "flag": "🇹🇹",
     "symbol": "TTD"
   },
   "TND": {
-    "name": "Tunisian Dinar",
+    "name": _("Tunisian Dinar"),
     "flag": "🇹🇳",
     "symbol": "TND"
   },
   "TRY": {
-    "name": "Turkish lira",
+    "name": _("Turkish lira"),
     "flag": "🇹🇷",
     "symbol": "TRY"
   },
   "TMM": {
-    "name": "Turkmenistan manat",
+    "name": _("Turkmenistan manat"),
     "flag": "TMT",
     "symbol": "TMM"
   },
   "TMT": {
-    "name": "Turkmenistan manat",
+    "name": _("Turkmenistan manat"),
     "flag": "🇹🇲",
     "symbol": "TMT"
   },
   "UGX": {
-    "name": "Ugandan Shilling",
+    "name": _("Ugandan Shilling"),
     "flag": "🇺🇬",
     "symbol": "UGX"
   },
   "UAH": {
-    "name": "Ukrainian hryvnia",
+    "name": _("Ukrainian hryvnia"),
     "flag": "🇺🇦",
     "symbol": "UAH"
   },
   "AED": {
-    "name": "United Arab Emirates Dirham",
+    "name": _("United Arab Emirates Dirham"),
     "flag": "🇦🇪",
     "symbol": "AED"
   },
   "USD": {
-    "name": "United States Dollar",
+    "name": _("United States Dollar"),
     "flag": "🇺🇸",
     "symbol": "$"
   },
   "UYU": {
-    "name": "Uruguayan Peso",
+    "name": _("Uruguayan Peso"),
     "flag": "🇺🇾",
     "symbol": "UYU"
   },
   "UZS": {
-    "name": "Uzbekistani Som",
+    "name": _("Uzbekistani Som"),
     "flag": "🇺🇿",
     "symbol": "UZS"
   },
   "VND": {
-    "name": "Vietnamese dong",
+    "name": _("Vietnamese dong"),
     "flag": "🇻🇳",
     "symbol": "₫"
   },
   "XOF": {
-    "name": "West African CFA franc",
+    "name": _("West African CFA franc"),
     "flag": "",
     "symbol": "XOF"
   },
   "YER": {
-    "name": "Yemeni Rial",
+    "name": _("Yemeni Rial"),
     "flag": "🇾🇪",
     "symbol": "YER",
   },
   "ZMW": {
-    "name": "Zambian Kwacha",
+    "name": _("Zambian Kwacha"),
     "flag": "🇿🇲",
     "symbol": "ZMW",
   },
