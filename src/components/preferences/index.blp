@@ -18,6 +18,17 @@ Adw.PreferencesWindow component {
             strings [_("Google"), _("European Central Bank")]
           };
         }
+        Adw.ActionRow  {
+          title: _("High precision");
+          subtitle: _("If enabled, it makes the numbers more accurate");
+          icon-name: "sonar-symbolic";
+          activatable-widget: high_precision;
+          [suffix]
+          Switch high_precision {
+            name: "high-precision";
+            valign: center;
+          }
+        }
       }
     }
   }

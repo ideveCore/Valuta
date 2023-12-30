@@ -20,7 +20,7 @@
 from typing import Any, Dict, Union, Callable
 from gi.repository import Adw, Gio, GObject
 from .requests import Requests
-
+from decimal import Decimal
 
 class CurrencyObject(GObject.Object):
     __gtype_name__ = 'CurrencyObject'
@@ -59,7 +59,7 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
     def do_get_n_items(self):
         return len(self.currencies)
 
-    def set_currencies(self, currencies, auto=False):
+    def set_currencies(self, currencies):
         removed = len(self.currencies)
         self.currencies.clear()
         for code in currencies:
@@ -72,7 +72,7 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
 
 
 class Convertion:
-    def __init__(self):
+    def __init__(self, settings: Gio.Settings):
         self.converted_data: Dict[str, Union[str, int]] = {
             "from": "",
             "to": "",
@@ -83,11 +83,19 @@ class Convertion:
         self.__events = {
             "converted": [],
         }
+        self.settings = settings
     def convert(self, from_currency_value: int, from_currency: str, to_currency: str, provider: int) -> Dict[str, Union[str, int]]:
         if not self.match_data(from_currency, to_currency, provider):
             self.converted_data = Requests(provider, from_currency, to_currency, 1).get()
 
-        data = {**self.converted_data, "amount": from_currency_value * self.converted_data["amount"]}
+        if self.settings.get_boolean("high-precision"):
+            from_currency = Decimal(from_currency_value)
+            base_currency = Decimal(self.converted_data["amount"])
+        else:
+            from_currency = from_currency_value
+            base_currency = self.converted_data["amount"]
+
+        data = {**self.converted_data, "amount": from_currency * base_currency}
         self.__event('converted', data)
 
     def match_data(self, from_currency: str, to_currency: str, provider: int) -> bool:
@@ -114,5 +122,5 @@ class Settings(Gio.Settings):
 class Utils:
     def __init__(self, application: Adw.Application):
         self.settings = Settings(application.get_application_id())
-        self.convertion = Convertion()
+        self.convertion = Convertion(self.settings)
 

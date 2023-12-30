@@ -78,8 +78,7 @@ class Google(Providers):
         time = current_date.format("%H:%M:%S")
         self.response["from"] = self.from_currency
         self.response["to"] = self.to_currency
-        self.response["amount"] = data['amount']
-        self.response["converted"] = True
+        self.response["amount"] = float(data['amount'])
         self.response['info'] = f'{date} - {time}'
         self.response['disclaimer'] = url
         self.response["provider"] = 0
