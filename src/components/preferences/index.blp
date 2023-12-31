@@ -1,0 +1,36 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.PreferencesWindow component {
+  modal: true;
+  default-height: 250;
+  default-width: 350;
+  Adw.PreferencesPage {
+    title: _("Preferences");
+    Adw.PreferencesGroup {
+      title: _("Application");
+      ListBox list_box {
+        styles [ "boxed-list" ]
+        selection-mode: none;
+        Adw.ComboRow providers {
+          title: _("Providers");
+          model: Gtk.StringList {
+            strings [_("Google"), _("European Central Bank")]
+          };
+        }
+        Adw.ActionRow  {
+          title: _("High precision");
+          subtitle: _("If enabled, it makes the numbers more accurate");
+          icon-name: "sonar-symbolic";
+          activatable-widget: high_precision;
+          [suffix]
+          Switch high_precision {
+            name: "high-precision";
+            valign: center;
+          }
+        }
+      }
+    }
+  }
+}
+
