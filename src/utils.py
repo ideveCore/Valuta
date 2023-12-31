@@ -70,7 +70,6 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
         for item in self.currencies:
             item.props.selected = (item.code == code)
 
-
 class Convertion:
     def __init__(self, settings: Gio.Settings):
         self.converted_data: Dict[str, Union[str, int]] = {
@@ -123,4 +122,3 @@ class Utils:
     def __init__(self, application: Adw.Application):
         self.settings = Settings(application.get_application_id())
         self.convertion = Convertion(self.settings)
-

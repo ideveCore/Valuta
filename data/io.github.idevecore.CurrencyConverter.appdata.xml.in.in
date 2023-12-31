@@ -10,10 +10,12 @@
   </description>
   <url type="homepage">https://github.com/ideveCore/currency-converter</url>
   <url type="bugtracker">https://github.com/ideveCore/currency-converter/issues</url>
+  <url type="vcs-browser">https://github.com/ideveCore/currency-converter</url>
+  <url type="translate">https://github.com/ideveCore/currency-converter/tree/main/po</url>
   <url type="donation">https://ko-fi.com/idevecore</url>
   <releases>
     <release version="1.1.0" date="2023-08-14">
-      <description>
+      <description translatable="no">
         <p>In this version we bring:</p>
         <ul>
           <li>New ui;</li>
@@ -30,7 +32,7 @@
 
   <releases>
     <release version="1.0.0" date="2023-07-14">
-      <description>
+      <description translatable="no">
         <p>Currency Converter 1.0.0: Application launch</p>
       </description>
     </release>
@@ -81,5 +83,5 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
-  <developer_name>Ideve Core</developer_name>
+  <developer_name translatable="no">Ideve Core</developer_name>
 </component>
