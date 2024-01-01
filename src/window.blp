@@ -19,89 +19,18 @@ Adw.ApplicationWindow window {
       [end]
       MenuButton menu_button {
         menu-model: primary_menu;
-<<<<<<< HEAD
         icon-name: "open-menu-symbolic";
         tooltip-text: _("Main menu");
-=======
-        tooltip-text: _("Main Menu");
->>>>>>> turkish
       }
     }
     content: Adw.Bin content {};
     [bottom]
     Gtk.Box {
       halign: center;
-<<<<<<< HEAD
       margin-bottom: 10;
-      Gtk.Label {
+      Gtk.Label info {
         styles ["dim-label"]
-        label: _("Results for 8th September 2023 23:28");
-=======
-      valign: center;
-
-      Box {
-        orientation: vertical;
-        spacing: 24;
-        Adw.PreferencesGroup {
-          styles ['pd']
-          title: _("Converter");
-            header-suffix: Gtk.Box {
-            orientation: horizontal;
-            spacing: 6;
-            
-            Gtk.Button {
-              styles ["flat"]
-              valign: center;
-              child: Adw.ButtonContent {
-                icon-name: "emblem-synchronizing-symbolic";
-                label: _("Switch");
-              };
-              clicked => _switch_currencies();
-            }
-          };
-          Adw.ActionRow src_currency {
-            title: _("From currency");
-            .CurrencySelector src_currency_selector {
-              styles ["m-e"]
-            }
-          }
-          Adw.ActionRow dest_currency {
-            title: _("To currency");
-            .CurrencySelector dest_currency_selector {
-              styles ["m-e"]
-            }
-          }
-          Adw.EntryRow src_currency_entry {
-            title: "";
-          }
-        }
-        Gtk.Button convert_button {
-          styles ["pill", "suggested-action"]
-          sensitive: false;
-          halign: center;
-          child: 
-            Spinner convert_button_spinner {
-            spinning: true;
-          };
-        }
-        Label dest_currency_label {
-          styles ['title-1']
-          label: "£ 10";
-        }
-        Box {
-          Label info {
-            styles ["m-s", "caption"]
-            halign: start;
-          }
-          LinkButton disclaimer {
-            styles [
-              "caption",
-            ]
-            label: _("disclaimer");
-          }
-        }
-        Adw.ToastOverlay overlay {}
->>>>>>> turkish
+        label: _("");
       }
     }
   };

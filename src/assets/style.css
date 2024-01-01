@@ -108,3 +108,8 @@
 .top-transform {
   transform: translateY(-40px);
 }
+
+.large-button {
+  padding: 0.5em;
+}
+

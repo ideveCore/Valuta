@@ -23,15 +23,20 @@ gi.require_version('Adw', '1')
 
 from gi.repository import Gio, Adw
 from .components.preferences.main import preferences
+from .about import about
 
 def application_actions(application: Adw.Application):
   quit_action = Gio.SimpleAction.new(name='quit')
   preferences_action = Gio.SimpleAction.new(name='preferences')
+  about_action = Gio.SimpleAction.new(name='about')
 
   quit_action.connect('activate', lambda simple_action, parameter: application.quit())
   preferences_action.connect('activate', lambda simple_action, parameter : preferences(application, application.utils.settings).present())
+  about_action.connect('activate', lambda simple_action, parameter : about(application).present())
 
   application.add_action(quit_action)
   application.add_action(preferences_action)
+  application.add_action(about_action)
   application.set_accels_for_action('app.quit', ['<primary>q'])
   application.set_accels_for_action('app.preferences', ['<primary>comma'])
+  application.set_accels_for_action('win.show-help-overlay', ['<Primary>question'])

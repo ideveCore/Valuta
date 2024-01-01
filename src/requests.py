@@ -50,6 +50,12 @@ class Providers:
     def default_response(self):
         pass
 
+    def create_info(self, date: str, time: str = "00:00:00"):
+        date = date.split("-")
+        time = time.split(":")
+        date_time = GLib.DateTime.new_utc(float(date[0]), float(date[1]), float(date[2]), float(time[0]), float(time[1]), float(time[2]))
+        return _(f"Results for {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')} - UTC")
+
 class Google(Providers):
     def mount_url(self):
         return f'{self.GOOGLE_BASE_URL}+{self.from_currency_value}+{self.from_currency}+to+{self.to_currency}{BASE_URL_LANG_PREFIX}'
@@ -74,12 +80,11 @@ class Google(Providers):
     def default_response(self, data: Dict[str, str]):
         url = self.mount_url()
         current_date = GLib.DateTime.new_now_local()
-        date = f'{current_date.get_day_of_month()} {gettext("of")} {current_date.format("%B")}'
         time = current_date.format("%H:%M:%S")
         self.response["from"] = self.from_currency
         self.response["to"] = self.to_currency
         self.response["amount"] = float(data['amount'])
-        self.response['info'] = f'{date} - {time}'
+        self.response['info'] = self.create_info(current_date.format("%F"), time)
         self.response['disclaimer'] = url
         self.response["provider"] = 0
         return self.response
@@ -95,7 +100,7 @@ class ECB(Providers):
         self.response["from"] = self.from_currency
         self.response["to"] = self.to_currency
         self.response["amount"] = data["rates"][self.to_currency]
-        self.response["info"] = data["date"]
+        self.response["info"] = self.create_info(data["date"])
         self.response["disclaimer"] = self.mount_url()
         self.response["provider"] = 1
         return self.response
@@ -125,8 +130,8 @@ class SoupSession(Soup.Session):
             response = self.send_and_read(message, None)
             data = response.get_data()
             return data
-        except GLib.GError as exc:
-            return exc.message
+        except GLib.GError as error:
+             raise error from error
 
 class Requests:
     HEADERS: Dict[str, str] = {
@@ -139,4 +144,7 @@ class Requests:
     def get(self):
         session = SoupSession();
         message = session.create_request("GET", self.__url, self.HEADERS)
-        return self.__provider.serializer(session.get_response(message))
+        try:
+            return self.__provider.serializer(session.get_response(message))
+        except Exception as error:
+            return error.message

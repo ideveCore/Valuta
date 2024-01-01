@@ -41,6 +41,8 @@ def convertion_page(application: Adw.Application, from_currency_value):
     to_currency_entry = builder.get_object("to_currency_entry")
     invert_currencies_button = builder.get_object("invert_currencies")
     stack = builder.get_object("stack")
+    reload = builder.get_object("reload")
+    toast_overlay = builder.get_object("toast_overlay")
     to_currency_value = 0
 
     def load_currencies(provider: int):
@@ -92,17 +94,22 @@ def convertion_page(application: Adw.Application, from_currency_value):
                     task.return_value(self.__converted_data)
                 except Exception as e:
                     task.return_value(e)
-            if convertion.converted_data["from"] != from_currency_selector.selected or convertion.converted_data["to"] != to_currency_selector.selected:
+            if convertion.converted_data["from"] != from_currency_selector.selected or convertion.converted_data["to"] != to_currency_selector.selected or not convertion.converted_data["converted"]:
                 stack.set_visible_child_name("loading")
                 task = Gio.Task.new(application, None, None, None)
                 task.run_in_thread(thread_cb)
             else:
                 convertion.convert(float(value), from_currency_selector.selected, to_currency_selector.selected, settings.get_int("providers"))
 
-
     def converted(data: Dict[str, Union[str, int]]):
-        stack.set_visible_child_name("result")
-        to_currency_entry.set_text(str(data["amount"]))
+        if not data["converted"]:
+            stack.set_visible_child_name("convertion-error")
+            toast_overlay.add_toast(Adw.Toast.new(
+                title = _("Error converting, please try again."),
+            ))
+        else:
+            stack.set_visible_child_name("result")
+            to_currency_entry.set_text(str(data["amount"]))
 
     def currency_selectors_changed(_obj, _param):
         from_code = from_currency_selector.selected
@@ -117,6 +124,7 @@ def convertion_page(application: Adw.Application, from_currency_value):
     from_currency_selector.connect('notify::selected', currency_selectors_changed)
     to_currency_selector.connect('notify::selected', currency_selectors_changed)
     invert_currencies_button.connect('clicked', lambda button: invert_currencies())
+    reload.connect('clicked', lambda button: convert(from_currency_entry.get_text()))
     convertion.connect("converted", converted)
     settings.connect("changed::providers", change_provider)
     settings.connect("changed::high-precision", lambda settings, key: convert(from_currency_entry.get_text()))

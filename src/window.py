@@ -29,6 +29,7 @@ from typing import Union, Any, Dict
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk, Panel
 from .define import RES_PATH
 from .pages import convertion_page
+from .components import Shortcuts
 
 resource = f"{RES_PATH}/window.ui"
 
@@ -43,9 +44,12 @@ def string_to_color(string: str):
 def create_main_window(application: Adw.Application):
     builder = Gtk.Builder.new_from_resource(resource)
     settings = application.utils.settings
+    convertion = application.utils.convertion
     window = builder.get_object("window")
     content = builder.get_object("content")
     menu_button = builder.get_object("menu_button")
+    info = builder.get_object("info")
+    disclaimer = builder.get_object("disclaimer")
 
     def set_color_scheme(color: str):
       Adw.StyleManager.get_default().set_color_scheme(string_to_color(color))
@@ -81,9 +85,22 @@ def create_main_window(application: Adw.Application):
         theme_selector_wg = Panel.ThemeSelector()
         theme_selector_wg.set_action_name('win.color-scheme')
         menu_button.props.popover.add_child(theme_selector_wg, 'theme')
+        window.set_help_overlay(Shortcuts())
+
+    def converted(data: Dict[str, Union[str, int]]):
+        info.set_text(data["info"])
+        disclaimer.set_visible(True)
+
+    def open_uri(link: str):
+        Gtk.show_uri(
+          window,
+          link,
+          Gdk.CURRENT_TIME
+        );
 
     load_window_state()
-    content.set_child(convertion_page(application, 0))
+    disclaimer.connect('clicked', lambda button: open_uri(convertion.get_convertion()['disclaimer']))
+    convertion.connect("converted", converted)
+    content.set_child(convertion_page(application, 0, ))
     window.set_application(application)
-    # window.connect('show', lambda user_data: print(application.utils.convertion.convert(2, "USD", "EUR", settings.get_int("providers"))))
     return window

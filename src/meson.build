@@ -49,6 +49,7 @@ gnome.compile_resources('currencyconverter',
 # ===== Python sources =====
 sources = [
   '__init__.py',
+  'about.py',
   'actions.py',
   'components/preferences/main.py',
   'requests.py',

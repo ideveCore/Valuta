@@ -72,7 +72,28 @@ Gtk.Box page {
             }
           };
         }
+        Gtk.StackPage {
+          name: "convertion-error";
+          child: WindowHandle {
+            Box {
+              orientation: vertical;
+              spacing: 12;
+              margin-top: 12;
+              margin-bottom: 12;
+              margin-start: 12;
+              margin-end: 12;
+              halign: center;
+              valign: center;
+
+              Gtk.Button reload {
+                styles ["circular", "large-button"]
+                icon-name: "refresh-large-symbolic";
+              }
+            }
+          };
+        }
       }
+      Adw.ToastOverlay toast_overlay {}
     }
   }
 }

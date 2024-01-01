@@ -78,14 +78,20 @@ class Convertion:
             "amount": 1,
             "info": "",
             "disclaimer": "",
+            "converted": False,
         }
         self.__events = {
             "converted": [],
         }
         self.settings = settings
     def convert(self, from_currency_value: int, from_currency: str, to_currency: str, provider: int) -> Dict[str, Union[str, int]]:
-        if not self.match_data(from_currency, to_currency, provider):
-            self.converted_data = Requests(provider, from_currency, to_currency, 1).get()
+        if not self.match_data(from_currency, to_currency, provider) or not self.converted_data["converted"]:
+            response = Requests(provider, from_currency, to_currency, 1).get()
+            if isinstance(response, str):
+                self.converted_data["converted"] = False
+                return self.__event('converted', self.converted_data)
+            self.converted_data = response
+            self.converted_data["converted"] = True
 
         if self.settings.get_boolean("high-precision"):
             from_currency = Decimal(from_currency_value)
@@ -108,6 +114,9 @@ class Convertion:
             return True
     def connect(self, event: str, callback: Callable):
         self.__events[event].append(callback)
+
+    def get_convertion(self) -> Dict[str, Union[str, int]]:
+        return self.converted_data
 
     def __event(self, event: str, data: Dict[str, Union[str, int]]):
         for listener in self.__events[event]:

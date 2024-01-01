@@ -6,6 +6,7 @@ install_data(
     'lightbulb-symbolic.svg',
     'vertical-arrows-symbolic.svg',
     'sonar-symbolic.svg',
+    'refresh-large-symbolic.svg',
   ],
   install_dir: datadir / 'icons/hicolor/scalable/status',
 )
