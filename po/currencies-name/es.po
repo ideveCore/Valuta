@@ -1,0 +1,470 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: currencies-name\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-31 15:15-0500\n"
+"PO-Revision-Date: 2024-01-07 04:11-0400\n"
+"Last-Translator: Clay Gomera <d4r1us-drk@proton.me>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4\n"
+
+msgid "Afghan Afghani"
+msgstr "Afgani afgano"
+
+msgid "Albanian Lek"
+msgstr "Lek albanés"
+
+msgid "Algerian Dinar"
+msgstr "Dinar argelino"
+
+msgid "Angolan Kwanza"
+msgstr "Kwanza angoleño"
+
+msgid "Argentine Peso"
+msgstr "Peso argentino"
+
+msgid "Armenian Dram"
+msgstr "Dram armenio"
+
+msgid "Aruban Florin"
+msgstr "Florín arubeño"
+
+msgid "Australian Dollar"
+msgstr "Dólar australiano"
+
+msgid "Azerbaijani Manat"
+msgstr "Manat azerbaiyano"
+
+msgid "Bahamian Dollar"
+msgstr "Dólar bahameño"
+
+msgid "Bahraini Dinar"
+msgstr "Dinar bahreiní"
+
+msgid "Bajan dollar"
+msgstr "Dólar de Barbados"
+
+msgid "Bangladeshi Taka"
+msgstr "Taka bangladesí"
+
+msgid "Belarusian Ruble"
+msgstr "Rublo bielorruso"
+
+msgid "Belize Dollar"
+msgstr "Dólar beliceño"
+
+msgid "Bermudan Dollar"
+msgstr "Dólar bermudeño"
+
+msgid "Bhutan currency"
+msgstr "Moneda de Bután"
+
+msgid "Bitcoin"
+msgstr "Bitcoin"
+
+msgid "Bitcoin Cash"
+msgstr "Bitcoin Cash"
+
+msgid "Bolivian Boliviano"
+msgstr "Boliviano boliviano"
+
+msgid "Bosnia-Herzegovina Convertible Mark"
+msgstr "Marco convertible de Bosnia y Herzegovina"
+
+msgid "Botswanan Pula"
+msgstr "Pula botsuano"
+
+msgid "Brazilian Real"
+msgstr "Real brasileño"
+
+msgid "Brunei Dollar"
+msgstr "Dólar de Brunéi"
+
+msgid "Bulgarian Lev"
+msgstr "Lev búlgaro"
+
+msgid "Burundian Franc"
+msgstr "Franco burundés"
+
+msgid "CFP Franc"
+msgstr "Franco CFP"
+
+msgid "Cambodian riel"
+msgstr "Riel camboyano"
+
+msgid "Canadian Dollar"
+msgstr "Dólar canadiense"
+
+msgid "Cape Verdean Escudo"
+msgstr "Escudo caboverdiano"
+
+msgid "Cayman Islands Dollar"
+msgstr "Dólar de las Islas Caimán"
+
+msgid "Central African CFA franc"
+msgstr "Franco CFA de África Central"
+
+msgid "Chilean Peso"
+msgstr "Peso chileno"
+
+msgid "Chilean Unit of Account (UF)"
+msgstr "Unidad de cuenta chilena (UF)"
+
+msgid "Chinese Yuan"
+msgstr "Yuan chino"
+
+msgid "Chinese Yuan (offshore)"
+msgstr "Yuan chino (offshore)"
+
+msgid "Colombian Peso"
+msgstr "Peso colombiano"
+
+msgid "Comorian franc"
+msgstr "Franco comorense"
+
+msgid "Congolese Franc"
+msgstr "Franco congoleño"
+
+msgid "Costa Rican Colón"
+msgstr "Colón costarricense"
+
+msgid "Croatian Kuna"
+msgstr "Kuna croata"
+
+msgid "Cuban Peso"
+msgstr "Peso cubano"
+
+msgid "Czech Koruna"
+msgstr "Corona checa"
+
+msgid "Danish Krone"
+msgstr "Corona danesa"
+
+msgid "Djiboutian Franc"
+msgstr "Franco yibutiano"
+
+msgid "Dominican Peso"
+msgstr "Peso dominicano"
+
+msgid "East Caribbean Dollar"
+msgstr "Dólar del Caribe Oriental"
+
+msgid "Egyptian Pound"
+msgstr "Libra egipcia"
+
+msgid "Ether"
+msgstr "Ether"
+
+msgid "Ethiopian Birr"
+msgstr "Birr etíope"
+
+msgid "Euro"
+msgstr "Euro"
+
+msgid "Fijian Dollar"
+msgstr "Dólar fiyiano"
+
+msgid "Gambian dalasi"
+msgstr "Dalasi gambiano"
+
+msgid "Georgian Lari"
+msgstr "Lari georgiano"
+
+msgid "Ghanaian Cedi"
+msgstr "Cedi ghanés"
+
+msgid "Gibraltar Pound"
+msgstr "Libra gibraltareña"
+
+msgid "Guatemalan Quetzal"
+msgstr "Quetzal guatemalteco"
+
+msgid "Guinean Franc"
+msgstr "Franco guineano"
+
+msgid "Guyanaese Dollar"
+msgstr "Dólar guyanés"
+
+msgid "Haitian Gourde"
+msgstr "Gourde haitiano"
+
+msgid "Honduran Lempira"
+msgstr "Lempira hondureño"
+
+msgid "Hong Kong Dollar"
+msgstr "Dólar de Hong Kong"
+
+msgid "Hungarian Forint"
+msgstr "Forinto húngaro"
+
+msgid "Icelandic Króna"
+msgstr "Króna islandesa"
+
+msgid "Indian Rupee"
+msgstr "Rupia india"
+
+msgid "Indonesian Rupiah"
+msgstr "Rupia indonesia"
+
+msgid "Iranian Rial"
+msgstr "Rial iraní"
+
+msgid "Iraqi Dinar"
+msgstr "Dinar iraquí"
+
+msgid "Israeli New Shekel"
+msgstr "Nuevo shekel israelí"
+
+msgid "Jamaican Dollar"
+msgstr "Dólar jamaicano"
+
+msgid "Japanese Yen"
+msgstr "Yen japonés"
+
+msgid "Jordanian Dinar"
+msgstr "Dinar jordano"
+
+msgid "Kazakhstani Tenge"
+msgstr "Tenge kazajo"
+
+msgid "Kenyan Shilling"
+msgstr "Chelín keniano"
+
+msgid "Kuwaiti Dinar"
+msgstr "Dinar kuwaití"
+
+msgid "Kyrgyzstani Som"
+msgstr "Som kirguís"
+
+msgid "Laotian Kip"
+msgstr "Kip laosiano"
+
+msgid "Lebanese pound"
+msgstr "Libra libanesa"
+
+msgid "Lesotho loti"
+msgstr "Loti lesothense"
+
+msgid "Liberian Dollar"
+msgstr "Dólar liberiano"
+
+msgid "Libyan Dinar"
+msgstr "Dinar libio"
+
+msgid "Litecoin"
+msgstr "Litecoin"
+
+msgid "Macanese Pataca"
+msgstr "Pataca de Macao"
+
+msgid "Macedonian Denar"
+msgstr "Denar macedonio"
+
+msgid "Malagasy Ariary"
+msgstr "Ariary malgache"
+
+msgid "Malawian Kwacha"
+msgstr "Kwacha malauí"
+
+msgid "Malaysian Ringgit"
+msgstr "Ringgit malasio"
+
+msgid "Maldivian Rufiyaa"
+msgstr "Rufiyaa de Maldivas"
+
+msgid "Mauritanian Ouguiya (1973–2017)"
+msgstr "Ouguiya mauritana (1973–2017)"
+
+msgid "Mauritian Rupee"
+msgstr "Rupia mauriciana"
+
+msgid "Mexican Peso"
+msgstr "Peso mexicano"
+
+msgid "Moldovan Leu"
+msgstr "Leu moldavo"
+
+msgid "Moroccan Dirham"
+msgstr "Dírham marroquí"
+
+msgid "Mozambican metical"
+msgstr "Metical mozambiqueño"
+
+msgid "Myanmar Kyat"
+msgstr "Kyat birmano"
+
+msgid "New Taiwan dollar"
+msgstr "Dólar taiwanés"
+
+msgid "Namibian dollar"
+msgstr "Dólar namibio"
+
+msgid "Nepalese Rupee"
+msgstr "Rupia nepalí"
+
+msgid "Netherlands Antillean Guilder"
+msgstr "Florín antillano neerlandés"
+
+msgid "New Zealand Dollar"
+msgstr "Dólar neozelandés"
+
+msgid "Nicaraguan Córdoba"
+msgstr "Córdoba nicaragüense"
+
+msgid "Nigerian Naira"
+msgstr "Naira nigeriana"
+
+msgid "Norwegian Krone"
+msgstr "Corona noruega"
+
+msgid "Omani Rial"
+msgstr "Rial omaní"
+
+msgid "Pakistani Rupee"
+msgstr "Rupia pakistaní"
+
+msgid "Panamanian Balboa"
+msgstr "Balboa panameño"
+
+msgid "Papua New Guinean Kina"
+msgstr "Kina papuana"
+
+msgid "Paraguayan Guarani"
+msgstr "Guaraní paraguayo"
+
+msgid "Philippine Piso"
+msgstr "Peso filipino"
+
+msgid "Poland złoty"
+msgstr "Złoty polaco"
+
+msgid "Pound sterling"
+msgstr "Libra esterlina"
+
+msgid "Qatari Rial"
+msgstr "Riyal catarí"
+
+msgid "Romanian Leu"
+msgstr "Leu rumano"
+
+msgid "Russian Ruble"
+msgstr "Rublo ruso"
+
+msgid "Rwandan franc"
+msgstr "Franco ruandés"
+
+msgid "Salvadoran Colón"
+msgstr "Colón salvadoreño"
+
+msgid "Saudi Riyal"
+msgstr "Riyal saudita"
+
+msgid "Serbian Dinar"
+msgstr "Dinar serbio"
+
+msgid "Seychellois Rupee"
+msgstr "Rupia seychelense"
+
+msgid "Sierra Leonean Leone"
+msgstr "Leona sierraleonesa"
+
+msgid "Singapore Dollar"
+msgstr "Dólar singapurense"
+
+msgid "Sol"
+msgstr "Sol"
+
+msgid "Solomon Islands Dollar"
+msgstr "Dólar de las Islas Salomón"
+
+msgid "Somali Shilling"
+msgstr "Chelín somalí"
+
+msgid "South African Rand"
+msgstr "Rand sudafricano"
+
+msgid "South Korean won"
+msgstr "Won surcoreano"
+
+msgid "Sovereign Bolivar"
+msgstr "Bolívar soberano"
+
+msgid "Special Drawing Rights"
+msgstr "Derechos especiales de giro"
+
+msgid "Sri Lankan Rupee"
+msgstr "Rupia de Sri Lanka"
+
+msgid "Sudanese pound"
+msgstr "Libra sudanesa"
+
+msgid "Surinamese Dollar"
+msgstr "Dólar surinamés"
+
+msgid "Swazi Lilangeni"
+msgstr "Lilangeni suazi"
+
+msgid "Swedish Krona"
+msgstr "Corona sueca"
+
+msgid "Swiss Franc"
+msgstr "Franco suizo"
+
+msgid "Tajikistani Somoni"
+msgstr "Somoni tayiko"
+
+msgid "Tanzanian Shilling"
+msgstr "Chelín tanzano"
+
+msgid "Thai Baht"
+msgstr "Baht tailandés"
+
+msgid "Tongan Paʻanga"
+msgstr "Paʻanga tongano"
+
+msgid "Trinidad & Tobago Dollar"
+msgstr "Dólar de Trinidad y Tobago"
+
+msgid "Tunisian Dinar"
+msgstr "Dinar tunecino"
+
+msgid "Turkish lira"
+msgstr "Lira turca"
+
+msgid "Turkmenistan manat"
+msgstr "Manat turcomano"
+
+msgid "Ugandan Shilling"
+msgstr "Chelín ugandés"
+
+msgid "Ukrainian hryvnia"
+msgstr "Grivna ucraniana"
+
+msgid "United Arab Emirates Dirham"
+msgstr "Dírham de los Emiratos Árabes Unidos"
+
+msgid "United States Dollar"
+msgstr "Dólar estadounidense"
+
+msgid "Uruguayan Peso"
+msgstr "Peso uruguayo"
+
+msgid "Uzbekistani Som"
+msgstr "Som uzbeko"
+
+msgid "Vietnamese dong"
+msgstr "Dong vietnamita"
+
+msgid "West African CFA franc"
+msgstr "Franco CFA de África Occidental"
+
+msgid "Yemeni Rial"
+msgstr "Riyal yemení"
+
+msgid "Zambian Kwacha"
+msgstr "Kwacha zambiano"
