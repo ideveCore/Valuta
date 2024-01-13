@@ -92,6 +92,7 @@ class Convertion:
                 return self.__event('converted', self.converted_data)
             self.converted_data = response
             self.converted_data["converted"] = True
+            self.converted_data["from"] = from_currency_value
 
         if self.settings.get_boolean("high-precision"):
             from_currency = Decimal(from_currency_value)
@@ -109,6 +110,8 @@ class Convertion:
         if self.converted_data["to"] != to_currency:
             return False
         if self.converted_data["provider"] != provider:
+            return False
+        if from_currency == to_currency:
             return False
         else:
             return True

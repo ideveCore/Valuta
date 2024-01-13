@@ -41,7 +41,7 @@ def string_to_color(string: str):
     }
     return colors[string]
 
-def create_main_window(application: Adw.Application):
+def create_main_window(application: Adw.Application, from_currency_value: int):
     builder = Gtk.Builder.new_from_resource(resource)
     settings = application.utils.settings
     convertion = application.utils.convertion
@@ -91,6 +91,9 @@ def create_main_window(application: Adw.Application):
         info.set_text(data["info"])
         disclaimer.set_visible(True)
 
+    def load_convertion_page(from_currency_value: int = 0):
+        content.set_child(convertion_page(application, from_currency_value))
+
     def open_uri(link: str):
         Gtk.show_uri(
           window,
@@ -101,6 +104,7 @@ def create_main_window(application: Adw.Application):
     load_window_state()
     disclaimer.connect('clicked', lambda button: open_uri(convertion.get_convertion()['disclaimer']))
     convertion.connect("converted", converted)
-    content.set_child(convertion_page(application, 0, ))
+    load_convertion_page(from_currency_value)
     window.set_application(application)
+    window.load_convertion_page = load_convertion_page
     return window

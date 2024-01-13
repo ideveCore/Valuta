@@ -22,8 +22,8 @@ import gi, sys
 gi.require_version("Panel", "1")
 
 from gi.repository import Panel
-from .application import application
+from .application import Application
 
 Panel.init()
 
-main = lambda version: application.run(sys.argv)
+main = lambda version: Application().run(sys.argv)

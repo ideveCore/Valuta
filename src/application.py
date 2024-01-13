@@ -30,39 +30,35 @@ from .actions import application_actions
 
 from .define import APP_ID, VERSION, RES_PATH
 
-application = Adw.Application(
-    application_id=APP_ID,
-    resource_base_path=RES_PATH,
-    flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
-)
+class Application(Adw.Application):
+    """The main application singleton class."""
 
-def do_command_line(command_line) :
-    options = command_line.get_options_dict()
-    options = options.end().unpack()
-    src_currency_value = ''
-    if 'src-currency-value' in options:
-        src_currency_value = options['src-currency-value']
-    if application.get_active_window() is not None:
-        print("open")
-        # application.get_active_window().load_settings(APP_ID)
-        # application.get_active_window().src_currency_entry.set_text(src_currency_value)
-        # application.window.load_data()
-        # application.window._convert_currencies()
-    else:
-        application.launch_src_currency_value = src_currency_value
+    def __init__(self):
+        Adw.ApplicationWindow.__init__(
+                self,
+                application_id=APP_ID,
+                resource_base_path=RES_PATH,
+                flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE
+            )
+        self.utils = Utils(self)
+        application_actions(application=self)
+        self.from_currency_value = 0
+        self.add_main_option('src-currency-value', b't', GLib.OptionFlags.NONE,
+                             GLib.OptionArg.STRING, 'Value to converte currencies', None)
 
-    application.activate()
-    return 0
+    def do_activate(self):
+        create_main_window(self, self.from_currency_value).present()
 
-def startup(application: Adw.Application):
-    application.utils = Utils(application)
-    application_actions(application=application)
+    def do_command_line(self, command_line):
+        options = command_line.get_options_dict()
+        options = options.end().unpack()
+        src_currency_value = ''
+        if 'src-currency-value' in options:
+            src_currency_value = options['src-currency-value']
+        if self.get_active_window() is not None:
+            self.get_active_window().load_convertion_page(src_currency_value)
+        else:
+            self.from_currency_value = src_currency_value
 
-def load_main_window(application: Adw.Application):
-    create_main_window(application).present()
-
-application.connect("startup", startup)
-application.connect("activate", load_main_window)
-application.add_main_option('src-currency-value', b't', GLib.OptionFlags.NONE,
-GLib.OptionArg.STRING, 'Value to converte currencies', None)
-application.do_command_line = do_command_line
+        self.activate()
+        return 0
