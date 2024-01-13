@@ -4,6 +4,7 @@
 
 import sys
 import logging
+import locale
 import gettext
 
 import gi
@@ -16,7 +17,7 @@ from currencyconverter.define import CODES
 CLIPBOARD_PREFIX = 'copy-to-clipboard'
 ERROR_PREFIX = 'translation-error'
 
-# localedir = '@localedir@'
+localedir = '@localedir@'
 # langs_trans = gettext.translation('dialect-cldr-langs', localedir, fallback=True)
 # ui_trans = gettext.translation('dialect', localedir, fallback=True)
 # ui_trans.add_fallback(langs_trans)
@@ -25,8 +26,8 @@ ERROR_PREFIX = 'translation-error'
 locale.bindtextdomain('currencyconverter', localedir)
 locale.textdomain('currencyconverter')
 
-# gettext.install('currencyconverter', '@localedir@')
-# _ = gettext.gettext
+gettext.install('currencyconverter', localedir)
+_ = gettext.gettext
 
 dbus_interface_description = '''
 <!DOCTYPE node PUBLIC
@@ -78,33 +79,33 @@ class ConvertionService:
     value = ' '.join(terms)
     if self._is_number(value):
       self.currency_data['from_currency_value'] = float(value)
-      converter_id = self._converter(value)
+      converter_id = self.convertion(value)
       results = [converter_id]
       if not converter_id.startswith(ERROR_PREFIX):
         results.append(CLIPBOARD_PREFIX + value)
       return results
 
-      value_splited = value.upper().split(' ')
-      if len(value_splited) == 4:
-        if value_splited[0] in CODES and value_splited[2] in CODES:
-          if self._is_number(value_splited[0]):
-            if value_splited[1] != self.from_currency or value_splited[3] != self.to_currency:
-              self.settings.set_string('src-currency', value_splited[1])
-              self.settings.set_string('dest-currency', value_splited[3])
-              self._on_currencies_changed('', '')
-              self.currency_data['from_currency_value'] = float(value_splited[0])
-              converter_id = self._converter(value)
-              results = [converter_id]
-              if not converter_id.startswith(ERROR_PREFIX):
-                results.append(CLIPBOARD_PREFIX + value)
-              return results
-            else:
-              self.currency_data['from_currency_value'] = float(value_splited[0])
-              converter_id = self._converter(value)
-              results = [converter_id]
-              if not converter_id.startswith(ERROR_PREFIX):
-                results.append(CLIPBOARD_PREFIX + value)
-              return results
+    value_splited = value.upper().split(' ')
+    if len(value_splited) == 4:
+      if value_splited[1] in CODES and value_splited[3] in CODES:
+        if self._is_number(value_splited[0]):
+          if value_splited[1] != self.from_currency or value_splited[3] != self.to_currency:
+            self.settings.set_string('src-currency', value_splited[1])
+            self.settings.set_string('dest-currency', value_splited[3])
+            self._on_currencies_changed('', '')
+            self.currency_data['from_currency_value'] = float(value_splited[0])
+            converter_id = self.convertion(value)
+            results = [converter_id]
+            if not converter_id.startswith(ERROR_PREFIX):
+              results.append(CLIPBOARD_PREFIX + value)
+            return results
+          else:
+            self.currency_data['from_currency_value'] = float(value_splited[0])
+            converter_id = self.convertion(value)
+            results = [converter_id]
+            if not converter_id.startswith(ERROR_PREFIX):
+              results.append(CLIPBOARD_PREFIX + value)
+            return results
 
   def GetSubsearchResultSet(self, _previous_results, new_terms):
     return self.GetInitialResultSet(new_terms)
@@ -117,8 +118,8 @@ class ConvertionService:
       if converter_id in self.dest_currencies:
         value = self.dest_currencies[converter_id]
       return [{
-        'id': converter_id,
-        'name': value,
+        'id': GLib.Variant("s", converter_id),
+        'name': GLib.Variant("s", value),
       }]
 
     elif (
@@ -130,23 +131,23 @@ class ConvertionService:
       self.dest_currencies.clear()
       return [
         {
-          'id': converter_id,
-          'name': value,
-          'description': description,
+          'id': GLib.Variant("s", converter_id),
+          'name': GLib.Variant("s", value),
+          'description': GLib.Variant("s", description),
         },
         {
-          'id': ids[1],
-          'name': _('Copy'),
-          'description': _('Copy currency to clipboard'),
-          'clipboardText': value
+          'id': GLib.Variant("s", ids[1]),
+          'name': GLib.Variant("s", _('Copy')),
+          'description': GLib.Variant("s", _('Copy currency to clipboard')),
+          'clipboardText': GLib.Variant("s", value)
         }
       ]
 
     else:
       return [
         dict(
-          id=id,
-          name=name,
+          id=GLib.Variant("s", id),
+          name=GLib.Variant("s",name),
         )
         for id in ids
       ]
@@ -168,8 +169,8 @@ class ConvertionService:
       GLib.SpawnFlags.SEARCH_PATH, None
     )
 
-  def convertion(elf, from_currency_value=None):
-    if self.from_currency != self.to_currency:
+  def convertion(self, from_currency_value=None):
+    if not self.from_currency == self.to_currency:
       error_id = ERROR_PREFIX + from_currency_value
       if not self.currency_data["to_currency_value"]:
         self.currency_data["to_currency_value"] = "10"
@@ -192,6 +193,11 @@ class ConvertionService:
       return True
     except ValueError:
       return False
+
+  def _on_currencies_changed(self, widget, state):
+        self.from_currency = self.settings.get_string('src-currency')
+        self.from_currency = self.settings.get_string('dest-currency')
+        self.currency_data['to_currency_value'] = None
 
 class ConvertionServiceApplication(Gio.Application):
   def __init__(self):
@@ -232,4 +238,3 @@ class ConvertionServiceApplication(Gio.Application):
 if __name__ == "__main__":
     app = ConvertionServiceApplication()
     sys.exit(app.run())
-
