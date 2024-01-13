@@ -87,19 +87,19 @@ class ConvertionService:
       value_splited = value.upper().split(' ')
       if len(value_splited) == 4:
         if value_splited[0] in CODES and value_splited[2] in CODES:
-          if self._is_number(value_splited[3]):
-            if value_splited[0] != self.from_currency or value_splited[2] != self.to_currency:
-              self.settings.set_string('src-currency', value_splited[0])
-              self.settings.set_string('dest-currency', value_splited[2])
+          if self._is_number(value_splited[0]):
+            if value_splited[1] != self.from_currency or value_splited[3] != self.to_currency:
+              self.settings.set_string('src-currency', value_splited[1])
+              self.settings.set_string('dest-currency', value_splited[3])
               self._on_currencies_changed('', '')
-              self.currency_data['from_currency_value'] = float(value_splited[3])
+              self.currency_data['from_currency_value'] = float(value_splited[0])
               converter_id = self._converter(value)
               results = [converter_id]
               if not converter_id.startswith(ERROR_PREFIX):
                 results.append(CLIPBOARD_PREFIX + value)
               return results
             else:
-              self.currency_data['from_currency_value'] = float(value_splited[3])
+              self.currency_data['from_currency_value'] = float(value_splited[0])
               converter_id = self._converter(value)
               results = [converter_id]
               if not converter_id.startswith(ERROR_PREFIX):
@@ -232,3 +232,4 @@ class ConvertionServiceApplication(Gio.Application):
 if __name__ == "__main__":
     app = ConvertionServiceApplication()
     sys.exit(app.run())
+
