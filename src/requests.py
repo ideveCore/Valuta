@@ -81,9 +81,10 @@ class Google(Providers):
         url = self.mount_url()
         current_date = GLib.DateTime.new_now_local()
         time = current_date.format("%H:%M:%S")
+        self.response["base"] = float(data['amount'])
         self.response["from"] = self.from_currency
         self.response["to"] = self.to_currency
-        self.response["amount"] = float(data['amount'])
+        self.response["amount"] = 0
         self.response['info'] = self.create_info(current_date.format("%F"), time)
         self.response['disclaimer'] = url
         self.response["provider"] = 0
@@ -97,9 +98,10 @@ class ECB(Providers):
         return self.default_response(json.loads(data))
 
     def default_response(self, data: Dict[str, str]):
+        self.response["base"] = data["rates"][self.to_currency]
         self.response["from"] = self.from_currency
         self.response["to"] = self.to_currency
-        self.response["amount"] = data["rates"][self.to_currency]
+        self.response["amount"] = 0
         self.response["info"] = self.create_info(data["date"])
         self.response["disclaimer"] = self.mount_url()
         self.response["provider"] = 1

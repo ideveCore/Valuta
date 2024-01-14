@@ -13,6 +13,7 @@ from gi.repository import GLib, Gio
 
 from gi.repository import GLib, Gio
 from currencyconverter.define import CODES
+from currencyconverter.utils import Convertion
 
 CLIPBOARD_PREFIX = 'copy-to-clipboard'
 ERROR_PREFIX = 'translation-error'
@@ -72,12 +73,12 @@ class ConvertionService:
     self.dest_currencies = {}
     self.from_currency = self.settings.get_string('src-currency')
     self.to_currency = self.settings.get_string('dest-currency')
-    self.settings.connect("changed::src-currency", self._on_currencies_changed);
-    self.settings.connect("changed::dest-currency", self._on_currencies_changed);
+    self.settings.connect("changed::src-currency", self.on_currencies_changed);
+    self.settings.connect("changed::dest-currency", self.on_currencies_changed);
 
   def GetInitialResultSet(self, terms):
     value = ' '.join(terms)
-    if self._is_number(value):
+    if self.is_number(value):
       self.currency_data['from_currency_value'] = float(value)
       converter_id = self.convertion(value)
       results = [converter_id]
@@ -87,20 +88,20 @@ class ConvertionService:
 
     value_splited = value.upper().split(' ')
     if len(value_splited) == 4:
-      if value_splited[1] in CODES and value_splited[3] in CODES:
-        if self._is_number(value_splited[0]):
-          if value_splited[1] != self.from_currency or value_splited[3] != self.to_currency:
-            self.settings.set_string('src-currency', value_splited[1])
-            self.settings.set_string('dest-currency', value_splited[3])
-            self._on_currencies_changed('', '')
-            self.currency_data['from_currency_value'] = float(value_splited[0])
+      if value_splited[0] in CODES and value_splited[2] in CODES:
+        if self.is_number(value_splited[3]):
+          if value_splited[0] != self.from_currency or value_splited[2] != self.to_currency:
+            self.settings.set_string('src-currency', value_splited[0])
+            self.settings.set_string('dest-currency', value_splited[2])
+            self.on_currencies_changed('', '')
+            self.currency_data['from_currency_value'] = float(value_splited[3])
             converter_id = self.convertion(value)
             results = [converter_id]
             if not converter_id.startswith(ERROR_PREFIX):
               results.append(CLIPBOARD_PREFIX + value)
             return results
           else:
-            self.currency_data['from_currency_value'] = float(value_splited[0])
+            self.currency_data['from_currency_value'] = float(value_splited[3])
             converter_id = self.convertion(value)
             results = [converter_id]
             if not converter_id.startswith(ERROR_PREFIX):
@@ -147,7 +148,7 @@ class ConvertionService:
       return [
         dict(
           id=GLib.Variant("s", id),
-          name=GLib.Variant("s",name),
+          name=GLib.Variant("s", id),
         )
         for id in ids
       ]
@@ -170,22 +171,22 @@ class ConvertionService:
     )
 
   def convertion(self, from_currency_value=None):
-    if not self.from_currency == self.to_currency:
-      error_id = ERROR_PREFIX + from_currency_value
-      if not self.currency_data["to_currency_value"]:
-        self.currency_data["to_currency_value"] = "10"
-      if self.currency_data["to_currency_value"]:
-        try:
-          to_currency_value = float(self.currency_data["to_currency_value"]) * float(self.currency_data["from_currency_value"])
-          self.dest_currencies[from_currency_value] = str(to_currency_value)
-          return from_currency_value
-        except Exception as exc:
-          logging.error(exc)
-    else:
-      self.convertions[error_id] = _('Conversion failed, check for network issues')
+   if not self.from_currency == self.to_currency:
+    error_id = ERROR_PREFIX + from_currency_value
+    if not self.currency_data['to_currency_value']:
+      self.currency_data['to_currency_value'] = Convertion(self.settings).convert_raw(1, self.from_currency, self.to_currency, self.settings.get_int("providers"))
+
+    if self.currency_data['to_currency_value']:
+      try:
+        to_currency_value = float(self.currency_data["to_currency_value"]) * float(self.currency_data["from_currency_value"])
+        self.dest_currencies[from_currency_value] = str(to_currency_value)
+        return from_currency_value
+      except Exception as exc:
+        logging.error(exc)
+
     return error_id
 
-  def _is_number(self, value):
+  def is_number(self, value):
     if not value:
       return False
     try:
@@ -194,10 +195,10 @@ class ConvertionService:
     except ValueError:
       return False
 
-  def _on_currencies_changed(self, widget, state):
-        self.from_currency = self.settings.get_string('src-currency')
-        self.from_currency = self.settings.get_string('dest-currency')
-        self.currency_data['to_currency_value'] = None
+  def on_currencies_changed(self, widget, state):
+    self.from_currency = self.settings.get_string('src-currency')
+    self.to_currency = self.settings.get_string('dest-currency')
+    self.currency_data['to_currency_value'] = None
 
 class ConvertionServiceApplication(Gio.Application):
   def __init__(self):

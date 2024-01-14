@@ -73,6 +73,7 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
 class Convertion:
     def __init__(self, settings: Gio.Settings):
         self.converted_data: Dict[str, Union[str, int]] = {
+            "base": 1,
             "from": "",
             "to": "",
             "amount": 1,
@@ -85,24 +86,38 @@ class Convertion:
         }
         self.settings = settings
     def convert(self, from_currency_value: int, from_currency: str, to_currency: str, provider: int) -> Dict[str, Union[str, int]]:
-        if not self.match_data(from_currency, to_currency, provider) or not self.converted_data["converted"]:
-            response = Requests(provider, from_currency, to_currency, 1).get()
-            if isinstance(response, str):
-                self.converted_data["converted"] = False
-                return self.__event('converted', self.converted_data)
-            self.converted_data = response
-            self.converted_data["converted"] = True
-            self.converted_data["from"] = from_currency_value
+        if not from_currency == to_currency:
+            if not self.match_data(from_currency, to_currency, provider) or not self.converted_data["converted"]:
+                response = Requests(provider, from_currency, to_currency, 1).get()
+                if isinstance(response, str):
+                    self.converted_data["converted"] = False
+                    return self.__event('converted', self.converted_data)
+                self.converted_data = response
+                self.converted_data["converted"] = True
+                self.converted_data["from"] = from_currency_value
 
-        if self.settings.get_boolean("high-precision"):
-            from_currency = Decimal(from_currency_value)
-            base_currency = Decimal(self.converted_data["amount"])
+            if self.settings.get_boolean("high-precision"):
+                from_currency = Decimal(from_currency_value)
+                base_currency = Decimal(self.converted_data["base"])
+            else:
+                from_currency = from_currency_value
+                base_currency = self.converted_data["base"]
+
+            data = {**self.converted_data, "amount": from_currency * base_currency}
+            self.__event('converted', data)
+            return data
         else:
-            from_currency = from_currency_value
-            base_currency = self.converted_data["amount"]
+            self.converted_data["converted"] = False
 
-        data = {**self.converted_data, "amount": from_currency * base_currency}
-        self.__event('converted', data)
+    def convert_raw(self, from_currency_value: int, from_currency: str, to_currency: str, provider: int) -> int:
+        if not from_currency == to_currency:
+            response = Requests(provider, from_currency, to_currency, 1).get()
+            if not isinstance(response, str):
+                return response["base"]
+            else:
+                self.converted_data["converted"] = False
+        else:
+            self.converted_data["converted"] = False
 
     def match_data(self, from_currency: str, to_currency: str, provider: int) -> bool:
         if self.converted_data["from"] != from_currency:
@@ -110,8 +125,6 @@ class Convertion:
         if self.converted_data["to"] != to_currency:
             return False
         if self.converted_data["provider"] != provider:
-            return False
-        if from_currency == to_currency:
             return False
         else:
             return True
