@@ -139,7 +139,7 @@ class ConvertionService:
         {
           'id': GLib.Variant("s", ids[1]),
           'name': GLib.Variant("s", _('Copy')),
-          'description': GLib.Variant("s", _('Copy currency to clipboard')),
+          'description': GLib.Variant("s", _('Copy convertion to clipboard')),
           'clipboardText': GLib.Variant("s", value)
         }
       ]

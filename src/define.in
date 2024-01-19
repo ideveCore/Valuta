@@ -33,7 +33,7 @@ gettext.install('currencyconverter', '@localedir@')
 _ = gettext.gettext
 
 #The symbols is in Latin mode (based on dataset from wikipedia
-#
+
 CODES = {
   "AFN": {
     "name": _("Afghan Afghani"),

@@ -44,7 +44,7 @@ class Application(Adw.Application):
         application_actions(application=self)
         self.from_currency_value = 0
         self.add_main_option('src-currency-value', b't', GLib.OptionFlags.NONE,
-                             GLib.OptionArg.STRING, 'Value to converte currencies', None)
+                             GLib.OptionArg.STRING, 'Value to convert currencies', None)
 
     def do_activate(self):
         create_main_window(self, self.from_currency_value).present()
