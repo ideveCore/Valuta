@@ -7,7 +7,8 @@ A simple currency converter using Google-based data
 ![CurrencyConverter](data/screenshots/01.png)
 
 ## Features
-- Conversion based on Google Finance
+- Google finance conversion provider
+- European Central Bank conversion provider through the API (Frankfurter)
 
 ## Flathub
 <a href='https://flathub.org/apps/io.github.idevecore.CurrencyConverter'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
@@ -30,6 +31,19 @@ A simple currency converter using Google-based data
  meson builddir --prefix=/usr/local 
  sudo ninja -C builddir install 
  ```
+
+## Translations
+
+[![Translation status](https://hosted.weblate.org/widget/currency-converter/svg-badge.svg)](https://hosted.weblate.org/engage/currency-converter/) ✨Powered by [Weblate](https://weblate.org/en/)✨
+
+Currency Converter has been translated into the following languages:
+
+<a href="https://hosted.weblate.org/engage/currency-converter/">
+<img src="https://hosted.weblate.org/widget/currency-converter/multi-auto.svg" alt="Translation status" />
+</a>
+
+Please help translate Currency Converter into more languages through [Weblate](https://hosted.weblate.org/engage/currency-converter/).
+
 
 ## Donate
 If you like this project and have some spare money left, consider donating:
