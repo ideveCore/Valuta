@@ -14,9 +14,6 @@
     <key name="providers" type="i">
       <default>0</default>
     </key>
-    <key name="high-precision" type="b">
-      <default>false</default>
-    </key>
     <key name="width" type="i">
 			<default>420</default>
 		</key>

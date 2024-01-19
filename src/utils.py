@@ -96,12 +96,8 @@ class Convertion:
                 self.converted_data["converted"] = True
                 self.converted_data["from"] = from_currency_value
 
-            if self.settings.get_boolean("high-precision"):
-                from_currency = Decimal(from_currency_value)
-                base_currency = Decimal(self.converted_data["base"])
-            else:
-                from_currency = from_currency_value
-                base_currency = self.converted_data["base"]
+            from_currency = from_currency_value
+            base_currency = self.converted_data["base"]
 
             data = {**self.converted_data, "amount": from_currency * base_currency}
             self.__event('converted', data)
