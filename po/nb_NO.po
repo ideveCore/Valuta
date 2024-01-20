@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Currency Converter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-01-20 20:40+0000\n"
+"PO-Revision-Date: 2024-01-20 23:08+0000\n"
 "Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/nb_NO/>\n"
@@ -44,10 +44,8 @@ msgid "Converter"
 msgstr "Konverterer"
 
 #: src/components/currency_selector/currency_selector.blp:41
-#, fuzzy
-#| msgid "Search Currencies"
 msgid "Search Currencies…"
-msgstr "Søk etter valutaer"
+msgstr "Søk etter valutaer…"
 
 #: src/components/preferences/preferences.blp:9 src/window.blp:47
 msgid "Preferences"
