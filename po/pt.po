@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
 "PO-Revision-Date: 2024-01-20 23:08+0000\n"
 "Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/"
-"currency-converter/currency-converter/pt/>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/currency-"
+"converter/currency-converter/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain charset=UTF-8\n"
@@ -62,19 +62,24 @@ msgid "European Central Bank"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:9
-msgctxt "shortcut window"
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "General"
+msgctxt "shortcuts window"
 msgid "General"
 msgstr "Geral"
 
 #: src/components/shortcuts/shortcuts.blp:11
-msgctxt "shortcut window"
+msgctxt "shortcuts window"
 msgid "Preferences"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:25
-msgctxt "shortcut window"
-msgid "Shortcuts"
-msgstr "Atalhos"
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgctxt "shortcuts window"
+msgid "Keyboard shortcuts"
+msgstr "Atalhos de teclado"
 
 #: src/components/shortcuts/shortcuts.blp:19
 #, fuzzy
@@ -741,7 +746,7 @@ msgstr "isenção de responsabilidade"
 #: src/window.blp:23
 #, fuzzy
 #| msgid "Main menu"
-msgid "Main Menu"
+msgid "Main menu"
 msgstr "Menu principal"
 
 #: src/window.blp:52
@@ -764,6 +769,10 @@ msgstr "Sair"
 #: src/window.py:109
 msgid "Convert"
 msgstr "Converter"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Shortcuts"
+#~ msgstr "Atalhos"
 
 #~ msgid "Follow sytem Style"
 #~ msgstr "Siga o estilo do sistema"

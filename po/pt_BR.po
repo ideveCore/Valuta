@@ -61,19 +61,26 @@ msgid "European Central Bank"
 msgstr "Banco central da europa"
 
 #: src/components/shortcuts/shortcuts.blp:9
-msgctxt "shortcut window"
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "General"
+msgctxt "shortcuts window"
 msgid "General"
 msgstr "Geral"
 
 #: src/components/shortcuts/shortcuts.blp:11
-msgctxt "shortcut window"
+#, fuzzy
+#| msgid "Preferences"
+msgctxt "shortcuts window"
 msgid "Preferences"
 msgstr "Preferências"
 
 #: src/components/shortcuts/shortcuts.blp:25
-msgctxt "shortcut window"
-msgid "Shortcuts"
-msgstr "Atalhos"
+#, fuzzy
+#| msgid "Keyboard shortcuts"
+msgctxt "shortcuts window"
+msgid "Keyboard shortcuts"
+msgstr "Atalhos de teclado"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
@@ -729,7 +736,9 @@ msgid "Disclaimer"
 msgstr "Isenção de responsabilidade"
 
 #: src/window.blp:23
-msgid "Main Menu"
+#, fuzzy
+#| msgid "Main Menu"
+msgid "Main menu"
 msgstr "Menu principal"
 
 #: src/window.blp:52
@@ -747,6 +756,14 @@ msgstr "Sair"
 #: src/window.py:109
 msgid "Convert"
 msgstr "Converter"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Preferences"
+#~ msgstr "Preferências"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Shortcuts"
+#~ msgstr "Atalhos"
 
 #, fuzzy
 #~ msgid "Light"

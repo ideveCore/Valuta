@@ -63,21 +63,26 @@ msgid "European Central Bank"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:9
-msgctxt "shortcut window"
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "General"
+msgctxt "shortcuts window"
 msgid "General"
 msgstr "Genel"
 
 #: src/components/shortcuts/shortcuts.blp:11
 #, fuzzy
 #| msgid "Preferences"
-msgctxt "shortcut window"
+msgctxt "shortcuts window"
 msgid "Preferences"
 msgstr "Tercihler"
 
 #: src/components/shortcuts/shortcuts.blp:25
-msgctxt "shortcut window"
-msgid "Shortcuts"
-msgstr "Kısayollar"
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgctxt "shortcuts window"
+msgid "Keyboard shortcuts"
+msgstr "Klavye Kısayolları"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
@@ -737,7 +742,9 @@ msgid "Disclaimer"
 msgstr "yasal uyarı"
 
 #: src/window.blp:23
-msgid "Main Menu"
+#, fuzzy
+#| msgid "Main Menu"
+msgid "Main menu"
 msgstr "Ana Menü"
 
 #: src/window.blp:52
@@ -760,6 +767,16 @@ msgstr "Çık"
 #: src/window.py:109
 msgid "Convert"
 msgstr "Dönüştür"
+
+#, fuzzy
+#~| msgid "Preferences"
+#~ msgctxt "shortcut window"
+#~ msgid "Preferences"
+#~ msgstr "Tercihler"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Shortcuts"
+#~ msgstr "Kısayollar"
 
 #~ msgid "User interface"
 #~ msgstr "Kullanıcı arayüzü"

@@ -64,19 +64,24 @@ msgid "European Central Bank"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:9
-msgctxt "shortcut window"
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "General"
+msgctxt "shortcuts window"
 msgid "General"
 msgstr "Generelt"
 
 #: src/components/shortcuts/shortcuts.blp:11
-msgctxt "shortcut window"
+msgctxt "shortcuts window"
 msgid "Preferences"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:25
-msgctxt "shortcut window"
-msgid "Shortcuts"
-msgstr "Snarveier"
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgctxt "shortcuts window"
+msgid "Keyboard shortcuts"
+msgstr "Tastatursnarveier"
 
 #: src/components/shortcuts/shortcuts.blp:19
 #, fuzzy
@@ -743,7 +748,7 @@ msgstr "ansvarsfraskrivelse"
 #: src/window.blp:23
 #, fuzzy
 #| msgid "Main menu"
-msgid "Main Menu"
+msgid "Main menu"
 msgstr "Hovedmeny"
 
 #: src/window.blp:52
@@ -766,6 +771,10 @@ msgstr "Avslutt"
 #: src/window.py:109
 msgid "Convert"
 msgstr "Konverter"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Shortcuts"
+#~ msgstr "Snarveier"
 
 #~ msgid "Follow sytem Style"
 #~ msgstr "Systemstil"
