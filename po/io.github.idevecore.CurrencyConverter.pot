@@ -863,11 +863,11 @@ msgstr ""
 msgid "Zambian Kwacha"
 msgstr ""
 
-#: src/requests.in:57
+#: src/requests.py:57
 msgid "Results for"
 msgstr ""
 
-#: src/requests.in:75
+#: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
 msgstr ""
 
