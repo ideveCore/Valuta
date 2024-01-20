@@ -722,11 +722,11 @@ msgstr "Yemen Riyali"
 msgid "Zambian Kwacha"
 msgstr "Zambia Kvaçası"
 
-#: src/requests.in:57
+#: src/requests.py:57
 msgid "Results for"
 msgstr ""
 
-#: src/requests.in:75
+#: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
 msgstr "Para birimi dönüştürülemiyor, Google'dan sonuç alınamadı"
 
