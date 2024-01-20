@@ -739,7 +739,7 @@ msgid "Main Menu"
 msgstr "Menu principal"
 
 #: src/window.blp:52
-msgid "Keyboard Shortcuts"
+msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
 
 #: src/window.blp:56
