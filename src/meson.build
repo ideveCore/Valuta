@@ -26,14 +26,11 @@ run_target('run',
 # ===== Blueprint compiler =====
 blueprints = custom_target('blueprints',
   input: files(
-    'components/currency_selector_row/currency_selector_row.blp',
-    'components/currency_selector/currency_selector.blp',
-    # ==================================================
-    # ====== This component temporarily is unused ======
-    #'components/preferences/preferences.blp',
-    # ==================================================
+    'components/preferences/index.blp',
+    'components/currency_selector/index.blp',
+    'components/currency_selector_row/index.blp',
     'components/shortcuts/shortcuts.blp',
-    'components/theme_switcher/theme_switcher.blp',
+    'pages/convertion/index.blp',
     'window.blp',
   ),
   output: '.',
@@ -52,14 +49,13 @@ gnome.compile_resources('currencyconverter',
 # ===== Python sources =====
 sources = [
   '__init__.py',
-  './components/currency_selector/currency_selector.py',
-  # ==================================================
-  # ====== This component temporarily is unused ======
-  # './components/preferences/preferences.py',
-  # ==================================================
-  'components/theme_switcher/theme_switcher.py',
+  'about.py',
+  'actions.py',
+  'components/preferences/main.py',
+  'requests.py',
   'utils.py',
   'main.py',
+  'application.py',
   'window.py',
 ]
 
@@ -69,8 +65,14 @@ install_data(sources, install_dir: moduledir)
 # ===== Install components sources =====
 install_subdir('components', install_dir: moduledir)
 
+# ===== Install page sources =====
+install_subdir('pages', install_dir: moduledir)
+
 # ===== Install assets sources =====
 install_subdir('assets', install_dir: moduledir)
 
 # ===== Install provider =====
 subdir('search_provider')
+
+# ===== Install icons =====
+subdir('assets/icons')

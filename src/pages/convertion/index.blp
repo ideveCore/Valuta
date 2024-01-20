@@ -1,0 +1,99 @@
+using Gtk 4.0;
+using Adw 1;
+
+Gtk.Box page {
+  orientation: vertical;
+  valign: center;
+  Adw.PreferencesPage {
+    Adw.PreferencesGroup {
+      margin-start: 24;
+      margin-end: 24;
+      title: _("From");
+      header-suffix: Gtk.Box {
+        orientation: horizontal;
+        $CurrencySelector from_currency_selector {}
+      };
+      Gtk.Entry from_currency_entry {
+        styles ["f-l"]
+        xalign: 0.50;
+        height-request: 70;
+      }
+    }
+    Adw.PreferencesGroup {
+      halign: center;
+      valign: center;
+      Gtk.Button invert_currencies {
+        styles ["circular"]
+        width-request: 50;
+        height-request: 50;
+        icon-name: "vertical-arrows-symbolic";
+      }
+    }
+    Adw.PreferencesGroup {
+      styles ["top-transform"]
+      margin-start: 24;
+      margin-end: 24;
+      title: _("To");
+      header-suffix: Gtk.Box {
+        orientation: horizontal;
+        $CurrencySelector to_currency_selector {}
+      };
+      Gtk.Stack stack {
+        transition-type: crossfade;
+        Gtk.StackPage {
+          name: "result";
+          child: WindowHandle {
+            Gtk.Entry to_currency_entry {
+              styles ["f-l", "text-light", "bg-accent-color"]
+              xalign: 0.50;
+              height-request: 70;
+              editable: false;
+            }
+          };
+        }
+        Gtk.StackPage {
+          name: "loading";
+          child: WindowHandle {
+            Box {
+              orientation: vertical;
+              spacing: 12;
+              margin-top: 12;
+              margin-bottom: 12;
+              margin-start: 12;
+              margin-end: 12;
+              halign: center;
+              valign: center;
+
+              Spinner {
+                spinning: true;
+                width-request: 25;
+                height-request: 25;
+              }
+            }
+          };
+        }
+        Gtk.StackPage {
+          name: "convertion-error";
+          child: WindowHandle {
+            Box {
+              orientation: vertical;
+              spacing: 12;
+              margin-top: 12;
+              margin-bottom: 12;
+              margin-start: 12;
+              margin-end: 12;
+              halign: center;
+              valign: center;
+
+              Gtk.Button reload {
+                styles ["circular", "large-button"]
+                icon-name: "refresh-large-symbolic";
+              }
+            }
+          };
+        }
+      }
+      Adw.ToastOverlay toast_overlay {}
+    }
+  }
+}

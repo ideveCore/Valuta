@@ -1,4 +1,6 @@
- .pd {
+@define-color weather_temp_chart_fill_color rgba(248, 228, 92, 0.5);
+@define-color weather_temp_chart_stroke_color rgba(246, 211, 45, 1.0);
+.pd {
    padding: 0.5em;
  }
  
@@ -90,3 +92,24 @@
   background-color: @theme_selected_bg_color;
   color: @theme_selected_fg_color;
 }
+
+.f-l {
+  font-size: 28px;
+}
+
+.text-light {
+  color: rgb(255, 255, 255);
+}
+
+.bg-accent-color {
+  background-color: @accent_bg_color;
+}
+
+.top-transform {
+  transform: translateY(-40px);
+}
+
+.large-button {
+  padding: 0.5em;
+}
+

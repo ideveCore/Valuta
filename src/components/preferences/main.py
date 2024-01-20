@@ -26,7 +26,6 @@ def preferences(application: Adw.Application, settings: Gio.Settings):
     builder = Gtk.Builder.new_from_resource(resource)
     component = builder.get_object('component')
     providers = builder.get_object('providers')
-    high_precision = builder.get_object('high_precision')
     component.set_transient_for(application.get_active_window())
 
     settings.bind(
@@ -35,12 +34,5 @@ def preferences(application: Adw.Application, settings: Gio.Settings):
         property="selected",
         flags=Gio.SettingsBindFlags.DEFAULT,
     )
-    settings.bind(
-        key="high-precision",
-        object=high_precision,
-        property="active",
-        flags=Gio.SettingsBindFlags.DEFAULT,
-    )
-    #providers.connect('notify::selected-item', lambda user_data : print('change'))
-
+    
     return component

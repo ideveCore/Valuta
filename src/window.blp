@@ -1,97 +1,39 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $CurrencyConverterWindow : Adw.ApplicationWindow {
-  default-width: 400;
-  default-height: 400;
+Adw.ApplicationWindow window {
+  width-request: 350;
+  height-request: 300;
+  default-width: 420;
+  default-height: 600;
   title: _("Currency Converter");
-
-  Box {
-    orientation: vertical;
-    [titlebar]
+  content: Adw.ToolbarView {
+    [top]
     Adw.HeaderBar {
-      styles [
-        "flat",
-      ]
-
+      [start]
+      Gtk.Button disclaimer {
+        icon-name: "lightbulb-symbolic";
+        tooltip-text: _("Disclaimer");
+        visible: false;
+      }
       [end]
-      MenuButton menu_btn {
-        icon-name: "open-menu-symbolic";
+      MenuButton menu_button {
         menu-model: primary_menu;
+        icon-name: "open-menu-symbolic";
         tooltip-text: _("Main menu");
       }
     }
-    Adw.Clamp {
-      maximum-size: 400;
-      vexpand: true;
+    content: Adw.Bin content {};
+    [bottom]
+    Gtk.Box {
       halign: center;
-      valign: center;
-
-      Box {
-        orientation: vertical;
-        spacing: 24;
-        Adw.PreferencesGroup {
-          styles ['pd']
-          title: _("Converter");
-            header-suffix: Gtk.Box {
-            orientation: horizontal;
-            spacing: 6;
-            
-            Gtk.Button {
-              styles ["flat"]
-              valign: center;
-              child: Adw.ButtonContent {
-                icon-name: "emblem-synchronizing-symbolic";
-                label: _("Switch");
-              };
-              clicked => $_switch_currencies();
-            }
-          };
-          Adw.ActionRow src_currency {
-            title: _('From currency');
-            $CurrencySelector src_currency_selector {
-              styles ["m-e"]
-            }
-          }
-          Adw.ActionRow dest_currency {
-            title: _('To currency');
-            $CurrencySelector dest_currency_selector {
-              styles ["m-e"]
-            }
-          }
-          Adw.EntryRow src_currency_entry {
-            title: '';
-          }
-        }
-        Gtk.Button convert_button {
-          styles ["pill", "suggested-action"]
-          sensitive: false;
-          halign: center;
-          child: 
-            Spinner convert_button_spinner {
-            spinning: true;
-          };
-        }
-        Label dest_currency_label {
-          styles ['title-1']
-          label: "£ 10";
-        }
-        Box {
-          Label info {
-            styles ["m-s", "caption"]
-            halign: start;
-          }
-          LinkButton disclaimer {
-            styles [
-              "caption",
-            ]
-            label: _("disclaimer");
-          }
-        }
-        Adw.ToastOverlay overlay {}
+      margin-bottom: 10;
+      Gtk.Label info {
+        styles ["dim-label"]
+        label: _("");
       }
     }
-  }
+  };
 }
 
 menu primary_menu {
@@ -102,13 +44,21 @@ menu primary_menu {
   }
   section {
     item {
-      label: _("Keyboard Shortcuts");
-      action: "win.show-help-overlay";
+      label: _("_Preferences");
+      action: "app.preferences";
     }
 
     item {
-      label: _("About Currency Converter");
+      label: _("_Keyboard shortcuts");
+      action: "win.show-help-overlay";
+    }
+    item {
+      label: _("_About Currency Converter");
       action: "app.about";
+    }
+    item {
+      label: _("_Quit");
+      action: "app.quit";
     }
   }
 }
