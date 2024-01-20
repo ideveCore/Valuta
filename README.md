@@ -29,7 +29,7 @@ A simple currency converter using Google-based data
  git clone --recurse-submodules https://github.com/idevecore/currency-converter.git
  cd currency-converter
  meson builddir --prefix=/usr/local 
- sudo ninja -C builddir install 
+ sudo ninja -C builddir install
  ```
 
 ## Translations

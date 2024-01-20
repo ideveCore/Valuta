@@ -34,5 +34,5 @@ def preferences(application: Adw.Application, settings: Gio.Settings):
         property="selected",
         flags=Gio.SettingsBindFlags.DEFAULT,
     )
-
+    
     return component
