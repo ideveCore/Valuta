@@ -72,7 +72,7 @@ class Google(Providers):
                     "converted": True,
                 })
             else:
-                raise Exception(gettext("Unable to convert currency, failed to fetch results from Google"))
+                raise Exception(_("Unable to convert currency, failed to fetch results from Google"))
         except Exception as error:
             print(error)
             return self.default_response

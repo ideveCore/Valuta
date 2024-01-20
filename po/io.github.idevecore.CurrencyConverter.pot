@@ -61,18 +61,18 @@ msgid "European Central Bank"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:9
-msgctxt "shortcut window"
+msgctxt "shortcuts window"
 msgid "General"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:11
-msgctxt "shortcut window"
+msgctxt "shortcuts window"
 msgid "Preferences"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:25
-msgctxt "shortcut window"
-msgid "Shortcuts"
+msgctxt "shortcuts window"
+msgid "Keyboard shortcuts"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:19
@@ -876,7 +876,7 @@ msgid "Disclaimer"
 msgstr ""
 
 #: src/window.blp:23
-msgid "Main Menu"
+msgid "Main menu"
 msgstr ""
 
 #: src/window.blp:52

@@ -9,8 +9,8 @@ src/components/preferences/preferences.blp
 src/components/preferences/preferences.py
 src/components/shortcuts/shortcuts.blp
 src/components/shortcuts/shortcuts.py
-src/components/theme_switcher/theme_switcher.blp
-src/components/theme_switcher/theme_switcher.py
+src/pages/convertion/convertion.py
+src/pages/convertion/index.blp
 src/search_provider/search_provider.in
 src/main.py
 src/utils.py
