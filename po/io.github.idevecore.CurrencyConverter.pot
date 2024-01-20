@@ -178,11 +178,6 @@ msgid "Belarusian Ruble"
 msgstr ""
 
 
-#: src/define.in:123
-msgid "Belarusian Ruble"
-msgstr ""
-
-
 #: src/define.in:129
 msgid "Belize Dollar"
 msgstr ""
@@ -388,11 +383,6 @@ msgid "Ghanaian Cedi"
 msgstr ""
 
 
-#: src/define.in:375
-msgid "Ghanaian Cedi"
-msgstr ""
-
-
 #: src/define.in:381
 msgid "Gibraltar Pound"
 msgstr ""
@@ -588,11 +578,6 @@ msgid "Mozambican metical"
 msgstr ""
 
 
-#: src/define.in:615
-msgid "Mozambican metical"
-msgstr ""
-
-
 #: src/define.in:621
 msgid "Myanmar Kyat"
 msgstr ""
@@ -687,18 +672,7 @@ msgstr ""
 msgid "Romanian Leu"
 msgstr ""
 
-
-#: src/define.in:735
-msgid "Romanian Leu"
-msgstr ""
-
-
 #: src/define.in:741
-msgid "Russian Ruble"
-msgstr ""
-
-
-#: src/define.in:747
 msgid "Russian Ruble"
 msgstr ""
 
@@ -719,11 +693,6 @@ msgstr ""
 
 
 #: src/define.in:771
-msgid "Serbian Dinar"
-msgstr ""
-
-
-#: src/define.in:777
 msgid "Serbian Dinar"
 msgstr ""
 
@@ -787,12 +756,6 @@ msgstr ""
 msgid "Sudanese pound"
 msgstr ""
 
-
-#: src/define.in:855
-msgid "Sudanese pound"
-msgstr ""
-
-
 #: src/define.in:861
 msgid "Surinamese Dollar"
 msgstr ""
@@ -851,12 +814,6 @@ msgstr ""
 #: src/define.in:927
 msgid "Turkmenistan manat"
 msgstr ""
-
-
-#: src/define.in:933
-msgid "Turkmenistan manat"
-msgstr ""
-
 
 #: src/define.in:939
 msgid "Ugandan Shilling"
