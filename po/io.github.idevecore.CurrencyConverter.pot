@@ -76,7 +76,6 @@ msgid "Shortcuts"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:19
-#: src/window.blp:60
 msgctxt "shortcuts window"
 msgid "Quit"
 msgstr ""
@@ -881,11 +880,15 @@ msgid "Main Menu"
 msgstr ""
 
 #: src/window.blp:52
-msgid "Keyboard Shortcuts"
+msgid "Keyboard shortcuts"
 msgstr ""
 
 #: src/window.blp:56
 msgid "About Currency Converter"
+msgstr ""
+
+#: src/window.blp:60
+msgid "Quit"
 msgstr ""
 
 #: src/window.py:109

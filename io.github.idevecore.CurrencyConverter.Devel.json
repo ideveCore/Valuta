@@ -1,35 +1,37 @@
 {
-  "app-id": "io.github.idevecore.CurrencyConverter.Devel",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "45",
-  "sdk": "org.gnome.Sdk",
-  "command": "currencyconverter",
-  "finish-args": [
-    "--share=network",
-    "--share=ipc",
-    "--device=dri",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--own-name=io.github.idevecore.CurrencyConverter.Devel.SearchProvider"
-  ],
-  "cleanup": ["*blueprint*"],
-  "modules": [
-    "pypi-dependencies.json",
-    {
-      "name": "currencyconverter",
-      "builddir": true,
-      "buildsystem": "meson",
-      "config-opts": [
-        "--prefix=/app",
-        "--buildtype=debugoptimized",
-        "-Dprofile=development"
-      ],
-      "sources": [
+    "app-id" : "io.github.idevecore.CurrencyConverter.Devel",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "45",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "currencyconverter",
+    "finish-args" : [
+        "--share=network",
+        "--share=ipc",
+        "--device=dri",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--own-name=io.github.idevecore.CurrencyConverter.Devel.SearchProvider"
+    ],
+    "cleanup" : [
+        "*blueprint*"
+    ],
+    "modules" : [
+        "pypi-dependencies.json",
         {
-          "type": "dir",
-          "url": "./"
+            "name" : "currencyconverter",
+            "builddir" : true,
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "--prefix=/app",
+                "--buildtype=debugoptimized",
+                "-Dprofile=development"
+            ],
+            "sources" : [
+                {
+                    "type" : "dir",
+                    "url" : "./"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
