@@ -105,6 +105,10 @@ msgstr "Trocar"
 msgid "To"
 msgstr ""
 
+#: src/pages/convertion/index.blp:92
+msgid "Reload"
+msgstr ""
+
 #: src/search_provider/search_provider.in:83
 msgid "Conversion failed, check for network issues"
 msgstr "A conversão falhou, verifique se há problemas de rede"
@@ -730,7 +734,9 @@ msgid "Zambian Kwacha"
 msgstr ""
 
 #: src/requests.py:57
-msgid "Results for"
+msgid ""
+"Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
+"format('%Y')} {date_time.format('%H:%M')} - UTC"
 msgstr ""
 
 #: src/requests.py:75

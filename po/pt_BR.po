@@ -96,6 +96,10 @@ msgstr "Trocar"
 msgid "To"
 msgstr "Para"
 
+#: src/pages/convertion/index.blp:92
+msgid "Reload"
+msgstr ""
+
 #: src/search_provider/search_provider.in:83
 msgid "Conversion failed, check for network issues"
 msgstr "A conversão falhou, verifique se há problemas de rede"
@@ -717,8 +721,10 @@ msgid "Zambian Kwacha"
 msgstr "Kwacha Zambiano"
 
 #: src/requests.py:57
-msgid "Results for"
-msgstr "Resultados de"
+msgid ""
+"Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
+"format('%Y')} {date_time.format('%H:%M')} - UTC"
+msgstr ""
 
 #: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
@@ -747,6 +753,9 @@ msgstr "Sair"
 #: src/window.py:109
 msgid "Convert"
 msgstr "Converter"
+
+#~ msgid "Results for"
+#~ msgstr "Resultados de"
 
 #~ msgctxt "shortcut window"
 #~ msgid "Preferences"
