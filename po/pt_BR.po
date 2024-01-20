@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Currency Converter master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-01-20 22:31+0000\n"
+"PO-Revision-Date: 2024-01-20 23:29+0000\n"
 "Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/pt_BR/>\n"
@@ -61,23 +61,16 @@ msgid "European Central Bank"
 msgstr "Banco central da europa"
 
 #: src/components/shortcuts/shortcuts.blp:9
-#, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "General"
 msgctxt "shortcuts window"
 msgid "General"
 msgstr "Geral"
 
 #: src/components/shortcuts/shortcuts.blp:11
-#, fuzzy
-#| msgid "Preferences"
 msgctxt "shortcuts window"
 msgid "Preferences"
 msgstr "Preferências"
 
 #: src/components/shortcuts/shortcuts.blp:25
-#, fuzzy
-#| msgid "Keyboard shortcuts"
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
@@ -736,8 +729,6 @@ msgid "Disclaimer"
 msgstr "Isenção de responsabilidade"
 
 #: src/window.blp:23
-#, fuzzy
-#| msgid "Main Menu"
 msgid "Main menu"
 msgstr "Menu principal"
 
