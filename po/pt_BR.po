@@ -7,8 +7,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/idevecore/currency-converter/-/"
 "issues\n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-01-20 12:45+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-01-20 12:49+0000\n"
+"Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -31,26 +31,24 @@ msgid "A simple currency converter using Google-based data"
 msgstr "Um conversor de moeda simples usando dados baseados no Google"
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
-#, fuzzy
 msgid ""
 "The currency converter is simple and fast, ideal for those who need to "
 "convert currencies repeatedly."
 msgstr ""
 "O conversor de moeda é simples e rápido, ideal para quem precisa converter "
-"moedas repetidamente"
+"moedas repetidamente."
 
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:4 src/window.blp:35
 msgid "Converter"
 msgstr "Conversor"
 
 #: src/components/currency_selector/currency_selector.blp:41
-#, fuzzy
 msgid "Search Currencies…"
-msgstr "Pesquisar moedas"
+msgstr "Pesquisar por moedas…"
 
 #: src/components/preferences/preferences.blp:13
 msgid "Preferences"
-msgstr ""
+msgstr "Preferências"
 
 #: src/components/preferences/preferences.blp:15
 msgid "User interface"
@@ -84,7 +82,6 @@ msgid "Shortcuts"
 msgstr "Atalhos"
 
 #: src/components/shortcuts/shortcuts.blp:27
-#, fuzzy
 msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Sair"
@@ -130,7 +127,6 @@ msgid "{0} of {1}"
 msgstr ""
 
 #: src/window.blp:21
-#, fuzzy
 msgid "Main Menu"
 msgstr "Menu principal"
 
