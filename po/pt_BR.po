@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Currency Converter master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-01-20 20:40+0000\n"
+"PO-Revision-Date: 2024-01-20 22:31+0000\n"
 "Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/pt_BR/>\n"
@@ -50,15 +50,15 @@ msgstr "Preferências"
 
 #: src/components/preferences/preferences.blp:11
 msgid "Application"
-msgstr ""
+msgstr "Aplicação"
 
 #: src/components/preferences/preferences.blp:16
 msgid "Providers"
-msgstr ""
+msgstr "Provedores"
 
 #: src/components/preferences/preferences.blp:18
 msgid "European Central Bank"
-msgstr ""
+msgstr "Banco central da europa"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcut window"
@@ -66,8 +66,6 @@ msgid "General"
 msgstr "Geral"
 
 #: src/components/shortcuts/shortcuts.blp:11
-#, fuzzy
-#| msgid "Preferences"
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Preferências"
@@ -84,11 +82,11 @@ msgstr "Sair"
 
 #: src/pages/convertion/index.blp:108
 msgid "Error converting, please try again."
-msgstr ""
+msgstr "Erro ao converter, por favor tente novamente."
 
 #: src/pages/convertion/index.blp:11
 msgid "From"
-msgstr ""
+msgstr "De"
 
 #: src/pages/convertion/index.blp:30
 msgid "Switch"
@@ -96,7 +94,7 @@ msgstr "Trocar"
 
 #: src/pages/convertion/index.blp:36
 msgid "To"
-msgstr ""
+msgstr "Para"
 
 #: src/search_provider/search_provider.in:83
 msgid "Conversion failed, check for network issues"
@@ -107,10 +105,8 @@ msgid "Copy"
 msgstr "Copiar"
 
 #: src/search_provider/search_provider.in:142
-#, fuzzy
-#| msgid "Copy currency to clipboard"
 msgid "Copy convertion to clipboard"
-msgstr "Copiar moeda para área de transferência"
+msgstr "Copiar conversão para área de transferência"
 
 #: src/define.in:39
 msgid "Afghan Afghani"
@@ -722,17 +718,15 @@ msgstr "Kwacha Zambiano"
 
 #: src/requests.in:57
 msgid "Results for"
-msgstr ""
+msgstr "Resultados de"
 
 #: src/requests.in:75
 msgid "Unable to convert currency, failed to fetch results from Google"
 msgstr "Incapaz de converter moeda, não conseguiu obter resultados do Google"
 
 #: src/window.blp:16
-#, fuzzy
-#| msgid "disclaimer"
 msgid "Disclaimer"
-msgstr "isenção de responsabilidade"
+msgstr "Isenção de responsabilidade"
 
 #: src/window.blp:23
 msgid "Main Menu"
@@ -747,9 +741,6 @@ msgid "About Currency Converter"
 msgstr "Sobre Conversor de Moedas"
 
 #: src/window.blp:60
-#, fuzzy
-#| msgctxt "shortcuts window"
-#| msgid "Quit"
 msgid "Quit"
 msgstr "Sair"
 
