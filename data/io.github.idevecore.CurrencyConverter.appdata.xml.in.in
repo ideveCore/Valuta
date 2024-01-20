@@ -14,6 +14,18 @@
   <url type="translate">https://github.com/ideveCore/currency-converter/tree/main/po</url>
   <url type="donation">https://ko-fi.com/idevecore</url>
   <releases>
+    <release version="1.2.0" date="2024-01-20">
+      <description translatable="no">
+        <p>In this version we bring:</p>
+        <ul>
+          <li>New ui;</li>
+          <li>Modified the search format to "{currency_value} {from_currency} {prefix[to|&gt;|para|...]} {to_currency}";</li>
+          <li>From now on, the translations of the application will be carried out through Weblate;</li>
+        </ul>
+      </description>
+    </release>
+  </releases>)
+  <releases>
     <release version="1.1.0" date="2023-08-14">
       <description translatable="no">
         <p>In this version we bring:</p>
@@ -85,3 +97,4 @@
   </content_rating>
   <developer_name translatable="no">Ideve Core</developer_name>
 </component>
+
