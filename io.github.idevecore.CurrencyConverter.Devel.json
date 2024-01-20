@@ -19,7 +19,11 @@
       "name": "currencyconverter",
       "builddir": true,
       "buildsystem": "meson",
-      "config-opts": ["-Dprofile=development"],
+      "config-opts": [
+        "--prefix=/app",
+        "--buildtype=debugoptimized",
+        "-Dprofile=development"
+      ],
       "sources": [
         {
           "type": "dir",

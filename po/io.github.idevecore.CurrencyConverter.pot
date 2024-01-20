@@ -89,6 +89,10 @@ msgstr ""
 msgid "From"
 msgstr ""
 
+#: src/pages/convertion/index.blp:30
+msgid "Switch"
+msgstr ""
+
 #: src/pages/convertion/index.blp:36
 msgid "To"
 msgstr ""
