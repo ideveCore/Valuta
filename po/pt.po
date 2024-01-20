@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: Currency Converter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-01-20 20:40+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/currency-"
-"converter/currency-converter/pt/>\n"
+"PO-Revision-Date: 2024-01-20 23:08+0000\n"
+"Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/"
+"currency-converter/currency-converter/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain charset=UTF-8\n"
@@ -30,26 +30,20 @@ msgid "A simple currency converter using Google-based data"
 msgstr "Um conversor de moeda simples usando dados baseados no Google"
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
-#, fuzzy
-#| msgid ""
-#| "The currency converter is simple and fast, ideal for those who need to "
-#| "convert currencies repeatedly"
 msgid ""
 "The currency converter is simple and fast, ideal for those who need to "
 "convert currencies repeatedly."
 msgstr ""
 "O conversor de moeda é simples e rápido, ideal para quem precisa converter "
-"moedas repetidamente"
+"moedas repetidamente."
 
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3 src/window.blp:35
 msgid "Converter"
 msgstr "Conversor"
 
 #: src/components/currency_selector/currency_selector.blp:41
-#, fuzzy
-#| msgid "Search Currencies"
 msgid "Search Currencies…"
-msgstr "Pesquisar moedas"
+msgstr "Pesquisar moedas…"
 
 #: src/components/preferences/preferences.blp:9 src/window.blp:47
 msgid "Preferences"
