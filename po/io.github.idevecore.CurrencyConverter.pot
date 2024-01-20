@@ -672,12 +672,6 @@ msgstr ""
 msgid "Romanian Leu"
 msgstr ""
 
-
-#: src/define.in:735
-msgid "Romanian Leu"
-msgstr ""
-
-
 #: src/define.in:741
 msgid "Russian Ruble"
 msgstr ""
@@ -820,12 +814,6 @@ msgstr ""
 #: src/define.in:927
 msgid "Turkmenistan manat"
 msgstr ""
-
-
-#: src/define.in:933
-msgid "Turkmenistan manat"
-msgstr ""
-
 
 #: src/define.in:939
 msgid "Ugandan Shilling"
