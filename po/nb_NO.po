@@ -80,7 +80,7 @@ msgctxt "shortcut window"
 msgid "Shortcuts"
 msgstr "Snarveier"
 
-#: src/components/shortcuts/shortcuts.blp:19 src/window.blp:60
+#: src/components/shortcuts/shortcuts.blp:19
 #, fuzzy
 #| msgctxt "shortcut window"
 #| msgid "Quit"
@@ -749,12 +749,21 @@ msgid "Main Menu"
 msgstr "Hovedmeny"
 
 #: src/window.blp:52
-msgid "Keyboard Shortcuts"
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgid "Keyboard shortcuts"
 msgstr "Tastatursnarveier"
 
 #: src/window.blp:56
 msgid "About Currency Converter"
 msgstr "Om Valutaveksler"
+
+#: src/window.blp:60
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "Quit"
+msgid "Quit"
+msgstr "Avslutt"
 
 #: src/window.py:109
 msgid "Convert"

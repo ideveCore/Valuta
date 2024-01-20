@@ -77,7 +77,7 @@ msgctxt "shortcut window"
 msgid "Shortcuts"
 msgstr "Atalhos"
 
-#: src/components/shortcuts/shortcuts.blp:19 src/window.blp:60
+#: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Sair"
@@ -745,6 +745,13 @@ msgstr "Atalhos de teclado"
 #: src/window.blp:56
 msgid "About Currency Converter"
 msgstr "Sobre Conversor de Moedas"
+
+#: src/window.blp:60
+#, fuzzy
+#| msgctxt "shortcuts window"
+#| msgid "Quit"
+msgid "Quit"
+msgstr "Sair"
 
 #: src/window.py:109
 msgid "Convert"

@@ -79,7 +79,7 @@ msgctxt "shortcut window"
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
-#: src/components/shortcuts/shortcuts.blp:19 src/window.blp:60
+#: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Çık"
@@ -741,12 +741,21 @@ msgid "Main Menu"
 msgstr "Ana Menü"
 
 #: src/window.blp:52
-msgid "Keyboard Shortcuts"
+#, fuzzy
+#| msgid "Keyboard Shortcuts"
+msgid "Keyboard shortcuts"
 msgstr "Klavye Kısayolları"
 
 #: src/window.blp:56
 msgid "About Currency Converter"
 msgstr "Para Birimi Dönüştürücü Hakkında"
+
+#: src/window.blp:60
+#, fuzzy
+#| msgctxt "shortcuts window"
+#| msgid "Quit"
+msgid "Quit"
+msgstr "Çık"
 
 #: src/window.py:109
 msgid "Convert"
