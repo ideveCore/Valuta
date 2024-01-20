@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Currency Converter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-31 15:15-0500\n"
-"PO-Revision-Date: 2024-01-01 16:10+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2024-01-20 12:57+0000\n"
+"Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -68,7 +68,6 @@ msgid "Dark Style"
 msgstr "Mørk stil"
 
 #: src/search_provider/search_provider.in:83
-#, fuzzy
 msgid "Conversion failed, check for network issues"
 msgstr "Konvertering mislyktes. Kontroller nettverket."
 
@@ -81,7 +80,6 @@ msgid "Copy currency to clipboard"
 msgstr "Kopier valuta til utklippstavle"
 
 #: src/utils.py:172
-#, fuzzy
 msgid "Unable to convert currency, failed to fetch results from Google"
 msgstr "Kunne ikke konvertere valuta. Kunne ikke hente resultater fra Google."
 
