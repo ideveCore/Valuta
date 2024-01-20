@@ -1,21 +1,22 @@
+name: CI
 on:
   push:
     branches: [release-1.2.0]
   pull_request:
-name: Flatpak Builder
+
 jobs:
-  build:
-    name: Build
+  flatpak:
+    name: "Flatpak"
     runs-on: ubuntu-latest
     container:
       image: bilelmoussaoui/flatpak-github-actions:gnome-45
       options: --privileged
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        with:
+          bundle: currencyconverter.flatpak
+          manifest-path: io.github.idevecore.CurrencyConverter.Devel.json
+          cache-key: flatpak-builder-${{ github.sha }}
+          run-tests: true
 
-    - name: Flatpak Builder
-      uses: flatpak/flatpak-github-actions/flatpak-builder@v6.1
-      with:
-        bundle: io.github.idevecore.CurrencyConverter.Devel.flatpak
-        manifest-path: io.github.idevecore.CurrencyConverter.Devel.json
