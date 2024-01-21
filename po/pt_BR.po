@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Currency Converter master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-01-20 23:29+0000\n"
+"PO-Revision-Date: 2024-01-21 00:06+0000\n"
 "Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/pt_BR/>\n"
@@ -98,7 +98,7 @@ msgstr "Para"
 
 #: src/pages/convertion/index.blp:92
 msgid "Reload"
-msgstr ""
+msgstr "Recarregar"
 
 #: src/search_provider/search_provider.in:83
 msgid "Conversion failed, check for network issues"
@@ -725,6 +725,8 @@ msgid ""
 "Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
 "format('%Y')} {date_time.format('%H:%M')} - UTC"
 msgstr ""
+"Resultados para {date_time.format('%d')} {date_time.format('%B')} {date_time."
+"format('%Y')} {date_time.format('%H:%M')} - UTC"
 
 #: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
