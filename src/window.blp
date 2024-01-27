@@ -12,8 +12,8 @@ Adw.ApplicationWindow window {
     Adw.HeaderBar {
       [start]
       Gtk.Button disclaimer {
-        icon-name: "lightbulb-symbolic";
-        tooltip-text: _("Disclaimer");
+        icon-name: "code-symbolic";
+        tooltip-text: _("Source");
         visible: false;
       }
       [end]
@@ -26,12 +26,14 @@ Adw.ApplicationWindow window {
     content: Adw.Bin content {};
     [bottom]
     Gtk.Box {
+      orientation: horizontal;
       halign: center;
-      margin-bottom: 10;
       Gtk.Label info {
         styles ["dim-label"]
         label: _("");
       }
+
+      styles ["toolbar"]
     }
   };
 }

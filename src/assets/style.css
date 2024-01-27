@@ -1,5 +1,10 @@
-@define-color weather_temp_chart_fill_color rgba(248, 228, 92, 0.5);
-@define-color weather_temp_chart_stroke_color rgba(246, 211, 45, 1.0);
+@define-color accent_color @green_3;
+@define-color accent_bg_color @green_5;
+
+selection {
+  background-color: alpha(@green_1, 0.2);
+}
+
 .pd {
    padding: 0.5em;
  }
@@ -21,8 +26,12 @@
    margin-right: 0.5em;
  }
 
+ .rounded {
+  border-radius: 6px;
+ }
+
 .bg-error {
-  background-color: alpha(@destructive_color, 0.3);
+  background-color: alpha(@error_color, 0.3);
 }
 
 .bg-accent {
