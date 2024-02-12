@@ -1,0 +1,759 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-25 04:47+0300\n"
+"PO-Revision-Date: 2024-02-12 12:02+0000\n"
+"Last-Translator: Nitin Khalia <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi <https://hosted.weblate.org/projects/currency-converter/"
+"currency-converter/hi/>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
+
+#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:6
+#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:2
+#: src/window.blp:9
+msgid "Currency Converter"
+msgstr "मुद्रा परिवर्तक"
+
+#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:7
+#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:6
+msgid "A simple currency converter using Google-based data"
+msgstr "Google-आधारित डेटा का उपयोग करके एक सरल मुद्रा परिवर्तक"
+
+#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
+msgid ""
+"The currency converter is simple and fast, ideal for those who need to "
+"convert currencies repeatedly."
+msgstr ""
+"मुद्रा परिवर्तक सरल और तेज़ है, यह उन लोगों के लिए आदर्श है जिन्हें बार-बार "
+"मुद्राएँ परिवर्तित करने की आवश्यकता होती है।"
+
+#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3
+#: src/window.blp:35
+msgid "Converter"
+msgstr "परिवर्तक"
+
+#: src/components/currency_selector/currency_selector.blp:41
+msgid "Search Currencies…"
+msgstr "मुद्राएँ खोजें…"
+
+#: src/components/preferences/preferences.blp:9
+#: src/window.blp:47
+msgid "Preferences"
+msgstr "प्राथमिकताएँ"
+
+#: src/components/preferences/preferences.blp:11
+msgid "Application"
+msgstr "एप्लिकेशन"
+
+#: src/components/preferences/preferences.blp:16
+msgid "Providers"
+msgstr "प्रदाता"
+
+#: src/components/preferences/preferences.blp:18
+msgid "European Central Bank"
+msgstr "यूरोपीय केंद्रीय बैंक"
+
+#: src/components/shortcuts/shortcuts.blp:9
+msgctxt "shortcuts window"
+msgid "General"
+msgstr "जनरल"
+
+#: src/components/shortcuts/shortcuts.blp:11
+msgctxt "shortcuts window"
+msgid "Preferences"
+msgstr "प्राथमिकताएँ"
+
+#: src/components/shortcuts/shortcuts.blp:25
+msgctxt "shortcuts window"
+msgid "Keyboard shortcuts"
+msgstr "कीबोर्ड शॉर्टकट"
+
+#: src/components/shortcuts/shortcuts.blp:19
+msgctxt "shortcuts window"
+msgid "Quit"
+msgstr "छोड़ें"
+
+#: src/pages/convertion/index.blp:108
+msgid "Error converting, please try again."
+msgstr "कनवर्ट करने में त्रुटि, कृपया पुनः प्रयास करें।"
+
+#: src/pages/convertion/index.blp:11
+msgid "From"
+msgstr "से"
+
+#: src/pages/convertion/index.blp:30
+msgid "Switch"
+msgstr "बदले"
+
+#: src/pages/convertion/index.blp:36
+msgid "To"
+msgstr "को"
+
+#: src/pages/convertion/index.blp:92
+msgid "Reload"
+msgstr "पुनः लोड करें"
+
+#: src/search_provider/search_provider.in:83
+msgid "Conversion failed, check for network issues"
+msgstr "रूपांतरण विफल, नेटवर्क समस्याओं की जाँच करें"
+
+#: src/search_provider/search_provider.in:141
+msgid "Copy"
+msgstr "कॉपी"
+
+#: src/search_provider/search_provider.in:142
+msgid "Copy convertion to clipboard"
+msgstr "परिवर्तन को क्लिपबोर्ड पर कॉपी करें"
+
+#: src/define.in:39
+msgid "Afghan Afghani"
+msgstr "अफ़ग़ान अफ़गानी"
+
+#: src/define.in:45
+msgid "Albanian Lek"
+msgstr "अल्बानियाई लेक"
+
+#: src/define.in:51
+msgid "Algerian Dinar"
+msgstr "अल्जीरियाई दीनार"
+
+#: src/define.in:57
+msgid "Angolan Kwanza"
+msgstr "अंगोलन क्वान्ज़ा"
+
+#: src/define.in:63
+msgid "Argentine Peso"
+msgstr "अर्जेंटीनी पेसो"
+
+#: src/define.in:69
+msgid "Armenian Dram"
+msgstr "अर्मेनियाई ड्राम"
+
+#: src/define.in:75
+msgid "Aruban Florin"
+msgstr "अरुबन फ्लोरिन"
+
+#: src/define.in:81
+msgid "Australian Dollar"
+msgstr "ऑस्ट्रलियन डॉलर"
+
+#: src/define.in:87
+msgid "Azerbaijani Manat"
+msgstr "अज़रबैजानी मनत"
+
+#: src/define.in:93
+msgid "Bahamian Dollar"
+msgstr "बहामियन डॉलर"
+
+#: src/define.in:99
+msgid "Bahraini Dinar"
+msgstr "बहरीनी दिनार"
+
+#: src/define.in:105
+msgid "Bajan dollar"
+msgstr "बाजन डॉलर"
+
+#: src/define.in:111
+msgid "Bangladeshi Taka"
+msgstr "बांग्लादेशी टका"
+
+#: src/define.in:117
+msgid "Belarusian Ruble"
+msgstr "बेलारूसी रूबल"
+
+#: src/define.in:129
+msgid "Belize Dollar"
+msgstr "बेलीज़ डॉलर"
+
+#: src/define.in:135
+msgid "Bermudan Dollar"
+msgstr "बरमूडन डॉलर"
+
+#: src/define.in:141
+msgid "Bhutan currency"
+msgstr "भूटान मुद्रा"
+
+#: src/define.in:147
+msgid "Bitcoin"
+msgstr "बिटकॉइन"
+
+#: src/define.in:153
+msgid "Bitcoin Cash"
+msgstr "बिटकॉइन कैश"
+
+#: src/define.in:159
+msgid "Bolivian Boliviano"
+msgstr "बोलिवियन बोलिवियानो"
+
+#: src/define.in:165
+msgid "Bosnia-Herzegovina Convertible Mark"
+msgstr "बोस्निया-हर्जेगोविना परिवर्तनीय मार्क"
+
+#: src/define.in:171
+msgid "Botswanan Pula"
+msgstr "बोत्सवाना पुला"
+
+#: src/define.in:177
+msgid "Brazilian Real"
+msgstr "ब्राजीली रियल"
+
+#: src/define.in:183
+msgid "Brunei Dollar"
+msgstr "ब्रुनेई डॉलर"
+
+#: src/define.in:189
+msgid "Bulgarian Lev"
+msgstr "बल्गेरियाई लेव"
+
+#: src/define.in:195
+msgid "Burundian Franc"
+msgstr "बुरुंडियन फ़्रैंक"
+
+#: src/define.in:201
+msgid "CFP Franc"
+msgstr "CFP फ़्रैंक"
+
+#: src/define.in:207
+msgid "Cambodian riel"
+msgstr "कंबोडियाई रील"
+
+#: src/define.in:213
+msgid "Canadian Dollar"
+msgstr "कैनेडियन डॉलर"
+
+#: src/define.in:219
+msgid "Cape Verdean Escudo"
+msgstr "केप वर्डीन एस्कुडो"
+
+#: src/define.in:225
+msgid "Cayman Islands Dollar"
+msgstr "केमैन आइलैंड्स डॉलर"
+
+#: src/define.in:231
+msgid "Central African CFA franc"
+msgstr "मध्य अफ़्रीकी सीएफए फ़्रैंक"
+
+#: src/define.in:237
+msgid "Chilean Peso"
+msgstr "चिली पेसो"
+
+#: src/define.in:243
+msgid "Chilean Unit of Account (UF)"
+msgstr "खाते की चिली इकाई (UF)"
+
+#: src/define.in:249
+msgid "Chinese Yuan"
+msgstr "चीनी युआन"
+
+#: src/define.in:255
+msgid "Chinese Yuan (offshore)"
+msgstr "चीनी युआन (अपतटीय)"
+
+#: src/define.in:261
+msgid "Colombian Peso"
+msgstr "कोलम्बियाई पेसो"
+
+#: src/define.in:267
+msgid "Comorian franc"
+msgstr "कोमोरियन फ़्रैंक"
+
+#: src/define.in:273
+msgid "Congolese Franc"
+msgstr "कांगोलेस फ़्रैंक"
+
+#: src/define.in:279
+msgid "Costa Rican Colón"
+msgstr "कोस्टा रिकन कोलोन"
+
+#: src/define.in:285
+msgid "Croatian Kuna"
+msgstr "क्रोएशियाई कुना"
+
+#: src/define.in:291
+msgid "Cuban Peso"
+msgstr "क्यूबा पेसो"
+
+#: src/define.in:297
+msgid "Czech Koruna"
+msgstr "चेक कोरुना"
+
+#: src/define.in:303
+msgid "Danish Krone"
+msgstr "डेनिश क्रोन"
+
+#: src/define.in:309
+msgid "Djiboutian Franc"
+msgstr "जिबूतीयन फ़्रैंक"
+
+#: src/define.in:315
+msgid "Dominican Peso"
+msgstr "डोमिनिकन पेसो"
+
+#: src/define.in:321
+msgid "East Caribbean Dollar"
+msgstr "पूर्वी कैरेबियाई डॉलर"
+
+#: src/define.in:327
+msgid "Egyptian Pound"
+msgstr "मिस्री पाउण्ड"
+
+#: src/define.in:333
+msgid "Ether"
+msgstr "ईथर"
+
+#: src/define.in:339
+msgid "Ethiopian Birr"
+msgstr "इथियोपिया बिर"
+
+#: src/define.in:345
+msgid "Euro"
+msgstr "यूरो"
+
+#: src/define.in:351
+msgid "Fijian Dollar"
+msgstr "फ़ीजी डॉलर"
+
+#: src/define.in:357
+msgid "Gambian dalasi"
+msgstr "गैम्बियन दलासी"
+
+#: src/define.in:363
+msgid "Georgian Lari"
+msgstr "जॉर्जियाई लारी"
+
+#: src/define.in:369
+msgid "Ghanaian Cedi"
+msgstr "घानायन सेडी"
+
+#: src/define.in:381
+msgid "Gibraltar Pound"
+msgstr "जिब्राल्टर पाउंड"
+
+#: src/define.in:387
+msgid "Guatemalan Quetzal"
+msgstr "ग्वाटेमाला क्वेटज़ल"
+
+#: src/define.in:393
+msgid "Guinean Franc"
+msgstr "गिनी फ्रैंक"
+
+#: src/define.in:399
+msgid "Guyanaese Dollar"
+msgstr "गुयानीज़ डॉलर"
+
+#: src/define.in:405
+msgid "Haitian Gourde"
+msgstr "हाईटियन गौर्डे"
+
+#: src/define.in:411
+msgid "Honduran Lempira"
+msgstr "होंडुरास लेम्पिरा"
+
+#: src/define.in:417
+msgid "Hong Kong Dollar"
+msgstr "होन्ग कोंग डॉलर"
+
+#: src/define.in:423
+msgid "Hungarian Forint"
+msgstr "हंगेरियन फ़ोरिंट"
+
+#: src/define.in:429
+msgid "Icelandic Króna"
+msgstr "आइसलैंडिक क्रोना"
+
+#: src/define.in:435
+msgid "Indian Rupee"
+msgstr "भारतीय रुपया"
+
+#: src/define.in:441
+msgid "Indonesian Rupiah"
+msgstr "इंडोनेशियाई रुपिया"
+
+#: src/define.in:447
+msgid "Iranian Rial"
+msgstr "ईरानी रियाल"
+
+#: src/define.in:453
+msgid "Iraqi Dinar"
+msgstr "इराकी दिनार"
+
+#: src/define.in:459
+msgid "Israeli New Shekel"
+msgstr "इज़राइली न्यू शेकेल"
+
+#: src/define.in:465
+msgid "Jamaican Dollar"
+msgstr "जमैका डॉलर"
+
+#: src/define.in:471
+msgid "Japanese Yen"
+msgstr "जापानी येन"
+
+#: src/define.in:477
+msgid "Jordanian Dinar"
+msgstr "जॉर्डनियन दिनार"
+
+#: src/define.in:483
+msgid "Kazakhstani Tenge"
+msgstr "कजाकिस्तान तेंगे"
+
+#: src/define.in:489
+msgid "Kenyan Shilling"
+msgstr "केन्याई शिलिंग"
+
+#: src/define.in:495
+msgid "Kuwaiti Dinar"
+msgstr "कुवैती दीनार"
+
+#: src/define.in:501
+msgid "Kyrgyzstani Som"
+msgstr "किर्गिज़स्तानी सोम"
+
+#: src/define.in:507
+msgid "Laotian Kip"
+msgstr "लाओटियन किप"
+
+#: src/define.in:513
+msgid "Lebanese pound"
+msgstr "लेबनानी पाउंड"
+
+#: src/define.in:519
+msgid "Lesotho loti"
+msgstr "लेसोथो लोटी"
+
+#: src/define.in:525
+msgid "Liberian Dollar"
+msgstr "लाइबेरिया डॉलर"
+
+#: src/define.in:531
+msgid "Libyan Dinar"
+msgstr "लीबियाई दीनार"
+
+#: src/define.in:537
+msgid "Litecoin"
+msgstr "लाइटकॉइन"
+
+#: src/define.in:543
+msgid "Macanese Pataca"
+msgstr "मैकनीज पटाका"
+
+#: src/define.in:549
+msgid "Macedonian Denar"
+msgstr "मैसेडोनियाई डेनार"
+
+#: src/define.in:555
+msgid "Malagasy Ariary"
+msgstr "मालागासी एरीरी"
+
+#: src/define.in:561
+msgid "Malawian Kwacha"
+msgstr "मलावी क्वाचा"
+
+#: src/define.in:567
+msgid "Malaysian Ringgit"
+msgstr "मलेशियाई रिंग्गित"
+
+#: src/define.in:573
+msgid "Maldivian Rufiyaa"
+msgstr "मालदीवियन रुफिया"
+
+#: src/define.in:579
+msgid "Mauritanian Ouguiya (1973–2017)"
+msgstr "मॉरिटानियन ओगुइया (1973–2017)"
+
+#: src/define.in:585
+msgid "Mauritian Rupee"
+msgstr "मॉरीशस रुपया"
+
+#: src/define.in:591
+msgid "Mexican Peso"
+msgstr "मैक्सिकन पेसो"
+
+#: src/define.in:597
+msgid "Moldovan Leu"
+msgstr "मोल्दोवन लियू"
+
+#: src/define.in:603
+msgid "Moroccan Dirham"
+msgstr "मोरक्कन दिरहम"
+
+#: src/define.in:609
+msgid "Mozambican metical"
+msgstr "मोज़ाम्बिकन मेटिकल"
+
+#: src/define.in:621
+msgid "Myanmar Kyat"
+msgstr "म्यांमार क्यात"
+
+#: src/define.in:627
+msgid "New Taiwan dollar"
+msgstr "नया ताइवान डॉलर"
+
+#: src/define.in:633
+msgid "Namibian dollar"
+msgstr "नामीबियाई डॉलर"
+
+#: src/define.in:639
+msgid "Nepalese Rupee"
+msgstr "नेपाली रुपया"
+
+#: src/define.in:645
+msgid "Netherlands Antillean Guilder"
+msgstr "नीदरलैंड एंटिलियन गिल्डर"
+
+#: src/define.in:651
+msgid "New Zealand Dollar"
+msgstr "न्यूज़ीलैंड डॉलर"
+
+#: src/define.in:657
+msgid "Nicaraguan Córdoba"
+msgstr "निकारागुआन कोर्डोबा"
+
+#: src/define.in:663
+msgid "Nigerian Naira"
+msgstr "नाइजीरियाई नाइरा"
+
+#: src/define.in:669
+msgid "Norwegian Krone"
+msgstr "नॉर्वेजियन क्रोन"
+
+#: src/define.in:675
+msgid "Omani Rial"
+msgstr "ओमानी रियाल"
+
+#: src/define.in:681
+msgid "Pakistani Rupee"
+msgstr "पाकिस्तानी रुपया"
+
+#: src/define.in:687
+msgid "Panamanian Balboa"
+msgstr "पनामायन बाल्बोआ"
+
+#: src/define.in:693
+msgid "Papua New Guinean Kina"
+msgstr "पापुआ न्यू गिनी किना"
+
+#: src/define.in:699
+msgid "Paraguayan Guarani"
+msgstr "परागुआयन गुआरानी"
+
+#: src/define.in:705
+msgid "Philippine Piso"
+msgstr "फिलीपीन पिसो"
+
+#: src/define.in:711
+msgid "Poland złoty"
+msgstr "पोलैंड ज़्लॉटी"
+
+#: src/define.in:717
+msgid "Pound sterling"
+msgstr "पौंड स्टर्लिंग"
+
+#: src/define.in:723
+msgid "Qatari Rial"
+msgstr "कतरी रियाल"
+
+#: src/define.in:729
+msgid "Romanian Leu"
+msgstr "रोमानियाई ल्यू"
+
+#: src/define.in:741
+msgid "Russian Ruble"
+msgstr "रूसी रूबल"
+
+#: src/define.in:753
+msgid "Rwandan franc"
+msgstr "रवांडा फ्रैंक"
+
+#: src/define.in:759
+msgid "Salvadoran Colón"
+msgstr "साल्वाडोरन कोलोन"
+
+#: src/define.in:765
+msgid "Saudi Riyal"
+msgstr "सऊदी रियाल"
+
+#: src/define.in:771
+msgid "Serbian Dinar"
+msgstr "सर्बियाई दिनार"
+
+#: src/define.in:783
+msgid "Seychellois Rupee"
+msgstr "सेशेलोइस रुपया"
+
+#: src/define.in:789
+msgid "Sierra Leonean Leone"
+msgstr "सिएरा लियोनियन लियोन"
+
+#: src/define.in:795
+msgid "Singapore Dollar"
+msgstr "सिंगापुर डाॅलर"
+
+#: src/define.in:801
+msgid "Sol"
+msgstr "सॉल"
+
+#: src/define.in:807
+msgid "Solomon Islands Dollar"
+msgstr "सोलोमन द्वीप डॉलर"
+
+#: src/define.in:813
+msgid "Somali Shilling"
+msgstr "सोमाली शिलिंग"
+
+#: src/define.in:819
+msgid "South African Rand"
+msgstr "दक्षिण अफ़्रीकी रैंड"
+
+#: src/define.in:825
+msgid "South Korean won"
+msgstr "दक्षिण कोरियाई वॉन"
+
+#: src/define.in:831
+msgid "Sovereign Bolivar"
+msgstr "संप्रभु बोलिवर"
+
+#: src/define.in:837
+msgid "Special Drawing Rights"
+msgstr "विशेष आहरण अधिकार"
+
+#: src/define.in:843
+msgid "Sri Lankan Rupee"
+msgstr "श्रीलंकाई रुपया"
+
+#: src/define.in:849
+msgid "Sudanese pound"
+msgstr "सूडानी पाउंड"
+
+#: src/define.in:861
+msgid "Surinamese Dollar"
+msgstr "सूरीनामी डॉलर"
+
+#: src/define.in:867
+msgid "Swazi Lilangeni"
+msgstr "स्वाजी लिलांगेनी"
+
+#: src/define.in:873
+msgid "Swedish Krona"
+msgstr "स्वीडिश क्रोना"
+
+#: src/define.in:879
+msgid "Swiss Franc"
+msgstr "स्विस फ्रैंक"
+
+#: src/define.in:885
+msgid "Tajikistani Somoni"
+msgstr "तजाकिस्तानी सोमौनी"
+
+#: src/define.in:891
+msgid "Tanzanian Shilling"
+msgstr "तंजानियाई शिलिंग"
+
+#: src/define.in:897
+msgid "Thai Baht"
+msgstr "थाई बात"
+
+#: src/define.in:903
+msgid "Tongan Paʻanga"
+msgstr "टोंगन पांगा"
+
+#: src/define.in:909
+msgid "Trinidad & Tobago Dollar"
+msgstr "त्रिनिदाद और टोबैगो डॉलर"
+
+#: src/define.in:915
+msgid "Tunisian Dinar"
+msgstr "ट्यूनीशियाई दिनार"
+
+#: src/define.in:921
+msgid "Turkish lira"
+msgstr "टर्किश लीरा"
+
+#: src/define.in:927
+msgid "Turkmenistan manat"
+msgstr "तुर्कमेनिस्तान मनात"
+
+#: src/define.in:939
+msgid "Ugandan Shilling"
+msgstr "युगांडाई शिलिंग"
+
+#: src/define.in:945
+msgid "Ukrainian hryvnia"
+msgstr "यूक्रेनियन रिव्निया"
+
+#: src/define.in:951
+msgid "United Arab Emirates Dirham"
+msgstr "संयुक्त अरब अमीरात दिरहम"
+
+#: src/define.in:957
+msgid "United States Dollar"
+msgstr "यूनाइटेड स्टेट्स डॉलर"
+
+#: src/define.in:963
+msgid "Uruguayan Peso"
+msgstr "उरुग्वयन पेसो"
+
+#: src/define.in:969
+msgid "Uzbekistani Som"
+msgstr "उज़्बेकिस्तानी सोम"
+
+#: src/define.in:975
+msgid "Vietnamese dong"
+msgstr "वियतनामी डोंग"
+
+#: src/define.in:981
+msgid "West African CFA franc"
+msgstr "पश्चिम अफ़्रीकी CFA फ़्रैंक"
+
+#: src/define.in:987
+msgid "Yemeni Rial"
+msgstr "यमनी रियाल"
+
+#: src/define.in:993
+msgid "Zambian Kwacha"
+msgstr "ज़ाम्बियन क्वाचा"
+
+#: src/requests.py:57
+msgid "Results for {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')} - UTC"
+msgstr ""
+"{date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} "
+"{date_time.format('%H:%M')} के लिए परिणाम - UTC"
+
+#: src/requests.py:75
+msgid "Unable to convert currency, failed to fetch results from Google"
+msgstr "मुद्रा परिवर्तित करने में असमर्थ, Google से परिणाम लाने में विफल"
+
+#: src/window.blp:16
+msgid "Disclaimer"
+msgstr "अस्वीकरण"
+
+#: src/window.blp:23
+msgid "Main menu"
+msgstr "मुख्य मेन्यू"
+
+#: src/window.blp:52
+msgid "Keyboard shortcuts"
+msgstr "कीबोर्ड शॉर्टकट"
+
+#: src/window.blp:56
+msgid "About Currency Converter"
+msgstr "मुद्रा परिवर्तक के बारे में"
+
+#: src/window.blp:60
+msgid "Quit"
+msgstr "छोड़ें"
+
+#: src/window.py:109
+msgid "Convert"
+msgstr "परिवर्तित करें"

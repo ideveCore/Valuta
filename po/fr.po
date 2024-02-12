@@ -8,108 +8,113 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-02-08 09:01+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/"
+"currency-converter/currency-converter/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:6
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:2
 #: src/window.blp:9
 msgid "Currency Converter"
-msgstr ""
+msgstr "Convertisseur de devises"
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:7
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:6
 msgid "A simple currency converter using Google-based data"
-msgstr ""
+msgstr "Un simple convertisseur de devises utilisant les données de Google"
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
 msgid ""
 "The currency converter is simple and fast, ideal for those who need to "
 "convert currencies repeatedly."
 msgstr ""
+"Le convertisseur de devises est simple et rapide, idéal pour ceux qui ont "
+"besoin de convertir des devises à plusieurs reprises."
 
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3
 #: src/window.blp:35
 msgid "Converter"
-msgstr ""
+msgstr "Convertisseur"
 
 #: src/components/currency_selector/currency_selector.blp:41
 msgid "Search Currencies…"
-msgstr ""
+msgstr "Rechercher des devises…"
 
 #: src/components/preferences/preferences.blp:9
 #: src/window.blp:47
 msgid "Preferences"
-msgstr ""
+msgstr "Préférences"
 
 #: src/components/preferences/preferences.blp:11
 msgid "Application"
-msgstr ""
+msgstr "Application"
 
 #: src/components/preferences/preferences.blp:16
 msgid "Providers"
-msgstr ""
+msgstr "Fournisseurs"
 
 #: src/components/preferences/preferences.blp:18
 msgid "European Central Bank"
-msgstr ""
+msgstr "Banque Centrale Européenne"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
-msgstr ""
+msgstr "Général"
 
 #: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Preferences"
-msgstr ""
+msgstr "Préférences"
 
 #: src/components/shortcuts/shortcuts.blp:25
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Raccourcis clavier"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
-msgstr ""
+msgstr "Quitter"
 
 #: src/pages/convertion/index.blp:108
 msgid "Error converting, please try again."
-msgstr ""
+msgstr "Erreur de conversion, veuillez réessayer."
 
 #: src/pages/convertion/index.blp:11
 msgid "From"
-msgstr ""
+msgstr "Depuis"
 
 #: src/pages/convertion/index.blp:30
 msgid "Switch"
-msgstr ""
+msgstr "Inverser"
 
 #: src/pages/convertion/index.blp:36
 msgid "To"
-msgstr ""
+msgstr "Vers"
 
 #: src/pages/convertion/index.blp:92
 msgid "Reload"
-msgstr ""
+msgstr "Recharger"
 
 #: src/search_provider/search_provider.in:83
 msgid "Conversion failed, check for network issues"
-msgstr ""
+msgstr "Échec de la conversion, vérifiez votre connexion réseau"
 
 #: src/search_provider/search_provider.in:141
 msgid "Copy"
-msgstr ""
+msgstr "Copier"
 
 #: src/search_provider/search_provider.in:142
 msgid "Copy convertion to clipboard"
-msgstr ""
+msgstr "Copier la conversion dans le presse-papiers"
 
 #: src/define.in:39
 msgid "Afghan Afghani"
@@ -141,7 +146,7 @@ msgstr ""
 
 #: src/define.in:81
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Dollar australien"
 
 #: src/define.in:87
 msgid "Azerbaijani Manat"
@@ -165,7 +170,7 @@ msgstr ""
 
 #: src/define.in:117
 msgid "Belarusian Ruble"
-msgstr ""
+msgstr "Rouble biélorusse"
 
 #: src/define.in:129
 msgid "Belize Dollar"
@@ -181,11 +186,11 @@ msgstr ""
 
 #: src/define.in:147
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
 #: src/define.in:153
 msgid "Bitcoin Cash"
-msgstr ""
+msgstr "Bitcoin Cash"
 
 #: src/define.in:159
 msgid "Bolivian Boliviano"
@@ -225,7 +230,7 @@ msgstr ""
 
 #: src/define.in:213
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "Dollar canadien"
 
 #: src/define.in:219
 msgid "Cape Verdean Escudo"
@@ -281,11 +286,11 @@ msgstr ""
 
 #: src/define.in:297
 msgid "Czech Koruna"
-msgstr ""
+msgstr "Couronne tchèque"
 
 #: src/define.in:303
 msgid "Danish Krone"
-msgstr ""
+msgstr "Couronne danoise"
 
 #: src/define.in:309
 msgid "Djiboutian Franc"
@@ -313,7 +318,7 @@ msgstr ""
 
 #: src/define.in:345
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: src/define.in:351
 msgid "Fijian Dollar"
@@ -357,11 +362,11 @@ msgstr ""
 
 #: src/define.in:417
 msgid "Hong Kong Dollar"
-msgstr ""
+msgstr "Dollar de Hong Kong"
 
 #: src/define.in:423
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "Forint hongrois"
 
 #: src/define.in:429
 msgid "Icelandic Króna"
@@ -369,7 +374,7 @@ msgstr ""
 
 #: src/define.in:435
 msgid "Indian Rupee"
-msgstr ""
+msgstr "Roupie indienne"
 
 #: src/define.in:441
 msgid "Indonesian Rupiah"
@@ -389,11 +394,11 @@ msgstr ""
 
 #: src/define.in:465
 msgid "Jamaican Dollar"
-msgstr ""
+msgstr "Dollar jamaïcain"
 
 #: src/define.in:471
 msgid "Japanese Yen"
-msgstr ""
+msgstr "Yen japonais"
 
 #: src/define.in:477
 msgid "Jordanian Dinar"
@@ -421,7 +426,7 @@ msgstr ""
 
 #: src/define.in:513
 msgid "Lebanese pound"
-msgstr ""
+msgstr "Livre libanaise"
 
 #: src/define.in:519
 msgid "Lesotho loti"
@@ -429,7 +434,7 @@ msgstr ""
 
 #: src/define.in:525
 msgid "Liberian Dollar"
-msgstr ""
+msgstr "Dollar libérien"
 
 #: src/define.in:531
 msgid "Libyan Dinar"
@@ -437,7 +442,7 @@ msgstr ""
 
 #: src/define.in:537
 msgid "Litecoin"
-msgstr ""
+msgstr "Litecoin"
 
 #: src/define.in:543
 msgid "Macanese Pataca"
@@ -497,7 +502,7 @@ msgstr ""
 
 #: src/define.in:633
 msgid "Namibian dollar"
-msgstr ""
+msgstr "Dollat namibien"
 
 #: src/define.in:639
 msgid "Nepalese Rupee"
@@ -509,7 +514,7 @@ msgstr ""
 
 #: src/define.in:651
 msgid "New Zealand Dollar"
-msgstr ""
+msgstr "Dollar de Nouvelle-Zélande"
 
 #: src/define.in:657
 msgid "Nicaraguan Córdoba"
@@ -521,7 +526,7 @@ msgstr ""
 
 #: src/define.in:669
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "Couronne norvégienne"
 
 #: src/define.in:675
 msgid "Omani Rial"
@@ -553,7 +558,7 @@ msgstr ""
 
 #: src/define.in:717
 msgid "Pound sterling"
-msgstr ""
+msgstr "Livre sterling"
 
 #: src/define.in:723
 msgid "Qatari Rial"
@@ -565,11 +570,11 @@ msgstr ""
 
 #: src/define.in:741
 msgid "Russian Ruble"
-msgstr ""
+msgstr "Rouble russe"
 
 #: src/define.in:753
 msgid "Rwandan franc"
-msgstr ""
+msgstr "Franc rwandais"
 
 #: src/define.in:759
 msgid "Salvadoran Colón"
@@ -593,7 +598,7 @@ msgstr ""
 
 #: src/define.in:795
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "Dollar de Singapour"
 
 #: src/define.in:801
 msgid "Sol"
@@ -601,7 +606,7 @@ msgstr ""
 
 #: src/define.in:807
 msgid "Solomon Islands Dollar"
-msgstr ""
+msgstr "Dollar des Îles Salomon"
 
 #: src/define.in:813
 msgid "Somali Shilling"
@@ -629,11 +634,11 @@ msgstr ""
 
 #: src/define.in:849
 msgid "Sudanese pound"
-msgstr ""
+msgstr "Livre soudanaise"
 
 #: src/define.in:861
 msgid "Surinamese Dollar"
-msgstr ""
+msgstr "Dollar surinamais"
 
 #: src/define.in:867
 msgid "Swazi Lilangeni"
@@ -641,11 +646,11 @@ msgstr ""
 
 #: src/define.in:873
 msgid "Swedish Krona"
-msgstr ""
+msgstr "Couronne suédoise"
 
 #: src/define.in:879
 msgid "Swiss Franc"
-msgstr ""
+msgstr "Franc suisse"
 
 #: src/define.in:885
 msgid "Tajikistani Somoni"
@@ -665,7 +670,7 @@ msgstr ""
 
 #: src/define.in:909
 msgid "Trinidad & Tobago Dollar"
-msgstr ""
+msgstr "Dollar de Trinité-et-Tobago"
 
 #: src/define.in:915
 msgid "Tunisian Dinar"
@@ -693,7 +698,7 @@ msgstr ""
 
 #: src/define.in:957
 msgid "United States Dollar"
-msgstr ""
+msgstr "Dollar américain"
 
 #: src/define.in:963
 msgid "Uruguayan Peso"
@@ -722,31 +727,35 @@ msgstr ""
 #: src/requests.py:57
 msgid "Results for {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')} - UTC"
 msgstr ""
+"Résultats pour le {date_time.format('%d')} {date_time.format('%B')} "
+"{date_time.format('%Y')} {date_time.format('%H:%M')} - UTC"
 
 #: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
 msgstr ""
+"Impossible de convertir la devise, échec de la recherche de résultats sur "
+"Google"
 
 #: src/window.blp:16
 msgid "Disclaimer"
-msgstr ""
+msgstr "Avertissement"
 
 #: src/window.blp:23
 msgid "Main menu"
-msgstr ""
+msgstr "Menu principal"
 
 #: src/window.blp:52
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Raccourcis clavier"
 
 #: src/window.blp:56
 msgid "About Currency Converter"
-msgstr ""
+msgstr "À propos de Convertisseur de devises"
 
 #: src/window.blp:60
 msgid "Quit"
-msgstr ""
+msgstr "Quitter"
 
 #: src/window.py:109
 msgid "Convert"
-msgstr ""
+msgstr "Convertir"
