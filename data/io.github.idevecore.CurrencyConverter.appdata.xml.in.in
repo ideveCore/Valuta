@@ -4,9 +4,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <name>Currency Converter</name>
-  <summary>A simple currency converter using Google-based data</summary>
+  <summary>Convert between currencies</summary>
   <description>
-    <p>The currency converter is simple and fast, ideal for those who need to convert currencies repeatedly.</p>
+    <p>Currency Converter is a simple and fast conversion tool, ideal for those who need to convert between different currencies repeatedly. Use it while traveling, budgeting, or anytime else you need to quickly convert between two currencies.</p>
   </description>
   <url type="homepage">https://github.com/ideveCore/currency-converter</url>
   <url type="bugtracker">https://github.com/ideveCore/currency-converter/issues</url>

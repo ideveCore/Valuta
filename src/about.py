@@ -52,6 +52,7 @@ def about(application: Adw.Application):
                             developer_name='Ideve Core',
                             version=VERSION,
                             developers=['Ideve Core'],
+                            designers=['Brage Fuglseth https://bragefuglseth.dev'],
                             issue_url='https://github.com/ideveCore/currency-converter/issues',
                             debug_info=debug_info,
                             copyright='© 2023 Ideve Core')
