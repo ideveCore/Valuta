@@ -23,10 +23,9 @@ import gi, math
 
 gi.require_version("Adw", "1")
 gi.require_version("Gtk", "4.0")
-gi.require_version("Panel", "1")
 
 from typing import Union, Any, Dict
-from gi.repository import Adw, Gdk, Gio, GLib, Gtk, Panel
+from gi.repository import Adw, Gdk, Gio, GLib, Gtk
 from .define import RES_PATH
 from .pages import convertion_page
 from .components import Shortcuts
@@ -82,9 +81,6 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
         settings.connect('changed::color-scheme', lambda setting, key: set_color_scheme(setting.get_string('color-scheme')));
         set_color_scheme(settings.get_string('color-scheme'))
         window.add_action(settings.create_action('color-scheme'))
-        theme_selector_wg = Panel.ThemeSelector()
-        theme_selector_wg.set_action_name('win.color-scheme')
-        menu_button.props.popover.add_child(theme_selector_wg, 'theme')
         window.set_help_overlay(Shortcuts())
 
     def converted(data: Dict[str, Union[str, int]]):
