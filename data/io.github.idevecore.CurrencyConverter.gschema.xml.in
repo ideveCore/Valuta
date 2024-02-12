@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="currencyconverter">
   <schema id="@app-id@" path="/io/github/idevecore/CurrencyConverter/">
-    <key name="color-scheme" type="s">
-      <choices>
-        <choice value="default"/>
-        <choice value="light"/>
-        <choice value="dark"/>
-      </choices>
-      <default>'light'</default>
-      <summary>Color Scheme</summary>
-      <description>Use the light or dark variant of the GTK theme</description>
-    </key>
     <key name="providers" type="i">
       <default>0</default>
     </key>

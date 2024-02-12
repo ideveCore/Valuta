@@ -50,9 +50,6 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
     info = builder.get_object("info")
     disclaimer = builder.get_object("disclaimer")
 
-    def set_color_scheme(color: str):
-      Adw.StyleManager.get_default().set_color_scheme(string_to_color(color))
-
     def load_window_state():
         settings.bind(
             key="width",
@@ -78,9 +75,6 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
             property="fullscreened",
             flags=Gio.SettingsBindFlags.DEFAULT,
         )
-        settings.connect('changed::color-scheme', lambda setting, key: set_color_scheme(setting.get_string('color-scheme')));
-        set_color_scheme(settings.get_string('color-scheme'))
-        window.add_action(settings.create_action('color-scheme'))
         window.set_help_overlay(Shortcuts())
 
     def converted(data: Dict[str, Union[str, int]]):
