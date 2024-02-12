@@ -4,90 +4,91 @@ using Adw 1;
 Gtk.Box page {
   orientation: vertical;
   valign: center;
-  Adw.PreferencesPage {
-    Adw.PreferencesGroup {
-      margin-start: 24;
-      margin-end: 24;
-      title: _("From");
-      header-suffix: Gtk.Box {
-        orientation: horizontal;
-        $CurrencySelector from_currency_selector {}
-      };
-      Gtk.Entry from_currency_entry {
-        styles ["f-l"]
-        xalign: 0.50;
-        height-request: 70;
+  Adw.ToastOverlay toast_overlay {
+    Adw.PreferencesPage {
+      Adw.PreferencesGroup {
+        margin-start: 24;
+        margin-end: 24;
+        title: _("From");
+        header-suffix: Gtk.Box {
+          orientation: horizontal;
+          $CurrencySelector from_currency_selector {}
+        };
+        Gtk.Entry from_currency_entry {
+          styles ["f-l"]
+          xalign: 0.50;
+          height-request: 70;
+        }
       }
-    }
-    Adw.PreferencesGroup {
-      halign: center;
-      valign: center;
-      Gtk.Button invert_currencies {
-        styles ["circular"]
-        tooltip-text: _("Switch");
-        icon-name: "vertical-arrows-symbolic";
+      Adw.PreferencesGroup {
+        halign: center;
+        valign: center;
+        Gtk.Button invert_currencies {
+          styles ["circular"]
+          tooltip-text: _("Switch");
+          icon-name: "vertical-arrows-symbolic";
+        }
       }
-    }
-    Adw.PreferencesGroup {
-      styles ["top-transform"]
-      margin-start: 24;
-      margin-end: 24;
-      title: _("To");
-      header-suffix: Gtk.Box {
-        orientation: horizontal;
-        $CurrencySelector to_currency_selector {}
-      };
+      Adw.PreferencesGroup {
+        styles ["top-transform"]
+        margin-start: 24;
+        margin-end: 24;
+        title: _("To");
+        header-suffix: Gtk.Box {
+          orientation: horizontal;
+          $CurrencySelector to_currency_selector {}
+        };
 
-      Adw.Bin {
-        styles ["f-l", "text-light", "bg-accent-color", "rounded"]
+        Adw.Bin {
+          styles ["f-l", "text-light", "bg-accent-color", "rounded"]
 
-        Gtk.Stack stack {
-          transition-type: crossfade;
-          Gtk.StackPage {
-            name: "result";
-            child: WindowHandle {
-              Gtk.Label to_currency_entry {
-                selectable: true;
-                xalign: 0.50;
-                height-request: 70;
-              }
-            };
-          }
-          Gtk.StackPage {
-            name: "loading";
-            child: WindowHandle {
-              Box {
-                orientation: vertical;
-                halign: center;
-                valign: center;
-
-                Spinner {
-                  spinning: true;
-                  width-request: 25;
-                  height-request: 25;
+          Gtk.Stack stack {
+            transition-type: crossfade;
+            Gtk.StackPage {
+              name: "result";
+              child: WindowHandle {
+                Gtk.Label to_currency_entry {
+                  selectable: true;
+                  xalign: 0.50;
+                  height-request: 70;
                 }
-              }
-            };
-          }
-          Gtk.StackPage {
-            name: "convertion-error";
-            child: WindowHandle {
-              Box {
-                orientation: vertical;
-                halign: center;
-                valign: center;
+              };
+            }
+            Gtk.StackPage {
+              name: "loading";
+              child: WindowHandle {
+                Box {
+                  orientation: vertical;
+                  halign: center;
+                  valign: center;
 
-                Gtk.Button reload {
-                  styles ["circular"]
-                  icon-name: "refresh-large-symbolic";
-                  tooltip-text: _("Reload");
+                  Spinner {
+                    spinning: true;
+                    width-request: 25;
+                    height-request: 25;
+                  }
                 }
-              }
-            };
+              };
+            }
+            Gtk.StackPage {
+              name: "convertion-error";
+              child: WindowHandle {
+                Box {
+                  orientation: vertical;
+                  halign: center;
+                  valign: center;
+
+                  Gtk.Button reload {
+                    styles ["circular"]
+                    icon-name: "refresh-large-symbolic";
+                    tooltip-text: _("Reload");
+                  }
+                }
+              };
+            }
           }
         }
       }
-      Adw.ToastOverlay toast_overlay {}
     }
   }
 }
