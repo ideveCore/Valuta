@@ -1,14 +1,15 @@
 using Gtk 4.0;
 using Adw 1;
 
-Gtk.Box page {
-  orientation: vertical;
-  valign: center;
-  Adw.ToastOverlay toast_overlay {
+Adw.ToastOverlay toast_overlay {
+  Gtk.Box {
+    orientation: vertical;
+    valign: center;
     Adw.PreferencesPage {
       Adw.PreferencesGroup {
         margin-start: 24;
         margin-end: 24;
+        margin-bottom: 20;
         title: _("From");
         header-suffix: Gtk.Box {
           orientation: horizontal;
@@ -24,7 +25,7 @@ Gtk.Box page {
         halign: center;
         valign: center;
         Gtk.Button invert_currencies {
-          styles ["circular"]
+          styles ["circular", "pd"]
           tooltip-text: _("Switch");
           icon-name: "vertical-arrows-symbolic";
         }

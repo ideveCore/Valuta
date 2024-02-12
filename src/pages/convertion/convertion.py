@@ -34,7 +34,7 @@ def convertion_page(application: Adw.Application, from_currency_value):
     builder = Gtk.Builder.new_from_resource(resource)
     settings = application.utils.settings
     convertion = application.utils.convertion
-    page = builder.get_object("page")
+    page = builder.get_object("toast_overlay")
     from_currency_selector: CurrencySelector = builder.get_object("from_currency_selector")
     to_currency_selector: CurrencySelector = builder.get_object("to_currency_selector")
     from_currency_entry = builder.get_object("from_currency_entry")
