@@ -94,7 +94,6 @@ class Convertion:
                     return self.__event('converted', self.converted_data)
                 self.converted_data = response
                 self.converted_data["converted"] = True
-                self.converted_data["from"] = from_currency_value
 
             from_currency = from_currency_value
             base_currency = self.converted_data["base"]
