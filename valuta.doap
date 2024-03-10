@@ -4,11 +4,11 @@
          xmlns:gnome="http://api.gnome.org/doap-extensions#"
          xmlns="http://usefulinc.com/ns/doap#">
 
-  <name xml:lang="en">Currency Converter</name>
-  <shortdesc xml:lang="en">A simple currency converter using Google-based data</shortdesc>
-  <description xml:lang="en">The currency converter is simple and fast, ideal for those who need to convert currencies repeatedly.</description>
-  <homepage rdf:resource="https://github.com/idevecore/currency-converter" />
-  <bug-database rdf:resource="https://github.com/idevecore/currency-converter/issues/" />
+  <name xml:lang="en">Valuta</name>
+  <shortdesc xml:lang="en">Convert currencies with ease. Valuta provides an intuitive and fast experience for your conversion needs.</shortdesc>
+  <description xml:lang="en">The Valuta is simple and fast, ideal for those who need to convert currencies repeatedly.</description>
+  <homepage rdf:resource="https://github.com/idevecore/valuta" />
+  <bug-database rdf:resource="https://github.com/idevecore/valuta/issues/" />
   <programming-language>Python</programming-language>
   <platform>GTK 4</platform>
   <platform>Libadwaita</platform>

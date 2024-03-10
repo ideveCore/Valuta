@@ -19,7 +19,7 @@
 
 from gi.repository import Gtk
 
-@Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/components/shortcuts/shortcuts.ui')
+@Gtk.Template(resource_path='/io/github/idevecore/Valuta/components/shortcuts/shortcuts.ui')
 class Shortcuts(Gtk.ShortcutsWindow):
     __gtype_name__ = 'Shortcuts'
 

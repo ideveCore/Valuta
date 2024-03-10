@@ -1,17 +1,17 @@
-<img heigth="128" src="data/icons/hicolor/scalable/apps/io.github.idevecore.CurrencyConverter.svg" align="left" />
+<img heigth="128" src="data/icons/hicolor/scalable/apps/io.github.idevecore.Valuta.svg" align="left" />
 
-# Currency Converter
+# Valuta
 
-A simple currency converter using Google-based data
+Convert currencies with ease. Valuta provides an intuitive and fast experience for your conversion needs.
 
-![CurrencyConverter](data/screenshots/01.png)
+![Valuta](data/screenshots/01.png)
 
 ## Features
-- Google finance conversion provider
 - European Central Bank conversion provider through the API (Frankfurter)
+- Google finance conversion provider
 
 ## Flathub
-<a href='https://flathub.org/apps/io.github.idevecore.CurrencyConverter'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
+<a href='https://flathub.org/apps/io.github.idevecore.Valuta'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
 
 ## Building
 
@@ -26,23 +26,23 @@ A simple currency converter using Google-based data
 
 ### Building from Git
 ```bash 
- git clone --recurse-submodules https://github.com/idevecore/currency-converter.git
- cd currency-converter
+ git clone --recurse-submodules https://github.com/idevecore/valuta.git
+ cd valuta
  meson builddir --prefix=/usr/local 
  sudo ninja -C builddir install
  ```
 
 ## Translations
 
-[![Translation status](https://hosted.weblate.org/widget/currency-converter/svg-badge.svg)](https://hosted.weblate.org/engage/currency-converter/) ✨Powered by [Weblate](https://weblate.org/en/)✨
+[![Translation status](https://hosted.weblate.org/widget/valuta/svg-badge.svg)](https://hosted.weblate.org/engage/valuta/) ✨Powered by [Weblate](https://weblate.org/en/)✨
 
-Currency Converter has been translated into the following languages:
+Valuta has been translated into the following languages:
 
-<a href="https://hosted.weblate.org/engage/currency-converter/">
-<img src="https://hosted.weblate.org/widget/currency-converter/multi-auto.svg" alt="Translation status" />
+<a href="https://hosted.weblate.org/engage/valuta/">
+<img src="https://hosted.weblate.org/widget/valuta/multi-auto.svg" alt="Translation status" />
 </a>
 
-Please help translate Currency Converter into more languages through [Weblate](https://hosted.weblate.org/engage/currency-converter/).
+Please help translate Valuta into more languages through [Weblate](https://hosted.weblate.org/engage/valuta/).
 
 
 ## Donate

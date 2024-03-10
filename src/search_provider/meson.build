@@ -2,14 +2,14 @@ search_provider_dir = join_paths(get_option('prefix'), get_option('datadir'), 'g
 service_dir = join_paths(get_option('prefix'), get_option('datadir'), 'dbus-1', 'services')
 
 configure_file(
-  input: 'io.github.idevecore.CurrencyConverter.SearchProvider.ini',
+  input: 'io.github.idevecore.Valuta.SearchProvider.ini',
   output: '@0@.SearchProvider.ini'.format(application_id),
   configuration: conf,
   install_dir: search_provider_dir,
 )
 
 configure_file(
-  input: 'io.github.idevecore.CurrencyConverter.SearchProvider.service.in',
+  input: 'io.github.idevecore.Valuta.SearchProvider.service.in',
   output: '@0@.SearchProvider.service'.format(application_id),
   configuration: conf,
   install_dir: service_dir,

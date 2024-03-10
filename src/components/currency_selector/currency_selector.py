@@ -23,7 +23,7 @@ import re
 from gi.repository import Adw, Gdk, GObject, Gtk
 from ..currency_selector_row.currency_selector_row import CurrencySelectorRow
 
-@Gtk.Template(resource_path='/io/github/idevecore/CurrencyConverter/components/currency_selector/index.ui')
+@Gtk.Template(resource_path='/io/github/idevecore/Valuta/components/currency_selector/index.ui')
 class CurrencySelector(Adw.Bin):
     __gtype_name__ = 'CurrencySelector'
     __gsignals__ = {

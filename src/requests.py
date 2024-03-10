@@ -108,8 +108,8 @@ class ECB(Providers):
         return self.response
 
 providers = {
-    0 : Google,
-    1 : ECB,
+    0 : ECB,
+    1 : Google,
 }
 
 class SoupSession(Soup.Session):
