@@ -1,4 +1,4 @@
-project('currencyconverter',
+project('valuta',
           version: '1.1.0',
     meson_version: '>= 0.63.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
@@ -8,9 +8,9 @@ python = import('python')
 i18n = import('i18n')
 
 prefix = get_option('prefix')
-base_id = 'io.github.idevecore.CurrencyConverter'
+base_id = 'io.github.idevecore.Valuta'
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-moduledir = join_paths(pkgdatadir, 'currencyconverter')
+moduledir = join_paths(pkgdatadir, 'valuta')
 datadir = prefix / get_option('datadir')
 
 if get_option('profile') == 'development'
@@ -22,12 +22,12 @@ if get_option('profile') == 'development'
     version_suffix = '-@0@'.format(vcs_tag)
   endif
   application_id = '@0@.@1@'.format(base_id, profile)
-  object_path = '/io/github/idevecore/CurrencyConverter/Devel/SearchProvider'
+  object_path = '/io/github/idevecore/valuta/Devel/SearchProvider'
 else
   profile = ''
   version_suffix = ''
   application_id = base_id
-  object_path = '/io/github/idevecore/CurrencyConverter/SearchProvider'
+  object_path = '/io/github/idevecore/valuta/SearchProvider'
 endif
 
 conf = configuration_data()

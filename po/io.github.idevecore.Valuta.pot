@@ -17,20 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:6
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:2
-#: src/window.blp:9
-msgid "Currency Converter"
-msgstr ""
-
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:7
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:6
-msgid "A simple currency converter using Google-based data"
+msgid "Convert currencies with ease. Valuta provides an intuitive and fast experience for your conversion needs."
 msgstr ""
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
 msgid ""
-"The currency converter is simple and fast, ideal for those who need to "
+"The Valuta is simple and fast, ideal for those who need to "
 "convert currencies repeatedly."
 msgstr ""
 
@@ -888,7 +882,7 @@ msgid "Keyboard shortcuts"
 msgstr ""
 
 #: src/window.blp:56
-msgid "About Currency Converter"
+msgid "About"
 msgstr ""
 
 #: src/window.blp:60

@@ -2,8 +2,8 @@ python = import('python')
 
 # ===== Generate Currency Convert bin ===== 
 configure_file(
-  input: 'currencyconverter.in',
-  output: 'currencyconverter',
+  input: 'valuta.in',
+  output: 'valuta',
   configuration: conf,
   install: true,
   install_dir: get_option('bindir'),
@@ -38,8 +38,8 @@ blueprints = custom_target('blueprints',
 )
 
 # ===== Compile Currence Converter gresource =====
-gnome.compile_resources('currencyconverter',
-  'currencyconverter.gresource.xml',
+gnome.compile_resources('valuta',
+  'valuta.gresource.xml',
   dependencies: blueprints,
   gresource_bundle: true,
   install: true,

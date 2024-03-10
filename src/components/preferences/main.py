@@ -18,7 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Adw, Gtk, Gio
-from currencyconverter.define import RES_PATH
+from valuta.define import RES_PATH
 
 resource = f'{RES_PATH}/components/preferences/index.ui'
 

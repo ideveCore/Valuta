@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=Currency Converter
-GenericName=Converter
-TryExec=currencyconverter
-Exec=currencyconverter
-Comment=A simple currency converter using Google-based data
+Name=Valuta
+GenericName=Valuta
+TryExec=valuta
+Exec=valuta
+Comment=Convert currencies with ease. Valuta provides an intuitive and fast experience for your conversion needs.
 Icon=@icon@
 Terminal=false
 Type=Application

@@ -12,8 +12,8 @@ gi.require_version('Soup', '3.0')
 from gi.repository import GLib, Gio
 
 from gi.repository import GLib, Gio
-from currencyconverter.define import CODES
-from currencyconverter.utils import Convertion
+from valuta.define import CODES
+from valuta.utils import Convertion
 
 CLIPBOARD_PREFIX = 'copy-to-clipboard'
 ERROR_PREFIX = 'translation-error'
@@ -24,10 +24,10 @@ localedir = '@localedir@'
 # ui_trans.add_fallback(langs_trans)
 # ui_trans.install(names=['gettext'])
 
-locale.bindtextdomain('currencyconverter', localedir)
-locale.textdomain('currencyconverter')
+locale.bindtextdomain('valuta', localedir)
+locale.textdomain('valuta')
 
-gettext.install('currencyconverter', localedir)
+gettext.install('valuta', localedir)
 _ = gettext.gettext
 
 dbus_interface_description = '''

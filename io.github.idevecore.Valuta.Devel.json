@@ -1,16 +1,16 @@
 {
-    "app-id" : "io.github.idevecore.CurrencyConverter.Devel",
+    "app-id" : "io.github.idevecore.Valuta.Devel",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "45",
     "sdk" : "org.gnome.Sdk",
-    "command" : "currencyconverter",
+    "command" : "valuta",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
         "--device=dri",
         "--socket=fallback-x11",
         "--socket=wayland",
-        "--own-name=io.github.idevecore.CurrencyConverter.Devel.SearchProvider"
+        "--own-name=io.github.idevecore.Valuta.Devel.SearchProvider"
     ],
     "cleanup" : [
         "*blueprint*"
@@ -18,7 +18,7 @@
     "modules" : [
         "pypi-dependencies.json",
         {
-            "name" : "currencyconverter",
+            "name" : "Valuta",
             "builddir" : true,
             "buildsystem" : "meson",
             "config-opts" : [

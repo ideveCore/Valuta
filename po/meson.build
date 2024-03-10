@@ -1,1 +1,1 @@
-i18n.gettext('currencyconverter', preset: 'glib')
+i18n.gettext('valuta', preset: 'glib')
