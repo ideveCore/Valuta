@@ -18,20 +18,21 @@ msgstr ""
 "X-Generator: Weblate 5.5-dev\n"
 "X-Project-Style: gnome\n"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:6
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:2 src/window.blp:9
-msgid "Currency Converter"
-msgstr "Conversor de moeda"
-
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:7
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:6
-msgid "A simple currency converter using Google-based data"
-msgstr "Um conversor de moeda simples usando dados baseados no Google"
+msgid ""
+"Convert currencies with ease. Valuta provides an intuitive and fast "
+"experience for your conversion needs."
+msgstr ""
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
+#, fuzzy
+#| msgid ""
+#| "The currency converter is simple and fast, ideal for those who need to "
+#| "convert currencies repeatedly."
 msgid ""
-"The currency converter is simple and fast, ideal for those who need to "
-"convert currencies repeatedly."
+"The Valuta is simple and fast, ideal for those who need to convert "
+"currencies repeatedly."
 msgstr ""
 "O conversor de moeda é simples e rápido, ideal para quem precisa converter "
 "moedas repetidamente."
@@ -745,8 +746,8 @@ msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
 
 #: src/window.blp:56
-msgid "About Currency Converter"
-msgstr "Sobre Conversor de Moedas"
+msgid "About"
+msgstr ""
 
 #: src/window.blp:60
 msgid "Quit"
@@ -755,6 +756,15 @@ msgstr "Sair"
 #: src/window.py:109
 msgid "Convert"
 msgstr "Converter"
+
+#~ msgid "Currency Converter"
+#~ msgstr "Conversor de moeda"
+
+#~ msgid "A simple currency converter using Google-based data"
+#~ msgstr "Um conversor de moeda simples usando dados baseados no Google"
+
+#~ msgid "About Currency Converter"
+#~ msgstr "Sobre Conversor de Moedas"
 
 #~ msgid "Results for"
 #~ msgstr "Resultados de"

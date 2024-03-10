@@ -19,27 +19,26 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:6
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:2
-#: src/window.blp:9
-msgid "Currency Converter"
-msgstr "मुद्रा परिवर्तक"
-
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:7
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:6
-msgid "A simple currency converter using Google-based data"
-msgstr "Google-आधारित डेटा का उपयोग करके एक सरल मुद्रा परिवर्तक"
+msgid ""
+"Convert currencies with ease. Valuta provides an intuitive and fast "
+"experience for your conversion needs."
+msgstr ""
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
+#, fuzzy
+#| msgid ""
+#| "The currency converter is simple and fast, ideal for those who need to "
+#| "convert currencies repeatedly."
 msgid ""
-"The currency converter is simple and fast, ideal for those who need to "
-"convert currencies repeatedly."
+"The Valuta is simple and fast, ideal for those who need to convert "
+"currencies repeatedly."
 msgstr ""
-"मुद्रा परिवर्तक सरल और तेज़ है, यह उन लोगों के लिए आदर्श है जिन्हें बार-बार "
-"मुद्राएँ परिवर्तित करने की आवश्यकता होती है।"
+"मुद्रा परिवर्तक सरल और तेज़ है, यह उन लोगों के लिए आदर्श है जिन्हें बार-बार मुद्राएँ "
+"परिवर्तित करने की आवश्यकता होती है।"
 
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3
-#: src/window.blp:35
+#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3 src/window.blp:35
 msgid "Converter"
 msgstr "परिवर्तक"
 
@@ -47,8 +46,7 @@ msgstr "परिवर्तक"
 msgid "Search Currencies…"
 msgstr "मुद्राएँ खोजें…"
 
-#: src/components/preferences/preferences.blp:9
-#: src/window.blp:47
+#: src/components/preferences/preferences.blp:9 src/window.blp:47
 msgid "Preferences"
 msgstr "प्राथमिकताएँ"
 
@@ -725,7 +723,9 @@ msgid "Zambian Kwacha"
 msgstr "ज़ाम्बियन क्वाचा"
 
 #: src/requests.py:57
-msgid "Results for {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')} - UTC"
+msgid ""
+"Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
+"format('%Y')} {date_time.format('%H:%M')} - UTC"
 msgstr ""
 "{date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} "
 "{date_time.format('%H:%M')} के लिए परिणाम - UTC"
@@ -747,8 +747,8 @@ msgid "Keyboard shortcuts"
 msgstr "कीबोर्ड शॉर्टकट"
 
 #: src/window.blp:56
-msgid "About Currency Converter"
-msgstr "मुद्रा परिवर्तक के बारे में"
+msgid "About"
+msgstr ""
 
 #: src/window.blp:60
 msgid "Quit"
@@ -757,3 +757,12 @@ msgstr "छोड़ें"
 #: src/window.py:109
 msgid "Convert"
 msgstr "परिवर्तित करें"
+
+#~ msgid "Currency Converter"
+#~ msgstr "मुद्रा परिवर्तक"
+
+#~ msgid "A simple currency converter using Google-based data"
+#~ msgstr "Google-आधारित डेटा का उपयोग करके एक सरल मुद्रा परिवर्तक"
+
+#~ msgid "About Currency Converter"
+#~ msgstr "मुद्रा परिवर्तक के बारे में"

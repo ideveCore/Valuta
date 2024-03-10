@@ -19,15 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:6
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:2 src/window.blp:9
-msgid "Currency Converter"
-msgstr "Valutaveksler"
-
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:7
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:6
-msgid "A simple currency converter using Google-based data"
-msgstr "Enkel valutakonvertering med Google-basert data"
+msgid ""
+"Convert currencies with ease. Valuta provides an intuitive and fast "
+"experience for your conversion needs."
+msgstr ""
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
 #, fuzzy
@@ -35,8 +32,8 @@ msgstr "Enkel valutakonvertering med Google-basert data"
 #| "The currency converter is simple and fast, ideal for those who need to "
 #| "convert currencies repeatedly"
 msgid ""
-"The currency converter is simple and fast, ideal for those who need to "
-"convert currencies repeatedly."
+"The Valuta is simple and fast, ideal for those who need to convert "
+"currencies repeatedly."
 msgstr "Valutaveksleren er enkel og rask. Ideelt for dem som ofte trenger den."
 
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3 src/window.blp:35
@@ -764,8 +761,8 @@ msgid "Keyboard shortcuts"
 msgstr "Tastatursnarveier"
 
 #: src/window.blp:56
-msgid "About Currency Converter"
-msgstr "Om Valutaveksler"
+msgid "About"
+msgstr ""
 
 #: src/window.blp:60
 #, fuzzy
@@ -777,6 +774,15 @@ msgstr "Avslutt"
 #: src/window.py:109
 msgid "Convert"
 msgstr "Konverter"
+
+#~ msgid "Currency Converter"
+#~ msgstr "Valutaveksler"
+
+#~ msgid "A simple currency converter using Google-based data"
+#~ msgstr "Enkel valutakonvertering med Google-basert data"
+
+#~ msgid "About Currency Converter"
+#~ msgstr "Om Valutaveksler"
 
 #~ msgctxt "shortcut window"
 #~ msgid "Shortcuts"
