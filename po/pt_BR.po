@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Currency Converter master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-03-10 21:05+0000\n"
+"PO-Revision-Date: 2024-03-10 21:12+0000\n"
 "Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/pt_BR/>\n"
@@ -24,18 +24,16 @@ msgid ""
 "Convert currencies with ease. Valuta provides an intuitive and fast "
 "experience for your conversion needs."
 msgstr ""
+"Converta moedas com facilidade. Valuta oferece uma experiência intuitiva e "
+"rápida para suas necessidades de conversão."
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
-#, fuzzy
-#| msgid ""
-#| "The currency converter is simple and fast, ideal for those who need to "
-#| "convert currencies repeatedly."
 msgid ""
 "The Valuta is simple and fast, ideal for those who need to convert "
 "currencies repeatedly."
 msgstr ""
-"O conversor de moeda é simples e rápido, ideal para quem precisa converter "
-"moedas repetidamente."
+"O Valuta é simples e rápido, ideal para quem precisa converter moedas "
+"repetidamente."
 
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3 src/window.blp:35
 msgid "Converter"
@@ -747,7 +745,7 @@ msgstr "Atalhos de teclado"
 
 #: src/window.blp:56
 msgid "About"
-msgstr ""
+msgstr "Sobre"
 
 #: src/window.blp:60
 msgid "Quit"
