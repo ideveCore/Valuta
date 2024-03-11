@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-03-10 21:05+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-03-11 23:01+0000\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/currency-converter/"
 "currency-converter/hi/>\n"
 "Language: hi\n"
@@ -25,18 +25,16 @@ msgid ""
 "Convert currencies with ease. Valuta provides an intuitive and fast "
 "experience for your conversion needs."
 msgstr ""
+"मुद्राओं को आसानी से परिवर्तित करें। Valuta आपकी रूपांतरण आवश्यकताओं के लिए "
+"एक सहज और तेज़ अनुभव प्रदान करता है।"
 
 #: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
-#, fuzzy
-#| msgid ""
-#| "The currency converter is simple and fast, ideal for those who need to "
-#| "convert currencies repeatedly."
 msgid ""
 "The Valuta is simple and fast, ideal for those who need to convert "
 "currencies repeatedly."
 msgstr ""
-"मुद्रा परिवर्तक सरल और तेज़ है, यह उन लोगों के लिए आदर्श है जिन्हें बार-बार मुद्राएँ "
-"परिवर्तित करने की आवश्यकता होती है।"
+"Valuta सरल और तेज़ है, यह उन लोगों के लिए आदर्श है जिन्हें बार-बार मुद्राएँ "
+"बदलने की आवश्यकता होती है।"
 
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3 src/window.blp:35
 msgid "Converter"
@@ -748,7 +746,7 @@ msgstr "कीबोर्ड शॉर्टकट"
 
 #: src/window.blp:56
 msgid "About"
-msgstr ""
+msgstr "बारे में"
 
 #: src/window.blp:60
 msgid "Quit"
