@@ -38,8 +38,8 @@ Convert currencies with ease. Valuta provides an intuitive and fast experience f
 
 Valuta has been translated into the following languages:
 
-<a href="https://hosted.weblate.org/engage/valuta/">
-<img src="https://hosted.weblate.org/widget/valuta/multi-auto.svg" alt="Translation status" />
+<a href="https://hosted.weblate.org/engage/currency-converter/">
+<img src="https://hosted.weblate.org/widget/currency-converter/multi-auto.svg" alt="Translation status" />
 </a>
 
 Please help translate Valuta into more languages through [Weblate](https://hosted.weblate.org/engage/valuta/).
