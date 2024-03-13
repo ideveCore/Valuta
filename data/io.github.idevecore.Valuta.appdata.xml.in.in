@@ -11,7 +11,7 @@
   <url type="homepage">https://github.com/ideveCore/valuta</url>
   <url type="bugtracker">https://github.com/ideveCore/valuta/issues</url>
   <url type="vcs-browser">https://github.com/ideveCore/valuta</url>
-  <url type="translate">https://github.com/ideveCore/valuta/tree/main/po</url>
+  <url type="translate">https://hosted.weblate.org/engage/currency-converter/</url>
   <url type="donation">https://ko-fi.com/idevecore</url>
   <releases>
     <release version="1.2.0" date="2024-01-20">
