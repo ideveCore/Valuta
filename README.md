@@ -34,7 +34,7 @@ Convert currencies with ease. Valuta provides an intuitive and fast experience f
 
 ## Translations
 
-[![Translation status](https://hosted.weblate.org/widget/valuta/svg-badge.svg)](https://hosted.weblate.org/engage/valuta/) ✨Powered by [Weblate](https://weblate.org/en/)✨
+[![Translation status](https://hosted.weblate.org/widget/valuta/svg-badge.svg)](https://hosted.weblate.org/engage/currency-converter/) ✨Powered by [Weblate](https://weblate.org/en/)✨
 
 Valuta has been translated into the following languages:
 
