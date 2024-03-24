@@ -1,37 +1,49 @@
 {
-    "app-id" : "io.github.idevecore.Valuta.Devel",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "45",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "valuta",
-    "finish-args" : [
-        "--share=network",
-        "--share=ipc",
-        "--device=dri",
-        "--socket=fallback-x11",
-        "--socket=wayland",
-        "--own-name=io.github.idevecore.Valuta.Devel.SearchProvider"
-    ],
-    "cleanup" : [
-        "*blueprint*"
-    ],
-    "modules" : [
-        "pypi-dependencies.json",
+  "app-id" : "io.github.idevecore.Valuta.Devel",
+  "runtime" : "org.gnome.Platform",
+  "runtime-version" : "45",
+  "sdk" : "org.gnome.Sdk",
+  "command" : "valuta",
+  "finish-args" : [
+    "--share=network",
+    "--share=ipc",
+    "--device=dri",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--own-name=io.github.idevecore.Valuta.Devel.SearchProvider"
+  ],
+  "cleanup" : [
+    "*blueprint*"
+  ],
+  "modules" : [
+    {
+      "name": "blueprint",
+      "buildsystem": "meson",
+      "cleanup": ["*"],
+      "sources": [
         {
-            "name" : "Valuta",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "--prefix=/app",
-                "--buildtype=debugoptimized",
-                "-Dprofile=development"
-            ],
-            "sources" : [
-                {
-                    "type" : "dir",
-                    "url" : "./"
-                }
-            ]
+          "type": "git",
+          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+          "tag": "v0.10.0",
+          "commit": "2a39a16391122af2f3d812e478c1c1398c98b972"
         }
-    ]
+      ]
+    },
+    {
+      "name" : "Valuta",
+      "builddir" : true,
+      "buildsystem" : "meson",
+      "config-opts" : [
+        "--prefix=/app",
+        "--buildtype=debugoptimized",
+        "-Dprofile=development"
+      ],
+      "sources" : [
+          {
+            "type" : "dir",
+            "url" : "./"
+          }
+      ]
+    }
+  ]
 }
