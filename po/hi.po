@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-03-11 23:01+0000\n"
+"PO-Revision-Date: 2024-03-28 19:01+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/currency-converter/"
 "currency-converter/hi/>\n"
@@ -34,7 +34,7 @@ msgid ""
 "currencies repeatedly."
 msgstr ""
 "Valuta सरल और तेज़ है, यह उन लोगों के लिए आदर्श है जिन्हें बार-बार मुद्राएँ "
-"बदलने की आवश्यकता होती है।"
+"परिवर्तन की आवश्यकता होती है।"
 
 #: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3 src/window.blp:35
 msgid "Converter"
@@ -82,7 +82,7 @@ msgstr "छोड़ें"
 
 #: src/pages/convertion/index.blp:108
 msgid "Error converting, please try again."
-msgstr "कनवर्ट करने में त्रुटि, कृपया पुनः प्रयास करें।"
+msgstr "परिवर्तन करने में त्रुटि, कृपया पुनः प्रयास करें।"
 
 #: src/pages/convertion/index.blp:11
 msgid "From"
@@ -102,7 +102,7 @@ msgstr "पुनः लोड करें"
 
 #: src/search_provider/search_provider.in:83
 msgid "Conversion failed, check for network issues"
-msgstr "रूपांतरण विफल, नेटवर्क समस्याओं की जाँच करें"
+msgstr "परिवर्तन विफल, नेटवर्क समस्याओं की जाँच करें"
 
 #: src/search_provider/search_provider.in:141
 msgid "Copy"
