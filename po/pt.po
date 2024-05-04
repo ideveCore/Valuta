@@ -8,23 +8,21 @@ msgstr ""
 "Project-Id-Version: Currency Converter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-03-25 17:01+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/currency-"
-"converter/currency-converter/pt/>\n"
+"PO-Revision-Date: 2024-05-04 21:48+0000\n"
+"Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/"
+"currency-converter/currency-converter/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
-#, fuzzy
-#| msgid "Error when get currencies data"
 msgid "Convert between currencies"
-msgstr "Erro quando obtém dados de moedas"
+msgstr "Converter entre moedas"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
@@ -33,6 +31,10 @@ msgid ""
 "budgeting, or anytime else you need to quickly convert between two "
 "currencies."
 msgstr ""
+"Valuta é uma ferramenta de conversão simples e rápida, ideal para quem "
+"precisa fazer conversões repetidas entre diferentes moedas. Use-o durante "
+"viagens, orçamentos ou sempre que precisar converter rapidamente entre duas "
+"moedas."
 
 #: src/components/currency_selector/currency_selector.blp:41
 msgid "Search Currencies…"
@@ -716,7 +718,7 @@ msgstr "Kwacha Zambiano"
 
 #: src/requests.py:57
 msgid "Results for"
-msgstr ""
+msgstr "Resultados para"
 
 #: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
@@ -724,7 +726,7 @@ msgstr "Incapaz de converter moeda, não conseguiu obter resultados do Google"
 
 #: src/window.blp:16
 msgid "Source"
-msgstr ""
+msgstr "Fonte"
 
 #: src/window.blp:23
 msgid "Main menu"
@@ -736,7 +738,7 @@ msgstr "Atalhos de teclado"
 
 #: src/window.blp:53
 msgid "About Valuta"
-msgstr ""
+msgstr "Sobre o Valuta"
 
 #: src/window.blp:57
 msgid "Quit"
