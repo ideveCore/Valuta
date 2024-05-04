@@ -54,7 +54,7 @@ class Providers:
         date = date.split("-")
         time = time.split(":")
         date_time = GLib.DateTime.new_utc(float(date[0]), float(date[1]), float(date[2]), float(time[0]), float(time[1]), float(time[2]))
-        return _(f"Results for {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')} - UTC")
+        return f"{_('Results for')} {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')} - UTC"
 
 class Google(Providers):
     def mount_url(self):

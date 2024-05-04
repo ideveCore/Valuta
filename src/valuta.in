@@ -31,10 +31,12 @@ localedir = '@localedir@'
 
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
-locale.bindtextdomain('valuta', localedir)
-locale.textdomain('valuta')
+
 ui_trans = gettext.translation('valuta', localedir, fallback=True)
 ui_trans.install(names=['gettext'])
+
+locale.bindtextdomain('valuta', localedir)
+locale.textdomain('valuta')
 
 if __name__ == '__main__':
     import gi
