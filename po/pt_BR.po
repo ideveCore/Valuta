@@ -18,26 +18,20 @@ msgstr ""
 "X-Generator: Weblate 5.5-dev\n"
 "X-Project-Style: gnome\n"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:7
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:6
-msgid ""
-"Convert currencies with ease. Valuta provides an intuitive and fast "
-"experience for your conversion needs."
-msgstr ""
-"Converta moedas com facilidade. Valuta oferece uma experiência intuitiva e "
-"rápida para suas necessidades de conversão."
+#: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
+#: data/io.github.idevecore.Valuta.desktop.in.in:6
+#, fuzzy
+#| msgid "Error when get currencies data"
+msgid "Convert between currencies"
+msgstr "Erro quando obtém dados de moedas"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
+#: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
-"The Valuta is simple and fast, ideal for those who need to convert "
-"currencies repeatedly."
+"Valuta is a simple and fast conversion tool, ideal for those who need to "
+"convert between different currencies repeatedly. Use it while traveling, "
+"budgeting, or anytime else you need to quickly convert between two "
+"currencies."
 msgstr ""
-"O Valuta é simples e rápido, ideal para quem precisa converter moedas "
-"repetidamente."
-
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3 src/window.blp:35
-msgid "Converter"
-msgstr "Conversor"
 
 #: src/components/currency_selector/currency_selector.blp:41
 msgid "Search Currencies…"
@@ -720,20 +714,16 @@ msgid "Zambian Kwacha"
 msgstr "Kwacha Zambiano"
 
 #: src/requests.py:57
-msgid ""
-"Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
-"format('%Y')} {date_time.format('%H:%M')} - UTC"
-msgstr ""
-"Resultados para {date_time.format('%d')} {date_time.format('%B')} {date_time."
-"format('%Y')} {date_time.format('%H:%M')} - UTC"
+msgid "Results for"
+msgstr "Resultados de"
 
 #: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
 msgstr "Incapaz de converter moeda, não conseguiu obter resultados do Google"
 
 #: src/window.blp:16
-msgid "Disclaimer"
-msgstr "Isenção de responsabilidade"
+msgid "Source"
+msgstr ""
 
 #: src/window.blp:23
 msgid "Main menu"
@@ -743,17 +733,46 @@ msgstr "Menu principal"
 msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
 
-#: src/window.blp:56
-msgid "About"
-msgstr "Sobre"
+#: src/window.blp:53
+msgid "About Valuta"
+msgstr ""
 
-#: src/window.blp:60
+#: src/window.blp:57
 msgid "Quit"
 msgstr "Sair"
 
-#: src/window.py:109
-msgid "Convert"
-msgstr "Converter"
+#~ msgid ""
+#~ "Convert currencies with ease. Valuta provides an intuitive and fast "
+#~ "experience for your conversion needs."
+#~ msgstr ""
+#~ "Converta moedas com facilidade. Valuta oferece uma experiência intuitiva "
+#~ "e rápida para suas necessidades de conversão."
+
+#~ msgid ""
+#~ "The Valuta is simple and fast, ideal for those who need to convert "
+#~ "currencies repeatedly."
+#~ msgstr ""
+#~ "O Valuta é simples e rápido, ideal para quem precisa converter moedas "
+#~ "repetidamente."
+
+#~ msgid "Converter"
+#~ msgstr "Conversor"
+
+#~ msgid ""
+#~ "Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
+#~ "format('%Y')} {date_time.format('%H:%M')} - UTC"
+#~ msgstr ""
+#~ "Resultados para {date_time.format('%d')} {date_time.format('%B')} "
+#~ "{date_time.format('%Y')} {date_time.format('%H:%M')} - UTC"
+
+#~ msgid "Disclaimer"
+#~ msgstr "Isenção de responsabilidade"
+
+#~ msgid "About"
+#~ msgstr "Sobre"
+
+#~ msgid "Convert"
+#~ msgstr "Converter"
 
 #~ msgid "Currency Converter"
 #~ msgstr "Conversor de moeda"
@@ -763,9 +782,6 @@ msgstr "Converter"
 
 #~ msgid "About Currency Converter"
 #~ msgstr "Sobre Conversor de Moedas"
-
-#~ msgid "Results for"
-#~ msgstr "Resultados de"
 
 #~ msgctxt "shortcut window"
 #~ msgid "Preferences"
@@ -794,9 +810,6 @@ msgstr "Converter"
 
 #~ msgid "To currency"
 #~ msgstr "Para moeda"
-
-#~ msgid "Error when get currencies data"
-#~ msgstr "Erro quando obtém dados de moedas"
 
 #~ msgid "Try again"
 #~ msgstr "Tentar novamente"

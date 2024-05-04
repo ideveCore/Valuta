@@ -19,26 +19,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:7
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:6
-msgid ""
-"Convert currencies with ease. Valuta provides an intuitive and fast "
-"experience for your conversion needs."
+#: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
+#: data/io.github.idevecore.Valuta.desktop.in.in:6
+msgid "Convert between currencies"
 msgstr ""
-"मुद्राओं को आसानी से परिवर्तित करें। Valuta आपकी रूपांतरण आवश्यकताओं के लिए "
-"एक सहज और तेज़ अनुभव प्रदान करता है।"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
+#: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
-"The Valuta is simple and fast, ideal for those who need to convert "
-"currencies repeatedly."
+"Valuta is a simple and fast conversion tool, ideal for those who need to "
+"convert between different currencies repeatedly. Use it while traveling, "
+"budgeting, or anytime else you need to quickly convert between two "
+"currencies."
 msgstr ""
-"Valuta सरल और तेज़ है, यह उन लोगों के लिए आदर्श है जिन्हें बार-बार मुद्राएँ "
-"परिवर्तन की आवश्यकता होती है।"
-
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3 src/window.blp:35
-msgid "Converter"
-msgstr "परिवर्तक"
 
 #: src/components/currency_selector/currency_selector.blp:41
 msgid "Search Currencies…"
@@ -721,20 +713,16 @@ msgid "Zambian Kwacha"
 msgstr "ज़ाम्बियन क्वाचा"
 
 #: src/requests.py:57
-msgid ""
-"Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
-"format('%Y')} {date_time.format('%H:%M')} - UTC"
+msgid "Results for"
 msgstr ""
-"{date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} "
-"{date_time.format('%H:%M')} के लिए परिणाम - UTC"
 
 #: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
 msgstr "मुद्रा परिवर्तित करने में असमर्थ, Google से परिणाम लाने में विफल"
 
 #: src/window.blp:16
-msgid "Disclaimer"
-msgstr "अस्वीकरण"
+msgid "Source"
+msgstr ""
 
 #: src/window.blp:23
 msgid "Main menu"
@@ -744,17 +732,46 @@ msgstr "मुख्य मेन्यू"
 msgid "Keyboard shortcuts"
 msgstr "कीबोर्ड शॉर्टकट"
 
-#: src/window.blp:56
-msgid "About"
-msgstr "बारे में"
+#: src/window.blp:53
+msgid "About Valuta"
+msgstr ""
 
-#: src/window.blp:60
+#: src/window.blp:57
 msgid "Quit"
 msgstr "छोड़ें"
 
-#: src/window.py:109
-msgid "Convert"
-msgstr "परिवर्तित करें"
+#~ msgid ""
+#~ "Convert currencies with ease. Valuta provides an intuitive and fast "
+#~ "experience for your conversion needs."
+#~ msgstr ""
+#~ "मुद्राओं को आसानी से परिवर्तित करें। Valuta आपकी रूपांतरण आवश्यकताओं के लिए एक सहज और "
+#~ "तेज़ अनुभव प्रदान करता है।"
+
+#~ msgid ""
+#~ "The Valuta is simple and fast, ideal for those who need to convert "
+#~ "currencies repeatedly."
+#~ msgstr ""
+#~ "Valuta सरल और तेज़ है, यह उन लोगों के लिए आदर्श है जिन्हें बार-बार मुद्राएँ परिवर्तन की "
+#~ "आवश्यकता होती है।"
+
+#~ msgid "Converter"
+#~ msgstr "परिवर्तक"
+
+#~ msgid ""
+#~ "Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
+#~ "format('%Y')} {date_time.format('%H:%M')} - UTC"
+#~ msgstr ""
+#~ "{date_time.format('%d')} {date_time.format('%B')} {date_time."
+#~ "format('%Y')} {date_time.format('%H:%M')} के लिए परिणाम - UTC"
+
+#~ msgid "Disclaimer"
+#~ msgstr "अस्वीकरण"
+
+#~ msgid "About"
+#~ msgstr "बारे में"
+
+#~ msgid "Convert"
+#~ msgstr "परिवर्तित करें"
 
 #~ msgid "Currency Converter"
 #~ msgstr "मुद्रा परिवर्तक"

@@ -11,8 +11,8 @@ msgstr ""
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
 "PO-Revision-Date: 2024-03-11 23:01+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/"
-"currency-converter/currency-converter/tr/>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/currency-"
+"converter/currency-converter/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,26 +20,21 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:7
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:6
-msgid ""
-"Convert currencies with ease. Valuta provides an intuitive and fast "
-"experience for your conversion needs."
-msgstr ""
-"Para birimlerini kolaylıkla dönüştürün. Valuta, dönüştürme ihtiyaçlarınız "
-"için kullanımı kolay ve hızlı bir deneyim sunar."
+# Arayüze sığmadığı için kısaltıldı
+#: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
+#: data/io.github.idevecore.Valuta.desktop.in.in:6
+#, fuzzy
+#| msgid "Error when get currencies data"
+msgid "Convert between currencies"
+msgstr "Veriler alınırken hata oluştu"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
+#: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
-"The Valuta is simple and fast, ideal for those who need to convert "
-"currencies repeatedly."
+"Valuta is a simple and fast conversion tool, ideal for those who need to "
+"convert between different currencies repeatedly. Use it while traveling, "
+"budgeting, or anytime else you need to quickly convert between two "
+"currencies."
 msgstr ""
-"Valuta basit ve hızlıdır, para birimlerini sık sık dönüştürmesi gerekenler "
-"için idealdir."
-
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3 src/window.blp:35
-msgid "Converter"
-msgstr "Dönüştürücü"
 
 #: src/components/currency_selector/currency_selector.blp:41
 msgid "Search Currencies…"
@@ -722,20 +717,16 @@ msgid "Zambian Kwacha"
 msgstr "Zambia Kvaçası"
 
 #: src/requests.py:57
-msgid ""
-"Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
-"format('%Y')} {date_time.format('%H:%M')} - UTC"
+msgid "Results for"
 msgstr ""
-"{date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} "
-"{date_time.format('%H:%M')} - UTC için sonuçlar"
 
 #: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
 msgstr "Para birimi dönüştürülemiyor, Google'dan sonuç alınamadı"
 
 #: src/window.blp:16
-msgid "Disclaimer"
-msgstr "Yasal uyarı"
+msgid "Source"
+msgstr ""
 
 #: src/window.blp:23
 msgid "Main menu"
@@ -745,17 +736,46 @@ msgstr "Ana menü"
 msgid "Keyboard shortcuts"
 msgstr "Klavye kısayolları"
 
-#: src/window.blp:56
-msgid "About"
-msgstr "Hakkında"
+#: src/window.blp:53
+msgid "About Valuta"
+msgstr ""
 
-#: src/window.blp:60
+#: src/window.blp:57
 msgid "Quit"
 msgstr "Çıkış"
 
-#: src/window.py:109
-msgid "Convert"
-msgstr "Dönüştür"
+#~ msgid ""
+#~ "Convert currencies with ease. Valuta provides an intuitive and fast "
+#~ "experience for your conversion needs."
+#~ msgstr ""
+#~ "Para birimlerini kolaylıkla dönüştürün. Valuta, dönüştürme ihtiyaçlarınız "
+#~ "için kullanımı kolay ve hızlı bir deneyim sunar."
+
+#~ msgid ""
+#~ "The Valuta is simple and fast, ideal for those who need to convert "
+#~ "currencies repeatedly."
+#~ msgstr ""
+#~ "Valuta basit ve hızlıdır, para birimlerini sık sık dönüştürmesi "
+#~ "gerekenler için idealdir."
+
+#~ msgid "Converter"
+#~ msgstr "Dönüştürücü"
+
+#~ msgid ""
+#~ "Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
+#~ "format('%Y')} {date_time.format('%H:%M')} - UTC"
+#~ msgstr ""
+#~ "{date_time.format('%d')} {date_time.format('%B')} {date_time."
+#~ "format('%Y')} {date_time.format('%H:%M')} - UTC için sonuçlar"
+
+#~ msgid "Disclaimer"
+#~ msgstr "Yasal uyarı"
+
+#~ msgid "About"
+#~ msgstr "Hakkında"
+
+#~ msgid "Convert"
+#~ msgstr "Dönüştür"
 
 #~ msgid "Currency Converter"
 #~ msgstr "Para Birimi Dönüştürücü"
@@ -812,10 +832,6 @@ msgstr "Dönüştür"
 
 #~ msgid "To currency"
 #~ msgstr "Para birimine"
-
-# Arayüze sığmadığı için kısaltıldı
-#~ msgid "Error when get currencies data"
-#~ msgstr "Veriler alınırken hata oluştu"
 
 #~ msgid "Try again"
 #~ msgstr "Yeniden dene"

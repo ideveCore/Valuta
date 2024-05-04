@@ -19,28 +19,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:7
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:6
-msgid ""
-"Convert currencies with ease. Valuta provides an intuitive and fast "
-"experience for your conversion needs."
+#: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
+#: data/io.github.idevecore.Valuta.desktop.in.in:6
+msgid "Convert between currencies"
 msgstr ""
 
-#: data/io.github.idevecore.CurrencyConverter.appdata.xml.in.in:9
-#, fuzzy
-#| msgid ""
-#| "The currency converter is simple and fast, ideal for those who need to "
-#| "convert currencies repeatedly."
+#: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
-"The Valuta is simple and fast, ideal for those who need to convert "
-"currencies repeatedly."
+"Valuta is a simple and fast conversion tool, ideal for those who need to "
+"convert between different currencies repeatedly. Use it while traveling, "
+"budgeting, or anytime else you need to quickly convert between two "
+"currencies."
 msgstr ""
-"Le convertisseur de devises est simple et rapide, idéal pour ceux qui ont "
-"besoin de convertir des devises à plusieurs reprises."
-
-#: data/io.github.idevecore.CurrencyConverter.desktop.in.in:3 src/window.blp:35
-msgid "Converter"
-msgstr "Convertisseur"
 
 #: src/components/currency_selector/currency_selector.blp:41
 msgid "Search Currencies…"
@@ -723,12 +713,8 @@ msgid "Zambian Kwacha"
 msgstr ""
 
 #: src/requests.py:57
-msgid ""
-"Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
-"format('%Y')} {date_time.format('%H:%M')} - UTC"
+msgid "Results for"
 msgstr ""
-"Résultats pour le {date_time.format('%d')} {date_time.format('%B')} "
-"{date_time.format('%Y')} {date_time.format('%H:%M')} - UTC"
 
 #: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
@@ -737,8 +723,8 @@ msgstr ""
 "Google"
 
 #: src/window.blp:16
-msgid "Disclaimer"
-msgstr "Avertissement"
+msgid "Source"
+msgstr ""
 
 #: src/window.blp:23
 msgid "Main menu"
@@ -748,17 +734,40 @@ msgstr "Menu principal"
 msgid "Keyboard shortcuts"
 msgstr "Raccourcis clavier"
 
-#: src/window.blp:56
-msgid "About"
+#: src/window.blp:53
+msgid "About Valuta"
 msgstr ""
 
-#: src/window.blp:60
+#: src/window.blp:57
 msgid "Quit"
 msgstr "Quitter"
 
-#: src/window.py:109
-msgid "Convert"
-msgstr "Convertir"
+#, fuzzy
+#~| msgid ""
+#~| "The currency converter is simple and fast, ideal for those who need to "
+#~| "convert currencies repeatedly."
+#~ msgid ""
+#~ "The Valuta is simple and fast, ideal for those who need to convert "
+#~ "currencies repeatedly."
+#~ msgstr ""
+#~ "Le convertisseur de devises est simple et rapide, idéal pour ceux qui ont "
+#~ "besoin de convertir des devises à plusieurs reprises."
+
+#~ msgid "Converter"
+#~ msgstr "Convertisseur"
+
+#~ msgid ""
+#~ "Results for {date_time.format('%d')} {date_time.format('%B')} {date_time."
+#~ "format('%Y')} {date_time.format('%H:%M')} - UTC"
+#~ msgstr ""
+#~ "Résultats pour le {date_time.format('%d')} {date_time.format('%B')} "
+#~ "{date_time.format('%Y')} {date_time.format('%H:%M')} - UTC"
+
+#~ msgid "Disclaimer"
+#~ msgstr "Avertissement"
+
+#~ msgid "Convert"
+#~ msgstr "Convertir"
 
 #~ msgid "Currency Converter"
 #~ msgstr "Convertisseur de devises"
