@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-03-28 19:01+0000\n"
+"PO-Revision-Date: 2024-05-05 16:26+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/currency-converter/"
 "currency-converter/hi/>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
 msgid "Convert between currencies"
-msgstr ""
+msgstr "मुद्राओं के बीच परिवर्तित करें"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
@@ -31,18 +31,22 @@ msgid ""
 "budgeting, or anytime else you need to quickly convert between two "
 "currencies."
 msgstr ""
+"Valuta एक सरल और तेज़ रूपांतरण उपकरण है, जो उन लोगों के लिए आदर्श है जिन्हें "
+"बार-बार विभिन्न मुद्राओं के बीच रूपांतरण करने की आवश्यकता होती है। यात्रा "
+"करते समय, बजट बनाते समय, या किसी अन्य समय जब आपको दो मुद्राओं के बीच शीघ्रता "
+"से परिवर्तन करने की आवश्यकता हो तो इसका उपयोग करें।"
 
 #: src/components/currency_selector/currency_selector.blp:41
 msgid "Search Currencies…"
-msgstr "मुद्राएँ खोजें…"
+msgstr "मुद्राएं खोजें…"
 
 #: src/components/preferences/preferences.blp:9 src/window.blp:47
 msgid "Preferences"
-msgstr "प्राथमिकताएँ"
+msgstr "प्राथमिकताएं"
 
 #: src/components/preferences/preferences.blp:11
 msgid "Application"
-msgstr "एप्लिकेशन"
+msgstr "अनुप्रयोग"
 
 #: src/components/preferences/preferences.blp:16
 msgid "Providers"
@@ -55,12 +59,12 @@ msgstr "यूरोपीय केंद्रीय बैंक"
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
-msgstr "जनरल"
+msgstr "सामान्य"
 
 #: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Preferences"
-msgstr "प्राथमिकताएँ"
+msgstr "प्राथमिकताएं"
 
 #: src/components/shortcuts/shortcuts.blp:25
 msgctxt "shortcuts window"
@@ -98,7 +102,7 @@ msgstr "परिवर्तन विफल, नेटवर्क समस�
 
 #: src/search_provider/search_provider.in:141
 msgid "Copy"
-msgstr "कॉपी"
+msgstr "कॉपी करें"
 
 #: src/search_provider/search_provider.in:142
 msgid "Copy convertion to clipboard"
@@ -170,7 +174,7 @@ msgstr "बरमूडन डॉलर"
 
 #: src/define.in:141
 msgid "Bhutan currency"
-msgstr "भूटान मुद्रा"
+msgstr "भूटान की मुद्रा"
 
 #: src/define.in:147
 msgid "Bitcoin"
@@ -230,7 +234,7 @@ msgstr "केमैन आइलैंड्स डॉलर"
 
 #: src/define.in:231
 msgid "Central African CFA franc"
-msgstr "मध्य अफ़्रीकी सीएफए फ़्रैंक"
+msgstr "मध्य अफ़्रीकी CFA फ़्रैंक"
 
 #: src/define.in:237
 msgid "Chilean Peso"
@@ -350,7 +354,7 @@ msgstr "होंडुरास लेम्पिरा"
 
 #: src/define.in:417
 msgid "Hong Kong Dollar"
-msgstr "होन्ग कोंग डॉलर"
+msgstr "हांगकांग डॉलर"
 
 #: src/define.in:423
 msgid "Hungarian Forint"
@@ -714,7 +718,7 @@ msgstr "ज़ाम्बियन क्वाचा"
 
 #: src/requests.py:57
 msgid "Results for"
-msgstr ""
+msgstr "हेतु परिणाम"
 
 #: src/requests.py:75
 msgid "Unable to convert currency, failed to fetch results from Google"
@@ -722,11 +726,11 @@ msgstr "मुद्रा परिवर्तित करने में �
 
 #: src/window.blp:16
 msgid "Source"
-msgstr ""
+msgstr "स्रोत"
 
 #: src/window.blp:23
 msgid "Main menu"
-msgstr "मुख्य मेन्यू"
+msgstr "मुख्य मेनू"
 
 #: src/window.blp:52
 msgid "Keyboard shortcuts"
@@ -734,7 +738,7 @@ msgstr "कीबोर्ड शॉर्टकट"
 
 #: src/window.blp:53
 msgid "About Valuta"
-msgstr ""
+msgstr "Valuta के बारे में"
 
 #: src/window.blp:57
 msgid "Quit"
