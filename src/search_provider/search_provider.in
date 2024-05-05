@@ -19,10 +19,6 @@ CLIPBOARD_PREFIX = 'copy-to-clipboard'
 ERROR_PREFIX = 'translation-error'
 
 localedir = '@localedir@'
-# langs_trans = gettext.translation('dialect-cldr-langs', localedir, fallback=True)
-# ui_trans = gettext.translation('dialect', localedir, fallback=True)
-# ui_trans.add_fallback(langs_trans)
-# ui_trans.install(names=['gettext'])
 
 locale.bindtextdomain('valuta', localedir)
 locale.textdomain('valuta')
