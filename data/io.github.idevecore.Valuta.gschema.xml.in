@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="valuta">
+  <enum id="@app-id@.Window">
+    <value nick="ecb" value="0"/>
+    <value nick="google" value="1"/>
+  </enum>
   <schema id="@app-id@" path="/io/github/idevecore/Valuta/">
-    <key name="providers" type="i">
-      <default>0</default>
+    <key name="providers" enum="@app-id@.Window">
+      <default>'ecb'</default>
     </key>
     <key name="width" type="i">
 			<default>420</default>
@@ -24,4 +28,3 @@
     </key>
   </schema>
 </schemalist>
-

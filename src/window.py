@@ -49,6 +49,9 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
     menu_button = builder.get_object("menu_button")
     info = builder.get_object("info")
     disclaimer = builder.get_object("disclaimer")
+    providers_action_group = Gio.SimpleActionGroup.new();
+    window.insert_action_group("window", providers_action_group);
+    providers_action_group.add_action(settings.create_action('providers'));
 
     def load_window_state():
         settings.bind(

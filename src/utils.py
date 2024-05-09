@@ -79,6 +79,7 @@ class Convertion:
             "amount": 1,
             "info": "",
             "disclaimer": "",
+            "provider": settings.get_enum("providers"),
             "converted": False,
         }
         self.__events = {

@@ -40,11 +40,23 @@ Adw.ApplicationWindow window {
 
 menu primary_menu {
   section {
-    item {
-      label: _("Preferences");
-      action: "app.preferences";
+    submenu {
+      label: _('Providers');
+      section {
+        item {
+          label: _("ECB");
+          action: 'window.providers';
+          target: 'ecb';
+        }
+        item {
+          label: _("Google");
+          action: 'window.providers';
+          target: 'google';
+        }
+      }
     }
-
+  }
+  section {
     item {
       label: _("Keyboard shortcuts");
       action: "win.show-help-overlay";

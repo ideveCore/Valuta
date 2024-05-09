@@ -62,7 +62,8 @@ def convertion_page(application: Adw.Application, from_currency_value):
 
     def change_provider(settings, key):
         from_currency_selector.handler_block_by_func(currency_selectors_changed)
-        load_currencies(settings.get_int(key))
+        load_currencies(settings.get_enum(key))
+        convert(from_currency_entry.get_text(), force=True)
 
     def invert_currencies():
         from_code = from_currency_selector.selected
@@ -86,20 +87,20 @@ def convertion_page(application: Adw.Application, from_currency_value):
         except ValueError:
             return False
 
-    def convert(value):
+    def convert(value, force=False):
         if not is_loading() and valid_from_currency_value(value):
             def thread_cb(task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
                 try:
-                    convertion.convert(float(value), from_currency_selector.selected, to_currency_selector.selected, settings.get_int("providers"))
+                    convertion.convert(float(value), from_currency_selector.selected, to_currency_selector.selected, settings.get_enum("providers"))
                     task.return_value(self.__converted_data)
                 except Exception as e:
                     task.return_value(e)
-            if convertion.converted_data["from"] != from_currency_selector.selected or convertion.converted_data["to"] != to_currency_selector.selected or not convertion.converted_data["converted"]:
+            if convertion.converted_data["from"] != from_currency_selector.selected or convertion.converted_data["to"] != to_currency_selector.selected or not convertion.converted_data["converted"] or force:
                 stack.set_visible_child_name("loading")
                 task = Gio.Task.new(application, None, None, None)
                 task.run_in_thread(thread_cb)
             else:
-                convertion.convert(float(value), from_currency_selector.selected, to_currency_selector.selected, settings.get_int("providers"))
+                convertion.convert(float(value), from_currency_selector.selected, to_currency_selector.selected, settings.get_enum("providers"))
 
     def converted(data: Dict[str, Union[str, int]]):
         if not data["converted"]:
@@ -119,7 +120,7 @@ def convertion_page(application: Adw.Application, from_currency_value):
         if from_code != to_code:
             convert(from_currency_entry.get_text())
 
-    load_currencies(settings.get_int("providers"))
+    load_currencies(settings.get_enum("providers"))
     from_currency_entry.connect('changed', lambda entry: convert(entry.get_text()))
     from_currency_selector.connect('notify::selected', currency_selectors_changed)
     to_currency_selector.connect('notify::selected', currency_selectors_changed)

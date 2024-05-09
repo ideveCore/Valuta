@@ -87,7 +87,7 @@ class Google(Providers):
         self.response["amount"] = 0
         self.response['info'] = self.create_info(current_date.format("%F"), time)
         self.response['disclaimer'] = url
-        self.response["provider"] = 0
+        self.response["provider"] = 1
         return self.response
 
 class ECB(Providers):
@@ -104,7 +104,7 @@ class ECB(Providers):
         self.response["amount"] = 0
         self.response["info"] = self.create_info(data["date"])
         self.response["disclaimer"] = self.mount_url()
-        self.response["provider"] = 1
+        self.response["provider"] = 0
         return self.response
 
 providers = {
