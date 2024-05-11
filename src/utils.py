@@ -18,9 +18,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from typing import Any, Dict, Union, Callable
-from gi.repository import Adw, Gio, GObject
+from gi.repository import Adw, Gio, GObject, GLib
 from .requests import Requests
-from decimal import Decimal
+from babel.numbers import format_number
 
 class CurrencyObject(GObject.Object):
     __gtype_name__ = 'CurrencyObject'
@@ -143,3 +143,9 @@ class Utils:
     def __init__(self, application: Adw.Application):
         self.settings = Settings(application.get_application_id())
         self.convertion = Convertion(self.settings)
+        self.locale = GLib.get_locale_variants(GLib.get_language_names()[0]);
+    def format_number(self, number):
+        if number:
+            return format_number(number, locale=self.locale[1])
+        else:
+            return False
