@@ -30,6 +30,20 @@
       ]
     },
     {
+	    "name": "babel",
+	    "buildsystem": "simple",
+	    "build-commands": [
+		    "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"babel\" --no-build-isolation"
+	    ],
+	    "sources": [
+		    {
+		      "type": "file",
+		      "url": "https://files.pythonhosted.org/packages/27/45/377f7e32a5c93d94cd56542349b34efab5ca3f9e2fd5a68c5e93169aa32d/Babel-2.15.0-py3-none-any.whl",
+		      "sha256": "08706bdad8d0a3413266ab61bd6c34d0c28d6e1e7badf40a2cebe67644e2e1fb"
+		    }
+	    ]
+	  },
+    {
       "name" : "Valuta",
       "builddir" : true,
       "buildsystem" : "meson",
