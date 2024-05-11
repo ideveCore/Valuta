@@ -2,17 +2,18 @@ on:
   push:
     branches: [main]
   pull_request:
-name: CI
+name: Build Flatpak
 jobs:
-  flatpak-builder:
-    name: "Flatpak Builder"
+  flatpak:
+    name: "build-packages"
     runs-on: ubuntu-latest
     container:
-      image: bilelmoussaoui/flatpak-github-actions:gnome-46
+      image: bilelmoussaoui/flatpak-github-actions:gnome-44
       options: --privileged
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v6
       with:
-        bundle: "plots.flatpak"
-        manifest-path: "io.github.idevecore.Valuta.Devel.json"
+        bundle: valuta.flatpak
+        manifest-path: io.github.idevecore.Valuta.Devel.json
+        cache-key: flatpak-builder-${{ github.sha }}
