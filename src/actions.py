@@ -38,5 +38,6 @@ def application_actions(application: Adw.Application):
   application.add_action(preferences_action)
   application.add_action(about_action)
   application.set_accels_for_action('app.quit', ['<primary>q'])
+  application.set_accels_for_action('app.quit', ['<primary>w'])
   application.set_accels_for_action('app.preferences', ['<primary>comma'])
   application.set_accels_for_action('win.show-help-overlay', ['<Primary>question'])
