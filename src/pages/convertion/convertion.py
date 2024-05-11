@@ -61,9 +61,18 @@ def convertion_page(application: Adw.Application, from_currency_value):
         to_currency_selector.set_selected(settings.get_string('dest-currency'))
 
     def change_provider(settings, key):
-        from_currency_selector.handler_block_by_func(currency_selectors_changed)
-        load_currencies(settings.get_enum(key))
-        convert(from_currency_entry.get_text(), force=True)
+        def thread_cb(task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
+            try:
+                from_currency_selector.handler_block_by_func(currency_selectors_changed)
+                load_currencies(settings.get_enum(key))
+                convert(from_currency_entry.get_text(), force=True)
+                task.return_value(self.__converted_data)
+            except Exception as e:
+                task.return_value(e)
+        stack.set_visible_child_name("loading")
+        task = Gio.Task.new(application, None, None, None)
+        task.run_in_thread(thread_cb)
+
 
     def invert_currencies():
         from_code = from_currency_selector.selected
@@ -88,7 +97,7 @@ def convertion_page(application: Adw.Application, from_currency_value):
             return False
 
     def convert(value, force=False):
-        if not is_loading() and valid_from_currency_value(value):
+        if not is_loading() and valid_from_currency_value(value) or force:
             def thread_cb(task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
                 try:
                     convertion.convert(float(value), from_currency_selector.selected, to_currency_selector.selected, settings.get_enum("providers"))
@@ -110,7 +119,11 @@ def convertion_page(application: Adw.Application, from_currency_value):
             ))
         else:
             stack.set_visible_child_name("result")
-            to_currency_entry.set_text(str(data["amount"]))
+            result = application.utils.format_number(str(data["amount"]))
+            if result:
+                to_currency_entry.set_text(result)
+            else:
+                stack.set_visible_child_name("convertion-error")
 
     def currency_selectors_changed(_obj, _param):
         from_code = from_currency_selector.selected
