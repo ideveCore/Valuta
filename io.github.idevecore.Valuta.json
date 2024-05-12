@@ -1,5 +1,5 @@
 {
-  "app-id" : "io.github.idevecore.Valuta.Devel",
+  "app-id" : "io.github.idevecore.Valuta",
   "runtime" : "org.gnome.Platform",
   "runtime-version" : "46",
   "sdk" : "org.gnome.Sdk",
@@ -10,7 +10,7 @@
     "--device=dri",
     "--socket=fallback-x11",
     "--socket=wayland",
-    "--own-name=io.github.idevecore.Valuta.Devel.SearchProvider"
+    "--own-name=io.github.idevecore.Valuta.SearchProvider"
   ],
   "cleanup" : [
     "*blueprint*"
@@ -44,14 +44,10 @@
 	    ]
 	  },
     {
-      "name" : "Valuta",
+      "name" : "valuta",
       "builddir" : true,
       "buildsystem" : "meson",
-      "config-opts" : [
-        "--prefix=/app",
-        "--buildtype=debugoptimized",
-        "-Dprofile=development"
-      ],
+      "config-opts": [ "-Dprofile=default" ],
       "sources" : [
           {
             "type" : "dir",
