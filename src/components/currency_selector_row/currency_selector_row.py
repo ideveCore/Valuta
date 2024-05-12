@@ -30,7 +30,7 @@ class CurrencySelectorRow(Gtk.ListBoxRow):
     def __init__(self, currency):
         super().__init__()
         self.currency = currency
-        self.name.props.label = f'{CODES[str(self.currency)]["flag"]}   {self.currency} - {self.currency.name}'
+        self.name.props.label = f'{CODES[str(self.currency)]["flag"]}   {self.currency} – {self.currency.name}'
 
         self.currency.bind_property(
             'selected',

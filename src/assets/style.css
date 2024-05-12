@@ -29,3 +29,22 @@ selection {
   padding: 0.5rem;
 }
 
+
+.search-box {
+  background: @popover_bg_color;
+  border-bottom: 1px solid @borders;
+  padding: 6px;
+}
+
+.currency-selector list {
+  padding: 6px;
+  padding-top: 4px;
+}
+
+.currency-selector row {
+  margin-top: 2px;
+}
+
+.currency-selector separator {
+  margin: 0 6px;
+}
