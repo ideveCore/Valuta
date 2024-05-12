@@ -46,13 +46,14 @@ def about(application: Adw.Application):
 
     """Callback for the app.about action."""
 
-    return Adw.AboutWindow(transient_for=application.props.active_window,
-                            application_name=gettext('Valuta'),
-                            application_icon=APP_ID,
-                            developer_name='Ideve Core',
-                            version=VERSION,
-                            developers=['Ideve Core'],
-                            designers=['Brage Fuglseth https://bragefuglseth.dev'],
-                            issue_url='https://github.com/ideveCore/valuta/issues',
-                            debug_info=debug_info,
-                            copyright='© 2023 Ideve Core')
+    return Adw.AboutDialog(
+        application_name=gettext('Valuta'),
+        application_icon=APP_ID,
+        developer_name='Ideve Core',
+        version=VERSION,
+        developers=['Ideve Core'],
+        designers=['Brage Fuglseth https://bragefuglseth.dev'],
+        issue_url='https://github.com/ideveCore/valuta/issues',
+        debug_info=debug_info,
+        copyright='© 2023 Ideve Core'
+    )
