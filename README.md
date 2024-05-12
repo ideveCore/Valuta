@@ -53,7 +53,7 @@ If you like this project and have some spare money left, consider donating:
 <a href='https://github.com/sponsors/ideveCore'><img width='60' alt='Download on Flathub' src='https://github.githubassets.com/images/email/sponsors/mona.png'/></a>
 
 ## Code of Conduct
-The project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundation/CodeOfConduct).
+The project follows the [GNOME Code of Conduct](https://conduct.gnome.org/).
 
 ## License 
  [GNU General Public License 3 or later](https://www.gnu.org/licenses/gpl-3.0.en.html)
