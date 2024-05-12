@@ -6,63 +6,15 @@ selection {
 }
 
 .pd {
-   padding: 0.5em;
- }
- 
- .m {
-   margin: 0.5em;
-}
- 
- .m-s {
-  margin-left: 0.5em;
- } 
-
- .m-e {
-  margin-right: 0.5em;
- }
- 
- .m-se {
-   margin-left: 0.5em;
-   margin-right: 0.5em;
+   padding: 0.5rem;
  }
 
  .rounded {
-  border-radius: 6px;
+    border-radius: 6px;
  }
 
-.bg-error {
-  background-color: alpha(@error_color, 0.3);
-}
-
-.bg-accent {
-  background-color: alpha(@accent_bg_color, 0.3);
-}
-
-.search-box {
-  background: @popover_bg_color;
-  border-bottom: 1px solid @borders;
-  padding: 6px;
-}
-
-.currency-selector list {
-  padding: 6px;
-  padding-top: 4px;
-}
-
-.currency-selector row {
-  margin-top: 2px;
-}
-
-.currency-selector separator {
-  margin: 0 6px;
-}
-
 .f-l {
-  font-size: 28px;
-}
-
-.text-light {
-  color: rgb(255, 255, 255);
+  font-size: 2rem;
 }
 
 .bg-accent-color {
@@ -74,6 +26,6 @@ selection {
 }
 
 .large-button {
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
