@@ -20,7 +20,7 @@
 from typing import Any, Dict, Union, Callable
 from gi.repository import Adw, Gio, GObject, GLib
 from .requests import Requests
-from babel.numbers import format_number
+from babel.numbers import format_number, parse_decimal
 
 class CurrencyObject(GObject.Object):
     __gtype_name__ = 'CurrencyObject'
@@ -140,12 +140,23 @@ class Settings(Gio.Settings):
         super().__init__(*args)
 
 class Utils:
-    def __init__(self, application: Adw.Application):
-        self.settings = Settings(application.get_application_id())
+    def __init__(self, application_id):
+        self.settings = Settings(application_id)
         self.convertion = Convertion(self.settings)
         self.locale = GLib.get_locale_variants(GLib.get_language_names()[0]);
     def format_number(self, number):
-        if number:
-            return format_number(number, locale=self.locale[1])
-        else:
+        try:
+            if number:
+                return format_number(number, locale=self.locale[1])
+            else:
+                return False
+        except:
+            return False
+    def parse_number(self, number):
+        try:
+            if number:
+                return parse_decimal(number, locale=self.locale[1])
+            else:
+                return False
+        except:
             return False

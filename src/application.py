@@ -40,7 +40,7 @@ class Application(Adw.Application):
                 resource_base_path=RES_PATH,
                 flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE
             )
-        self.utils = Utils(self)
+        self.utils = Utils(APP_ID)
         application_actions(application=self)
         self.from_currency_value = 0
         self.add_main_option('src-currency-value', b't', GLib.OptionFlags.NONE,
