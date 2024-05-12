@@ -3,7 +3,6 @@
   <gresource prefix="/io/github/idevecore/Valuta">
     <file compressed="true" alias="style.css">assets/style.css</file>
     <file preprocess="xml-stripblanks">window.ui</file>
-    <file preprocess="xml-stripblanks">components/preferences/index.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector/index.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector_row/index.ui</file>
     <file preprocess="xml-stripblanks">components/shortcuts/shortcuts.ui</file>
