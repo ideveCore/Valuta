@@ -19,12 +19,11 @@ CLIPBOARD_PREFIX = 'copy-to-clipboard'
 ERROR_PREFIX = 'translation-error'
 
 localedir = '@localedir@'
+ui_trans = gettext.translation('valuta', localedir, fallback=True)
+ui_trans.install(names=['gettext'])
 
 locale.bindtextdomain('valuta', localedir)
 locale.textdomain('valuta')
-
-gettext.install('valuta', localedir)
-_ = gettext.gettext
 
 dbus_interface_description = '''
 <!DOCTYPE node PUBLIC
@@ -125,8 +124,7 @@ class ConvertionService:
       and ids[1] == CLIPBOARD_PREFIX + ids[0]
     ):
       value = self.dest_currencies[converter_id]
-      # description = f'{self.from_currency} > {self.to_currency}'
-      description = f'According to {self.utils.settings.get_string("providers").upper()}'
+      description = f'{_("According to")} {self.utils.settings.get_string("providers").upper()}'
       self.dest_currencies.clear()
       return [
         {

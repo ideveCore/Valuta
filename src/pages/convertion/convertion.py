@@ -101,7 +101,7 @@ def convertion_page(application: Adw.Application, from_currency_value):
             value = application.utils.parse_number(value)
             if not value:
                 toast_overlay.add_toast(Adw.Toast.new(
-                    title = _("The input value is invalid!"),
+                    title = _("The input value is invalid."),
                 ))
                 return
             def thread_cb(task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
