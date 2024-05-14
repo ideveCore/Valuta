@@ -99,7 +99,7 @@ msgstr "Recarregar"
 msgid "Conversion failed, check for network issues"
 msgstr "A conversão falhou, verifique se há problemas de rede"
 
-#: src/search_provider/search_provider.in:141
+#: src/search_provider/search_provider.in:138
 msgid "Copy"
 msgstr "Copiar"
 
