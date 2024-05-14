@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Currency Converter master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-05-05 16:26+0000\n"
+"PO-Revision-Date: 2024-05-14 09:45+0000\n"
 "Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/pt_BR/>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.6-dev\n"
 "X-Project-Style: gnome\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
@@ -56,7 +56,7 @@ msgstr "Sair"
 
 #: src/pages/convertion/convertion.py:104
 msgid "The input value is invalid."
-msgstr ""
+msgstr "A entrada não é válida."
 
 #: src/pages/convertion/convertion.py:124
 msgid "Error converting, please try again."
@@ -80,7 +80,7 @@ msgstr "Recarregar"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
-msgstr ""
+msgstr "De acordo com"
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
@@ -703,10 +703,8 @@ msgid "Results for"
 msgstr "Resultados de"
 
 #: src/requests.py:75
-#, fuzzy
-#| msgid "Unable to convert currency, failed to fetch results from Google"
 msgid "Unable to convert currency, failed to fetch results from Google."
-msgstr "Incapaz de converter moeda, não conseguiu obter resultados do Google"
+msgstr "Incapaz de converter moeda, não conseguiu obter resultados do Google."
 
 #: src/window.blp:16
 msgid "Source"
@@ -722,11 +720,11 @@ msgstr "Provedores"
 
 #: src/window.blp:48
 msgid "ECB"
-msgstr ""
+msgstr "ECB"
 
 #: src/window.blp:53
 msgid "Google (unstable)"
-msgstr ""
+msgstr "Google (instável)"
 
 #: src/window.blp:62
 msgid "Keyboard shortcuts"
