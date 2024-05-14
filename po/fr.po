@@ -36,31 +36,10 @@ msgstr ""
 msgid "Search Currencies…"
 msgstr "Rechercher des devises…"
 
-#: src/components/preferences/preferences.blp:9 src/window.blp:47
-msgid "Preferences"
-msgstr "Préférences"
-
-#: src/components/preferences/preferences.blp:11
-msgid "Application"
-msgstr "Application"
-
-#: src/components/preferences/preferences.blp:16
-msgid "Providers"
-msgstr "Fournisseurs"
-
-#: src/components/preferences/preferences.blp:18
-msgid "European Central Bank"
-msgstr "Banque Centrale Européenne"
-
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
 msgstr "Général"
-
-#: src/components/shortcuts/shortcuts.blp:11
-msgctxt "shortcuts window"
-msgid "Preferences"
-msgstr "Préférences"
 
 #: src/components/shortcuts/shortcuts.blp:25
 msgctxt "shortcuts window"
@@ -72,7 +51,11 @@ msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Quitter"
 
-#: src/pages/convertion/index.blp:108
+#: src/pages/convertion/convertion.py:104
+msgid "The input value is invalid."
+msgstr ""
+
+#: src/pages/convertion/convertion.py:124
 msgid "Error converting, please try again."
 msgstr "Erreur de conversion, veuillez réessayer."
 
@@ -88,19 +71,19 @@ msgstr "Inverser"
 msgid "To"
 msgstr "Vers"
 
-#: src/pages/convertion/index.blp:92
+#: src/pages/convertion/index.blp:86
 msgid "Reload"
 msgstr "Recharger"
 
-#: src/search_provider/search_provider.in:83
-msgid "Conversion failed, check for network issues"
-msgstr "Échec de la conversion, vérifiez votre connexion réseau"
+#: src/search_provider/search_provider.in:128
+msgid "According to"
+msgstr ""
 
-#: src/search_provider/search_provider.in:141
+#: src/search_provider/search_provider.in:138
 msgid "Copy"
 msgstr "Copier"
 
-#: src/search_provider/search_provider.in:142
+#: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
 msgstr "Copier la conversion dans le presse-papiers"
 
@@ -726,21 +709,49 @@ msgstr ""
 msgid "Source"
 msgstr ""
 
-#: src/window.blp:23
+#: src/window.blp:24
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: src/window.blp:52
+#: src/window.blp:45
+msgid "Providers"
+msgstr "Fournisseurs"
+
+#: src/window.blp:48
+msgid "ECB"
+msgstr ""
+
+#: src/window.blp:53
+msgid "Google (unstable)"
+msgstr ""
+
+#: src/window.blp:62
 msgid "Keyboard shortcuts"
 msgstr "Raccourcis clavier"
 
-#: src/window.blp:53
+#: src/window.blp:66
 msgid "About Valuta"
 msgstr ""
 
-#: src/window.blp:57
+#: src/window.blp:70
 msgid "Quit"
 msgstr "Quitter"
+
+#~ msgid "Preferences"
+#~ msgstr "Préférences"
+
+#~ msgid "Application"
+#~ msgstr "Application"
+
+#~ msgid "European Central Bank"
+#~ msgstr "Banque Centrale Européenne"
+
+#~ msgctxt "shortcuts window"
+#~ msgid "Preferences"
+#~ msgstr "Préférences"
+
+#~ msgid "Conversion failed, check for network issues"
+#~ msgstr "Échec de la conversion, vérifiez votre connexion réseau"
 
 #, fuzzy
 #~| msgid ""

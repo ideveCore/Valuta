@@ -31,40 +31,19 @@ msgid ""
 "budgeting, or anytime else you need to quickly convert between two "
 "currencies."
 msgstr ""
-"Valuta एक सरल और तेज़ रूपांतरण उपकरण है, जो उन लोगों के लिए आदर्श है जिन्हें "
-"बार-बार विभिन्न मुद्राओं के बीच रूपांतरण करने की आवश्यकता होती है। यात्रा "
-"करते समय, बजट बनाते समय, या किसी अन्य समय जब आपको दो मुद्राओं के बीच शीघ्रता "
-"से परिवर्तन करने की आवश्यकता हो तो इसका उपयोग करें।"
+"Valuta एक सरल और तेज़ रूपांतरण उपकरण है, जो उन लोगों के लिए आदर्श है जिन्हें बार-बार "
+"विभिन्न मुद्राओं के बीच रूपांतरण करने की आवश्यकता होती है। यात्रा करते समय, बजट बनाते "
+"समय, या किसी अन्य समय जब आपको दो मुद्राओं के बीच शीघ्रता से परिवर्तन करने की आवश्यकता "
+"हो तो इसका उपयोग करें।"
 
 #: src/components/currency_selector/currency_selector.blp:41
 msgid "Search Currencies…"
 msgstr "मुद्राएं खोजें…"
 
-#: src/components/preferences/preferences.blp:9 src/window.blp:47
-msgid "Preferences"
-msgstr "प्राथमिकताएं"
-
-#: src/components/preferences/preferences.blp:11
-msgid "Application"
-msgstr "अनुप्रयोग"
-
-#: src/components/preferences/preferences.blp:16
-msgid "Providers"
-msgstr "प्रदाता"
-
-#: src/components/preferences/preferences.blp:18
-msgid "European Central Bank"
-msgstr "यूरोपीय केंद्रीय बैंक"
-
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
 msgstr "सामान्य"
-
-#: src/components/shortcuts/shortcuts.blp:11
-msgctxt "shortcuts window"
-msgid "Preferences"
-msgstr "प्राथमिकताएं"
 
 #: src/components/shortcuts/shortcuts.blp:25
 msgctxt "shortcuts window"
@@ -76,7 +55,11 @@ msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "छोड़ें"
 
-#: src/pages/convertion/index.blp:108
+#: src/pages/convertion/convertion.py:104
+msgid "The input value is invalid."
+msgstr ""
+
+#: src/pages/convertion/convertion.py:124
 msgid "Error converting, please try again."
 msgstr "परिवर्तन करने में त्रुटि, कृपया पुनः प्रयास करें।"
 
@@ -92,19 +75,19 @@ msgstr "बदले"
 msgid "To"
 msgstr "इसमें"
 
-#: src/pages/convertion/index.blp:92
+#: src/pages/convertion/index.blp:86
 msgid "Reload"
 msgstr "पुनः लोड करें"
 
-#: src/search_provider/search_provider.in:83
-msgid "Conversion failed, check for network issues"
-msgstr "परिवर्तन विफल, नेटवर्क समस्याओं की जाँच करें"
+#: src/search_provider/search_provider.in:128
+msgid "According to"
+msgstr ""
 
-#: src/search_provider/search_provider.in:141
+#: src/search_provider/search_provider.in:138
 msgid "Copy"
 msgstr "कॉपी करें"
 
-#: src/search_provider/search_provider.in:142
+#: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
 msgstr "परिवर्तन को क्लिपबोर्ड पर कॉपी करें"
 
@@ -728,21 +711,49 @@ msgstr "मुद्रा परिवर्तित करने में �
 msgid "Source"
 msgstr "स्रोत"
 
-#: src/window.blp:23
+#: src/window.blp:24
 msgid "Main menu"
 msgstr "मुख्य मेनू"
 
-#: src/window.blp:52
+#: src/window.blp:45
+msgid "Providers"
+msgstr "प्रदाता"
+
+#: src/window.blp:48
+msgid "ECB"
+msgstr ""
+
+#: src/window.blp:53
+msgid "Google (unstable)"
+msgstr ""
+
+#: src/window.blp:62
 msgid "Keyboard shortcuts"
 msgstr "कीबोर्ड शॉर्टकट"
 
-#: src/window.blp:53
+#: src/window.blp:66
 msgid "About Valuta"
 msgstr "Valuta के बारे में"
 
-#: src/window.blp:57
+#: src/window.blp:70
 msgid "Quit"
 msgstr "छोड़ें"
+
+#~ msgid "Preferences"
+#~ msgstr "प्राथमिकताएं"
+
+#~ msgid "Application"
+#~ msgstr "अनुप्रयोग"
+
+#~ msgid "European Central Bank"
+#~ msgstr "यूरोपीय केंद्रीय बैंक"
+
+#~ msgctxt "shortcuts window"
+#~ msgid "Preferences"
+#~ msgstr "प्राथमिकताएं"
+
+#~ msgid "Conversion failed, check for network issues"
+#~ msgstr "परिवर्तन विफल, नेटवर्क समस्याओं की जाँच करें"
 
 #~ msgid ""
 #~ "Convert currencies with ease. Valuta provides an intuitive and fast "

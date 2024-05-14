@@ -37,22 +37,6 @@ msgstr ""
 msgid "Search Currencies…"
 msgstr "Søk etter valutaer…"
 
-#: src/components/preferences/preferences.blp:9 src/window.blp:47
-msgid "Preferences"
-msgstr ""
-
-#: src/components/preferences/preferences.blp:11
-msgid "Application"
-msgstr ""
-
-#: src/components/preferences/preferences.blp:16
-msgid "Providers"
-msgstr ""
-
-#: src/components/preferences/preferences.blp:18
-msgid "European Central Bank"
-msgstr ""
-
 #: src/components/shortcuts/shortcuts.blp:9
 #, fuzzy
 #| msgctxt "shortcut window"
@@ -60,11 +44,6 @@ msgstr ""
 msgctxt "shortcuts window"
 msgid "General"
 msgstr "Generelt"
-
-#: src/components/shortcuts/shortcuts.blp:11
-msgctxt "shortcuts window"
-msgid "Preferences"
-msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:25
 #, fuzzy
@@ -81,7 +60,11 @@ msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Avslutt"
 
-#: src/pages/convertion/index.blp:108
+#: src/pages/convertion/convertion.py:104
+msgid "The input value is invalid."
+msgstr ""
+
+#: src/pages/convertion/convertion.py:124
 msgid "Error converting, please try again."
 msgstr ""
 
@@ -97,19 +80,19 @@ msgstr "Bytt"
 msgid "To"
 msgstr ""
 
-#: src/pages/convertion/index.blp:92
+#: src/pages/convertion/index.blp:86
 msgid "Reload"
 msgstr ""
 
-#: src/search_provider/search_provider.in:83
-msgid "Conversion failed, check for network issues"
-msgstr "Konvertering mislyktes. Kontroller nettverket"
+#: src/search_provider/search_provider.in:128
+msgid "According to"
+msgstr ""
 
-#: src/search_provider/search_provider.in:141
+#: src/search_provider/search_provider.in:138
 msgid "Copy"
 msgstr "Kopier"
 
-#: src/search_provider/search_provider.in:142
+#: src/search_provider/search_provider.in:139
 #, fuzzy
 #| msgid "Copy currency to clipboard"
 msgid "Copy convertion to clipboard"
@@ -737,28 +720,43 @@ msgstr "Kunne ikke konvertere valuta. Kunne ikke hente resultater fra Google"
 msgid "Source"
 msgstr ""
 
-#: src/window.blp:23
+#: src/window.blp:24
 #, fuzzy
 #| msgid "Main menu"
 msgid "Main menu"
 msgstr "Hovedmeny"
 
-#: src/window.blp:52
+#: src/window.blp:45
+msgid "Providers"
+msgstr ""
+
+#: src/window.blp:48
+msgid "ECB"
+msgstr ""
+
+#: src/window.blp:53
+msgid "Google (unstable)"
+msgstr ""
+
+#: src/window.blp:62
 #, fuzzy
 #| msgid "Keyboard Shortcuts"
 msgid "Keyboard shortcuts"
 msgstr "Tastatursnarveier"
 
-#: src/window.blp:53
+#: src/window.blp:66
 msgid "About Valuta"
 msgstr ""
 
-#: src/window.blp:57
+#: src/window.blp:70
 #, fuzzy
 #| msgctxt "shortcut window"
 #| msgid "Quit"
 msgid "Quit"
 msgstr "Avslutt"
+
+#~ msgid "Conversion failed, check for network issues"
+#~ msgstr "Konvertering mislyktes. Kontroller nettverket"
 
 #, fuzzy
 #~| msgid ""

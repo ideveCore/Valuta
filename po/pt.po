@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
 "PO-Revision-Date: 2024-05-04 21:48+0000\n"
 "Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/"
-"currency-converter/currency-converter/pt/>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/currency-"
+"converter/currency-converter/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain charset=UTF-8\n"
@@ -40,31 +40,10 @@ msgstr ""
 msgid "Search Currencies…"
 msgstr "Pesquisar moedas…"
 
-#: src/components/preferences/preferences.blp:9 src/window.blp:47
-msgid "Preferences"
-msgstr "Preferências"
-
-#: src/components/preferences/preferences.blp:11
-msgid "Application"
-msgstr "Aplicação"
-
-#: src/components/preferences/preferences.blp:16
-msgid "Providers"
-msgstr "Provedores"
-
-#: src/components/preferences/preferences.blp:18
-msgid "European Central Bank"
-msgstr "Banco central da europa"
-
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
 msgstr "Geral"
-
-#: src/components/shortcuts/shortcuts.blp:11
-msgctxt "shortcuts window"
-msgid "Preferences"
-msgstr "Preferências"
 
 #: src/components/shortcuts/shortcuts.blp:25
 msgctxt "shortcuts window"
@@ -76,7 +55,11 @@ msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Sair"
 
-#: src/pages/convertion/index.blp:108
+#: src/pages/convertion/convertion.py:104
+msgid "The input value is invalid."
+msgstr ""
+
+#: src/pages/convertion/convertion.py:124
 msgid "Error converting, please try again."
 msgstr "Erro ao converter, por favor tente novamente."
 
@@ -92,19 +75,19 @@ msgstr "Trocar"
 msgid "To"
 msgstr "Para"
 
-#: src/pages/convertion/index.blp:92
+#: src/pages/convertion/index.blp:86
 msgid "Reload"
 msgstr "Recarregar"
 
-#: src/search_provider/search_provider.in:83
-msgid "Conversion failed, check for network issues"
-msgstr "A conversão falhou, verifique se há problemas de rede"
+#: src/search_provider/search_provider.in:128
+msgid "According to"
+msgstr ""
 
-#: src/search_provider/search_provider.in:141
+#: src/search_provider/search_provider.in:138
 msgid "Copy"
 msgstr "Copiar"
 
-#: src/search_provider/search_provider.in:142
+#: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
 msgstr "Copiar conversão para área de transferência"
 
@@ -728,21 +711,49 @@ msgstr "Incapaz de converter moeda, não conseguiu obter resultados do Google"
 msgid "Source"
 msgstr "Fonte"
 
-#: src/window.blp:23
+#: src/window.blp:24
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: src/window.blp:52
+#: src/window.blp:45
+msgid "Providers"
+msgstr "Provedores"
+
+#: src/window.blp:48
+msgid "ECB"
+msgstr ""
+
+#: src/window.blp:53
+msgid "Google (unstable)"
+msgstr ""
+
+#: src/window.blp:62
 msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
 
-#: src/window.blp:53
+#: src/window.blp:66
 msgid "About Valuta"
 msgstr "Sobre o Valuta"
 
-#: src/window.blp:57
+#: src/window.blp:70
 msgid "Quit"
 msgstr "Sair"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferências"
+
+#~ msgid "Application"
+#~ msgstr "Aplicação"
+
+#~ msgid "European Central Bank"
+#~ msgstr "Banco central da europa"
+
+#~ msgctxt "shortcuts window"
+#~ msgid "Preferences"
+#~ msgstr "Preferências"
+
+#~ msgid "Conversion failed, check for network issues"
+#~ msgstr "A conversão falhou, verifique se há problemas de rede"
 
 #~ msgid ""
 #~ "Convert currencies with ease. Valuta provides an intuitive and fast "
