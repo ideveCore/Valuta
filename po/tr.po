@@ -704,7 +704,9 @@ msgid "Results for"
 msgstr ""
 
 #: src/requests.py:75
-msgid "Unable to convert currency, failed to fetch results from Google"
+#, fuzzy
+#| msgid "Unable to convert currency, failed to fetch results from Google"
+msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr "Para birimi dönüştürülemiyor, Google'dan sonuç alınamadı"
 
 #: src/window.blp:16

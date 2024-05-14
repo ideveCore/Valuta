@@ -700,7 +700,7 @@ msgid "Results for"
 msgstr ""
 
 #: src/requests.py:75
-msgid "Unable to convert currency, failed to fetch results from Google"
+msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr ""
 
 #: src/window.blp:16
