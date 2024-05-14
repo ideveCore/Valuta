@@ -69,6 +69,7 @@ class ConvertionService:
     self.dest_currencies = {}
     self.from_currency = self.utils.settings.get_string('src-currency')
     self.to_currency = self.utils.settings.get_string('dest-currency')
+    self.provider = self.utils.settings.get_enum('providers')
     self.utils.settings.connect("changed::src-currency", self.on_currencies_changed);
     self.utils.settings.connect("changed::dest-currency", self.on_currencies_changed);
 
@@ -170,7 +171,7 @@ class ConvertionService:
   def convertion(self, from_currency_value=None):
    if not self.from_currency == self.to_currency:
     error_id = ERROR_PREFIX + from_currency_value
-    if not self.currency_data['to_currency_value']:
+    if not self.currency_data['to_currency_value'] or self.provider != self.utils.settings.get_enum("providers"):
       self.currency_data['to_currency_value'] = Convertion(self.utils.settings).convert_raw(1, self.from_currency, self.to_currency, self.utils.settings.get_enum("providers"))
 
     if self.currency_data['to_currency_value']:
