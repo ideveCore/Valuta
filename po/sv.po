@@ -36,30 +36,9 @@ msgstr ""
 msgid "Search Currencies…"
 msgstr ""
 
-#: src/components/preferences/preferences.blp:9 src/window.blp:47
-msgid "Preferences"
-msgstr ""
-
-#: src/components/preferences/preferences.blp:11
-msgid "Application"
-msgstr ""
-
-#: src/components/preferences/preferences.blp:16
-msgid "Providers"
-msgstr ""
-
-#: src/components/preferences/preferences.blp:18
-msgid "European Central Bank"
-msgstr ""
-
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
-msgstr ""
-
-#: src/components/shortcuts/shortcuts.blp:11
-msgctxt "shortcuts window"
-msgid "Preferences"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:25
@@ -72,7 +51,11 @@ msgctxt "shortcuts window"
 msgid "Quit"
 msgstr ""
 
-#: src/pages/convertion/index.blp:108
+#: src/pages/convertion/convertion.py:104
+msgid "The input value is invalid."
+msgstr ""
+
+#: src/pages/convertion/convertion.py:124
 msgid "Error converting, please try again."
 msgstr ""
 
@@ -88,19 +71,19 @@ msgstr ""
 msgid "To"
 msgstr ""
 
-#: src/pages/convertion/index.blp:92
+#: src/pages/convertion/index.blp:86
 msgid "Reload"
 msgstr ""
 
-#: src/search_provider/search_provider.in:83
-msgid "Conversion failed, check for network issues"
+#: src/search_provider/search_provider.in:128
+msgid "According to"
 msgstr ""
 
-#: src/search_provider/search_provider.in:141
+#: src/search_provider/search_provider.in:138
 msgid "Copy"
 msgstr ""
 
-#: src/search_provider/search_provider.in:142
+#: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
 msgstr ""
 
@@ -724,18 +707,30 @@ msgstr ""
 msgid "Source"
 msgstr ""
 
-#: src/window.blp:23
+#: src/window.blp:24
 msgid "Main menu"
 msgstr ""
 
-#: src/window.blp:52
-msgid "Keyboard shortcuts"
+#: src/window.blp:45
+msgid "Providers"
+msgstr ""
+
+#: src/window.blp:48
+msgid "ECB"
 msgstr ""
 
 #: src/window.blp:53
+msgid "Google (unstable)"
+msgstr ""
+
+#: src/window.blp:62
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#: src/window.blp:66
 msgid "About Valuta"
 msgstr ""
 
-#: src/window.blp:57
+#: src/window.blp:70
 msgid "Quit"
 msgstr ""

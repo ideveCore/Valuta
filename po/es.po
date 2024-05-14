@@ -36,31 +36,10 @@ msgstr ""
 msgid "Search Currencies…"
 msgstr "Buscar divisas…"
 
-#: src/components/preferences/preferences.blp:9 src/window.blp:47
-msgid "Preferences"
-msgstr "Preferencias"
-
-#: src/components/preferences/preferences.blp:11
-msgid "Application"
-msgstr "Aplicación"
-
-#: src/components/preferences/preferences.blp:16
-msgid "Providers"
-msgstr "Proveedores"
-
-#: src/components/preferences/preferences.blp:18
-msgid "European Central Bank"
-msgstr "Banco Central Europeo"
-
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
 msgstr "General"
-
-#: src/components/shortcuts/shortcuts.blp:11
-msgctxt "shortcuts window"
-msgid "Preferences"
-msgstr "Preferencias"
 
 #: src/components/shortcuts/shortcuts.blp:25
 msgctxt "shortcuts window"
@@ -72,7 +51,11 @@ msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Salir"
 
-#: src/pages/convertion/index.blp:108
+#: src/pages/convertion/convertion.py:104
+msgid "The input value is invalid."
+msgstr ""
+
+#: src/pages/convertion/convertion.py:124
 msgid "Error converting, please try again."
 msgstr "Error al convertir, por favor intenta de nuevo."
 
@@ -88,19 +71,19 @@ msgstr "Intercambiar"
 msgid "To"
 msgstr "A"
 
-#: src/pages/convertion/index.blp:92
+#: src/pages/convertion/index.blp:86
 msgid "Reload"
 msgstr "Volver a cargar"
 
-#: src/search_provider/search_provider.in:83
-msgid "Conversion failed, check for network issues"
-msgstr "La conversión falló; verifique si hay problemas de red"
+#: src/search_provider/search_provider.in:128
+msgid "According to"
+msgstr ""
 
-#: src/search_provider/search_provider.in:141
+#: src/search_provider/search_provider.in:138
 msgid "Copy"
 msgstr "Copiar"
 
-#: src/search_provider/search_provider.in:142
+#: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
 msgstr "Copiar conversión al portapapeles"
 
@@ -725,21 +708,49 @@ msgstr ""
 msgid "Source"
 msgstr ""
 
-#: src/window.blp:23
+#: src/window.blp:24
 msgid "Main menu"
 msgstr "Menú principal"
 
-#: src/window.blp:52
+#: src/window.blp:45
+msgid "Providers"
+msgstr "Proveedores"
+
+#: src/window.blp:48
+msgid "ECB"
+msgstr ""
+
+#: src/window.blp:53
+msgid "Google (unstable)"
+msgstr ""
+
+#: src/window.blp:62
 msgid "Keyboard shortcuts"
 msgstr "Atajos de teclado"
 
-#: src/window.blp:53
+#: src/window.blp:66
 msgid "About Valuta"
 msgstr ""
 
-#: src/window.blp:57
+#: src/window.blp:70
 msgid "Quit"
 msgstr "Salir"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferencias"
+
+#~ msgid "Application"
+#~ msgstr "Aplicación"
+
+#~ msgid "European Central Bank"
+#~ msgstr "Banco Central Europeo"
+
+#~ msgctxt "shortcuts window"
+#~ msgid "Preferences"
+#~ msgstr "Preferencias"
+
+#~ msgid "Conversion failed, check for network issues"
+#~ msgstr "La conversión falló; verifique si hay problemas de red"
 
 #~ msgid ""
 #~ "The Valuta is simple and fast, ideal for those who need to convert "
