@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-05-07 09:07+0000\n"
+"PO-Revision-Date: 2024-05-16 14:01+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/currency-converter/"
 "currency-converter/hi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5.4-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
@@ -57,7 +57,7 @@ msgstr "छोड़ें"
 
 #: src/pages/convertion/convertion.py:104
 msgid "The input value is invalid."
-msgstr ""
+msgstr "इनपुट मान अमान्य है।"
 
 #: src/pages/convertion/convertion.py:124
 msgid "Error converting, please try again."
@@ -81,7 +81,7 @@ msgstr "पुनः लोड करें"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
-msgstr ""
+msgstr "इसके अनुसार"
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
@@ -704,10 +704,8 @@ msgid "Results for"
 msgstr "हेतु परिणाम"
 
 #: src/requests.py:75
-#, fuzzy
-#| msgid "Unable to convert currency, failed to fetch results from Google"
 msgid "Unable to convert currency, failed to fetch results from Google."
-msgstr "मुद्रा परिवर्तित करने में असमर्थ, Google से परिणाम लाने में विफल"
+msgstr "मुद्रा परिवर्तित करने में असमर्थ, Google से परिणाम लाने में विफल।"
 
 #: src/window.blp:16
 msgid "Source"
@@ -723,11 +721,11 @@ msgstr "प्रदाता"
 
 #: src/window.blp:48
 msgid "ECB"
-msgstr ""
+msgstr "ECB"
 
 #: src/window.blp:53
 msgid "Google (unstable)"
-msgstr ""
+msgstr "Google (अस्थिर)"
 
 #: src/window.blp:62
 msgid "Keyboard shortcuts"
