@@ -13,6 +13,10 @@ selection {
     border-radius: 6px;
  }
 
+ .text-light {
+    color: rgb(255, 255, 255);
+ }
+
 .f-l {
   font-size: 2rem;
 }
