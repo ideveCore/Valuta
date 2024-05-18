@@ -61,17 +61,9 @@ def convertion_page(application: Adw.Application, from_currency_value):
         to_currency_selector.set_selected(settings.get_string('dest-currency'))
 
     def change_provider(settings, key):
-        def thread_cb(task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
-            try:
-                from_currency_selector.handler_block_by_func(currency_selectors_changed)
-                load_currencies(settings.get_enum(key))
-                convert(from_currency_entry.get_text(), force=True)
-                task.return_value(self.__converted_data)
-            except Exception as e:
-                task.return_value(e)
         stack.set_visible_child_name("loading")
-        task = Gio.Task.new(application, None, None, None)
-        task.run_in_thread(thread_cb)
+        load_currencies(settings.get_enum(key))
+        convert(from_currency_entry.get_text(), force=True)
 
 
     def invert_currencies():
@@ -118,6 +110,7 @@ def convertion_page(application: Adw.Application, from_currency_value):
                 convertion.convert(float(value), from_currency_selector.selected, to_currency_selector.selected, settings.get_enum("providers"))
 
     def converted(data: Dict[str, Union[str, int]]):
+        print("ola")
         if not data["converted"]:
             stack.set_visible_child_name("convertion-error")
             toast_overlay.add_toast(Adw.Toast.new(
