@@ -18,6 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from typing import Any, Dict, Union
+from datetime import datetime
 import gi, json, re
 gi.require_version('Soup', '3.0')
 from gi.repository import Soup, GLib
@@ -26,6 +27,7 @@ from .define import BASE_URL_LANG_PREFIX, CODES
 class Providers:
     GOOGLE_BASE_URL: str = 'https://www.google.com/search?q=convert'
     ECB_BASE_URL: str = 'https://api.frankfurter.app/latest'
+    MI_BASE_URL: str = 'https://cdn.moeda.info/api/latest.json'
     response = {
         "from": "",
         "to": "",
@@ -55,6 +57,23 @@ class Providers:
         time = time.split(":")
         date_time = GLib.DateTime.new_utc(float(date[0]), float(date[1]), float(date[2]), float(time[0]), float(time[1]), float(time[2]))
         return f"{_('Results for')} {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')} - UTC"
+
+class ECB(Providers):
+    def mount_url(self):
+        return f'{self.ECB_BASE_URL}?amount={self.from_currency_value}&from={self.from_currency}&to={self.to_currency}'
+
+    def serializer(self, data: bytes) -> Dict[str, Union[str, int]]:
+        return self.default_response(json.loads(data))
+
+    def default_response(self, data: Dict[str, str]):
+        self.response["base"] = data["rates"][self.to_currency]
+        self.response["from"] = self.from_currency
+        self.response["to"] = self.to_currency
+        self.response["amount"] = 0
+        self.response["info"] = self.create_info(data["date"])
+        self.response["disclaimer"] = self.mount_url()
+        self.response["provider"] = 0
+        return self.response
 
 class Google(Providers):
     def mount_url(self):
@@ -90,26 +109,28 @@ class Google(Providers):
         self.response["provider"] = 1
         return self.response
 
-class ECB(Providers):
+class MI(Providers):
     def mount_url(self):
-        return f'{self.ECB_BASE_URL}?amount={self.from_currency_value}&from={self.from_currency}&to={self.to_currency}'
+        return self.MI_BASE_URL
 
     def serializer(self, data: bytes) -> Dict[str, Union[str, int]]:
         return self.default_response(json.loads(data))
 
     def default_response(self, data: Dict[str, str]):
-        self.response["base"] = data["rates"][self.to_currency]
+        date_time = datetime.fromisoformat(data["lastupdate"])
+        self.response["base"] = data["rates"][self.to_currency]/data["rates"][self.from_currency]
         self.response["from"] = self.from_currency
         self.response["to"] = self.to_currency
         self.response["amount"] = 0
-        self.response["info"] = self.create_info(data["date"])
+        self.response["info"] = self.create_info(f'{date_time.date()}', f'{date_time.time()}')
         self.response["disclaimer"] = self.mount_url()
-        self.response["provider"] = 0
+        self.response["provider"] = 2
         return self.response
 
 providers = {
     0 : ECB,
     1 : Google,
+    2 : MI,
 }
 
 class SoupSession(Soup.Session):

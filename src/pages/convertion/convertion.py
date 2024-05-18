@@ -110,7 +110,6 @@ def convertion_page(application: Adw.Application, from_currency_value):
                 convertion.convert(float(value), from_currency_selector.selected, to_currency_selector.selected, settings.get_enum("providers"))
 
     def converted(data: Dict[str, Union[str, int]]):
-        print("ola")
         if not data["converted"]:
             stack.set_visible_child_name("convertion-error")
             toast_overlay.add_toast(Adw.Toast.new(

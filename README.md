@@ -6,9 +6,12 @@ Convert currencies with ease. Valuta provides an intuitive and fast experience f
 
 ![Valuta](data/screenshots/01.png)
 
+## Providers
+- [European Central Bank conversion provider through the API (Frankfurter).](https://www.frankfurter.app/)
+- [Google finance conversion provider.](https://google.com)
+- [Moeda.info conversion provider.](https://moeda.info/)
+
 ## Features
-- European Central Bank conversion provider through the API (Frankfurter).
-- Google finance conversion provider.
 - Gnome search provider integration: example "10" or "10 USD to EUR".
 
 ## Flathub
