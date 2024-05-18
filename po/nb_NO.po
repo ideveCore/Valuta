@@ -740,6 +740,10 @@ msgstr ""
 msgid "Google (unstable)"
 msgstr ""
 
+#: src/window.blp:58
+msgid "Moeda.info"
+msgstr ""
+
 #: src/window.blp:62
 #, fuzzy
 #| msgid "Keyboard Shortcuts"

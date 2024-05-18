@@ -726,6 +726,10 @@ msgstr "ECB"
 msgid "Google (unstable)"
 msgstr "Google (instável)"
 
+#: src/window.blp:58
+msgid "Moeda.info"
+msgstr ""
+
 #: src/window.blp:62
 msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
