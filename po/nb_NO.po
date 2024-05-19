@@ -33,16 +33,19 @@ msgid ""
 "currencies."
 msgstr ""
 
-#: src/components/currencies/index.blp:9
+#: src/components/currency_selector/index.blp:19
+msgid "Search"
+msgstr ""
+
+#: src/components/currencies/index.blp:27
 #: src/components/currency_selector/index.blp:41
-#: src/components/currencies/index.blp:27 src/window.blp:67
 #, fuzzy
 #| msgid "Search Currencies…"
 msgid "Search Currencies"
 msgstr "Søk etter valutaer…"
 
-#: src/components/currencies/main.py:83 src/window.blp:75
-msgid "About Valuta"
+#: src/components/currencies/main.py:83
+msgid "About"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:9
@@ -752,11 +755,21 @@ msgstr ""
 msgid "Moeda.info"
 msgstr ""
 
+#: src/components/currencies/index.blp:9 src/window.blp:67
+#, fuzzy
+#| msgid "Search Currencies…"
+msgid "Currencies"
+msgstr "Søk etter valutaer…"
+
 #: src/window.blp:71
 #, fuzzy
 #| msgid "Keyboard Shortcuts"
 msgid "Keyboard shortcuts"
 msgstr "Tastatursnarveier"
+
+#: src/window.blp:75
+msgid "About Valuta"
+msgstr ""
 
 #: src/window.blp:79
 #, fuzzy
@@ -764,11 +777,6 @@ msgstr "Tastatursnarveier"
 #| msgid "Quit"
 msgid "Quit"
 msgstr "Avslutt"
-
-#, fuzzy
-#~| msgid "Search Currencies…"
-#~ msgid "Currencies"
-#~ msgstr "Søk etter valutaer…"
 
 #~ msgid "Conversion failed, check for network issues"
 #~ msgstr "Konvertering mislyktes. Kontroller nettverket"

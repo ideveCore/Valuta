@@ -35,15 +35,18 @@ msgstr ""
 "viagens, orçamentos ou sempre que precisar converter rapidamente entre duas "
 "moedas."
 
-#: src/components/currencies/index.blp:9
+#: src/components/currency_selector/index.blp:19
+msgid "Search"
+msgstr "Pesquisar"
+
+#: src/components/currencies/index.blp:27
 #: src/components/currency_selector/index.blp:41
-#: src/components/currencies/index.blp:27 src/window.blp:67
 msgid "Search Currencies"
 msgstr "Pesquisar por moedas"
 
-#: src/components/currencies/main.py:83 src/window.blp:75
-msgid "About Valuta"
-msgstr "Sobre o Valuta"
+#: src/components/currencies/main.py:83
+msgid "About"
+msgstr "Sobre"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
@@ -736,22 +739,21 @@ msgstr "Google (instável)"
 msgid "Moeda.info"
 msgstr "Moeda.info"
 
+#: src/components/currencies/index.blp:9 src/window.blp:67
+msgid "Currencies"
+msgstr "Moedas"
+
 #: src/window.blp:71
 msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
 
+#: src/window.blp:75
+msgid "About Valuta"
+msgstr "Sobre o Valuta"
+
 #: src/window.blp:79
 msgid "Quit"
 msgstr "Sair"
-
-#~ msgid "Currencies"
-#~ msgstr "Moedas"
-
-#~ msgid "Search"
-#~ msgstr "Pesquisar"
-
-#~ msgid "About"
-#~ msgstr "Sobre"
 
 #~ msgid "Preferences"
 #~ msgstr "Preferências"
