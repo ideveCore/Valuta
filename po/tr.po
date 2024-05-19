@@ -36,20 +36,21 @@ msgid ""
 "currencies."
 msgstr ""
 
-#: src/components/currencies/index.blp:9 src/window.blp:67
+#: src/components/currencies/index.blp:9
+#: src/components/currency_selector/currency_selector.blp:41 src/window.blp:67
 #, fuzzy
 #| msgid "Search Currencies…"
 msgid "Currencies"
 msgstr "Para Birimi Ara…"
 
-#: src/components/currencies/index.blp:19
+#: src/components/currency_selector/currency_selector.blp:41
+#: src/components/currencies/index.blp:27
 msgid "Search"
 msgstr ""
 
-#: src/components/currency_selector/currency_selector.blp:41
-#: src/components/currencies/index.blp:27
-msgid "Search Currencies…"
-msgstr "Para Birimi Ara…"
+#: src/components/currencies/main.py:83 src/window.blp:75
+msgid "About"
+msgstr "Hakkında"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
@@ -748,13 +749,12 @@ msgstr ""
 msgid "Keyboard shortcuts"
 msgstr "Klavye kısayolları"
 
-#: src/window.blp:75
-msgid "About Valuta"
-msgstr ""
-
 #: src/window.blp:79
 msgid "Quit"
 msgstr "Çıkış"
+
+#~ msgid "Search Currencies…"
+#~ msgstr "Para Birimi Ara…"
 
 #~ msgid "Preferences"
 #~ msgstr "Tercihler"
@@ -798,9 +798,6 @@ msgstr "Çıkış"
 
 #~ msgid "Disclaimer"
 #~ msgstr "Yasal uyarı"
-
-#~ msgid "About"
-#~ msgstr "Hakkında"
 
 #~ msgid "Convert"
 #~ msgstr "Dönüştür"
