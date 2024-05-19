@@ -27,7 +27,17 @@ msgid ""
 "Valuta is a simple and fast conversion tool, ideal for those who need to convert between different currencies repeatedly. Use it while traveling, budgeting, or anytime else you need to quickly convert between two currencies."
 msgstr ""
 
+#: src/components/currencies/index.blp:9
+#: src/window.blp:67
+msgid "Currencies"
+msgstr ""
+
+#: src/components/currencies/index.blp:19
+msgid "Search"
+msgstr ""
+
 #: src/components/currency_selector/currency_selector.blp:41
+#: src/components/currencies/index.blp:27
 msgid "Search Currencies…"
 msgstr ""
 
@@ -722,14 +732,14 @@ msgstr ""
 msgid "Moeda.info"
 msgstr ""
 
-#: src/window.blp:62
+#: src/window.blp:71
 msgid "Keyboard shortcuts"
 msgstr ""
 
-#: src/window.blp:66
+#: src/window.blp:75
 msgid "About Valuta"
 msgstr ""
 
-#: src/window.blp:70
+#: src/window.blp:79
 msgid "Quit"
 msgstr ""

@@ -7,6 +7,7 @@ install_data(
     'sonar-symbolic.svg',
     'refresh-large-symbolic.svg',
     'code-symbolic.svg',
+    'help-about-symbolic.svg',
   ],
   install_dir: datadir / 'icons/hicolor/scalable/status',
 )

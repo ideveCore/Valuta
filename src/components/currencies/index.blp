@@ -1,0 +1,45 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.Dialog component {
+  can-close: true;
+  content-width: 400;
+  content-height: 450;
+  presentation-mode: auto;
+  title: _("Currencies");
+  Adw.ToolbarView {
+    [top]
+    Gtk.Box container {
+      orientation: vertical;
+      hexpand: true;
+      Adw.HeaderBar {
+        [start]
+        Gtk.ToggleButton search_button {
+          icon-name: "edit-find-symbolic";
+          tooltip-text: _("Search");
+        }
+      }
+      Gtk.SearchBar search_bar {
+        key-capture-widget: container;
+        SearchEntry search_entry {
+          hexpand: true;
+          search-delay: 100;
+          placeholder-text: _("Search Currencies");
+        }
+      }
+    }
+    content: Gtk.ScrolledWindow {
+      ListBox list_box_editable {
+        hexpand: true;
+        valign: start;
+        selection-mode: none;
+        margin-start: 6;
+        margin-end: 6;
+
+        styles [
+          "boxed-list"
+        ]
+      }
+    };
+  }
+}

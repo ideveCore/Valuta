@@ -26,6 +26,7 @@ run_target('run',
 # ===== Blueprint compiler =====
 blueprints = custom_target('blueprints',
   input: files(
+    'components/currencies/index.blp',
     'components/currency_selector/index.blp',
     'components/currency_selector_row/index.blp',
     'components/shortcuts/shortcuts.blp',

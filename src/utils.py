@@ -19,8 +19,9 @@
 
 from typing import Any, Dict, Union, Callable
 from gi.repository import Adw, Gio, GObject, GLib
-from .requests import Requests
 from babel.numbers import format_number, parse_decimal
+from .requests import Requests
+from .define import CODES
 
 class CurrencyObject(GObject.Object):
     __gtype_name__ = 'CurrencyObject'
@@ -143,7 +144,13 @@ class Utils:
     def __init__(self, application_id):
         self.settings = Settings(application_id)
         self.convertion = Convertion(self.settings)
-        self.locale = GLib.get_locale_variants(GLib.get_language_names()[0]);
+        self.locale = GLib.get_locale_variants(GLib.get_language_names()[0])
+        self.currencies = CODES
+        self.providers = {
+          "0": "ECB",
+          "1": "Google",
+          "2": "Moeda.info"
+        }
     def format_number(self, number):
         try:
             if number:

@@ -22,16 +22,20 @@ import gi
 gi.require_version('Adw', '1')
 from gi.repository import Gio, Adw
 from .about import about
+from .components.currencies.main import currencies
 
 def application_actions(application: Adw.Application):
   quit_action = Gio.SimpleAction.new(name='quit')
+  show_currencies_action = Gio.SimpleAction.new(name='show-currencies')
   about_action = Gio.SimpleAction.new(name='about')
 
   quit_action.connect('activate', lambda simple_action, parameter: application.quit())
+  show_currencies_action.connect('activate', lambda simple_action, parameter : currencies(application).present(application.get_active_window()))
   about_action.connect('activate', lambda simple_action, parameter : about(application).present(application.get_active_window()))
 
   application.add_action(quit_action)
   application.add_action(about_action)
+  application.add_action(show_currencies_action)
   application.set_accels_for_action('app.quit', ['<primary>q'])
   application.set_accels_for_action('app.quit', ['<primary>w'])
   application.set_accels_for_action('win.show-help-overlay', ['<Primary>question'])

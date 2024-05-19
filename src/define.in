@@ -40,959 +40,1119 @@ CODES = {
     "flag": "🇦🇫",
     "providers": "1,2",
     "symbol": "AFN",
+    "about": "https://en.wikipedia.org/wiki/Afghan_afghani",
   },
   "ALL": {
     "name": _("Albanian Lek"),
     "flag": "🇦🇱",
     "providers": "1,2",
     "symbol": "L",
+    "about": "https://en.wikipedia.org/wiki/Albanian_lek",
   },
   "DZD": {
     "name": _("Algerian Dinar"),
     "flag": "🇩🇿",
     "providers": "1,2",
-    "symbol": "DZD"
+    "symbol": "DZD",
+    "about": "https://en.wikipedia.org/wiki/Algerian_dinar",
   },
   "AOA": {
     "name": _("Angolan Kwanza"),
     "flag": "🇦🇴",
     "providers": "1,2",
     "symbol": "Kz",
+    "about": "https://en.wikipedia.org/wiki/Angolan_kwanza",
   },
   "ARS": {
     "name": _("Argentine Peso"),
     "flag": "🇦🇷",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Argentine_peso",
   },
   "AMD": {
     "name": _("Armenian Dram"),
     "flag": "🇦🇲",
     "providers": "1,2",
     "symbol": "֏",
+    "about": "https://en.wikipedia.org/wiki/Armenian_dram",
   },
   "AWG": {
     "name": _("Aruban Florin"),
     "flag": "🇦🇼",
     "providers": "1,2",
     "symbol": "ƒ",
+    "about": "https://en.wikipedia.org/wiki/Aruban_florin",
   },
   "AUD": {
     "name": _("Australian Dollar"),
     "flag": "🇦🇺",
     "providers": "0,1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Australian_dollar",
   },
   "AZN": {
     "name": _("Azerbaijani Manat"),
     "flag": "🇦🇿",
     "providers": "1,2",
     "symbol": "₼",
+    "about": "https://en.wikipedia.org/wiki/Azerbaijani_manat",
   },
   "BSD": {
     "name": _("Bahamian Dollar"),
     "flag": "🇧🇸",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Bahamian_dollar",
   },
   "BHD": {
     "name": _("Bahraini Dinar"),
     "flag": "🇧🇭",
     "providers": "1,2",
     "symbol": "BHD",
+    "about": "https://en.wikipedia.org/wiki/Bahraini_dinar",
   },
   "BBD": {
     "name": _("Bajan dollar"),
     "flag": "🇧🇧",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Barbadian_dollar",
   },
   "BDT": {
     "name": _("Bangladeshi Taka"),
     "flag": "🇧🇩",
     "providers": "1,2",
     "symbol": "৳",
+    "about": "https://en.wikipedia.org/wiki/Bangladeshi_taka",
   },
   "BYR": {
     "name": _("Belarusian Ruble"),
     "flag": "🇧🇾",
     "providers": "1",
     "symbol": "Rbl",
+    "about": "https://en.wikipedia.org/wiki/Belarusian_ruble",
   },
   "BYN": {
     "name": _("Belarusian Ruble"),
     "flag": "🇧🇾",
     "providers": "1,2",
     "symbol": "Rbl",
+    "about": "https://en.wikipedia.org/wiki/Belarusian_ruble",
   },
   "BZD": {
     "name": _("Belize Dollar"),
     "flag": "🇧🇿",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Belize_dollar",
   },
   "BMD": {
     "name": _("Bermudan Dollar"),
     "flag": "🇧🇲",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Bermudian_dollar",
   },
   "BTN": {
     "name": _("Bhutan currency"),
     "flag": "🇧🇹",
     "providers": "1,2",
     "symbol": "Nu.",
+    "about": "https://en.wikipedia.org/wiki/Bhutanese_ngultrum",
   },
   "BTC": {
     "name": _("Bitcoin"),
     "flag": "₿",
     "providers": "1,2",
     "symbol": "₿",
+    "about": "https://en.wikipedia.org/wiki/Bitcoin",
   },
   "BCH": {
     "name": _("Bitcoin Cash"),
     "flag": "₿",
     "providers": "1",
     "symbol": "₿",
+    "about": "https://en.wikipedia.org/wiki/Bitcoin_Cash",
   },
   "BOB": {
     "name": _("Bolivian Boliviano"),
     "flag": "🇧🇴",
     "providers": "1,2",
     "symbol": "Bs",
+    "about": "https://en.wikipedia.org/wiki/Bolivian_boliviano",
   },
   "BAM": {
     "name": _("Bosnia-Herzegovina Convertible Mark"),
     "flag": "🇧🇦",
     "providers": "1,2",
     "symbol": "KM",
+    "about": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_convertible_mark",
   },
   "BWP": {
     "name": _("Botswanan Pula"),
     "flag": "🇧🇼",
     "providers": "1,2",
     "symbol": "P",
+    "about": "https://en.wikipedia.org/wiki/Botswana_pula",
   },
   "BRL": {
     "name": _("Brazilian Real"),
     "flag": "🇧🇷",
     "providers": "0,1,2",
     "symbol": "R$",
+    "about": "https://en.wikipedia.org/wiki/Brazilian_real",
   },
   "BND": {
     "name": _("Brunei Dollar"),
     "flag": "🇧🇳",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Brunei_dollar",
   },
   "BGN": {
     "name": _("Bulgarian Lev"),
     "flag": "🇧🇬",
     "providers": "0,1,2",
     "symbol": "лв",
+    "about": "https://en.wikipedia.org/wiki/Bulgarian_lev",
   },
   "BIF": {
     "name": _("Burundian Franc"),
     "flag": "🇧🇮",
     "providers": "1,2",
     "symbol": "FBu",
+    "about": "https://en.wikipedia.org/wiki/Burundian_franc",
   },
   "XPF": {
     "name": _("CFP Franc"),
     "flag": "F",
     "providers": "1,2",
     "symbol": "F",
+    "about": "https://en.wikipedia.org/wiki/CFP_franc",
   },
   "KHR": {
     "name": _("Cambodian riel"),
     "flag": "🇰🇭",
     "providers": "1,2",
     "symbol": "៛",
+    "about": "https://en.wikipedia.org/wiki/Cambodian_riel",
   },
   "CAD": {
     "name": _("Canadian Dollar"),
     "flag": "🇨🇦",
     "providers": "0,1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Canadian_dollar",
   },
   "CVE": {
     "name": _("Cape Verdean Escudo"),
     "flag": "🇨🇻",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Cape_Verdean_escudo",
   },
   "KYD": {
     "name": _("Cayman Islands Dollar"),
     "flag": "🇰🇾",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Cayman_Islands_dollar",
   },
   "XAF": {
     "name": _("Central African CFA franc"),
     "flag": "F.CFA",
     "providers": "1,2",
     "symbol": "F.CFA",
+    "about": "https://en.wikipedia.org/wiki/Central_African_CFA_franc",
   },
   "CLP": {
     "name": _("Chilean Peso"),
     "flag": "🇨🇱",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Chilean_peso",
   },
   "CLF": {
     "name": _("Chilean Unit of Account (UF)"),
     "flag": "🇨🇱",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Unidad_de_Fomento",
   },
   "CNY": {
     "name": _("Chinese Yuan"),
     "flag": "🇨🇳",
     "providers": "0,1,2",
     "symbol": "¥",
+    "about": "https://en.wikipedia.org/wiki/Renminbi",
   },
   "CNH": {
     "name": _("Chinese Yuan (offshore)"),
     "flag": "🇨🇳",
     "providers": "1,2",
     "symbol": "¥",
+    "about": "https://en.wikipedia.org/wiki/Renminbi",
   },
   "COP": {
     "name": _("Colombian Peso"),
     "flag": "🇨🇴",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Colombian_peso",
   },
   "KMF": {
     "name": _("Comorian franc"),
     "flag": "🇰🇲",
     "providers": "1,2",
     "symbol": "FC",
+    "about": "https://en.wikipedia.org/wiki/Comorian_franc",
   },
   "CDF": {
     "name": _("Congolese Franc"),
     "flag": "🇨🇩",
     "providers": "1,2",
     "symbol": "FC",
+    "about": "https://en.wikipedia.org/wiki/Congolese_franc",
   },
   "CRC": {
     "name": _("Costa Rican Colón"),
     "flag": "🇨🇷",
     "providers": "1,2",
     "symbol": "₡",
+    "about": "https://en.wikipedia.org/wiki/Costa_Rican_col%C3%B3n",
   },
   "HRK": {
     "name": _("Croatian Kuna"),
     "flag": "🇭🇷",
     "providers": "1,2",
     "symbol": "kn",
+    "about": "https://en.wikipedia.org/wiki/Croatian_kuna",
   },
   "CUP": {
     "name": _("Cuban Peso"),
     "flag": "🇨🇺",
     "providers": "1,2",
     "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/Cuban_peso",
   },
   "CZK": {
     "name": _("Czech Koruna"),
     "flag": "🇨🇿",
     "providers": "0,1,2",
     "symbol": "Kč",
+    "about": "https://en.wikipedia.org/wiki/Czech_koruna",
   },
   "DKK": {
     "name": _("Danish Krone"),
     "flag": "🇩🇰",
     "providers": "0,1,2",
-    "symbol": "kr"
+    "symbol": "kr",
+    "about": "https://en.wikipedia.org/wiki/Danish_krone",
   },
   "DJF": {
     "name": _("Djiboutian Franc"),
     "flag": "🇩🇯",
     "providers": "1,2",
-    "symbol": "Fdj"
+    "symbol": "Fdj",
+    "about": "https://en.wikipedia.org/wiki/Djiboutian_franc",
   },
   "DOP": {
     "name": _("Dominican Peso"),
     "flag": "🇩🇴",
     "providers": "1,2",
-    "symbol": "RD$"
+    "symbol": "RD$",
+    "about": "https://en.wikipedia.org/wiki/Dominican_peso",
   },
   "XCD": {
     "name": _("East Caribbean Dollar"),
     "flag": "EC$",
     "providers": "1,2",
-    "symbol": "EC$"
+    "symbol": "EC$",
+    "about": "https://en.wikipedia.org/wiki/Eastern_Caribbean_dollar",
   },
   "EGP": {
     "name": _("Egyptian Pound"),
     "flag": "🇪🇬",
     "providers": "1,2",
-    "symbol": "EGP"
+    "symbol": "EGP",
+    "about": "https://en.wikipedia.org/wiki/Egyptian_pound",
   },
   "ETH": {
     "name": _("Ether"),
     "flag": "ETH",
     "providers": "1,2",
-    "symbol": "ETH"
+    "symbol": "ETH",
+    "about": "https://en.wikipedia.org/wiki/Ether",
   },
   "ETB": {
     "name": _("Ethiopian Birr"),
     "flag": "🇪🇹",
     "providers": "1,2",
-    "symbol": "ETB"
+    "symbol": "ETB",
+    "about": "https://en.wikipedia.org/wiki/Ethiopian_birr",
   },
   "EUR": {
     "name": _("Euro"),
     "flag": "🇪🇺",
     "providers": "0,1,2",
-    "symbol": "€"
+    "symbol": "€",
+    "about": "https://en.wikipedia.org/wiki/Euro",
   },
   "FJD": {
     "name": _("Fijian Dollar"),
     "flag": "🇫🇯",
     "providers": "1,2",
-    "symbol": "FJD"
+    "symbol": "FJD",
+    "about": "https://en.wikipedia.org/wiki/Fijian_dollar",
   },
   "GMD": {
     "name": _("Gambian dalasi"),
     "flag": "🇬🇲",
     "providers": "1,2",
-    "symbol": "GMD"
+    "symbol": "GMD",
+    "about": "https://en.wikipedia.org/wiki/Gambian_dalasi",
   },
   "GEL": {
     "name": _("Georgian Lari"),
     "flag": "🇬🇪",
     "providers": "1,2",
-    "symbol": "GEL"
+    "symbol": "GEL",
+    "about": "https://en.wikipedia.org/wiki/Georgian_lari",
   },
   "GHC": {
     "name": _("Ghanaian Cedi"),
     "flag": "GHC",
     "providers": "1",
-    "symbol": "GHC"
+    "symbol": "GHC",
+    "about": "https://en.wikipedia.org/wiki/Ghanaian_cedi",
   },
   "GHS": {
     "name": _("Ghanaian Cedi"),
     "flag": "🇬🇭",
     "providers": "1,2",
-    "symbol": "GHS"
+    "symbol": "GHS",
+    "about": "https://en.wikipedia.org/wiki/Ghanaian_cedi",
   },
   "GIP": {
     "name": _("Gibraltar Pound"),
     "flag": "🇬🇮",
     "providers": "1,2",
-    "symbol": "GIP"
+    "symbol": "GIP",
+    "about": "https://en.wikipedia.org/wiki/Gibraltar_pound",
   },
   "GTQ": {
     "name": _("Guatemalan Quetzal"),
     "flag": "🇬🇹",
     "providers": "1,2",
-    "symbol": "GTQ"
+    "symbol": "GTQ",
+    "about": "https://en.wikipedia.org/wiki/Guatemalan_quetzal",
   },
   "GNF": {
     "name": _("Guinean Franc"),
     "flag": "🇬🇳",
     "providers": "1,2",
-    "symbol": "GNF"
+    "symbol": "GNF",
+    "about": "https://en.wikipedia.org/wiki/Guinean_franc",
   },
   "GYD": {
     "name": _("Guyanaese Dollar"),
     "flag": "🇬🇾",
     "providers": "1,2",
-    "symbol": "GYD"
+    "symbol": "GYD",
+    "about": "https://en.wikipedia.org/wiki/Guyanese_dollar",
   },
   "HTG": {
     "name": _("Haitian Gourde"),
     "flag": "🇭🇹",
     "providers": "1,2",
-    "symbol": "HTG"
+    "symbol": "HTG",
+    "about": "https://en.wikipedia.org/wiki/Haitian_gourde",
   },
   "HNL": {
     "name": _("Honduran Lempira"),
     "flag": "🇭🇳",
     "providers": "1,2",
-    "symbol": "HNL"
+    "symbol": "HNL",
+    "about": "https://en.wikipedia.org/wiki/Honduran_lempira",
   },
   "HKD": {
     "name": _("Hong Kong Dollar"),
     "flag": "🇭🇰",
     "providers": "0,1,2",
-    "symbol": "HKD"
+    "symbol": "HKD",
+    "about": "https://en.wikipedia.org/wiki/Hong_Kong_dollar",
   },
   "HUF": {
     "name": _("Hungarian Forint"),
     "flag": "🇭🇺",
     "providers": "0,1,2",
-    "symbol": "HUF"
+    "symbol": "HUF",
+    "about": "https://en.wikipedia.org/wiki/Hungarian_forint",
   },
   "ISK": {
     "name": _("Icelandic Króna"),
     "flag": "🇮🇸",
     "providers": "0,1,2",
-    "symbol": "ISK"
+    "symbol": "ISK",
+    "about": "https://en.wikipedia.org/wiki/Icelandic_kr%C3%B3na",
   },
   "INR": {
     "name": _("Indian Rupee"),
     "flag": "🇮🇳",
     "providers": "0,1,2",
-    "symbol": "₹"
+    "symbol": "₹",
+    "about": "https://en.wikipedia.org/wiki/Indian_rupee",
   },
   "IDR": {
     "name": _("Indonesian Rupiah"),
     "flag": "🇮🇩",
     "providers": "0,1,2",
-    "symbol": "IDR"
+    "symbol": "IDR",
+    "about": "https://en.wikipedia.org/wiki/Indian_rupee",
   },
   "IRR": {
     "name": _("Iranian Rial"),
     "flag": "🇮🇷",
     "providers": "1,2",
-    "symbol": "IRR"
+    "symbol": "IRR",
+    "about": "https://en.wikipedia.org/wiki/Iranian_rial",
   },
   "IQD": {
     "name": _("Iraqi Dinar"),
     "flag": "🇮🇶",
     "providers": "1,2",
-    "symbol": "IQD"
+    "symbol": "IQD",
+    "about": "https://en.wikipedia.org/wiki/Iraqi_dinar",
   },
   "ILS": {
     "name": _("Israeli New Shekel"),
     "flag": "🇮🇱",
     "providers": "0,1,2",
-    "symbol": "₪"
+    "symbol": "₪",
+    "about": "https://en.wikipedia.org/wiki/Israeli_new_shekel",
   },
   "JMD": {
     "name": _("Jamaican Dollar"),
     "flag": "🇯🇲",
     "providers": "1,2",
-    "symbol": "JMD"
+    "symbol": "JMD",
+    "about": "https://en.wikipedia.org/wiki/Jamaican_dollar",
   },
   "JPY": {
     "name": _("Japanese Yen"),
     "flag": "🇯🇵",
     "providers": "0,1,2",
-    "symbol": "¥"
+    "symbol": "¥",
+    "about": "https://en.wikipedia.org/wiki/Japanese_yen",
   },
   "JOD": {
     "name": _("Jordanian Dinar"),
     "flag": "🇯🇴",
     "providers": "1,2",
-    "symbol": "JOD"
+    "symbol": "JOD",
+    "about": "https://en.wikipedia.org/wiki/Jordanian_dinar",
   },
   "KZT": {
     "name": _("Kazakhstani Tenge"),
     "flag": "🇰🇿",
     "providers": "1,2",
-    "symbol": "KZT"
+    "symbol": "KZT",
+    "about": "https://en.wikipedia.org/wiki/Kazakhstani_tenge",
   },
   "KES": {
     "name": _("Kenyan Shilling"),
     "flag": "🇰🇪",
     "providers": "1,2",
-    "symbol": "KES"
+    "symbol": "KES",
+    "about": "https://en.wikipedia.org/wiki/Kenyan_shilling",
   },
   "KWD": {
     "name": _("Kuwaiti Dinar"),
     "flag": "🇰🇼",
     "providers": "1,2",
-    "symbol": "KWD"
+    "symbol": "KWD",
+    "about": "https://en.wikipedia.org/wiki/Kuwaiti_dinar",
   },
   "KGS": {
     "name": _("Kyrgyzstani Som"),
     "flag": "🇰🇬",
     "providers": "1,2",
-    "symbol": "KGS"
+    "symbol": "KGS",
+    "about": "https://en.wikipedia.org/wiki/Kyrgyz_som",
   },
   "LAK": {
     "name": _("Laotian Kip"),
     "flag": "🇱🇦",
     "providers": "1,2",
-    "symbol": "LAK"
+    "symbol": "LAK",
+    "about": "https://en.wikipedia.org/wiki/Lao_kip",
   },
   "LBP": {
     "name": _("Lebanese pound"),
     "flag": "🇱🇧",
     "providers": "1,2",
-    "symbol": "LBP"
+    "symbol": "LBP",
+    "about": "https://en.wikipedia.org/wiki/Lebanese_pound",
   },
   "LSL": {
     "name": _("Lesotho loti"),
     "flag": "🇱🇸",
     "providers": "1,2",
-    "symbol": "LSL"
+    "symbol": "LSL",
+    "about": "https://en.wikipedia.org/wiki/Lesotho_loti",
   },
   "LRD": {
     "name": _("Liberian Dollar"),
     "flag": "🇱🇷",
     "providers": "1,2",
-    "symbol": "LRD"
+    "symbol": "LRD",
+    "about": "https://en.wikipedia.org/wiki/Liberian_dollar",
   },
   "LYD": {
     "name": _("Libyan Dinar"),
     "flag": "🇱🇾",
     "providers": "1,2",
-    "symbol": "LYD"
+    "symbol": "LYD",
+    "about": "https://en.wikipedia.org/wiki/Libyan_dinar",
   },
   "LTC": {
     "name": _("Litecoin"),
     "flag": "LTC",
     "providers": "1,2",
-    "symbol": "LTC"
+    "symbol": "LTC",
+    "about": "https://en.wikipedia.org/wiki/Litecoin",
   },
   "MOP": {
     "name": _("Macanese Pataca"),
     "flag": "🇲🇴",
     "providers": "1,2",
-    "symbol": "MOP"
+    "symbol": "MOP",
+    "about": "https://en.wikipedia.org/wiki/Macanese_pataca",
   },
   "MKD": {
     "name": _("Macedonian Denar"),
     "flag": "🇲🇰",
     "providers": "1,2",
-    "symbol": "MKD"
+    "symbol": "MKD",
+    "about": "https://en.wikipedia.org/wiki/Macedonian_denar",
   },
   "MGA": {
     "name": _("Malagasy Ariary"),
     "flag": "🇲🇬",
     "providers": "1,2",
-    "symbol": "MGA"
+    "symbol": "MGA",
+    "about": "https://en.wikipedia.org/wiki/Malagasy_ariary",
   },
   "MWK": {
     "name": _("Malawian Kwacha"),
     "flag": "🇲🇼",
     "providers": "1,2",
-    "symbol": "MWK"
+    "symbol": "MWK",
+    "about": "https://en.wikipedia.org/wiki/Malawian_kwacha",
   },
   "MYR": {
     "name": _("Malaysian Ringgit"),
     "flag": "🇲🇾",
     "providers": "0,1,2",
-    "symbol": "MYR"
+    "symbol": "MYR",
+    "about": "https://en.wikipedia.org/wiki/Malaysian_ringgit",
   },
   "MVR": {
     "name": _("Maldivian Rufiyaa"),
     "flag": "🇲🇻",
     "providers": "1,2",
-    "symbol": "MVR"
+    "symbol": "MVR",
+    "about": "https://en.wikipedia.org/wiki/Maldivian_rufiyaa",
   },
   "MRO": {
     "name": _("Mauritanian Ouguiya (1973–2017)"),
     "flag": "MRO",
     "providers": "1,2",
-    "symbol": "MRO"
+    "symbol": "MRO",
+    "about": "https://en.wikipedia.org/wiki/Mauritanian_ouguiya",
   },
   "MUR": {
     "name": _("Mauritian Rupee"),
     "flag": "🇲🇺",
     "providers": "1,2",
-    "symbol": "MUR"
+    "symbol": "MUR",
+    "about": "https://en.wikipedia.org/wiki/Mauritian_rupee",
   },
   "MXN": {
     "name": _("Mexican Peso"),
     "flag": "🇲🇽",
     "providers": "0,1,2",
-    "symbol": "MXN"
+    "symbol": "MXN",
+    "about": "https://en.wikipedia.org/wiki/Mexican_peso",
   },
   "MDL": {
     "name": _("Moldovan Leu"),
     "flag": "🇲🇩",
     "providers": "1,2",
-    "symbol": "MDL"
+    "symbol": "MDL",
+    "about": "https://en.wikipedia.org/wiki/Moldovan_leu",
   },
   "MAD": {
     "name": _("Moroccan Dirham"),
     "flag": "🇲🇦",
     "providers": "1,2",
-    "symbol": "MAD"
+    "symbol": "MAD",
+    "about": "https://en.wikipedia.org/wiki/Moroccan_dirham",
   },
   "MZM": {
     "name": _("Mozambican metical"),
     "flag": "MZM",
     "providers": "1",
-    "symbol": "MZM"
+    "symbol": "MZM",
+    "about": "https://en.wikipedia.org/wiki/Mozambican_metical",
   },
   "MZN": {
     "name": _("Mozambican metical"),
     "flag": "🇲🇿",
     "providers": "1,2",
-    "symbol": "MZN"
+    "symbol": "MZN",
+    "about": "https://en.wikipedia.org/wiki/Mozambican_metical",
   },
   "MMK": {
     "name": _("Myanmar Kyat"),
     "flag": "🇲🇲",
     "providers": "1,2",
-    "symbol": "MMK"
+    "symbol": "MMK",
+    "about": "https://en.wikipedia.org/wiki/Myanmar_kyat",
   },
   "TWD": {
     "name": _("New Taiwan dollar"),
     "flag": "🇹🇼",
     "providers": "1,2",
-    "symbol": "TWD"
+    "symbol": "TWD",
+    "about": "https://en.wikipedia.org/wiki/New_Taiwan_dollar",
   },
   "NAD": {
     "name": _("Namibian dollar"),
     "flag": "🇳🇦",
     "providers": "1,2",
-    "symbol": "NAD"
+    "symbol": "NAD",
+    "about": "https://en.wikipedia.org/wiki/Namibian_dollar",
   },
   "NPR": {
     "name": _("Nepalese Rupee"),
     "flag": "🇳🇵",
     "providers": "1,2",
-    "symbol": "NPR"
+    "symbol": "NPR",
+    "about": "https://en.wikipedia.org/wiki/Nepalese_rupee",
   },
   "ANG": {
     "name": _("Netherlands Antillean Guilder"),
     "flag": "ANG",
     "providers": "1,2",
-    "symbol": "ANG"
+    "symbol": "ANG",
+    "about": "https://en.wikipedia.org/wiki/Netherlands_Antillean_guilder",
   },
   "NZD": {
     "name": _("New Zealand Dollar"),
     "flag": "🇳🇿",
     "providers": "0,1,2",
-    "symbol": "NZD"
+    "symbol": "NZD",
+    "about": "https://en.wikipedia.org/wiki/New_Zealand_dollar",
   },
   "NIO": {
     "name": _("Nicaraguan Córdoba"),
     "flag": "🇳🇮",
     "providers": "1,2",
-    "symbol": "NIO"
+    "symbol": "NIO",
+    "about": "https://en.wikipedia.org/wiki/Nicaraguan_c%C3%B3rdoba",
   },
   "NGN": {
     "name": _("Nigerian Naira"),
     "flag": "🇳🇬",
     "providers": "1,2",
-    "symbol": "NGN"
+    "symbol": "NGN",
+    "about": "https://en.wikipedia.org/wiki/Nigerian_naira",
   },
   "NOK": {
     "name": _("Norwegian Krone"),
     "flag": "🇳🇴",
     "providers": "0,1,2",
-    "symbol": "NOK"
+    "symbol": "NOK",
+    "about": "https://en.wikipedia.org/wiki/Norwegian_krone",
   },
   "OMR": {
     "name": _("Omani Rial"),
     "flag": "🇴🇲",
     "providers": "1,2",
-    "symbol": "OMR"
+    "symbol": "OMR",
+    "about": "https://en.wikipedia.org/wiki/Omani_rial",
   },
   "PKR": {
     "name": _("Pakistani Rupee"),
     "flag": "🇵🇰",
     "providers": "1,2",
-    "symbol": "PKR"
+    "symbol": "PKR",
+    "about": "https://en.wikipedia.org/wiki/Pakistani_rupee",
   },
   "PAB": {
     "name": _("Panamanian Balboa"),
     "flag": "🇵🇦",
     "providers": "1,2",
-    "symbol": "PAB"
+    "symbol": "PAB",
+    "about": "https://en.wikipedia.org/wiki/Panamanian_balboa",
   },
   "PGK": {
     "name": _("Papua New Guinean Kina"),
     "flag": "🇵🇬",
     "providers": "1,2",
-    "symbol": "PGK"
+    "symbol": "PGK",
+    "about": "https://en.wikipedia.org/wiki/Papua_New_Guinean_kina",
   },
   "PYG": {
     "name": _("Paraguayan Guarani"),
     "flag": "🇵🇾",
     "providers": "1,2",
-    "symbol": "PYG"
+    "symbol": "PYG",
+    "about": "https://en.wikipedia.org/wiki/Guarani_language",
   },
   "PHP": {
     "name": _("Philippine Piso"),
     "flag": "🇵🇭",
     "providers": "0,1,2",
-    "symbol": "PHP"
+    "symbol": "PHP",
+    "about": "https://en.wikipedia.org/wiki/Philippine_peso",
   },
   "PLN": {
     "name": _("Poland złoty"),
     "flag": "🇵🇱",
     "providers": "0,1,2",
-    "symbol": "PLN"
+    "symbol": "PLN",
+    "about": "https://en.wikipedia.org/wiki/Polish_z%C5%82oty",
   },
   "GBP": {
     "name": _("Pound sterling"),
     "flag": "🇬🇧",
     "providers": "0,1,2",
-    "symbol": "£"
+    "symbol": "£",
+    "about": "https://en.wikipedia.org/wiki/Pound_sterling",
   },
   "QAR": {
     "name": _("Qatari Rial"),
     "flag": "🇶🇦",
     "providers": "1,2",
-    "symbol": "QAR"
+    "symbol": "QAR",
+    "about": "https://en.wikipedia.org/wiki/Qatari_riyal",
   },
   "ROL": {
     "name": _("Romanian Leu"),
     "flag": "ROL",
     "providers": "1",
-    "symbol": "ROL"
+    "symbol": "ROL",
+    "about": "https://en.wikipedia.org/wiki/Romanian_leu",
   },
   "RON": {
     "name": _("Romanian Leu"),
     "flag": "🇷🇴",
     "providers": "0,1,2",
-    "symbol": "RON"
+    "symbol": "RON",
+    "about": "https://en.wikipedia.org/wiki/Romanian_leu",
   },
   "RUR": {
     "name": _("Russian Ruble"),
     "flag": "RUR",
     "providers": "1",
-    "symbol": "RUR"
+    "symbol": "RUR",
+    "about": "https://en.wikipedia.org/wiki/Russian_ruble",
   },
   "RUB": {
     "name": _("Russian Ruble"),
     "flag": "🇷🇺",
     "providers": "1,2",
-    "symbol": "RUB"
+    "symbol": "RUB",
+    "about": "https://en.wikipedia.org/wiki/Russian_ruble",
   },
   "RWF": {
     "name": _("Rwandan franc"),
     "flag": "🇷🇼",
     "providers": "1,2",
-    "symbol": "RWF"
+    "symbol": "RWF",
+    "about": "https://en.wikipedia.org/wiki/Rwandan_franc",
   },
   "SVC": {
     "name": _("Salvadoran Colón"),
     "flag": "",
     "providers": "1,2",
-    "symbol": "SVC"
+    "symbol": "SVC",
+    "about": "https://en.wikipedia.org/wiki/Salvadoran_col%C3%B3n",
   },
   "SAR": {
     "name": _("Saudi Riyal"),
     "flag": "🇸🇦",
     "providers": "1,2",
-    "symbol": "SAR"
+    "symbol": "SAR",
+    "about": "https://en.wikipedia.org/wiki/Saudi_riyal",
   },
   "CSD": {
     "name": _("Serbian Dinar"),
     "flag": "CSD",
     "providers": "1",
-    "symbol": "CSD"
+    "symbol": "CSD",
+    "about": "https://en.wikipedia.org/wiki/Serbian_dinar",
   },
   "RSD": {
     "name": _("Serbian Dinar"),
     "flag": "🇷🇸",
     "providers": "1,2",
-    "symbol": "RSD"
+    "symbol": "RSD",
+    "about": "https://en.wikipedia.org/wiki/Serbian_dinar",
   },
   "SCR": {
     "name": _("Seychellois Rupee"),
     "flag": "🇸🇨",
     "providers": "1,2",
-    "symbol": "SCR"
+    "symbol": "SCR",
+    "about": "https://en.wikipedia.org/wiki/Seychellois_rupee",
   },
   "SLL": {
     "name": _("Sierra Leonean Leone"),
     "flag": "🇸🇱",
     "providers": "1,2",
-    "symbol": "SLL"
+    "symbol": "SLL",
+    "about": "https://en.wikipedia.org/wiki/Sierra_Leonean_leone",
   },
   "SGD": {
     "name": _("Singapore Dollar"),
     "flag": "🇸🇬",
     "providers": "0,1,2",
-    "symbol": "SGD"
+    "symbol": "SGD",
+    "about": "https://en.wikipedia.org/wiki/Singapore_dollar",
   },
   "PEN": {
     "name": _("Sol"),
     "flag": "🇵🇪",
     "providers": "1,2",
-    "symbol": "PEN"
+    "symbol": "PEN",
+    "about": "https://en.wikipedia.org/wiki/Peruvian_sol",
   },
   "SBD": {
     "name": _("Solomon Islands Dollar"),
     "flag": "🇸🇧",
     "providers": "1,2",
-    "symbol": "SBD"
+    "symbol": "SBD",
+    "about": "https://en.wikipedia.org/wiki/Solomon_Islands_dollar",
   },
   "SOS": {
     "name": _("Somali Shilling"),
     "flag": "🇸🇴",
     "providers": "1,2",
-    "symbol": "SOS"
+    "symbol": "SOS",
+    "about": "https://en.wikipedia.org/wiki/Somali_shilling",
   },
   "ZAR": {
     "name": _("South African Rand"),
     "flag": "🇿🇦",
     "providers": "0,1,2",
-    "symbol": "ZAR"
+    "symbol": "ZAR",
+    "about": "https://en.wikipedia.org/wiki/South_African_rand",
   },
   "KRW": {
     "name": _("South Korean won"),
     "flag": "🇰🇷",
     "providers": "0,1,2",
-    "symbol": "₩"
+    "symbol": "₩",
+    "about": "https://en.wikipedia.org/wiki/South_Korean_won",
   },
   "VEF": {
     "name": _("Sovereign Bolivar"),
     "flag": "🇻🇪",
     "providers": "1",
-    "symbol": "VEF"
+    "symbol": "VEF",
+    "about": "https://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar",
   },
   "XDR": {
     "name": _("Special Drawing Rights"),
     "flag": "XDR",
     "providers": "1,2",
-    "symbol": "XDR"
+    "symbol": "XDR",
+    "about": "https://en.wikipedia.org/wiki/Special_drawing_rights",
   },
   "LKR": {
     "name": _("Sri Lankan Rupee"),
     "flag": "🇱🇰",
     "providers": "1,2",
-    "symbol": "LKR"
+    "symbol": "LKR",
+    "about": "https://en.wikipedia.org/wiki/Sri_Lankan_rupee",
   },
   "SSP": {
     "name": _("Sudanese pound"),
     "flag": "🇸🇸",
     "providers": "1,2",
-    "symbol": "SSP"
+    "symbol": "SSP",
+    "about": "https://en.wikipedia.org/wiki/Sudanese_pound",
   },
   "SDG": {
     "name": _("Sudanese pound"),
     "flag": "🇸🇩",
     "providers": "1,2",
-    "symbol": "SDG"
+    "symbol": "SDG",
+    "about": "https://en.wikipedia.org/wiki/Sudanese_pound",
   },
   "SRD": {
     "name": _("Surinamese Dollar"),
     "flag": "🇸🇷",
     "providers": "1,2",
-    "symbol": "SRD"
+    "symbol": "SRD",
+    "about": "https://en.wikipedia.org/wiki/Surinamese_dollar",
   },
   "SZL": {
     "name": _("Swazi Lilangeni"),
     "flag": "🇸🇿",
     "providers": "1,2",
-    "symbol": "SZL"
+    "symbol": "SZL",
+    "about": "https://en.wikipedia.org/wiki/Swazi_lilangeni",
   },
   "SEK": {
     "name": _("Swedish Krona"),
     "flag": "🇸🇪",
     "providers": "0,1,2",
-    "symbol": "SEK"
+    "symbol": "SEK",
+    "about": "https://en.wikipedia.org/wiki/Swedish_krona",
   },
   "CHF": {
     "name": _("Swiss Franc"),
     "flag": "🇨🇭",
     "providers": "0,1,2",
-    "symbol": "CHF"
+    "symbol": "CHF",
+    "about": "https://en.wikipedia.org/wiki/Swiss_franc",
   },
   "TJS": {
     "name": _("Tajikistani Somoni"),
     "flag": "🇹🇯",
     "providers": "1,2",
-    "symbol": "TJS"
+    "symbol": "TJS",
+    "about": "https://en.wikipedia.org/wiki/Tajikistani_somoni",
   },
   "TZS": {
     "name": _("Tanzanian Shilling"),
     "flag": "🇹🇿",
     "providers": "1,2",
-    "symbol": "TZS"
+    "symbol": "TZS",
+    "about": "https://en.wikipedia.org/wiki/Tanzanian_shilling",
   },
   "THB": {
     "name": _("Thai Baht"),
     "flag": "🇹🇭",
     "providers": "0,1,2",
-    "symbol": "THB"
+    "symbol": "THB",
+    "about": "https://en.wikipedia.org/wiki/Thai_baht",
   },
   "TOP": {
     "name": _("Tongan Paʻanga"),
     "flag": "🇹🇴",
     "providers": "1,2",
-    "symbol": "TOP"
+    "symbol": "TOP",
+    "about": "https://en.wikipedia.org/wiki/Tongan_pa%CA%BBanga",
   },
   "TTD": {
     "name": _("Trinidad & Tobago Dollar"),
     "flag": "🇹🇹",
     "providers": "1,2",
-    "symbol": "TTD"
+    "symbol": "TTD",
+    "about": "https://en.wikipedia.org/wiki/Trinidad_and_Tobago_dollar",
   },
   "TND": {
     "name": _("Tunisian Dinar"),
     "flag": "🇹🇳",
     "providers": "1,2",
-    "symbol": "TND"
+    "symbol": "TND",
+    "about": "https://en.wikipedia.org/wiki/Tunisian_dinar",
   },
   "TRY": {
     "name": _("Turkish lira"),
     "flag": "🇹🇷",
     "providers": "0,1,2",
-    "symbol": "TRY"
+    "symbol": "TRY",
+    "about": "https://en.wikipedia.org/wiki/Turkish_lira",
   },
   "TMM": {
     "name": _("Turkmenistan manat"),
     "flag": "TMT",
     "providers": "1",
-    "symbol": "TMM"
+    "symbol": "TMM",
+    "about": "https://en.wikipedia.org/wiki/Turkmenistani_manat",
   },
   "TMT": {
     "name": _("Turkmenistan manat"),
     "flag": "🇹🇲",
     "providers": "1,2",
-    "symbol": "TMT"
+    "symbol": "TMT",
+    "about": "https://en.wikipedia.org/wiki/Turkmenistani_manat",
   },
   "UGX": {
     "name": _("Ugandan Shilling"),
     "flag": "🇺🇬",
     "providers": "1,2",
-    "symbol": "UGX"
+    "symbol": "UGX",
+    "about": "https://en.wikipedia.org/wiki/Ugandan_shilling",
   },
   "UAH": {
     "name": _("Ukrainian hryvnia"),
     "flag": "🇺🇦",
     "providers": "1,2",
-    "symbol": "UAH"
+    "symbol": "UAH",
+    "about": "https://en.wikipedia.org/wiki/Ukrainian_hryvnia",
   },
   "AED": {
     "name": _("United Arab Emirates Dirham"),
     "flag": "🇦🇪",
     "providers": "1,2",
-    "symbol": "AED"
+    "symbol": "AED",
+    "about": "https://en.wikipedia.org/wiki/United_Arab_Emirates_dirham",
   },
   "USD": {
     "name": _("United States Dollar"),
     "flag": "🇺🇸",
     "providers": "0,1,2",
-    "symbol": "$"
+    "symbol": "$",
+    "about": "https://en.wikipedia.org/wiki/United_States_dollar",
   },
   "UYU": {
     "name": _("Uruguayan Peso"),
     "flag": "🇺🇾",
     "providers": "1,2",
-    "symbol": "UYU"
+    "symbol": "UYU",
+    "about": "https://en.wikipedia.org/wiki/Uruguayan_peso",
   },
   "UZS": {
     "name": _("Uzbekistani Som"),
     "flag": "🇺🇿",
     "providers": "1,2",
-    "symbol": "UZS"
+    "symbol": "UZS",
+    "about": "https://en.wikipedia.org/wiki/Uzbekistani_sum",
   },
   "VND": {
     "name": _("Vietnamese dong"),
     "flag": "🇻🇳",
     "providers": "1,2",
-    "symbol": "₫"
+    "symbol": "₫",
+    "about": "https://en.wikipedia.org/wiki/Vietnamese_%C4%91%E1%BB%93ng",
   },
   "XOF": {
     "name": _("West African CFA franc"),
     "flag": "",
     "providers": "1,2",
-    "symbol": "XOF"
+    "symbol": "XOF",
+    "about": "https://en.wikipedia.org/wiki/West_African_CFA_franc",
   },
   "YER": {
     "name": _("Yemeni Rial"),
     "flag": "🇾🇪",
     "providers": "1,2",
     "symbol": "YER",
+    "about": "https://en.wikipedia.org/wiki/Yemeni_rial",
   },
   "ZMW": {
     "name": _("Zambian Kwacha"),
     "flag": "🇿🇲",
     "providers": "1,2",
     "symbol": "ZMW",
+    "about": "https://en.wikipedia.org/wiki/Zambian_kwacha",
   },
 }
