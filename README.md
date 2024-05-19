@@ -46,7 +46,7 @@ Valuta has been translated into the following languages:
 <img src="https://hosted.weblate.org/widget/currency-converter/multi-auto.svg" alt="Translation status" />
 </a>
 
-Please help translate Valuta into more languages through [Weblate](https://hosted.weblate.org/engage/valuta/).
+Please help translate Valuta into more languages through [Weblate](https://hosted.weblate.org/engage/currency-converter/).
 
 
 ## Donate
