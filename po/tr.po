@@ -37,20 +37,16 @@ msgid ""
 msgstr ""
 
 #: src/components/currencies/index.blp:9
-#: src/components/currency_selector/index.blp:41 src/window.blp:67
+#: src/components/currency_selector/index.blp:41
+#: src/components/currencies/index.blp:27 src/window.blp:67
 #, fuzzy
 #| msgid "Search Currencies…"
-msgid "Currencies"
+msgid "Search Currencies"
 msgstr "Para Birimi Ara…"
 
-#: src/components/currency_selector/index.blp:41
-#: src/components/currencies/index.blp:27
-msgid "Search"
-msgstr ""
-
 #: src/components/currencies/main.py:83 src/window.blp:75
-msgid "About"
-msgstr "Hakkında"
+msgid "About Valuta"
+msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
@@ -753,8 +749,13 @@ msgstr "Klavye kısayolları"
 msgid "Quit"
 msgstr "Çıkış"
 
-#~ msgid "Search Currencies…"
+#, fuzzy
+#~| msgid "Search Currencies…"
+#~ msgid "Currencies"
 #~ msgstr "Para Birimi Ara…"
+
+#~ msgid "About"
+#~ msgstr "Hakkında"
 
 #~ msgid "Preferences"
 #~ msgstr "Tercihler"

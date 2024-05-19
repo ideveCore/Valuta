@@ -36,18 +36,16 @@ msgstr ""
 "moedas."
 
 #: src/components/currencies/index.blp:9
-#: src/components/currency_selector/index.blp:41 src/window.blp:67
-msgid "Currencies"
-msgstr "Moedas"
-
 #: src/components/currency_selector/index.blp:41
-#: src/components/currencies/index.blp:27
-msgid "Search"
-msgstr "Pesquisar"
+#: src/components/currencies/index.blp:27 src/window.blp:67
+#, fuzzy
+#| msgid "Search Currencies…"
+msgid "Search Currencies"
+msgstr "Pesquisar por moedas…"
 
 #: src/components/currencies/main.py:83 src/window.blp:75
-msgid "About"
-msgstr "Sobre"
+msgid "About Valuta"
+msgstr "Sobre o Valuta"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
@@ -748,11 +746,14 @@ msgstr "Atalhos de teclado"
 msgid "Quit"
 msgstr "Sair"
 
-#~ msgid "Search Currencies…"
-#~ msgstr "Pesquisar por moedas…"
+#~ msgid "Currencies"
+#~ msgstr "Moedas"
 
-#~ msgid "About Valuta"
-#~ msgstr "Sobre o Valuta"
+#~ msgid "Search"
+#~ msgstr "Pesquisar"
+
+#~ msgid "About"
+#~ msgstr "Sobre"
 
 #~ msgid "Preferences"
 #~ msgstr "Preferências"
