@@ -33,13 +33,13 @@ msgid ""
 msgstr ""
 
 #: src/components/currencies/index.blp:9
-#: src/components/currency_selector/currency_selector.blp:41 src/window.blp:67
+#: src/components/currency_selector/index.blp:41 src/window.blp:67
 #, fuzzy
 #| msgid "Search Currencies…"
 msgid "Currencies"
 msgstr "Buscar divisas…"
 
-#: src/components/currency_selector/currency_selector.blp:41
+#: src/components/currency_selector/index.blp:41
 #: src/components/currencies/index.blp:27
 msgid "Search"
 msgstr ""
