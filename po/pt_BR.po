@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Currency Converter master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-05-19 13:09+0000\n"
+"PO-Revision-Date: 2024-05-19 22:42+0000\n"
 "Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/pt_BR/>\n"
@@ -37,15 +37,13 @@ msgstr ""
 
 #: src/components/currencies/index.blp:9
 #: src/components/currency_selector/currency_selector.blp:41 src/window.blp:67
-#, fuzzy
-#| msgid "Search Currencies…"
 msgid "Currencies"
-msgstr "Pesquisar por moedas…"
+msgstr "Moedas"
 
 #: src/components/currency_selector/currency_selector.blp:41
 #: src/components/currencies/index.blp:27
 msgid "Search"
-msgstr ""
+msgstr "Pesquisar"
 
 #: src/components/currencies/main.py:83 src/window.blp:75
 msgid "About"
