@@ -28,17 +28,19 @@ msgid ""
 msgstr ""
 
 #: src/components/currencies/index.blp:9
+#: src/components/currency_selector/currency_selector.blp:41
 #: src/window.blp:67
 msgid "Currencies"
 msgstr ""
 
-#: src/components/currencies/index.blp:19
+#: src/components/currency_selector/currency_selector.blp:41
+#: src/components/currencies/index.blp:27
 msgid "Search"
 msgstr ""
 
-#: src/components/currency_selector/currency_selector.blp:41
-#: src/components/currencies/index.blp:27
-msgid "Search Currencies…"
+#: src/components/currencies/main.py:83
+#: src/window.blp:75
+msgid "About"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:9
@@ -734,10 +736,6 @@ msgstr ""
 
 #: src/window.blp:71
 msgid "Keyboard shortcuts"
-msgstr ""
-
-#: src/window.blp:75
-msgid "About Valuta"
 msgstr ""
 
 #: src/window.blp:79

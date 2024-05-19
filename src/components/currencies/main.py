@@ -80,7 +80,7 @@ def currencies(application: Adw.Application):
       if currencies_list[key]["about_link"]:
         about_button = Gtk.Button(
           icon_name="help-about-symbolic",
-          tooltip_text=_("About currency"),
+          tooltip_text=_("About"),
           halign="center",
           valign="center",
         )
