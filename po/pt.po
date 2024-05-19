@@ -36,7 +36,18 @@ msgstr ""
 "viagens, orçamentos ou sempre que precisar converter rapidamente entre duas "
 "moedas."
 
+#: src/components/currencies/index.blp:9 src/window.blp:67
+#, fuzzy
+#| msgid "Search Currencies…"
+msgid "Currencies"
+msgstr "Pesquisar moedas…"
+
+#: src/components/currencies/index.blp:19
+msgid "Search"
+msgstr ""
+
 #: src/components/currency_selector/currency_selector.blp:41
+#: src/components/currencies/index.blp:27
 msgid "Search Currencies…"
 msgstr "Pesquisar moedas…"
 
@@ -733,15 +744,15 @@ msgstr ""
 msgid "Moeda.info"
 msgstr ""
 
-#: src/window.blp:62
+#: src/window.blp:71
 msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
 
-#: src/window.blp:66
+#: src/window.blp:75
 msgid "About Valuta"
 msgstr "Sobre o Valuta"
 
-#: src/window.blp:70
+#: src/window.blp:79
 msgid "Quit"
 msgstr "Sair"
 

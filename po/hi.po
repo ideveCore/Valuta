@@ -36,7 +36,18 @@ msgstr ""
 "समय, या किसी अन्य समय जब आपको दो मुद्राओं के बीच शीघ्रता से परिवर्तन करने की आवश्यकता "
 "हो तो इसका उपयोग करें।"
 
+#: src/components/currencies/index.blp:9 src/window.blp:67
+#, fuzzy
+#| msgid "Search Currencies…"
+msgid "Currencies"
+msgstr "मुद्राएं खोजें…"
+
+#: src/components/currencies/index.blp:19
+msgid "Search"
+msgstr ""
+
 #: src/components/currency_selector/currency_selector.blp:41
+#: src/components/currencies/index.blp:27
 msgid "Search Currencies…"
 msgstr "मुद्राएं खोजें…"
 
@@ -731,15 +742,15 @@ msgstr "Google (अस्थिर)"
 msgid "Moeda.info"
 msgstr "Moeda.info"
 
-#: src/window.blp:62
+#: src/window.blp:71
 msgid "Keyboard shortcuts"
 msgstr "कीबोर्ड शॉर्टकट"
 
-#: src/window.blp:66
+#: src/window.blp:75
 msgid "About Valuta"
 msgstr "Valuta के बारे में"
 
-#: src/window.blp:70
+#: src/window.blp:79
 msgid "Quit"
 msgstr "छोड़ें"
 
