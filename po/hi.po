@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-05-19 13:09+0000\n"
+"PO-Revision-Date: 2024-05-21 09:01+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/currency-converter/"
 "currency-converter/hi/>\n"
@@ -38,14 +38,12 @@ msgstr ""
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "खोजें"
 
 #: src/components/currencies/index.blp:27
 #: src/components/currency_selector/index.blp:41
-#, fuzzy
-#| msgid "Search Currencies…"
 msgid "Search Currencies"
-msgstr "मुद्राएं खोजें…"
+msgstr "मुद्राएं खोजें"
 
 #: src/components/currencies/main.py:83
 msgid "About"
@@ -743,10 +741,8 @@ msgid "Moeda.info"
 msgstr "Moeda.info"
 
 #: src/components/currencies/index.blp:9 src/window.blp:67
-#, fuzzy
-#| msgid "Search Currencies…"
 msgid "Currencies"
-msgstr "मुद्राएं खोजें…"
+msgstr "मुद्राएं"
 
 #: src/window.blp:71
 msgid "Keyboard shortcuts"
