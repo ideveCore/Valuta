@@ -47,7 +47,7 @@ def currencies(application: Adw.Application):
     currencies_code_list.append(f"{currency} – {application.utils.currencies[currency]['name'].replace('&', '&amp;')}")
     providers = application.utils.currencies[currency]["providers"].split(",")
     currencies_list[key] = {
-      "name": f"{currency} – {application.utils.currencies[currency]['name'].replace('&', '&amp;')}",
+      "name": _(f"{currency} – {application.utils.currencies[currency]['name'].replace('&', '&amp;')}"),
       "providers": ', '.join(substituir_numeros(providers, application.utils.providers)),
       "about_link": application.utils.currencies[currency]["about"]
     }

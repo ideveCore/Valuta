@@ -40,3 +40,4 @@ class CurrencySelectorRow(Gtk.ListBoxRow):
             GObject.BindingFlags.SYNC_CREATE
         )
 
+
