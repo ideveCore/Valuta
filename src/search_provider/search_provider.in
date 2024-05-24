@@ -1,5 +1,29 @@
 #!@PYTHON@
+#
 # Copyright 2023 Ideve Core
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# This file was inspired by the search_provider.in file from the dialect-app project
+# developed by dialect-team (available at https://github.com/dialect-app/dialect).
+# This file is not a direct copy of the original file, but rather an original work based on it.
+# This file is licensed under the GNU General Public License (GPL) version 3 or later.
+# For more information about the GPL license, please refer to:
+# https://www.gnu.org/licenses/gpl-3.0.en.html
+#
+# The complete code for the application is available at https://github.com/dialect-app/dialect.
+#
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import sys
@@ -72,15 +96,16 @@ class ConvertionService:
     self.utils.settings.connect("changed::src-currency", self.on_currencies_changed);
     self.utils.settings.connect("changed::dest-currency", self.on_currencies_changed);
 
-  def GetInitialResultSet(self, terms):
+  def GetInitialResultSet(self, terms, callback):
     value = ' '.join(terms)
+
     if self.utils.parse_number(value):
       self.currency_data['from_currency_value'] = float(self.utils.parse_number(value))
       converter_id = self.convertion(value)
       results = [converter_id]
       if not converter_id.startswith(ERROR_PREFIX):
         results.append(CLIPBOARD_PREFIX + value)
-      return results
+      callback(results)
 
     value_splited = value.upper().split(' ')
     if len(value_splited) == 4:
@@ -95,29 +120,35 @@ class ConvertionService:
             results = [converter_id]
             if not converter_id.startswith(ERROR_PREFIX):
               results.append(CLIPBOARD_PREFIX + value)
-            return results
+            callback(results)
           else:
             self.currency_data['from_currency_value'] = float(self.utils.parse_number(value_splited[0]))
             converter_id = self.convertion(value)
             results = [converter_id]
             if not converter_id.startswith(ERROR_PREFIX):
               results.append(CLIPBOARD_PREFIX + value)
-            return results
+            callback(results)
 
-  def GetSubsearchResultSet(self, _previous_results, new_terms):
-    return self.GetInitialResultSet(new_terms)
+  def GetSubsearchResultSet(self, _previous_results, new_terms, callback):
+    return self.GetInitialResultSet(new_terms, callback)
 
-  def GetResultMetas(self, ids):
+  def GetResultMetas(self, ids, callback):
     """Send destination currency value"""
+
     converter_id = ids[0]
+
     if len(ids) == 1:
       value = converter_id
       if converter_id in self.dest_currencies:
         value = self.dest_currencies[converter_id]
-      return [{
-        'id': GLib.Variant("s", converter_id),
-        'name': GLib.Variant("s", value),
-      }]
+      callback(
+        [
+          {
+            'id': GLib.Variant("s", converter_id),
+            'name': GLib.Variant("s", value),
+          }
+        ]
+      )
 
     elif (
       len(ids) == 2 and converter_id in self.dest_currencies
@@ -125,46 +156,54 @@ class ConvertionService:
     ):
       value = self.dest_currencies[converter_id]
       description = f'{_("According to")} {self.utils.settings.get_string("providers").upper()}'
+
       self.dest_currencies.clear()
-      return [
-        {
-          'id': GLib.Variant("s", converter_id),
-          'name': GLib.Variant("s", f'{self.utils.format_number(str(self.currency_data["from_currency_value"]))} {self.from_currency} = {self.utils.format_number(str(value))} {self.to_currency}'),
-          'description': GLib.Variant("s", description),
-        },
-        {
-          'id': GLib.Variant("s", ids[1]),
-          'name': GLib.Variant("s", _('Copy')),
-          'description': GLib.Variant("s", _('Copy convertion to clipboard')),
-          'clipboardText': GLib.Variant("s", self.utils.format_number(str(value)))
-        }
-      ]
+
+      callback(
+        [
+          {
+            'id': GLib.Variant("s", converter_id),
+            'name': GLib.Variant("s", f'{self.utils.format_number(str(self.currency_data["from_currency_value"]))} {self.from_currency} = {self.utils.format_number(str(value))} {self.to_currency}'),
+            'description': GLib.Variant("s", description),
+          },
+          {
+            'id': GLib.Variant("s", ids[1]),
+            'name': GLib.Variant("s", _('Copy')),
+            'description': GLib.Variant("s", _('Copy convertion to clipboard')),
+            'clipboardText': GLib.Variant("s", self.utils.format_number(str(value)))
+          }
+        ]
+      )
 
     else:
-      return [
-        dict(
-          id=GLib.Variant("s", id),
-          name=GLib.Variant("s", id),
-        )
-        for id in ids
-      ]
+      callback(
+        [
+          dict(
+            id=GLib.Variant("s", id),
+            name=GLib.Variant("s", id),
+          )
+          for id in ids
+        ]
+      )
 
-  def ActivateResult(self, result_id, terms, timestamp):
+  def ActivateResult(self, result_id, terms, timestamp, callback):
     if not result_id.startswith(CLIPBOARD_PREFIX):
       self.LaunchSearch(terms, timestamp)
+    callback((None,))
 
   def LaunchSearch(self, terms, _timestamp):
     value = ' '.join(terms)
     splited_value = value.split(' ')
     if len(splited_value) == 4:
       GLib.spawn_async_with_pipes(
-          None, ['@BIN@', '--src-currency-value', splited_value[3]], None,
+          None, ['@BIN@', '--src-currency-value', splited_value[0]], None,
           GLib.SpawnFlags.SEARCH_PATH, None
       )
-    GLib.spawn_async_with_pipes(
-      None, ['@BIN@', '--src-currency-value', value], None,
-      GLib.SpawnFlags.SEARCH_PATH, None
-    )
+    else:
+      GLib.spawn_async_with_pipes(
+        None, ['@BIN@', '--src-currency-value', value], None,
+        GLib.SpawnFlags.SEARCH_PATH, None
+      )
 
   def convertion(self, from_currency_value=None):
    if not self.from_currency == self.to_currency:
@@ -182,15 +221,6 @@ class ConvertionService:
 
     return error_id
 
-  def is_number(self, value):
-    if not value:
-      return False
-    try:
-      f=float(value)
-      return True
-    except ValueError:
-      return False
-
   def on_currencies_changed(self, widget, state):
     self.from_currency = self.utils.settings.get_string('src-currency')
     self.to_currency = self.utils.settings.get_string('dest-currency')
@@ -207,9 +237,11 @@ class ConvertionServiceApplication(Gio.Application):
 
   def do_dbus_register(self, connection, object_path):
     try:
-      connection.register_object(object_path=object_path,
-                                 interface_info=self.search_interface,
-                                 method_call_closure=self.on_dbus_method_call)
+      connection.register_object(
+        object_path=object_path,
+        interface_info=self.search_interface,
+        method_call_closure=self.on_dbus_method_call
+      )
     except:
       self.quit()
       return False
@@ -217,20 +249,31 @@ class ConvertionServiceApplication(Gio.Application):
       return True
 
   def on_dbus_method_call(self, connection, sender, object_path, interface_name, method_name, parameters, invocation):
+    def return_value(results):
+      results = (results,)
+      if results == (None,):
+        results = ()
+      results_type = (
+        "("
+        + "".join(
+          map(
+            lambda argument_info: argument_info.signature,
+            self.search_interface.lookup_method(method_name).out_args,
+          )
+        )
+        + ")"
+      )
+      wrapped_results = GLib.Variant(results_type, results)
+      invocation.return_value(wrapped_results)
+      self.release()
+
     self.hold()
 
     method = getattr(self.service_object, method_name)
     arguments = list(parameters.unpack())
+    arguments.append(return_value)
 
-    results = method(*arguments),
-    if results == (None,):
-      results = ()
-    results_type = "(" + "".join(map(lambda argument_info: argument_info.signature, self.search_interface.lookup_method(method_name).out_args)) + ")"
-    wrapped_results = GLib.Variant(results_type, results)
-
-    invocation.return_value(wrapped_results)
-
-    self.release()
+    method(*arguments)
 
 if __name__ == "__main__":
     app = ConvertionServiceApplication()
