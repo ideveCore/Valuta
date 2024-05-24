@@ -40,14 +40,9 @@ msgstr ""
 msgid "Search"
 msgstr "खोजें"
 
-#: src/components/currencies/index.blp:27
 #: src/components/currency_selector/index.blp:41
 msgid "Search Currencies"
 msgstr "मुद्राएं खोजें"
-
-#: src/components/currencies/main.py:83
-msgid "About"
-msgstr "बारे में"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
@@ -740,7 +735,7 @@ msgstr "Google (अस्थिर)"
 msgid "Moeda.info"
 msgstr "Moeda.info"
 
-#: src/components/currencies/index.blp:9 src/window.blp:67
+#: src/window.blp:67
 msgid "Currencies"
 msgstr "मुद्राएं"
 
@@ -755,6 +750,9 @@ msgstr "Valuta के बारे में"
 #: src/window.blp:79
 msgid "Quit"
 msgstr "छोड़ें"
+
+#~ msgid "About"
+#~ msgstr "बारे में"
 
 #~ msgid "Preferences"
 #~ msgstr "प्राथमिकताएं"

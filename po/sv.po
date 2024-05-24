@@ -36,13 +36,8 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: src/components/currencies/index.blp:27
 #: src/components/currency_selector/index.blp:41
 msgid "Search Currencies"
-msgstr ""
-
-#: src/components/currencies/main.py:83
-msgid "About"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:9
@@ -736,7 +731,7 @@ msgstr ""
 msgid "Moeda.info"
 msgstr ""
 
-#: src/components/currencies/index.blp:9 src/window.blp:67
+#: src/window.blp:67
 msgid "Currencies"
 msgstr ""
 

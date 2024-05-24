@@ -39,14 +39,9 @@ msgstr ""
 msgid "Search"
 msgstr "Pesquisar"
 
-#: src/components/currencies/index.blp:27
 #: src/components/currency_selector/index.blp:41
 msgid "Search Currencies"
 msgstr "Pesquisar por moedas"
-
-#: src/components/currencies/main.py:83
-msgid "About"
-msgstr "Sobre"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
@@ -739,7 +734,7 @@ msgstr "Google (instável)"
 msgid "Moeda.info"
 msgstr "Moeda.info"
 
-#: src/components/currencies/index.blp:9 src/window.blp:67
+#: src/window.blp:67
 msgid "Currencies"
 msgstr "Moedas"
 
@@ -754,6 +749,9 @@ msgstr "Sobre o Valuta"
 #: src/window.blp:79
 msgid "Quit"
 msgstr "Sair"
+
+#~ msgid "About"
+#~ msgstr "Sobre"
 
 #~ msgid "Preferences"
 #~ msgstr "Preferências"
