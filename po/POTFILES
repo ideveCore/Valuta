@@ -1,8 +1,6 @@
 data/io.github.idevecore.Valuta.appdata.xml.in.in
 data/io.github.idevecore.Valuta.desktop.in.in
 data/io.github.idevecore.Valuta.gschema.xml.in
-src/components/currencies/index.blp
-src/components/currencies/main.py
 src/components/currency_selector/index.blp
 src/components/currency_selector/currency_selector.py
 src/components/currency_selector_row/index.blp
