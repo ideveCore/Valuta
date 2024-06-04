@@ -9,24 +9,22 @@ msgstr ""
 "Project-Id-Version: CurrencyConverter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-03-11 23:01+0000\n"
-"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/currency-"
-"converter/currency-converter/tr/>\n"
+"PO-Revision-Date: 2024-06-05 20:09+0000\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"currency-converter/currency-converter/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 # Arayüze sığmadığı için kısaltıldı
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
-#, fuzzy
-#| msgid "Error when get currencies data"
 msgid "Convert between currencies"
-msgstr "Veriler alınırken hata oluştu"
+msgstr "Para birimleri arasında dönüştür"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
@@ -38,13 +36,11 @@ msgstr ""
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "Ara"
 
 #: src/components/currency_selector/index.blp:41
-#, fuzzy
-#| msgid "Search Currencies…"
 msgid "Search Currencies"
-msgstr "Para Birimi Ara…"
+msgstr "Para Birimi Ara"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
@@ -63,7 +59,7 @@ msgstr "Çık"
 
 #: src/pages/convertion/convertion.py:104
 msgid "The input value is invalid."
-msgstr ""
+msgstr "Girdi değeri geçersiz."
 
 #: src/pages/convertion/convertion.py:124
 msgid "Error converting, please try again."
@@ -87,7 +83,7 @@ msgstr "Yeniden yükle"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
-msgstr ""
+msgstr "Kaynak"
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
@@ -707,17 +703,15 @@ msgstr "Zambia Kvaçası"
 
 #: src/requests.py:57
 msgid "Results for"
-msgstr ""
+msgstr "Sonuçlar"
 
 #: src/requests.py:75
-#, fuzzy
-#| msgid "Unable to convert currency, failed to fetch results from Google"
 msgid "Unable to convert currency, failed to fetch results from Google."
-msgstr "Para birimi dönüştürülemiyor, Google'dan sonuç alınamadı"
+msgstr "Para birimi dönüştürülemedi, Google'dan sonuç alınamadı."
 
 #: src/window.blp:16
 msgid "Source"
-msgstr ""
+msgstr "Kaynak"
 
 #: src/window.blp:24
 msgid "Main menu"
@@ -729,21 +723,19 @@ msgstr "Sağlayıcılar"
 
 #: src/window.blp:48
 msgid "ECB"
-msgstr ""
+msgstr "ECB"
 
 #: src/window.blp:53
 msgid "Google (unstable)"
-msgstr ""
+msgstr "Google (dengesiz)"
 
 #: src/window.blp:58
 msgid "Moeda.info"
-msgstr ""
+msgstr "Moeda.info"
 
 #: src/window.blp:67
-#, fuzzy
-#| msgid "Search Currencies…"
 msgid "Currencies"
-msgstr "Para Birimi Ara…"
+msgstr "Para Birimleri"
 
 #: src/window.blp:71
 msgid "Keyboard shortcuts"
@@ -751,7 +743,7 @@ msgstr "Klavye kısayolları"
 
 #: src/window.blp:75
 msgid "About Valuta"
-msgstr ""
+msgstr "Valuta Hakkında"
 
 #: src/window.blp:79
 msgid "Quit"
