@@ -39,12 +39,10 @@ def convertion_page(application: Adw.Application, from_currency_value):
     to_currency_selector: CurrencySelector = builder.get_object("to_currency_selector")
     from_currency_entry = builder.get_object("from_currency_entry")
     to_currency_entry = builder.get_object("to_currency_entry")
-    invert_currencies_button = builder.get_object("invert_currencies")
     stack = builder.get_object("stack")
     reload = builder.get_object("reload")
     toast_overlay = builder.get_object("toast_overlay")
     to_currency_value = 0
-
     def load_currencies(provider: int):
         codes = {currency: details for currency, details in CODES.items() if str(provider) in details['providers']}
         from_currency_model = CurrenciesListModel(currency_names_func)
@@ -64,13 +62,6 @@ def convertion_page(application: Adw.Application, from_currency_value):
         stack.set_visible_child_name("loading")
         load_currencies(settings.get_enum(key))
         convert(from_currency_entry.get_text(), force=True)
-
-
-    def invert_currencies():
-        from_code = from_currency_selector.selected
-        to_code = to_currency_selector.selected
-        from_currency_selector.set_selected(to_code)
-        to_currency_selector.set_selected(from_code)
 
     def is_loading():
         return stack.get_visible_child_name() == "loading"
@@ -123,10 +114,8 @@ def convertion_page(application: Adw.Application, from_currency_value):
                 stack.set_visible_child_name("convertion-error")
 
     def currency_selectors_changed(_obj, _param):
-        from_code = from_currency_selector.selected
-        to_code = to_currency_selector.selected
-        settings.set_string('src-currency', from_code)
-        settings.set_string('dest-currency', to_code)
+        from_code = settings.get_string("src-currency")
+        to_code = settings.get_string("dest-currency")
         if from_code != to_code:
             convert(from_currency_entry.get_text())
 
@@ -134,10 +123,11 @@ def convertion_page(application: Adw.Application, from_currency_value):
     from_currency_entry.connect('changed', lambda entry: convert(entry.get_text()))
     from_currency_selector.connect('notify::selected', currency_selectors_changed)
     to_currency_selector.connect('notify::selected', currency_selectors_changed)
-    invert_currencies_button.connect('clicked', lambda button: invert_currencies())
     reload.connect('clicked', lambda button: convert(from_currency_entry.get_text()))
     convertion.connect("converted", converted)
     settings.connect("changed::providers", change_provider)
+    settings.connect("changed::src-currency", lambda settings, key: from_currency_selector.set_selected(settings.get_string(key)))
+    settings.connect("changed::dest-currency", lambda settings, key: to_currency_selector.set_selected(settings.get_string(key)))
     settings.connect("changed::high-precision", lambda settings, key: convert(from_currency_entry.get_text()))
 
     if from_currency_value:
