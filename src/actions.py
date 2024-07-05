@@ -26,12 +26,22 @@ from .about import about
 def application_actions(application: Adw.Application):
   quit_action = Gio.SimpleAction.new(name='quit')
   about_action = Gio.SimpleAction.new(name='about')
+  switch_currencies = Gio.SimpleAction.new(name="switch-currencies")
+
+  def invert_currencies():
+    from_code = application.utils.settings.get_string('src-currency')
+    to_code = application.utils.settings.get_string('dest-currency')
+    application.utils.settings.set_string('src-currency', to_code)
+    application.utils.settings.set_string('dest-currency', from_code)
 
   quit_action.connect('activate', lambda simple_action, parameter: application.quit())
   about_action.connect('activate', lambda simple_action, parameter : about(application).present(application.get_active_window()))
+  switch_currencies.connect('activate', lambda simple_action, parameter : invert_currencies())
 
   application.add_action(quit_action)
   application.add_action(about_action)
+  application.add_action(switch_currencies)
   application.set_accels_for_action('app.quit', ['<primary>q'])
   application.set_accels_for_action('app.quit', ['<primary>w'])
+  application.set_accels_for_action('app.switch-currencies', ['<primary>s'])
   application.set_accels_for_action('win.show-help-overlay', ['<Primary>question'])
