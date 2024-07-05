@@ -48,7 +48,7 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
     content = builder.get_object("content")
     menu_button = builder.get_object("menu_button")
     info = builder.get_object("info")
-    disclaimer = builder.get_object("disclaimer")
+    source = builder.get_object("source")
     providers_action_group = Gio.SimpleActionGroup.new();
     window.insert_action_group("window", providers_action_group);
     providers_action_group.add_action(settings.create_action('providers'));
@@ -81,8 +81,10 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
         window.set_help_overlay(Shortcuts())
 
     def converted(data: Dict[str, Union[str, int]]):
-        info.set_text(data["info"])
-        disclaimer.set_visible(True)
+        info.set_text(f'{data["info"]} -')
+        source.set_label(application.utils.settings.get_string("providers").upper())
+        source.set_uri(convertion.get_convertion()['disclaimer'])
+        source.set_visible(True)
 
     def load_convertion_page(from_currency_value: int = 0):
         content.set_child(convertion_page(application, from_currency_value))
@@ -95,7 +97,6 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
         );
 
     load_window_state()
-    disclaimer.connect('clicked', lambda button: open_uri(convertion.get_convertion()['disclaimer']))
     convertion.connect("converted", converted)
     load_convertion_page(from_currency_value)
     window.set_application(application)

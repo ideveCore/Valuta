@@ -10,12 +10,6 @@ Adw.ApplicationWindow window {
   content: Adw.ToolbarView {
     [top]
     Adw.HeaderBar {
-      [start]
-      Gtk.Button disclaimer {
-        icon-name: "code-symbolic";
-        tooltip-text: _("Source");
-        visible: false;
-      }
       [end]
       MenuButton menu_button {
         primary: true;
@@ -27,38 +21,40 @@ Adw.ApplicationWindow window {
     content: Adw.Bin content {};
     [bottom]
     Gtk.Box {
+      styles ["toolbar"]
       orientation: horizontal;
       halign: center;
+      margin-bottom: 8;
       Gtk.Label info {
         styles ["dim-label"]
         label: _("");
       }
-
-      styles ["toolbar"]
+      Gtk.LinkButton source {
+        tooltip-text: _("Source");
+        visible: false;
+      }
     }
   };
 }
 
 menu primary_menu {
   section {
-    submenu {
-      label: _('Providers');
-      section {
-        item {
-          label: _("ECB");
-          action: 'window.providers';
-          target: 'ecb';
-        }
-        item {
-          label: _("Google (unstable)");
-          action: 'window.providers';
-          target: 'google';
-        }
-        item {
-          label: _("Moeda.info");
-          action: 'window.providers';
-          target: 'mi';
-        }
+    label: _('Providers');
+    section {
+      item {
+        label: _("ECB");
+        action: 'window.providers';
+        target: 'ecb';
+      }
+      item {
+        label: _("Google (unstable)");
+        action: 'window.providers';
+        target: 'google';
+      }
+      item {
+        label: _("Moeda.info");
+        action: 'window.providers';
+        target: 'mi';
       }
     }
   }
@@ -70,10 +66,6 @@ menu primary_menu {
     item {
       label: _("About Valuta");
       action: "app.about";
-    }
-    item {
-      label: _("Quit");
-      action: "app.quit";
     }
   }
 }

@@ -55,8 +55,9 @@ class Providers:
     def create_info(self, date: str, time: str = "00:00:00"):
         date = date.split("-")
         time = time.split(":")
-        date_time = GLib.DateTime.new_utc(float(date[0]), float(date[1]), float(date[2]), float(time[0]), float(time[1]), float(time[2]))
-        return f"{_('Results for')} {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')} - UTC"
+        date_time = GLib.DateTime.new_local(float(date[0]), float(date[1]), float(date[2]), float(time[0]), float(time[1]), float(time[2]))
+        return date_time.format("%B%e, %Y")
+        # return f"{_('Results for')} {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')}"
 
 class ECB(Providers):
     def mount_url(self):
