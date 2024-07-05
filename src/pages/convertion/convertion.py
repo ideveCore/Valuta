@@ -92,10 +92,9 @@ def convertion_page(application: Adw.Application, from_currency_value):
         if not is_loading() and value or force:
             value = application.utils.parse_number(value)
             if not value:
-                toast_overlay.add_toast(Adw.Toast.new(
-                    title = _("The input value is invalid."),
-                ))
+                from_currency_entry.add_css_class("error")
                 return
+            from_currency_entry.remove_css_class("error")
             def thread_cb(task: Gio.Task, self, task_data: object, cancellable: Gio.Cancellable):
                 try:
                     convertion.convert(float(value), from_currency_selector.selected, to_currency_selector.selected, settings.get_enum("providers"))
