@@ -8,19 +8,21 @@
   <description>
     <p>Valuta is a simple and fast conversion tool, ideal for those who need to convert between different currencies repeatedly. Use it while traveling, budgeting, or anytime else you need to quickly convert between two currencies.</p>
   </description>
+  <launchable type="desktop-id">@app-id@.desktop</launchable>
   <url type="homepage">https://github.com/ideveCore/valuta</url>
   <url type="bugtracker">https://github.com/ideveCore/valuta/issues</url>
   <url type="vcs-browser">https://github.com/ideveCore/valuta</url>
   <url type="translate">https://hosted.weblate.org/engage/currency-converter/</url>
   <url type="donation">https://ko-fi.com/idevecore</url>
   <releases>
-    <release version="1.3.0" date="2024-06-01">
+    <release version="1.3.0" date="2024-07-05">
       <description translate="no">
         <p>In this version we bring:</p>
         <ul>
           <li>Redesign of the app.</li>
           <li>Changes in the search provider..</li>
           <li>Translation updates.</li>
+          <li>Added new providers.</li>
         </ul>
       </description>
     </release>
@@ -78,5 +80,6 @@
   </screenshots>
   <developer_name>Ideve Core</developer_name>
   <content_rating type="oars-1.1" />
+  <provides>@app-id@.desktop</provides>
 </component>
 
