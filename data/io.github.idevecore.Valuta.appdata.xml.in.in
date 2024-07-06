@@ -79,7 +79,7 @@
     </screenshot>
   </screenshots>
   <developer_name>Ideve Core</developer_name>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.0" />
   <provides>@app-id@.desktop</provides>
 </component>
 
