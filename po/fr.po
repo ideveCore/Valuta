@@ -47,25 +47,28 @@ msgctxt "shortcuts window"
 msgid "General"
 msgstr "Général"
 
-#: src/components/shortcuts/shortcuts.blp:25
+#: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
 msgstr "Raccourcis clavier"
+
+#: src/components/shortcuts/shortcuts.blp:15
+#, fuzzy
+#| msgid "Search Currencies…"
+msgctxt "shortcuts window"
+msgid "Switch currencies"
+msgstr "Rechercher des devises…"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Quitter"
 
-#: src/pages/convertion/convertion.py:104
-msgid "The input value is invalid."
-msgstr ""
-
-#: src/pages/convertion/convertion.py:124
+#: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
 msgstr "Erreur de conversion, veuillez réessayer."
 
-#: src/pages/convertion/index.blp:11
+#: src/pages/convertion/index.blp:13
 msgid "From"
 msgstr "Depuis"
 
@@ -73,11 +76,11 @@ msgstr "Depuis"
 msgid "Switch"
 msgstr "Inverser"
 
-#: src/pages/convertion/index.blp:36
+#: src/pages/convertion/index.blp:39
 msgid "To"
 msgstr "Vers"
 
-#: src/pages/convertion/index.blp:86
+#: src/pages/convertion/index.blp:87
 msgid "Reload"
 msgstr "Recharger"
 
@@ -701,11 +704,7 @@ msgstr ""
 msgid "Zambian Kwacha"
 msgstr ""
 
-#: src/requests.py:57
-msgid "Results for"
-msgstr ""
-
-#: src/requests.py:75
+#: src/requests.py:95
 #, fuzzy
 #| msgid "Unable to convert currency, failed to fetch results from Google"
 msgid "Unable to convert currency, failed to fetch results from Google."
@@ -713,47 +712,45 @@ msgstr ""
 "Impossible de convertir la devise, échec de la recherche de résultats sur "
 "Google"
 
-#: src/window.blp:16
-msgid "Source"
-msgstr ""
-
-#: src/window.blp:24
+#: src/window.blp:18
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: src/window.blp:45
+#: src/window.blp:34
+msgid "Source"
+msgstr ""
+
+#: src/window.blp:43
 msgid "Providers"
 msgstr "Fournisseurs"
 
-#: src/window.blp:48
+#: src/window.blp:46
 msgid "ECB"
 msgstr ""
 
-#: src/window.blp:53
+#: src/window.blp:51
 msgid "Google (unstable)"
 msgstr ""
 
-#: src/window.blp:58
+#: src/window.blp:56
 msgid "Moeda.info"
 msgstr ""
 
-#: src/window.blp:67
-#, fuzzy
-#| msgid "Search Currencies…"
-msgid "Currencies"
-msgstr "Rechercher des devises…"
-
-#: src/window.blp:71
+#: src/window.blp:64
 msgid "Keyboard shortcuts"
 msgstr "Raccourcis clavier"
 
-#: src/window.blp:75
+#: src/window.blp:68
 msgid "About Valuta"
 msgstr ""
 
-#: src/window.blp:79
-msgid "Quit"
-msgstr "Quitter"
+#, fuzzy
+#~| msgid "Search Currencies…"
+#~ msgid "Currencies"
+#~ msgstr "Rechercher des devises…"
+
+#~ msgid "Quit"
+#~ msgstr "Quitter"
 
 #~ msgid "Preferences"
 #~ msgstr "Préférences"

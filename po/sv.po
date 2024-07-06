@@ -45,9 +45,14 @@ msgctxt "shortcuts window"
 msgid "General"
 msgstr ""
 
-#: src/components/shortcuts/shortcuts.blp:25
+#: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
+msgstr ""
+
+#: src/components/shortcuts/shortcuts.blp:15
+msgctxt "shortcuts window"
+msgid "Switch currencies"
 msgstr ""
 
 #: src/components/shortcuts/shortcuts.blp:19
@@ -55,15 +60,11 @@ msgctxt "shortcuts window"
 msgid "Quit"
 msgstr ""
 
-#: src/pages/convertion/convertion.py:104
-msgid "The input value is invalid."
-msgstr ""
-
-#: src/pages/convertion/convertion.py:124
+#: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
 msgstr ""
 
-#: src/pages/convertion/index.blp:11
+#: src/pages/convertion/index.blp:13
 msgid "From"
 msgstr ""
 
@@ -71,11 +72,11 @@ msgstr ""
 msgid "Switch"
 msgstr ""
 
-#: src/pages/convertion/index.blp:36
+#: src/pages/convertion/index.blp:39
 msgid "To"
 msgstr ""
 
-#: src/pages/convertion/index.blp:86
+#: src/pages/convertion/index.blp:87
 msgid "Reload"
 msgstr ""
 
@@ -699,50 +700,38 @@ msgstr ""
 msgid "Zambian Kwacha"
 msgstr ""
 
-#: src/requests.py:57
-msgid "Results for"
-msgstr ""
-
-#: src/requests.py:75
+#: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr ""
 
-#: src/window.blp:16
-msgid "Source"
-msgstr ""
-
-#: src/window.blp:24
+#: src/window.blp:18
 msgid "Main menu"
 msgstr ""
 
-#: src/window.blp:45
+#: src/window.blp:34
+msgid "Source"
+msgstr ""
+
+#: src/window.blp:43
 msgid "Providers"
 msgstr ""
 
-#: src/window.blp:48
+#: src/window.blp:46
 msgid "ECB"
 msgstr ""
 
-#: src/window.blp:53
+#: src/window.blp:51
 msgid "Google (unstable)"
 msgstr ""
 
-#: src/window.blp:58
+#: src/window.blp:56
 msgid "Moeda.info"
 msgstr ""
 
-#: src/window.blp:67
-msgid "Currencies"
-msgstr ""
-
-#: src/window.blp:71
+#: src/window.blp:64
 msgid "Keyboard shortcuts"
 msgstr ""
 
-#: src/window.blp:75
+#: src/window.blp:68
 msgid "About Valuta"
-msgstr ""
-
-#: src/window.blp:79
-msgid "Quit"
 msgstr ""

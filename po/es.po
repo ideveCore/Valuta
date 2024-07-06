@@ -47,25 +47,28 @@ msgctxt "shortcuts window"
 msgid "General"
 msgstr "General"
 
-#: src/components/shortcuts/shortcuts.blp:25
+#: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
 msgstr "Atajos de teclado"
+
+#: src/components/shortcuts/shortcuts.blp:15
+#, fuzzy
+#| msgid "Search Currencies…"
+msgctxt "shortcuts window"
+msgid "Switch currencies"
+msgstr "Buscar divisas…"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Salir"
 
-#: src/pages/convertion/convertion.py:104
-msgid "The input value is invalid."
-msgstr ""
-
-#: src/pages/convertion/convertion.py:124
+#: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
 msgstr "Error al convertir, por favor intenta de nuevo."
 
-#: src/pages/convertion/index.blp:11
+#: src/pages/convertion/index.blp:13
 msgid "From"
 msgstr "De"
 
@@ -73,11 +76,11 @@ msgstr "De"
 msgid "Switch"
 msgstr "Intercambiar"
 
-#: src/pages/convertion/index.blp:36
+#: src/pages/convertion/index.blp:39
 msgid "To"
 msgstr "A"
 
-#: src/pages/convertion/index.blp:86
+#: src/pages/convertion/index.blp:87
 msgid "Reload"
 msgstr "Volver a cargar"
 
@@ -701,58 +704,52 @@ msgstr ""
 msgid "Zambian Kwacha"
 msgstr ""
 
-#: src/requests.py:57
-msgid "Results for"
-msgstr ""
-
-#: src/requests.py:75
+#: src/requests.py:95
 #, fuzzy
 #| msgid "Unable to convert currency, failed to fetch results from Google"
 msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr ""
 "No se pudo convertir la divisa, no se pudieron obtener resultados de Google"
 
-#: src/window.blp:16
-msgid "Source"
-msgstr ""
-
-#: src/window.blp:24
+#: src/window.blp:18
 msgid "Main menu"
 msgstr "Menú principal"
 
-#: src/window.blp:45
+#: src/window.blp:34
+msgid "Source"
+msgstr ""
+
+#: src/window.blp:43
 msgid "Providers"
 msgstr "Proveedores"
 
-#: src/window.blp:48
+#: src/window.blp:46
 msgid "ECB"
 msgstr ""
 
-#: src/window.blp:53
+#: src/window.blp:51
 msgid "Google (unstable)"
 msgstr ""
 
-#: src/window.blp:58
+#: src/window.blp:56
 msgid "Moeda.info"
 msgstr ""
 
-#: src/window.blp:67
-#, fuzzy
-#| msgid "Search Currencies…"
-msgid "Currencies"
-msgstr "Buscar divisas…"
-
-#: src/window.blp:71
+#: src/window.blp:64
 msgid "Keyboard shortcuts"
 msgstr "Atajos de teclado"
 
-#: src/window.blp:75
+#: src/window.blp:68
 msgid "About Valuta"
 msgstr ""
 
-#: src/window.blp:79
-msgid "Quit"
-msgstr "Salir"
+#, fuzzy
+#~| msgid "Search Currencies…"
+#~ msgid "Currencies"
+#~ msgstr "Buscar divisas…"
+
+#~ msgid "Quit"
+#~ msgstr "Salir"
 
 #~ msgid "About"
 #~ msgstr "Acerca de"

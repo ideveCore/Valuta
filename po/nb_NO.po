@@ -51,12 +51,19 @@ msgctxt "shortcuts window"
 msgid "General"
 msgstr "Generelt"
 
-#: src/components/shortcuts/shortcuts.blp:25
+#: src/components/shortcuts/shortcuts.blp:11
 #, fuzzy
 #| msgid "Keyboard Shortcuts"
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
 msgstr "Tastatursnarveier"
+
+#: src/components/shortcuts/shortcuts.blp:15
+#, fuzzy
+#| msgid "Search Currencies…"
+msgctxt "shortcuts window"
+msgid "Switch currencies"
+msgstr "Søk etter valutaer…"
 
 #: src/components/shortcuts/shortcuts.blp:19
 #, fuzzy
@@ -66,15 +73,11 @@ msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Avslutt"
 
-#: src/pages/convertion/convertion.py:104
-msgid "The input value is invalid."
-msgstr ""
-
-#: src/pages/convertion/convertion.py:124
+#: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
 msgstr ""
 
-#: src/pages/convertion/index.blp:11
+#: src/pages/convertion/index.blp:13
 msgid "From"
 msgstr ""
 
@@ -82,11 +85,11 @@ msgstr ""
 msgid "Switch"
 msgstr "Bytt"
 
-#: src/pages/convertion/index.blp:36
+#: src/pages/convertion/index.blp:39
 msgid "To"
 msgstr ""
 
-#: src/pages/convertion/index.blp:86
+#: src/pages/convertion/index.blp:87
 msgid "Reload"
 msgstr ""
 
@@ -714,64 +717,58 @@ msgstr ""
 msgid "Zambian Kwacha"
 msgstr ""
 
-#: src/requests.py:57
-msgid "Results for"
-msgstr ""
-
-#: src/requests.py:75
+#: src/requests.py:95
 #, fuzzy
 #| msgid "Unable to convert currency, failed to fetch results from Google"
 msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr "Kunne ikke konvertere valuta. Kunne ikke hente resultater fra Google"
 
-#: src/window.blp:16
-msgid "Source"
-msgstr ""
-
-#: src/window.blp:24
+#: src/window.blp:18
 #, fuzzy
 #| msgid "Main menu"
 msgid "Main menu"
 msgstr "Hovedmeny"
 
-#: src/window.blp:45
+#: src/window.blp:34
+msgid "Source"
+msgstr ""
+
+#: src/window.blp:43
 msgid "Providers"
 msgstr ""
 
-#: src/window.blp:48
+#: src/window.blp:46
 msgid "ECB"
 msgstr ""
 
-#: src/window.blp:53
+#: src/window.blp:51
 msgid "Google (unstable)"
 msgstr ""
 
-#: src/window.blp:58
+#: src/window.blp:56
 msgid "Moeda.info"
 msgstr ""
 
-#: src/window.blp:67
-#, fuzzy
-#| msgid "Search Currencies…"
-msgid "Currencies"
-msgstr "Søk etter valutaer…"
-
-#: src/window.blp:71
+#: src/window.blp:64
 #, fuzzy
 #| msgid "Keyboard Shortcuts"
 msgid "Keyboard shortcuts"
 msgstr "Tastatursnarveier"
 
-#: src/window.blp:75
+#: src/window.blp:68
 msgid "About Valuta"
 msgstr ""
 
-#: src/window.blp:79
 #, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "Quit"
-msgid "Quit"
-msgstr "Avslutt"
+#~| msgid "Search Currencies…"
+#~ msgid "Currencies"
+#~ msgstr "Søk etter valutaer…"
+
+#, fuzzy
+#~| msgctxt "shortcut window"
+#~| msgid "Quit"
+#~ msgid "Quit"
+#~ msgstr "Avslutt"
 
 #~ msgid "Conversion failed, check for network issues"
 #~ msgstr "Konvertering mislyktes. Kontroller nettverket"

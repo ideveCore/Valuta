@@ -48,25 +48,28 @@ msgctxt "shortcuts window"
 msgid "General"
 msgstr "Geral"
 
-#: src/components/shortcuts/shortcuts.blp:25
+#: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
+
+#: src/components/shortcuts/shortcuts.blp:15
+#, fuzzy
+#| msgid "Search Currencies"
+msgctxt "shortcuts window"
+msgid "Switch currencies"
+msgstr "Pesquisar por moedas"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Sair"
 
-#: src/pages/convertion/convertion.py:104
-msgid "The input value is invalid."
-msgstr "A entrada não é válida."
-
-#: src/pages/convertion/convertion.py:124
+#: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
 msgstr "Erro ao converter, por favor tente novamente."
 
-#: src/pages/convertion/index.blp:11
+#: src/pages/convertion/index.blp:13
 msgid "From"
 msgstr "De"
 
@@ -74,11 +77,11 @@ msgstr "De"
 msgid "Switch"
 msgstr "Trocar"
 
-#: src/pages/convertion/index.blp:36
+#: src/pages/convertion/index.blp:39
 msgid "To"
 msgstr "Para"
 
-#: src/pages/convertion/index.blp:86
+#: src/pages/convertion/index.blp:87
 msgid "Reload"
 msgstr "Recarregar"
 
@@ -702,53 +705,53 @@ msgstr "Rial Iemenita"
 msgid "Zambian Kwacha"
 msgstr "Kwacha Zambiano"
 
-#: src/requests.py:57
-msgid "Results for"
-msgstr "Resultados de"
-
-#: src/requests.py:75
+#: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr "Incapaz de converter moeda, não conseguiu obter resultados do Google."
 
-#: src/window.blp:16
-msgid "Source"
-msgstr "Fonte"
-
-#: src/window.blp:24
+#: src/window.blp:18
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: src/window.blp:45
+#: src/window.blp:34
+msgid "Source"
+msgstr "Fonte"
+
+#: src/window.blp:43
 msgid "Providers"
 msgstr "Provedores"
 
-#: src/window.blp:48
+#: src/window.blp:46
 msgid "ECB"
 msgstr "ECB"
 
-#: src/window.blp:53
+#: src/window.blp:51
 msgid "Google (unstable)"
 msgstr "Google (instável)"
 
-#: src/window.blp:58
+#: src/window.blp:56
 msgid "Moeda.info"
 msgstr "Moeda.info"
 
-#: src/window.blp:67
-msgid "Currencies"
-msgstr "Moedas"
-
-#: src/window.blp:71
+#: src/window.blp:64
 msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
 
-#: src/window.blp:75
+#: src/window.blp:68
 msgid "About Valuta"
 msgstr "Sobre o Valuta"
 
-#: src/window.blp:79
-msgid "Quit"
-msgstr "Sair"
+#~ msgid "The input value is invalid."
+#~ msgstr "A entrada não é válida."
+
+#~ msgid "Results for"
+#~ msgstr "Resultados de"
+
+#~ msgid "Currencies"
+#~ msgstr "Moedas"
+
+#~ msgid "Quit"
+#~ msgstr "Sair"
 
 #~ msgid "About"
 #~ msgstr "Sobre"

@@ -49,25 +49,28 @@ msgctxt "shortcuts window"
 msgid "General"
 msgstr "सामान्य"
 
-#: src/components/shortcuts/shortcuts.blp:25
+#: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
 msgstr "कीबोर्ड शॉर्टकट"
+
+#: src/components/shortcuts/shortcuts.blp:15
+#, fuzzy
+#| msgid "Search Currencies"
+msgctxt "shortcuts window"
+msgid "Switch currencies"
+msgstr "मुद्राएं खोजें"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "छोड़ें"
 
-#: src/pages/convertion/convertion.py:104
-msgid "The input value is invalid."
-msgstr "इनपुट मान अमान्य है।"
-
-#: src/pages/convertion/convertion.py:124
+#: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
 msgstr "परिवर्तन करने में त्रुटि, कृपया पुनः प्रयास करें।"
 
-#: src/pages/convertion/index.blp:11
+#: src/pages/convertion/index.blp:13
 msgid "From"
 msgstr "इससे"
 
@@ -75,11 +78,11 @@ msgstr "इससे"
 msgid "Switch"
 msgstr "बदले"
 
-#: src/pages/convertion/index.blp:36
+#: src/pages/convertion/index.blp:39
 msgid "To"
 msgstr "इसमें"
 
-#: src/pages/convertion/index.blp:86
+#: src/pages/convertion/index.blp:87
 msgid "Reload"
 msgstr "पुनः लोड करें"
 
@@ -703,53 +706,53 @@ msgstr "यमनी रियाल"
 msgid "Zambian Kwacha"
 msgstr "ज़ाम्बियन क्वाचा"
 
-#: src/requests.py:57
-msgid "Results for"
-msgstr "हेतु परिणाम"
-
-#: src/requests.py:75
+#: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr "मुद्रा परिवर्तित करने में असमर्थ, Google से परिणाम लाने में विफल।"
 
-#: src/window.blp:16
-msgid "Source"
-msgstr "स्रोत"
-
-#: src/window.blp:24
+#: src/window.blp:18
 msgid "Main menu"
 msgstr "मुख्य मेनू"
 
-#: src/window.blp:45
+#: src/window.blp:34
+msgid "Source"
+msgstr "स्रोत"
+
+#: src/window.blp:43
 msgid "Providers"
 msgstr "प्रदाता"
 
-#: src/window.blp:48
+#: src/window.blp:46
 msgid "ECB"
 msgstr "ECB"
 
-#: src/window.blp:53
+#: src/window.blp:51
 msgid "Google (unstable)"
 msgstr "Google (अस्थिर)"
 
-#: src/window.blp:58
+#: src/window.blp:56
 msgid "Moeda.info"
 msgstr "Moeda.info"
 
-#: src/window.blp:67
-msgid "Currencies"
-msgstr "मुद्राएं"
-
-#: src/window.blp:71
+#: src/window.blp:64
 msgid "Keyboard shortcuts"
 msgstr "कीबोर्ड शॉर्टकट"
 
-#: src/window.blp:75
+#: src/window.blp:68
 msgid "About Valuta"
 msgstr "Valuta के बारे में"
 
-#: src/window.blp:79
-msgid "Quit"
-msgstr "छोड़ें"
+#~ msgid "The input value is invalid."
+#~ msgstr "इनपुट मान अमान्य है।"
+
+#~ msgid "Results for"
+#~ msgstr "हेतु परिणाम"
+
+#~ msgid "Currencies"
+#~ msgstr "मुद्राएं"
+
+#~ msgid "Quit"
+#~ msgstr "छोड़ें"
 
 #~ msgid "About"
 #~ msgstr "बारे में"

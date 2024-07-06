@@ -11,8 +11,8 @@ msgstr ""
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
 "PO-Revision-Date: 2024-06-10 18:09+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/"
-"currency-converter/currency-converter/tr/>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/currency-"
+"converter/currency-converter/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,25 +51,28 @@ msgctxt "shortcuts window"
 msgid "General"
 msgstr "Genel"
 
-#: src/components/shortcuts/shortcuts.blp:25
+#: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
 msgstr "Klavye kısayolları"
+
+#: src/components/shortcuts/shortcuts.blp:15
+#, fuzzy
+#| msgid "Search Currencies"
+msgctxt "shortcuts window"
+msgid "Switch currencies"
+msgstr "Para Birimi Ara"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
 msgstr "Çık"
 
-#: src/pages/convertion/convertion.py:104
-msgid "The input value is invalid."
-msgstr "Girdi değeri geçersiz."
-
-#: src/pages/convertion/convertion.py:124
+#: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
 msgstr "Dönüştürme hatası, lütfen tekrar deneyin."
 
-#: src/pages/convertion/index.blp:11
+#: src/pages/convertion/index.blp:13
 msgid "From"
 msgstr "Şundan"
 
@@ -77,11 +80,11 @@ msgstr "Şundan"
 msgid "Switch"
 msgstr "Değiştir"
 
-#: src/pages/convertion/index.blp:36
+#: src/pages/convertion/index.blp:39
 msgid "To"
 msgstr "Şuna"
 
-#: src/pages/convertion/index.blp:86
+#: src/pages/convertion/index.blp:87
 msgid "Reload"
 msgstr "Yeniden yükle"
 
@@ -705,53 +708,53 @@ msgstr "Yemen Riyali"
 msgid "Zambian Kwacha"
 msgstr "Zambia Kvaçası"
 
-#: src/requests.py:57
-msgid "Results for"
-msgstr "Sonuçlar"
-
-#: src/requests.py:75
+#: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr "Para birimi dönüştürülemedi, Google'dan sonuç alınamadı."
 
-#: src/window.blp:16
-msgid "Source"
-msgstr "Kaynak"
-
-#: src/window.blp:24
+#: src/window.blp:18
 msgid "Main menu"
 msgstr "Ana menü"
 
-#: src/window.blp:45
+#: src/window.blp:34
+msgid "Source"
+msgstr "Kaynak"
+
+#: src/window.blp:43
 msgid "Providers"
 msgstr "Sağlayıcılar"
 
-#: src/window.blp:48
+#: src/window.blp:46
 msgid "ECB"
 msgstr "ECB"
 
-#: src/window.blp:53
+#: src/window.blp:51
 msgid "Google (unstable)"
 msgstr "Google (dengesiz)"
 
-#: src/window.blp:58
+#: src/window.blp:56
 msgid "Moeda.info"
 msgstr "Moeda.info"
 
-#: src/window.blp:67
-msgid "Currencies"
-msgstr "Para Birimleri"
-
-#: src/window.blp:71
+#: src/window.blp:64
 msgid "Keyboard shortcuts"
 msgstr "Klavye kısayolları"
 
-#: src/window.blp:75
+#: src/window.blp:68
 msgid "About Valuta"
 msgstr "Valuta Hakkında"
 
-#: src/window.blp:79
-msgid "Quit"
-msgstr "Çıkış"
+#~ msgid "The input value is invalid."
+#~ msgstr "Girdi değeri geçersiz."
+
+#~ msgid "Results for"
+#~ msgstr "Sonuçlar"
+
+#~ msgid "Currencies"
+#~ msgstr "Para Birimleri"
+
+#~ msgid "Quit"
+#~ msgstr "Çıkış"
 
 #~ msgid "About"
 #~ msgstr "Hakkında"
