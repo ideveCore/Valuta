@@ -17,6 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import textwrap
 from gi.repository import GObject, Gtk
 from ...define import CODES
 
@@ -31,7 +32,7 @@ class CurrencySelectorRow(Gtk.ListBoxRow):
         super().__init__()
         self.currency = currency
         #self.name.props.label = f'{CODES[str(self.currency)]["flag"]}   {self.currency} – {self.currency.name}'
-        self.name.props.label = f'{self.currency} – {self.currency.name}'
+        self.name.props.label = f'{self.currency} – {textwrap.shorten(self.currency.name, width=30, placeholder="...")}'
 
         self.currency.bind_property(
             'selected',
@@ -39,5 +40,3 @@ class CurrencySelectorRow(Gtk.ListBoxRow):
             'visible',
             GObject.BindingFlags.SYNC_CREATE
         )
-
-

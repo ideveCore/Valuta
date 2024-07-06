@@ -114,10 +114,14 @@ def convertion_page(application: Adw.Application, from_currency_value):
                 stack.set_visible_child_name("convertion-error")
 
     def currency_selectors_changed(_obj, _param):
-        from_code = settings.get_string("src-currency")
-        to_code = settings.get_string("dest-currency")
+        from_code = from_currency_selector.selected
+        to_code = to_currency_selector.selected
         if from_code != to_code:
-            convert(from_currency_entry.get_text())
+          if settings.get_string("src-currency") != from_code:
+            settings.set_string('src-currency', from_code)
+          if settings.get_string("dest-currency") != to_code:
+            settings.set_string('dest-currency', to_code)
+          convert(from_currency_entry.get_text())
 
     load_currencies(settings.get_enum("providers"))
     from_currency_entry.connect('changed', lambda entry: convert(entry.get_text()))
