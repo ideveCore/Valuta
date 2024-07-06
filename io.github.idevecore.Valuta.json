@@ -9,11 +9,7 @@
     "--share=ipc",
     "--device=dri",
     "--socket=fallback-x11",
-    "--socket=wayland",
-    "--own-name=io.github.idevecore.Valuta.SearchProvider"
-  ],
-  "cleanup" : [
-    "*blueprint*"
+    "--socket=wayland"
   ],
   "modules" : [
     {
