@@ -66,10 +66,12 @@
   </recommends>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/ideveCore/valuta/main/data/screenshots/01.png</image>
+      <caption>Main screen of the app</caption>
+      <image type="source">https://raw.githubusercontent.com/ideveCore/valuta/main/data/screenshots/01.png</image>
     </screenshot>
-    <screenshot type="default">
-      <image>https://raw.githubusercontent.com/ideveCore/valuta/main/data/screenshots/02.png</image>
+    <screenshot>
+      <caption>Main screen of the application, with coin inversion</caption>
+      <image type="source">https://raw.githubusercontent.com/ideveCore/valuta/main/data/screenshots/02.png</image>
     </screenshot>
   </screenshots>
   <developer_name>Ideve Core</developer_name>
