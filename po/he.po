@@ -8,83 +8,90 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-07-14 19:09+0000\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/"
+"currency-converter/currency-converter/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
 msgid "Convert between currencies"
-msgstr ""
+msgstr "המרה בין מטבעות"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
 "Valuta is a simple and fast conversion tool, ideal for those who need to convert between different currencies repeatedly. Use it while traveling, budgeting, or anytime else you need to quickly convert between two currencies."
 msgstr ""
+"‏Valuta הוא כלי פשוט ומהיר להמרת מטבעות, מתאים במיוחד למי שצריך להמיר בין "
+"מטבעות שונים לעתים קרובות. ניתן להשתמש בו בזמן שמטיילים, עורכים תקציב או בכל "
+"זמן אחר בו יש צורך להמיר במהירות בין שני מטבעות."
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "חיפוש"
 
 #: src/components/currency_selector/index.blp:41
 msgid "Search Currencies"
-msgstr ""
+msgstr "חיפוש מטבעות"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
-msgstr ""
+msgstr "כללי"
 
 #: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "צירופי מקשים"
 
 #: src/components/shortcuts/shortcuts.blp:15
 msgctxt "shortcuts window"
 msgid "Switch currencies"
-msgstr ""
+msgstr "החלפת מטבעות"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
-msgstr ""
+msgstr "יציאה"
 
 #: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
-msgstr ""
+msgstr "שגיאה בהמרה, נא לנסות שוב."
 
 #: src/pages/convertion/index.blp:13
 msgid "From"
-msgstr ""
+msgstr "מ"
 
 #: src/pages/convertion/index.blp:30
 msgid "Switch"
-msgstr ""
+msgstr "החלפה"
 
 #: src/pages/convertion/index.blp:39
 msgid "To"
-msgstr ""
+msgstr "אל"
 
 #: src/pages/convertion/index.blp:87
 msgid "Reload"
-msgstr ""
+msgstr "טעינה מחדש"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
-msgstr ""
+msgstr "לפי"
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
-msgstr ""
+msgstr "העתקה"
 
 #: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
-msgstr ""
+msgstr "העתקה ההמרה ללוח הגזירים"
 
 #: src/define.in:39
 msgid "Afghan Afghani"
@@ -96,7 +103,7 @@ msgstr ""
 
 #: src/define.in:51
 msgid "Algerian Dinar"
-msgstr ""
+msgstr "דינר אלג׳ירי"
 
 #: src/define.in:57
 msgid "Angolan Kwanza"
@@ -116,7 +123,7 @@ msgstr ""
 
 #: src/define.in:81
 msgid "Australian Dollar"
-msgstr ""
+msgstr "דולר אוסטרלי"
 
 #: src/define.in:87
 msgid "Azerbaijani Manat"
@@ -128,7 +135,7 @@ msgstr ""
 
 #: src/define.in:99
 msgid "Bahraini Dinar"
-msgstr ""
+msgstr "דינר בחרייני"
 
 #: src/define.in:105
 msgid "Bajan dollar"
@@ -136,7 +143,7 @@ msgstr ""
 
 #: src/define.in:111
 msgid "Bangladeshi Taka"
-msgstr ""
+msgstr "טאקה בנגלדשי"
 
 #: src/define.in:117
 msgid "Belarusian Ruble"
@@ -156,7 +163,7 @@ msgstr ""
 
 #: src/define.in:147
 msgid "Bitcoin"
-msgstr ""
+msgstr "ביטקוין"
 
 #: src/define.in:153
 msgid "Bitcoin Cash"
@@ -176,15 +183,15 @@ msgstr ""
 
 #: src/define.in:177
 msgid "Brazilian Real"
-msgstr ""
+msgstr "ריאל ברזילאי"
 
 #: src/define.in:183
 msgid "Brunei Dollar"
-msgstr ""
+msgstr "דולר ברוניי"
 
 #: src/define.in:189
 msgid "Bulgarian Lev"
-msgstr ""
+msgstr "לב בולגרי"
 
 #: src/define.in:195
 msgid "Burundian Franc"
@@ -192,7 +199,7 @@ msgstr ""
 
 #: src/define.in:201
 msgid "CFP Franc"
-msgstr ""
+msgstr "פרנק הקהילה הצרפתית באפריקה (CFA)"
 
 #: src/define.in:207
 msgid "Cambodian riel"
@@ -200,7 +207,7 @@ msgstr ""
 
 #: src/define.in:213
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "דולר קנדי"
 
 #: src/define.in:219
 msgid "Cape Verdean Escudo"
@@ -216,7 +223,7 @@ msgstr ""
 
 #: src/define.in:237
 msgid "Chilean Peso"
-msgstr ""
+msgstr "פסו צ׳יליאני"
 
 #: src/define.in:243
 msgid "Chilean Unit of Account (UF)"
@@ -224,7 +231,7 @@ msgstr ""
 
 #: src/define.in:249
 msgid "Chinese Yuan"
-msgstr ""
+msgstr "יואן סיני"
 
 #: src/define.in:255
 msgid "Chinese Yuan (offshore)"
@@ -232,7 +239,7 @@ msgstr ""
 
 #: src/define.in:261
 msgid "Colombian Peso"
-msgstr ""
+msgstr "פסו קולומביאני"
 
 #: src/define.in:267
 msgid "Comorian franc"
@@ -248,19 +255,19 @@ msgstr ""
 
 #: src/define.in:285
 msgid "Croatian Kuna"
-msgstr ""
+msgstr "קונה קרואטית"
 
 #: src/define.in:291
 msgid "Cuban Peso"
-msgstr ""
+msgstr "פסו קובני"
 
 #: src/define.in:297
 msgid "Czech Koruna"
-msgstr ""
+msgstr "קורונה צ׳כי"
 
 #: src/define.in:303
 msgid "Danish Krone"
-msgstr ""
+msgstr "כתר דני"
 
 #: src/define.in:309
 msgid "Djiboutian Franc"
@@ -268,7 +275,7 @@ msgstr ""
 
 #: src/define.in:315
 msgid "Dominican Peso"
-msgstr ""
+msgstr "פסו דומיניקני"
 
 #: src/define.in:321
 msgid "East Caribbean Dollar"
@@ -276,7 +283,7 @@ msgstr ""
 
 #: src/define.in:327
 msgid "Egyptian Pound"
-msgstr ""
+msgstr "לירה מצרית"
 
 #: src/define.in:333
 msgid "Ether"
@@ -288,7 +295,7 @@ msgstr ""
 
 #: src/define.in:345
 msgid "Euro"
-msgstr ""
+msgstr "אירו"
 
 #: src/define.in:351
 msgid "Fijian Dollar"
@@ -324,51 +331,51 @@ msgstr ""
 
 #: src/define.in:405
 msgid "Haitian Gourde"
-msgstr ""
+msgstr "גורד האיטי"
 
 #: src/define.in:411
 msgid "Honduran Lempira"
-msgstr ""
+msgstr "למפירה"
 
 #: src/define.in:417
 msgid "Hong Kong Dollar"
-msgstr ""
+msgstr "דולר הונג קונגי"
 
 #: src/define.in:423
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "פורינט הונגרי"
 
 #: src/define.in:429
 msgid "Icelandic Króna"
-msgstr ""
+msgstr "קרונה איסלנדית"
 
 #: src/define.in:435
 msgid "Indian Rupee"
-msgstr ""
+msgstr "רופי הודי"
 
 #: src/define.in:441
 msgid "Indonesian Rupiah"
-msgstr ""
+msgstr "רופיה אינדונזית"
 
 #: src/define.in:447
 msgid "Iranian Rial"
-msgstr ""
+msgstr "ריאל איראני"
 
 #: src/define.in:453
 msgid "Iraqi Dinar"
-msgstr ""
+msgstr "דינר עיראקי"
 
 #: src/define.in:459
 msgid "Israeli New Shekel"
-msgstr ""
+msgstr "שקל חדש ישראלי"
 
 #: src/define.in:465
 msgid "Jamaican Dollar"
-msgstr ""
+msgstr "דולר ג׳מייקי"
 
 #: src/define.in:471
 msgid "Japanese Yen"
-msgstr ""
+msgstr "ין יפני"
 
 #: src/define.in:477
 msgid "Jordanian Dinar"
@@ -376,7 +383,7 @@ msgstr ""
 
 #: src/define.in:483
 msgid "Kazakhstani Tenge"
-msgstr ""
+msgstr "טנגה קזחסטני"
 
 #: src/define.in:489
 msgid "Kenyan Shilling"
@@ -384,7 +391,7 @@ msgstr ""
 
 #: src/define.in:495
 msgid "Kuwaiti Dinar"
-msgstr ""
+msgstr "דינר כוויתי"
 
 #: src/define.in:501
 msgid "Kyrgyzstani Som"
@@ -408,7 +415,7 @@ msgstr ""
 
 #: src/define.in:531
 msgid "Libyan Dinar"
-msgstr ""
+msgstr "דינר לובי"
 
 #: src/define.in:537
 msgid "Litecoin"
@@ -432,7 +439,7 @@ msgstr ""
 
 #: src/define.in:567
 msgid "Malaysian Ringgit"
-msgstr ""
+msgstr "רינגיט מלזי"
 
 #: src/define.in:573
 msgid "Maldivian Rufiyaa"
@@ -444,11 +451,11 @@ msgstr ""
 
 #: src/define.in:585
 msgid "Mauritian Rupee"
-msgstr ""
+msgstr "רופי מאוריטני"
 
 #: src/define.in:591
 msgid "Mexican Peso"
-msgstr ""
+msgstr "פזו מקסיקני"
 
 #: src/define.in:597
 msgid "Moldovan Leu"
@@ -476,7 +483,7 @@ msgstr ""
 
 #: src/define.in:639
 msgid "Nepalese Rupee"
-msgstr ""
+msgstr "רופי נפאלי"
 
 #: src/define.in:645
 msgid "Netherlands Antillean Guilder"
@@ -484,7 +491,7 @@ msgstr ""
 
 #: src/define.in:651
 msgid "New Zealand Dollar"
-msgstr ""
+msgstr "דולר ניו־זילנדי"
 
 #: src/define.in:657
 msgid "Nicaraguan Córdoba"
@@ -492,23 +499,23 @@ msgstr ""
 
 #: src/define.in:663
 msgid "Nigerian Naira"
-msgstr ""
+msgstr "נאירה ניגרי"
 
 #: src/define.in:669
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "כתר נורווגי"
 
 #: src/define.in:675
 msgid "Omani Rial"
-msgstr ""
+msgstr "ריאל עומאני"
 
 #: src/define.in:681
 msgid "Pakistani Rupee"
-msgstr ""
+msgstr "רופי פקיסטני"
 
 #: src/define.in:687
 msgid "Panamanian Balboa"
-msgstr ""
+msgstr "בלבואה"
 
 #: src/define.in:693
 msgid "Papua New Guinean Kina"
@@ -520,31 +527,31 @@ msgstr ""
 
 #: src/define.in:705
 msgid "Philippine Piso"
-msgstr ""
+msgstr "פסו פיליפיני"
 
 #: src/define.in:711
 msgid "Poland złoty"
-msgstr ""
+msgstr "זלוטי"
 
 #: src/define.in:717
 msgid "Pound sterling"
-msgstr ""
+msgstr "לירה שטרלינג"
 
 #: src/define.in:723
 msgid "Qatari Rial"
-msgstr ""
+msgstr "ריאל קטרי"
 
 #: src/define.in:729
 msgid "Romanian Leu"
-msgstr ""
+msgstr "לאו רומני"
 
 #: src/define.in:741
 msgid "Russian Ruble"
-msgstr ""
+msgstr "רובל רוסי"
 
 #: src/define.in:753
 msgid "Rwandan franc"
-msgstr ""
+msgstr "פרנק רואנדי"
 
 #: src/define.in:759
 msgid "Salvadoran Colón"
@@ -552,11 +559,11 @@ msgstr ""
 
 #: src/define.in:765
 msgid "Saudi Riyal"
-msgstr ""
+msgstr "ריאל סעודי"
 
 #: src/define.in:771
 msgid "Serbian Dinar"
-msgstr ""
+msgstr "דינר סרבי"
 
 #: src/define.in:783
 msgid "Seychellois Rupee"
@@ -564,35 +571,35 @@ msgstr ""
 
 #: src/define.in:789
 msgid "Sierra Leonean Leone"
-msgstr ""
+msgstr "ליאון"
 
 #: src/define.in:795
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "דולר סינגפורי"
 
 #: src/define.in:801
 msgid "Sol"
-msgstr ""
+msgstr "סול"
 
 #: src/define.in:807
 msgid "Solomon Islands Dollar"
-msgstr ""
+msgstr "דולר איי שלמה"
 
 #: src/define.in:813
 msgid "Somali Shilling"
-msgstr ""
+msgstr "שילינג סומלי"
 
 #: src/define.in:819
 msgid "South African Rand"
-msgstr ""
+msgstr "ראנד דרום אפריקאי"
 
 #: src/define.in:825
 msgid "South Korean won"
-msgstr ""
+msgstr "וון דרום קוריאני"
 
 #: src/define.in:831
 msgid "Sovereign Bolivar"
-msgstr ""
+msgstr "בוליבר ונצואלי"
 
 #: src/define.in:837
 msgid "Special Drawing Rights"
@@ -600,7 +607,7 @@ msgstr ""
 
 #: src/define.in:843
 msgid "Sri Lankan Rupee"
-msgstr ""
+msgstr "רופי סרי לנקי"
 
 #: src/define.in:849
 msgid "Sudanese pound"
@@ -612,15 +619,15 @@ msgstr ""
 
 #: src/define.in:867
 msgid "Swazi Lilangeni"
-msgstr ""
+msgstr "לילנגני"
 
 #: src/define.in:873
 msgid "Swedish Krona"
-msgstr ""
+msgstr "כתר שבדי"
 
 #: src/define.in:879
 msgid "Swiss Franc"
-msgstr ""
+msgstr "פרנק שווייצרי"
 
 #: src/define.in:885
 msgid "Tajikistani Somoni"
@@ -628,15 +635,15 @@ msgstr ""
 
 #: src/define.in:891
 msgid "Tanzanian Shilling"
-msgstr ""
+msgstr "שילינג טנזני"
 
 #: src/define.in:897
 msgid "Thai Baht"
-msgstr ""
+msgstr "באט תאילנדי"
 
 #: src/define.in:903
 msgid "Tongan Paʻanga"
-msgstr ""
+msgstr "פאנגה טונגאית"
 
 #: src/define.in:909
 msgid "Trinidad & Tobago Dollar"
@@ -644,11 +651,11 @@ msgstr ""
 
 #: src/define.in:915
 msgid "Tunisian Dinar"
-msgstr ""
+msgstr "דינר תוניסאי"
 
 #: src/define.in:921
 msgid "Turkish lira"
-msgstr ""
+msgstr "לירה טורקית"
 
 #: src/define.in:927
 msgid "Turkmenistan manat"
@@ -656,27 +663,27 @@ msgstr ""
 
 #: src/define.in:939
 msgid "Ugandan Shilling"
-msgstr ""
+msgstr "שילינג אוגנדי"
 
 #: src/define.in:945
 msgid "Ukrainian hryvnia"
-msgstr ""
+msgstr "הריבניה"
 
 #: src/define.in:951
 msgid "United Arab Emirates Dirham"
-msgstr ""
+msgstr "דירהם איחוד האמירויות הערביות"
 
 #: src/define.in:957
 msgid "United States Dollar"
-msgstr ""
+msgstr "דולר אמריקאי"
 
 #: src/define.in:963
 msgid "Uruguayan Peso"
-msgstr ""
+msgstr "פזו אורוגוואי"
 
 #: src/define.in:969
 msgid "Uzbekistani Som"
-msgstr ""
+msgstr "סום אוזבקי"
 
 #: src/define.in:975
 msgid "Vietnamese dong"
@@ -688,7 +695,7 @@ msgstr ""
 
 #: src/define.in:987
 msgid "Yemeni Rial"
-msgstr ""
+msgstr "ריאל תימני"
 
 #: src/define.in:993
 msgid "Zambian Kwacha"
@@ -696,36 +703,36 @@ msgstr ""
 
 #: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
-msgstr ""
+msgstr "לא ניתן להמיר את המטבע, קבלת הנתונים מ־Google נכשלה."
 
 #: src/window.blp:18
 msgid "Main menu"
-msgstr ""
+msgstr "תפריט ראשי"
 
 #: src/window.blp:34
 msgid "Source"
-msgstr ""
+msgstr "מקור"
 
 #: src/window.blp:43
 msgid "Providers"
-msgstr ""
+msgstr "ספקים"
 
 #: src/window.blp:46
 msgid "ECB"
-msgstr ""
+msgstr "ECB"
 
 #: src/window.blp:51
 msgid "Google (unstable)"
-msgstr ""
+msgstr "‏Google (לא יציב)"
 
 #: src/window.blp:56
 msgid "Moeda.info"
-msgstr ""
+msgstr "Moeda.info"
 
 #: src/window.blp:64
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "צירופי מקשים"
 
 #: src/window.blp:68
 msgid "About Valuta"
-msgstr ""
+msgstr "על Valuta"
