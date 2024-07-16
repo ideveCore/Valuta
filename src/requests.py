@@ -56,7 +56,7 @@ class Providers:
         date = date.split("-")
         time = time.split(":")
         date_time = GLib.DateTime.new_local(float(date[0]), float(date[1]), float(date[2]), float(time[0]), float(time[1]), float(time[2]))
-        return date_time.format("%B%e, %Y")
+        return date_time.format("%B %e, %Y")
         # return f"{_('Results for')} {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')}"
 
 class ECB(Providers):
