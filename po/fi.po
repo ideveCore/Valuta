@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-07-10 08:36+0000\n"
+"PO-Revision-Date: 2024-07-17 09:54+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/fi/>\n"
@@ -447,7 +447,7 @@ msgstr "Malediivien rufiyaa"
 
 #: src/define.in:579
 msgid "Mauritanian Ouguiya (1973–2017)"
-msgstr ""
+msgstr "Mauritanian ouguiya (1973–2017)"
 
 #: src/define.in:585
 msgid "Mauritian Rupee"
