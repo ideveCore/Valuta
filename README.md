@@ -52,8 +52,7 @@ Please help translate Valuta into more languages through [Weblate](https://hoste
 ## Donate
 If you like this project and have some spare money left, consider donating:
 
-### Ko-fi and Github Sponsors
-<a href='https://ko-fi.com/idevecore'><img width='86' alt='Download on Flathub' src='https://storage.ko-fi.com/cdn/nav-logo-stroke.png'/></a>
+### Github Sponsors
 <a href='https://github.com/sponsors/ideveCore'><img width='60' alt='Download on Flathub' src='https://github.githubassets.com/images/email/sponsors/mona.png'/></a>
 
 ## Code of Conduct
