@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-03-10 21:05+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/currency-"
-"converter/currency-converter/fr/>\n"
+"PO-Revision-Date: 2024-08-28 15:09+0000\n"
+"Last-Translator: AYnonyme Anonyme <aynonyme971@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/"
+"currency-converter/currency-converter/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.7.1-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
@@ -34,13 +34,11 @@ msgstr ""
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "Rechercher"
 
 #: src/components/currency_selector/index.blp:41
-#, fuzzy
-#| msgid "Search Currencies…"
 msgid "Search Currencies"
-msgstr "Rechercher des devises…"
+msgstr "Rechercher des devises"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
@@ -53,11 +51,9 @@ msgid "Keyboard shortcuts"
 msgstr "Raccourcis clavier"
 
 #: src/components/shortcuts/shortcuts.blp:15
-#, fuzzy
-#| msgid "Search Currencies…"
 msgctxt "shortcuts window"
 msgid "Switch currencies"
-msgstr "Rechercher des devises…"
+msgstr "Inverser les devises"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
@@ -86,7 +82,7 @@ msgstr "Recharger"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
-msgstr ""
+msgstr "Selon"
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
