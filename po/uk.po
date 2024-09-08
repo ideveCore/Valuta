@@ -8,724 +8,733 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-09-09 02:09+0000\n"
+"Last-Translator: Leo <leooli@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/"
+"currency-converter/currency-converter/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
 msgid "Convert between currencies"
-msgstr ""
+msgstr "Конвертація між валютами"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
 "Valuta is a simple and fast conversion tool, ideal for those who need to convert between different currencies repeatedly. Use it while traveling, budgeting, or anytime else you need to quickly convert between two currencies."
 msgstr ""
+"Валюта — це простий і швидкий інструмент для конвертації, який ідеально "
+"підходить для тих, кому потрібно багато разів конвертувати між різними "
+"валютами. Використовуйте застосунок під час подорожей, планування бюджету "
+"або коли потрібно швидко конвертувати між двома валютами."
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "Пошук"
 
 #: src/components/currency_selector/index.blp:41
 msgid "Search Currencies"
-msgstr ""
+msgstr "Пошук валют"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
-msgstr ""
+msgstr "Загальні"
 
 #: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Клавіатурні скорочення"
 
 #: src/components/shortcuts/shortcuts.blp:15
 msgctxt "shortcuts window"
 msgid "Switch currencies"
-msgstr ""
+msgstr "Перемикнути валюти"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
-msgstr ""
+msgstr "Вийти"
 
 #: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
-msgstr ""
+msgstr "Помилка конвертації, спробуйте ще раз."
 
 #: src/pages/convertion/index.blp:13
 msgid "From"
-msgstr ""
+msgstr "З"
 
 #: src/pages/convertion/index.blp:30
 msgid "Switch"
-msgstr ""
+msgstr "Перемикнути"
 
 #: src/pages/convertion/index.blp:39
 msgid "To"
-msgstr ""
+msgstr "У"
 
 #: src/pages/convertion/index.blp:87
 msgid "Reload"
-msgstr ""
+msgstr "Оновити"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
-msgstr ""
+msgstr "Згідно з"
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
-msgstr ""
+msgstr "Скопіювати"
 
 #: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
-msgstr ""
+msgstr "Скопіювати конвертацію в буфер обміну"
 
 #: src/define.in:39
 msgid "Afghan Afghani"
-msgstr ""
+msgstr "Афганський афгані"
 
 #: src/define.in:45
 msgid "Albanian Lek"
-msgstr ""
+msgstr "Албанський лек"
 
 #: src/define.in:51
 msgid "Algerian Dinar"
-msgstr ""
+msgstr "Алжирський динар"
 
 #: src/define.in:57
 msgid "Angolan Kwanza"
-msgstr ""
+msgstr "Ангольська кванза"
 
 #: src/define.in:63
 msgid "Argentine Peso"
-msgstr ""
+msgstr "Аргентинський песо"
 
 #: src/define.in:69
 msgid "Armenian Dram"
-msgstr ""
+msgstr "Вірменський драм"
 
 #: src/define.in:75
 msgid "Aruban Florin"
-msgstr ""
+msgstr "Арубський флорин"
 
 #: src/define.in:81
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Австралійський долар"
 
 #: src/define.in:87
 msgid "Azerbaijani Manat"
-msgstr ""
+msgstr "Азербайджанський манат"
 
 #: src/define.in:93
 msgid "Bahamian Dollar"
-msgstr ""
+msgstr "Багамський долар"
 
 #: src/define.in:99
 msgid "Bahraini Dinar"
-msgstr ""
+msgstr "Бахрейнський динар"
 
 #: src/define.in:105
 msgid "Bajan dollar"
-msgstr ""
+msgstr "Барбадоський долар"
 
 #: src/define.in:111
 msgid "Bangladeshi Taka"
-msgstr ""
+msgstr "Бангладеська така"
 
 #: src/define.in:117
 msgid "Belarusian Ruble"
-msgstr ""
+msgstr "Білоруський рубль"
 
 #: src/define.in:129
 msgid "Belize Dollar"
-msgstr ""
+msgstr "Белізький долар"
 
 #: src/define.in:135
 msgid "Bermudan Dollar"
-msgstr ""
+msgstr "Бермудський долар"
 
 #: src/define.in:141
 msgid "Bhutan currency"
-msgstr ""
+msgstr "Бутанський нгултрум"
 
 #: src/define.in:147
 msgid "Bitcoin"
-msgstr ""
+msgstr "Біткойн"
 
 #: src/define.in:153
 msgid "Bitcoin Cash"
-msgstr ""
+msgstr "Bitcoin Cash"
 
 #: src/define.in:159
 msgid "Bolivian Boliviano"
-msgstr ""
+msgstr "Болівійський болівіано"
 
 #: src/define.in:165
 msgid "Bosnia-Herzegovina Convertible Mark"
-msgstr ""
+msgstr "Боснійсько-Герцеговинська конвертована марка"
 
 #: src/define.in:171
 msgid "Botswanan Pula"
-msgstr ""
+msgstr "Ботсванська пула"
 
 #: src/define.in:177
 msgid "Brazilian Real"
-msgstr ""
+msgstr "Бразильський реал"
 
 #: src/define.in:183
 msgid "Brunei Dollar"
-msgstr ""
+msgstr "Брунейський долар"
 
 #: src/define.in:189
 msgid "Bulgarian Lev"
-msgstr ""
+msgstr "Болгарський лев"
 
 #: src/define.in:195
 msgid "Burundian Franc"
-msgstr ""
+msgstr "Бурундійський франк"
 
 #: src/define.in:201
 msgid "CFP Franc"
-msgstr ""
+msgstr "Французький тихоокеанський франк"
 
 #: src/define.in:207
 msgid "Cambodian riel"
-msgstr ""
+msgstr "Камбоджійський рієль"
 
 #: src/define.in:213
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "Канадський долар"
 
 #: src/define.in:219
 msgid "Cape Verdean Escudo"
-msgstr ""
+msgstr "Кабо-Вердійський Ескудо"
 
 #: src/define.in:225
 msgid "Cayman Islands Dollar"
-msgstr ""
+msgstr "Долар Кайманових Островів"
 
 #: src/define.in:231
 msgid "Central African CFA franc"
-msgstr ""
+msgstr "Центральноафриканський франк"
 
 #: src/define.in:237
 msgid "Chilean Peso"
-msgstr ""
+msgstr "Чилійський песо"
 
 #: src/define.in:243
 msgid "Chilean Unit of Account (UF)"
-msgstr ""
+msgstr "Чилійська розрахункова одиниця (UF)"
 
 #: src/define.in:249
 msgid "Chinese Yuan"
-msgstr ""
+msgstr "Китайський юань"
 
 #: src/define.in:255
 msgid "Chinese Yuan (offshore)"
-msgstr ""
+msgstr "Китайський юань (офшорний)"
 
 #: src/define.in:261
 msgid "Colombian Peso"
-msgstr ""
+msgstr "Колумбійський песо"
 
 #: src/define.in:267
 msgid "Comorian franc"
-msgstr ""
+msgstr "Коморський франк"
 
 #: src/define.in:273
 msgid "Congolese Franc"
-msgstr ""
+msgstr "Конголезький франк"
 
 #: src/define.in:279
 msgid "Costa Rican Colón"
-msgstr ""
+msgstr "Костариканський колон"
 
 #: src/define.in:285
 msgid "Croatian Kuna"
-msgstr ""
+msgstr "Хорватська куна"
 
 #: src/define.in:291
 msgid "Cuban Peso"
-msgstr ""
+msgstr "Кубинський песо"
 
 #: src/define.in:297
 msgid "Czech Koruna"
-msgstr ""
+msgstr "Чеська крона"
 
 #: src/define.in:303
 msgid "Danish Krone"
-msgstr ""
+msgstr "Данська крона"
 
 #: src/define.in:309
 msgid "Djiboutian Franc"
-msgstr ""
+msgstr "Джибутійський франк"
 
 #: src/define.in:315
 msgid "Dominican Peso"
-msgstr ""
+msgstr "Домініканський песо"
 
 #: src/define.in:321
 msgid "East Caribbean Dollar"
-msgstr ""
+msgstr "Східнокарибський долар"
 
 #: src/define.in:327
 msgid "Egyptian Pound"
-msgstr ""
+msgstr "Єгипетський фунт"
 
 #: src/define.in:333
 msgid "Ether"
-msgstr ""
+msgstr "Етер"
 
 #: src/define.in:339
 msgid "Ethiopian Birr"
-msgstr ""
+msgstr "Етіопіський бир"
 
 #: src/define.in:345
 msgid "Euro"
-msgstr ""
+msgstr "Євро"
 
 #: src/define.in:351
 msgid "Fijian Dollar"
-msgstr ""
+msgstr "Фіджійський долар"
 
 #: src/define.in:357
 msgid "Gambian dalasi"
-msgstr ""
+msgstr "Гамбійський даласі"
 
 #: src/define.in:363
 msgid "Georgian Lari"
-msgstr ""
+msgstr "Грузинський ларі"
 
 #: src/define.in:369
 msgid "Ghanaian Cedi"
-msgstr ""
+msgstr "Ганський седі"
 
 #: src/define.in:381
 msgid "Gibraltar Pound"
-msgstr ""
+msgstr "Гібралтарський фунт"
 
 #: src/define.in:387
 msgid "Guatemalan Quetzal"
-msgstr ""
+msgstr "Гватемальський кетсаль"
 
 #: src/define.in:393
 msgid "Guinean Franc"
-msgstr ""
+msgstr "Гвінейський франк"
 
 #: src/define.in:399
 msgid "Guyanaese Dollar"
-msgstr ""
+msgstr "Гаянський долар"
 
 #: src/define.in:405
 msgid "Haitian Gourde"
-msgstr ""
+msgstr "Гаїтянський гурд"
 
 #: src/define.in:411
 msgid "Honduran Lempira"
-msgstr ""
+msgstr "Гондураська лемпіра"
 
 #: src/define.in:417
 msgid "Hong Kong Dollar"
-msgstr ""
+msgstr "Гонконзький долар"
 
 #: src/define.in:423
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "Угорський форинт"
 
 #: src/define.in:429
 msgid "Icelandic Króna"
-msgstr ""
+msgstr "Ісландська крона"
 
 #: src/define.in:435
 msgid "Indian Rupee"
-msgstr ""
+msgstr "Індійська рупія"
 
 #: src/define.in:441
 msgid "Indonesian Rupiah"
-msgstr ""
+msgstr "Індонезійська рупія"
 
 #: src/define.in:447
 msgid "Iranian Rial"
-msgstr ""
+msgstr "Іранський ріал"
 
 #: src/define.in:453
 msgid "Iraqi Dinar"
-msgstr ""
+msgstr "Іракський динар"
 
 #: src/define.in:459
 msgid "Israeli New Shekel"
-msgstr ""
+msgstr "Ізраїльський новий шекель"
 
 #: src/define.in:465
 msgid "Jamaican Dollar"
-msgstr ""
+msgstr "Ямайський долар"
 
 #: src/define.in:471
 msgid "Japanese Yen"
-msgstr ""
+msgstr "Японська єна"
 
 #: src/define.in:477
 msgid "Jordanian Dinar"
-msgstr ""
+msgstr "Йорданський динар"
 
 #: src/define.in:483
 msgid "Kazakhstani Tenge"
-msgstr ""
+msgstr "Казахстанський теньге"
 
 #: src/define.in:489
 msgid "Kenyan Shilling"
-msgstr ""
+msgstr "Кенійський шилінг"
 
 #: src/define.in:495
 msgid "Kuwaiti Dinar"
-msgstr ""
+msgstr "Кувейтський динар"
 
 #: src/define.in:501
 msgid "Kyrgyzstani Som"
-msgstr ""
+msgstr "Киргизстанський сом"
 
 #: src/define.in:507
 msgid "Laotian Kip"
-msgstr ""
+msgstr "Лаоський кіп"
 
 #: src/define.in:513
 msgid "Lebanese pound"
-msgstr ""
+msgstr "Ліванський фунт"
 
 #: src/define.in:519
 msgid "Lesotho loti"
-msgstr ""
+msgstr "Лесотський лоті"
 
 #: src/define.in:525
 msgid "Liberian Dollar"
-msgstr ""
+msgstr "Ліберійський долар"
 
 #: src/define.in:531
 msgid "Libyan Dinar"
-msgstr ""
+msgstr "Лівійський динар"
 
 #: src/define.in:537
 msgid "Litecoin"
-msgstr ""
+msgstr "Litecoin"
 
 #: src/define.in:543
 msgid "Macanese Pataca"
-msgstr ""
+msgstr "Аоминська патака"
 
 #: src/define.in:549
 msgid "Macedonian Denar"
-msgstr ""
+msgstr "Македонський денар"
 
 #: src/define.in:555
 msgid "Malagasy Ariary"
-msgstr ""
+msgstr "Малагасійський аріарі"
 
 #: src/define.in:561
 msgid "Malawian Kwacha"
-msgstr ""
+msgstr "Малавійська квача"
 
 #: src/define.in:567
 msgid "Malaysian Ringgit"
-msgstr ""
+msgstr "Малайзійський рингіт"
 
 #: src/define.in:573
 msgid "Maldivian Rufiyaa"
-msgstr ""
+msgstr "Мальдівська руфія"
 
 #: src/define.in:579
 msgid "Mauritanian Ouguiya (1973–2017)"
-msgstr ""
+msgstr "Мавританська угія (1973–2017)"
 
 #: src/define.in:585
 msgid "Mauritian Rupee"
-msgstr ""
+msgstr "Маврикійська рупія"
 
 #: src/define.in:591
 msgid "Mexican Peso"
-msgstr ""
+msgstr "Мексиканський песо"
 
 #: src/define.in:597
 msgid "Moldovan Leu"
-msgstr ""
+msgstr "Молдовський лей"
 
 #: src/define.in:603
 msgid "Moroccan Dirham"
-msgstr ""
+msgstr "Марокканський дирхам"
 
 #: src/define.in:609
 msgid "Mozambican metical"
-msgstr ""
+msgstr "Мозамбіцький метикал"
 
 #: src/define.in:621
 msgid "Myanmar Kyat"
-msgstr ""
+msgstr "М'янмський к'ят"
 
 #: src/define.in:627
 msgid "New Taiwan dollar"
-msgstr ""
+msgstr "Новий тайванський долар"
 
 #: src/define.in:633
 msgid "Namibian dollar"
-msgstr ""
+msgstr "Намібійський долар"
 
 #: src/define.in:639
 msgid "Nepalese Rupee"
-msgstr ""
+msgstr "Непальська рупія"
 
 #: src/define.in:645
 msgid "Netherlands Antillean Guilder"
-msgstr ""
+msgstr "Нідерландський антильський гульден"
 
 #: src/define.in:651
 msgid "New Zealand Dollar"
-msgstr ""
+msgstr "Новозеландський долар"
 
 #: src/define.in:657
 msgid "Nicaraguan Córdoba"
-msgstr ""
+msgstr "Нікарагуанська кордоба"
 
 #: src/define.in:663
 msgid "Nigerian Naira"
-msgstr ""
+msgstr "Нігерійська найра"
 
 #: src/define.in:669
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "Норвезька крона"
 
 #: src/define.in:675
 msgid "Omani Rial"
-msgstr ""
+msgstr "Оманський ріал"
 
 #: src/define.in:681
 msgid "Pakistani Rupee"
-msgstr ""
+msgstr "Пакистанська рупія"
 
 #: src/define.in:687
 msgid "Panamanian Balboa"
-msgstr ""
+msgstr "Панамське бальбоа"
 
 #: src/define.in:693
 msgid "Papua New Guinean Kina"
-msgstr ""
+msgstr "Кіна Папуа Нової Гвінеї"
 
 #: src/define.in:699
 msgid "Paraguayan Guarani"
-msgstr ""
+msgstr "Парагвайський гуарані"
 
 #: src/define.in:705
 msgid "Philippine Piso"
-msgstr ""
+msgstr "Філіппінське песо"
 
 #: src/define.in:711
 msgid "Poland złoty"
-msgstr ""
+msgstr "Польський злотий"
 
 #: src/define.in:717
 msgid "Pound sterling"
-msgstr ""
+msgstr "Фунт стерлінгів"
 
 #: src/define.in:723
 msgid "Qatari Rial"
-msgstr ""
+msgstr "Катарський ріал"
 
 #: src/define.in:729
 msgid "Romanian Leu"
-msgstr ""
+msgstr "Румунський лей"
 
 #: src/define.in:741
 msgid "Russian Ruble"
-msgstr ""
+msgstr "російський рубль"
 
 #: src/define.in:753
 msgid "Rwandan franc"
-msgstr ""
+msgstr "Руандійський франк"
 
 #: src/define.in:759
 msgid "Salvadoran Colón"
-msgstr ""
+msgstr "Сальвадорський колон"
 
 #: src/define.in:765
 msgid "Saudi Riyal"
-msgstr ""
+msgstr "Саудівський ріал"
 
 #: src/define.in:771
 msgid "Serbian Dinar"
-msgstr ""
+msgstr "Сербський динар"
 
 #: src/define.in:783
 msgid "Seychellois Rupee"
-msgstr ""
+msgstr "Сейшельська рупія"
 
 #: src/define.in:789
 msgid "Sierra Leonean Leone"
-msgstr ""
+msgstr "Леоне Сьєрра-Леоне"
 
 #: src/define.in:795
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "Сінгапурський долар"
 
 #: src/define.in:801
 msgid "Sol"
-msgstr ""
+msgstr "Перуанський соль"
 
 #: src/define.in:807
 msgid "Solomon Islands Dollar"
-msgstr ""
+msgstr "Долар Соломонових Островів"
 
 #: src/define.in:813
 msgid "Somali Shilling"
-msgstr ""
+msgstr "Сомалійський шилінг"
 
 #: src/define.in:819
 msgid "South African Rand"
-msgstr ""
+msgstr "Південноафриканський ранд"
 
 #: src/define.in:825
 msgid "South Korean won"
-msgstr ""
+msgstr "Південнокорейська вона"
 
 #: src/define.in:831
 msgid "Sovereign Bolivar"
-msgstr ""
+msgstr "Венесуельський суверенний болівар"
 
 #: src/define.in:837
 msgid "Special Drawing Rights"
-msgstr ""
+msgstr "Спеціальні права запозичення"
 
 #: src/define.in:843
 msgid "Sri Lankan Rupee"
-msgstr ""
+msgstr "Шрі-Ланкійська рупія"
 
 #: src/define.in:849
 msgid "Sudanese pound"
-msgstr ""
+msgstr "Суданський фунт"
 
 #: src/define.in:861
 msgid "Surinamese Dollar"
-msgstr ""
+msgstr "Суринамський долар"
 
 #: src/define.in:867
 msgid "Swazi Lilangeni"
-msgstr ""
+msgstr "Свазілендський лілангені"
 
 #: src/define.in:873
 msgid "Swedish Krona"
-msgstr ""
+msgstr "Шведська крона"
 
 #: src/define.in:879
 msgid "Swiss Franc"
-msgstr ""
+msgstr "Швейцарський франк"
 
 #: src/define.in:885
 msgid "Tajikistani Somoni"
-msgstr ""
+msgstr "Таджикистанський сомоні"
 
 #: src/define.in:891
 msgid "Tanzanian Shilling"
-msgstr ""
+msgstr "Танзанійський шилінг"
 
 #: src/define.in:897
 msgid "Thai Baht"
-msgstr ""
+msgstr "Тайський бат"
 
 #: src/define.in:903
 msgid "Tongan Paʻanga"
-msgstr ""
+msgstr "Тонганська паанга"
 
 #: src/define.in:909
 msgid "Trinidad & Tobago Dollar"
-msgstr ""
+msgstr "Долар Тринідаду і Тобаго"
 
 #: src/define.in:915
 msgid "Tunisian Dinar"
-msgstr ""
+msgstr "Туніський динар"
 
 #: src/define.in:921
 msgid "Turkish lira"
-msgstr ""
+msgstr "Турецька ліра"
 
 #: src/define.in:927
 msgid "Turkmenistan manat"
-msgstr ""
+msgstr "Туркменістанський манат"
 
 #: src/define.in:939
 msgid "Ugandan Shilling"
-msgstr ""
+msgstr "Угандійський шилінг"
 
 #: src/define.in:945
 msgid "Ukrainian hryvnia"
-msgstr ""
+msgstr "Українська гривня"
 
 #: src/define.in:951
 msgid "United Arab Emirates Dirham"
-msgstr ""
+msgstr "Дирхам Об'єднаних Арабських Еміратів"
 
 #: src/define.in:957
 msgid "United States Dollar"
-msgstr ""
+msgstr "Долар Сполучених Штатів Америки"
 
 #: src/define.in:963
 msgid "Uruguayan Peso"
-msgstr ""
+msgstr "Уругвайський песо"
 
 #: src/define.in:969
 msgid "Uzbekistani Som"
-msgstr ""
+msgstr "Узбекистанський сом"
 
 #: src/define.in:975
 msgid "Vietnamese dong"
-msgstr ""
+msgstr "В'єтнамський донг"
 
 #: src/define.in:981
 msgid "West African CFA franc"
-msgstr ""
+msgstr "Західноафриканський франк"
 
 #: src/define.in:987
 msgid "Yemeni Rial"
-msgstr ""
+msgstr "Єменський ріал"
 
 #: src/define.in:993
 msgid "Zambian Kwacha"
-msgstr ""
+msgstr "Замбійська квача"
 
 #: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr ""
+"Не вдалося конвертувати валюту, не вдалося отримати результати з Google."
 
 #: src/window.blp:18
 msgid "Main menu"
-msgstr ""
+msgstr "Головне меню"
 
 #: src/window.blp:34
 msgid "Source"
-msgstr ""
+msgstr "Джерело"
 
 #: src/window.blp:43
 msgid "Providers"
-msgstr ""
+msgstr "Постачальники"
 
 #: src/window.blp:46
 msgid "ECB"
-msgstr ""
+msgstr "ЄЦБ"
 
 #: src/window.blp:51
 msgid "Google (unstable)"
-msgstr ""
+msgstr "Google (нестабільний)"
 
 #: src/window.blp:56
 msgid "Moeda.info"
-msgstr ""
+msgstr "Moeda.info"
 
 #: src/window.blp:64
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Клавіатурні скорочення"
 
 #: src/window.blp:68
 msgid "About Valuta"
-msgstr ""
+msgstr "Про Валюту"
