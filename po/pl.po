@@ -8,103 +8,111 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-09-19 16:40+0000\n"
+"Last-Translator: adiee5 <adikrab@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/"
+"currency-converter/currency-converter/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
 msgid "Convert between currencies"
-msgstr ""
+msgstr "Przeliczaj waluty"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
 "Valuta is a simple and fast conversion tool, ideal for those who need to convert between different currencies repeatedly. Use it while traveling, budgeting, or anytime else you need to quickly convert between two currencies."
 msgstr ""
+"Valuta jest prostym i szybkim przelicznikiem, idealnym dla tych, co "
+"potrzebują często przeliczać waluty. Używaj tego w trakcie podróży, "
+"budżetowania lub kiedykolwiek, gdy potrzebujesz szybko przeliczyć dwie "
+"waluty."
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "Szukaj"
 
 #: src/components/currency_selector/index.blp:41
 msgid "Search Currencies"
-msgstr ""
+msgstr "Szukaj Walut"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
-msgstr ""
+msgstr "Ogólne"
 
 #: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Skróty klawiszowe"
 
 #: src/components/shortcuts/shortcuts.blp:15
 msgctxt "shortcuts window"
 msgid "Switch currencies"
-msgstr ""
+msgstr "Zamień waluty"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
-msgstr ""
+msgstr "Wyjdź"
 
 #: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
-msgstr ""
+msgstr "Błąd w trakcie przeliczania, spróbuj ponownie później."
 
 #: src/pages/convertion/index.blp:13
 msgid "From"
-msgstr ""
+msgstr "Z"
 
 #: src/pages/convertion/index.blp:30
 msgid "Switch"
-msgstr ""
+msgstr "Zamień"
 
 #: src/pages/convertion/index.blp:39
 msgid "To"
-msgstr ""
+msgstr "Na"
 
 #: src/pages/convertion/index.blp:87
 msgid "Reload"
-msgstr ""
+msgstr "Odśwież"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
-msgstr ""
+msgstr "Według"
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
-msgstr ""
+msgstr "Kopiuj"
 
 #: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
-msgstr ""
+msgstr "Kopiuj wynik do schowka"
 
 #: src/define.in:39
 msgid "Afghan Afghani"
-msgstr ""
+msgstr "Afgańskie Afgani"
 
 #: src/define.in:45
 msgid "Albanian Lek"
-msgstr ""
+msgstr "Lek Albański"
 
 #: src/define.in:51
 msgid "Algerian Dinar"
-msgstr ""
+msgstr "Dinar Algierski"
 
 #: src/define.in:57
 msgid "Angolan Kwanza"
-msgstr ""
+msgstr "Kwanza Angolska"
 
 #: src/define.in:63
 msgid "Argentine Peso"
-msgstr ""
+msgstr "Peso Argentyńskie"
 
 #: src/define.in:69
 msgid "Armenian Dram"
@@ -288,7 +296,7 @@ msgstr ""
 
 #: src/define.in:345
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: src/define.in:351
 msgid "Fijian Dollar"
@@ -697,35 +705,36 @@ msgstr ""
 #: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr ""
+"Nie można było przeliczyć waluty, nie udało się pobrać wyników z Google."
 
 #: src/window.blp:18
 msgid "Main menu"
-msgstr ""
+msgstr "Menu główne"
 
 #: src/window.blp:34
 msgid "Source"
-msgstr ""
+msgstr "Źródło"
 
 #: src/window.blp:43
 msgid "Providers"
-msgstr ""
+msgstr "Dostawcy"
 
 #: src/window.blp:46
 msgid "ECB"
-msgstr ""
+msgstr "EBC"
 
 #: src/window.blp:51
 msgid "Google (unstable)"
-msgstr ""
+msgstr "Google (niestabilne)"
 
 #: src/window.blp:56
 msgid "Moeda.info"
-msgstr ""
+msgstr "Moeda.info"
 
 #: src/window.blp:64
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Skróty klawiszowe"
 
 #: src/window.blp:68
 msgid "About Valuta"
-msgstr ""
+msgstr "O „Valucie”"
