@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-09-19 16:40+0000\n"
+"PO-Revision-Date: 2024-09-20 22:40+0000\n"
 "Last-Translator: adiee5 <adikrab@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/pl/>\n"
@@ -116,7 +116,7 @@ msgstr "Peso Argentyńskie"
 
 #: src/define.in:69
 msgid "Armenian Dram"
-msgstr ""
+msgstr "Dram Armeński"
 
 #: src/define.in:75
 msgid "Aruban Florin"
@@ -124,7 +124,7 @@ msgstr ""
 
 #: src/define.in:81
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Dolar Australijski"
 
 #: src/define.in:87
 msgid "Azerbaijani Manat"
@@ -132,7 +132,7 @@ msgstr ""
 
 #: src/define.in:93
 msgid "Bahamian Dollar"
-msgstr ""
+msgstr "Dolar Bahamski"
 
 #: src/define.in:99
 msgid "Bahraini Dinar"
@@ -140,7 +140,7 @@ msgstr ""
 
 #: src/define.in:105
 msgid "Bajan dollar"
-msgstr ""
+msgstr "Dolar Barbadoski"
 
 #: src/define.in:111
 msgid "Bangladeshi Taka"
@@ -148,15 +148,15 @@ msgstr ""
 
 #: src/define.in:117
 msgid "Belarusian Ruble"
-msgstr ""
+msgstr "Rubel Białoruski"
 
 #: src/define.in:129
 msgid "Belize Dollar"
-msgstr ""
+msgstr "Dolar Belizeński"
 
 #: src/define.in:135
 msgid "Bermudan Dollar"
-msgstr ""
+msgstr "Dolar Bermudzki"
 
 #: src/define.in:141
 msgid "Bhutan currency"
@@ -164,11 +164,11 @@ msgstr ""
 
 #: src/define.in:147
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
 #: src/define.in:153
 msgid "Bitcoin Cash"
-msgstr ""
+msgstr "Bitcoin Cash"
 
 #: src/define.in:159
 msgid "Bolivian Boliviano"
@@ -192,7 +192,7 @@ msgstr ""
 
 #: src/define.in:189
 msgid "Bulgarian Lev"
-msgstr ""
+msgstr "Lew Bułgarski"
 
 #: src/define.in:195
 msgid "Burundian Franc"
@@ -208,7 +208,7 @@ msgstr ""
 
 #: src/define.in:213
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "Dolar Kanadyjski"
 
 #: src/define.in:219
 msgid "Cape Verdean Escudo"
@@ -224,7 +224,7 @@ msgstr ""
 
 #: src/define.in:237
 msgid "Chilean Peso"
-msgstr ""
+msgstr "Peso Chilijskie"
 
 #: src/define.in:243
 msgid "Chilean Unit of Account (UF)"
@@ -232,15 +232,15 @@ msgstr ""
 
 #: src/define.in:249
 msgid "Chinese Yuan"
-msgstr ""
+msgstr "Yuan Chiński"
 
 #: src/define.in:255
 msgid "Chinese Yuan (offshore)"
-msgstr ""
+msgstr "Yan Chiński (zewnętrzny)"
 
 #: src/define.in:261
 msgid "Colombian Peso"
-msgstr ""
+msgstr "Peso Kolumbijskie"
 
 #: src/define.in:267
 msgid "Comorian franc"
@@ -256,19 +256,19 @@ msgstr ""
 
 #: src/define.in:285
 msgid "Croatian Kuna"
-msgstr ""
+msgstr "Kuna Chorwacka"
 
 #: src/define.in:291
 msgid "Cuban Peso"
-msgstr ""
+msgstr "Peso Kubańskie"
 
 #: src/define.in:297
 msgid "Czech Koruna"
-msgstr ""
+msgstr "Korona Czeska"
 
 #: src/define.in:303
 msgid "Danish Krone"
-msgstr ""
+msgstr "Korona Duńska"
 
 #: src/define.in:309
 msgid "Djiboutian Franc"
