@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-09-20 22:40+0000\n"
+"PO-Revision-Date: 2024-09-29 21:15+0000\n"
 "Last-Translator: adiee5 <adikrab@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/pl/>\n"
@@ -352,7 +352,7 @@ msgstr ""
 
 #: src/define.in:435
 msgid "Indian Rupee"
-msgstr ""
+msgstr "Rupia Indyjska"
 
 #: src/define.in:441
 msgid "Indonesian Rupiah"
@@ -368,15 +368,15 @@ msgstr ""
 
 #: src/define.in:459
 msgid "Israeli New Shekel"
-msgstr ""
+msgstr "Nowy Izraelski Szekel"
 
 #: src/define.in:465
 msgid "Jamaican Dollar"
-msgstr ""
+msgstr "Dolar Jamajski"
 
 #: src/define.in:471
 msgid "Japanese Yen"
-msgstr ""
+msgstr "Jen Japoński"
 
 #: src/define.in:477
 msgid "Jordanian Dinar"
@@ -420,7 +420,7 @@ msgstr ""
 
 #: src/define.in:537
 msgid "Litecoin"
-msgstr ""
+msgstr "Łitecoin"
 
 #: src/define.in:543
 msgid "Macanese Pataca"
@@ -428,7 +428,7 @@ msgstr ""
 
 #: src/define.in:549
 msgid "Macedonian Denar"
-msgstr ""
+msgstr "Denar Macedoński"
 
 #: src/define.in:555
 msgid "Malagasy Ariary"
@@ -456,11 +456,11 @@ msgstr ""
 
 #: src/define.in:591
 msgid "Mexican Peso"
-msgstr ""
+msgstr "Peso Meksykańskie"
 
 #: src/define.in:597
 msgid "Moldovan Leu"
-msgstr ""
+msgstr "Lej Mołdawski"
 
 #: src/define.in:603
 msgid "Moroccan Dirham"
@@ -504,7 +504,7 @@ msgstr ""
 
 #: src/define.in:669
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "Korona Norweska"
 
 #: src/define.in:675
 msgid "Omani Rial"
@@ -532,11 +532,11 @@ msgstr ""
 
 #: src/define.in:711
 msgid "Poland złoty"
-msgstr ""
+msgstr "Polski Złoty"
 
 #: src/define.in:717
 msgid "Pound sterling"
-msgstr ""
+msgstr "Funt szterling"
 
 #: src/define.in:723
 msgid "Qatari Rial"
@@ -544,11 +544,11 @@ msgstr ""
 
 #: src/define.in:729
 msgid "Romanian Leu"
-msgstr ""
+msgstr "Lej Rumuński"
 
 #: src/define.in:741
 msgid "Russian Ruble"
-msgstr ""
+msgstr "Rubel Rosyjski"
 
 #: src/define.in:753
 msgid "Rwandan franc"
@@ -564,7 +564,7 @@ msgstr ""
 
 #: src/define.in:771
 msgid "Serbian Dinar"
-msgstr ""
+msgstr "Dinar Serbski"
 
 #: src/define.in:783
 msgid "Seychellois Rupee"
@@ -576,7 +576,7 @@ msgstr ""
 
 #: src/define.in:795
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "Dolar Singapurski"
 
 #: src/define.in:801
 msgid "Sol"
@@ -596,7 +596,7 @@ msgstr ""
 
 #: src/define.in:825
 msgid "South Korean won"
-msgstr ""
+msgstr "Won Południowokoreański"
 
 #: src/define.in:831
 msgid "Sovereign Bolivar"
@@ -604,7 +604,7 @@ msgstr ""
 
 #: src/define.in:837
 msgid "Special Drawing Rights"
-msgstr ""
+msgstr "Specjalne Prawa Ciągnienia"
 
 #: src/define.in:843
 msgid "Sri Lankan Rupee"
@@ -612,11 +612,11 @@ msgstr ""
 
 #: src/define.in:849
 msgid "Sudanese pound"
-msgstr ""
+msgstr "Funt Sudański"
 
 #: src/define.in:861
 msgid "Surinamese Dollar"
-msgstr ""
+msgstr "Dolar Surinamski"
 
 #: src/define.in:867
 msgid "Swazi Lilangeni"
@@ -624,11 +624,11 @@ msgstr ""
 
 #: src/define.in:873
 msgid "Swedish Krona"
-msgstr ""
+msgstr "Korona Szwedzka"
 
 #: src/define.in:879
 msgid "Swiss Franc"
-msgstr ""
+msgstr "Frank Szwajcarski"
 
 #: src/define.in:885
 msgid "Tajikistani Somoni"
@@ -668,7 +668,7 @@ msgstr ""
 
 #: src/define.in:945
 msgid "Ukrainian hryvnia"
-msgstr ""
+msgstr "Hrywna Ukraińska"
 
 #: src/define.in:951
 msgid "United Arab Emirates Dirham"
@@ -676,7 +676,7 @@ msgstr ""
 
 #: src/define.in:957
 msgid "United States Dollar"
-msgstr ""
+msgstr "Dolar Amerykański"
 
 #: src/define.in:963
 msgid "Uruguayan Peso"
