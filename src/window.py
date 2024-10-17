@@ -100,5 +100,6 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
     convertion.connect("converted", converted)
     load_convertion_page(from_currency_value)
     window.set_application(application)
+    window.set_icon_name(application.get_application_id())
     window.load_convertion_page = load_convertion_page
     return window
