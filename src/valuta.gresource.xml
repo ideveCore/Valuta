@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/io/github/idevecore/Valuta">
+    <file alias="icons/scalable/status/arrow1-down-symbolic.svg" preprocess="xml-stripblanks">assets/icons/arrow1-down-symbolic.svg</file>
+    <file alias="icons/scalable/status/arrow1-up-symbolic.svg" preprocess="xml-stripblanks">assets/icons/arrow1-up-symbolic.svg</file>
+    <file alias="icons/scalable/status/code-symbolic.svg" preprocess="xml-stripblanks">assets/icons/code-symbolic.svg</file>
+    <file alias="icons/scalable/status/dark-mode-symbolic.svg" preprocess="xml-stripblanks">assets/icons/dark-mode-symbolic.svg</file>
+    <file alias="icons/scalable/status/help-about-symbolic.svg" preprocess="xml-stripblanks">assets/icons/help-about-symbolic.svg</file>
+    <file alias="icons/scalable/status/refresh-large-symbolic.svg" preprocess="xml-stripblanks">assets/icons/refresh-large-symbolic.svg</file>
+    <file alias="icons/scalable/status/sonar-symbolic.svg" preprocess="xml-stripblanks">assets/icons/sonar-symbolic.svg</file>
+    <file alias="icons/scalable/status/vertical-arrows-symbolic.svg" preprocess="xml-stripblanks">assets/icons/vertical-arrows-symbolic.svg</file>
     <file compressed="true" alias="style.css">assets/style.css</file>
     <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector/index.ui</file>

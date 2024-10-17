@@ -66,11 +66,5 @@ install_subdir('components', install_dir: moduledir)
 # ===== Install page sources =====
 install_subdir('pages', install_dir: moduledir)
 
-# ===== Install assets sources =====
-install_subdir('assets', install_dir: moduledir)
-
 # ===== Install provider =====
 subdir('search_provider')
-
-# ===== Install icons =====
-subdir('assets/icons')
