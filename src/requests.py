@@ -83,10 +83,10 @@ class Google(Providers):
     def serializer(self, data: bytes):
         data = data.decode('utf-8', errors="replace")
         try:
-            results = re.findall(f'[\d*\,]*\.\d* {CODES[self.to_currency]["name"]}', data)
+            results = re.findall(rf'[\d*\,]*\.\d* {CODES[self.to_currency]["name"]}', data)
             if results.__len__() > 0:
                 converted_amount_str = results[0]
-                converted_currency = re.findall('[\d*\,]*\.\d*', converted_amount_str)[0]
+                converted_currency = re.findall(r'[\d*\,]*\.\d*', converted_amount_str)[0]
                 return self.default_response({
                     "amount": converted_currency,
                     "converted": True,
