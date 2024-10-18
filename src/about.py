@@ -31,7 +31,7 @@ def about(application: Adw.Application):
             key_file.load_from_file("/.flatpak-info", GLib.KeyFileFlags.NONE);
         except Exception as error:
             return None;
-        return key_file;
+        return key_file.get_value("Instance", "flatpak-version");
 
     app_info = f'{APP_ID} {VERSION}'
     glib_os_info = f'{GLib.get_os_info("ID")} {GLib.get_os_info("VERSION_ID")}'
@@ -39,7 +39,7 @@ def about(application: Adw.Application):
     adw_info = f'Adw {Adw.MAJOR_VERSION}'
     gtk_info = f'Gtk {Gtk.get_major_version()}'
     glib_info = f'GLib {".".join(map(str, GLib.glib_version))}'
-    flatpak_info = f'Flatpak {get_flatpak_info().get_value("Instance", "flatpak-version")}'
+    flatpak_info = f'Flatpak {get_flatpak_info()}'
     blueprint_info = 'Blueprint 0.10.0'
 
     debug_info = f'{app_info}\n{glib_os_info}\n{pygobject_info}\n{adw_info}\n{gtk_info}\n{glib_info}\n{flatpak_info}\n{blueprint_info}'
