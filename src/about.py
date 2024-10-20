@@ -55,5 +55,6 @@ def about(application: Adw.Application):
         designers=['Brage Fuglseth https://bragefuglseth.dev'],
         issue_url='https://github.com/ideveCore/valuta/issues',
         debug_info=debug_info,
+        license_type=Gtk.License.GPL_3_0,
         copyright='© 2023 Ideve Core'
     )
