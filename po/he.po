@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-07-14 19:09+0000\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
+"PO-Revision-Date: 2024-11-06 08:00+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/he/>\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.8.2\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
@@ -91,15 +91,15 @@ msgstr "העתקה"
 
 #: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
-msgstr "העתקה ההמרה ללוח הגזירים"
+msgstr "העתקת ההמרה ללוח הגזירים"
 
 #: src/define.in:39
 msgid "Afghan Afghani"
-msgstr ""
+msgstr "אפגני אפגניסטני"
 
 #: src/define.in:45
 msgid "Albanian Lek"
-msgstr ""
+msgstr "לק אלבני"
 
 #: src/define.in:51
 msgid "Algerian Dinar"
@@ -107,19 +107,19 @@ msgstr "דינר אלג׳ירי"
 
 #: src/define.in:57
 msgid "Angolan Kwanza"
-msgstr ""
+msgstr "קואנזה אנגולי"
 
 #: src/define.in:63
 msgid "Argentine Peso"
-msgstr ""
+msgstr "פסו ארגנטינאי"
 
 #: src/define.in:69
 msgid "Armenian Dram"
-msgstr ""
+msgstr "דראם ארמני"
 
 #: src/define.in:75
 msgid "Aruban Florin"
-msgstr ""
+msgstr "פלורין ארובי"
 
 #: src/define.in:81
 msgid "Australian Dollar"
@@ -127,11 +127,11 @@ msgstr "דולר אוסטרלי"
 
 #: src/define.in:87
 msgid "Azerbaijani Manat"
-msgstr ""
+msgstr "מאנאט אזרי"
 
 #: src/define.in:93
 msgid "Bahamian Dollar"
-msgstr ""
+msgstr "דולר בהאמי"
 
 #: src/define.in:99
 msgid "Bahraini Dinar"
@@ -139,7 +139,7 @@ msgstr "דינר בחרייני"
 
 #: src/define.in:105
 msgid "Bajan dollar"
-msgstr ""
+msgstr "דולר של ברבדוס"
 
 #: src/define.in:111
 msgid "Bangladeshi Taka"
@@ -147,19 +147,19 @@ msgstr "טאקה בנגלדשי"
 
 #: src/define.in:117
 msgid "Belarusian Ruble"
-msgstr ""
+msgstr "רובל בלארוסי"
 
 #: src/define.in:129
 msgid "Belize Dollar"
-msgstr ""
+msgstr "דולר של בליז"
 
 #: src/define.in:135
 msgid "Bermudan Dollar"
-msgstr ""
+msgstr "דולר ברמודי"
 
 #: src/define.in:141
 msgid "Bhutan currency"
-msgstr ""
+msgstr "המטבע של בהוטן"
 
 #: src/define.in:147
 msgid "Bitcoin"
@@ -167,19 +167,19 @@ msgstr "ביטקוין"
 
 #: src/define.in:153
 msgid "Bitcoin Cash"
-msgstr ""
+msgstr "ביטקוין מזומן"
 
 #: src/define.in:159
 msgid "Bolivian Boliviano"
-msgstr ""
+msgstr "בוליביאנו בוליביאני"
 
 #: src/define.in:165
 msgid "Bosnia-Herzegovina Convertible Mark"
-msgstr ""
+msgstr "מארק סחיר של בוסניה והרצגובינה"
 
 #: src/define.in:171
 msgid "Botswanan Pula"
-msgstr ""
+msgstr "פולה בוטסואני"
 
 #: src/define.in:177
 msgid "Brazilian Real"
@@ -195,7 +195,7 @@ msgstr "לב בולגרי"
 
 #: src/define.in:195
 msgid "Burundian Franc"
-msgstr ""
+msgstr "פרנק בורונדי"
 
 #: src/define.in:201
 msgid "CFP Franc"
@@ -203,7 +203,7 @@ msgstr "פרנק הקהילה הצרפתית באפריקה (CFA)"
 
 #: src/define.in:207
 msgid "Cambodian riel"
-msgstr ""
+msgstr "ריאל קמבודי"
 
 #: src/define.in:213
 msgid "Canadian Dollar"
@@ -211,7 +211,7 @@ msgstr "דולר קנדי"
 
 #: src/define.in:219
 msgid "Cape Verdean Escudo"
-msgstr ""
+msgstr "אסקודו של כף ורדה"
 
 #: src/define.in:225
 msgid "Cayman Islands Dollar"
@@ -291,7 +291,7 @@ msgstr ""
 
 #: src/define.in:339
 msgid "Ethiopian Birr"
-msgstr ""
+msgstr "ביר אתיופי"
 
 #: src/define.in:345
 msgid "Euro"
@@ -307,7 +307,7 @@ msgstr ""
 
 #: src/define.in:363
 msgid "Georgian Lari"
-msgstr ""
+msgstr "לארי גאורגי"
 
 #: src/define.in:369
 msgid "Ghanaian Cedi"
@@ -315,15 +315,15 @@ msgstr ""
 
 #: src/define.in:381
 msgid "Gibraltar Pound"
-msgstr ""
+msgstr "פאונד גיברלטרי"
 
 #: src/define.in:387
 msgid "Guatemalan Quetzal"
-msgstr ""
+msgstr "קצאל גואטמלי"
 
 #: src/define.in:393
 msgid "Guinean Franc"
-msgstr ""
+msgstr "פרנק גינאי"
 
 #: src/define.in:399
 msgid "Guyanaese Dollar"
@@ -379,7 +379,7 @@ msgstr "ין יפני"
 
 #: src/define.in:477
 msgid "Jordanian Dinar"
-msgstr ""
+msgstr "דינר ירדני"
 
 #: src/define.in:483
 msgid "Kazakhstani Tenge"
@@ -395,7 +395,7 @@ msgstr "דינר כוויתי"
 
 #: src/define.in:501
 msgid "Kyrgyzstani Som"
-msgstr ""
+msgstr "סום קירגיזי"
 
 #: src/define.in:507
 msgid "Laotian Kip"
@@ -403,7 +403,7 @@ msgstr ""
 
 #: src/define.in:513
 msgid "Lebanese pound"
-msgstr ""
+msgstr "לירה לבנונית"
 
 #: src/define.in:519
 msgid "Lesotho loti"
@@ -419,7 +419,7 @@ msgstr "דינר לובי"
 
 #: src/define.in:537
 msgid "Litecoin"
-msgstr ""
+msgstr "לייטקוין"
 
 #: src/define.in:543
 msgid "Macanese Pataca"
@@ -463,15 +463,15 @@ msgstr ""
 
 #: src/define.in:603
 msgid "Moroccan Dirham"
-msgstr ""
+msgstr "דירהם מרוקאי"
 
 #: src/define.in:609
 msgid "Mozambican metical"
-msgstr ""
+msgstr "מטיקל מוזמביני"
 
 #: src/define.in:621
 msgid "Myanmar Kyat"
-msgstr ""
+msgstr "צ׳אט מיאנמרי"
 
 #: src/define.in:627
 msgid "New Taiwan dollar"
@@ -479,7 +479,7 @@ msgstr ""
 
 #: src/define.in:633
 msgid "Namibian dollar"
-msgstr ""
+msgstr "דולר נמיבי"
 
 #: src/define.in:639
 msgid "Nepalese Rupee"
@@ -495,7 +495,7 @@ msgstr "דולר ניו־זילנדי"
 
 #: src/define.in:657
 msgid "Nicaraguan Córdoba"
-msgstr ""
+msgstr "קורדובה של ניקרגואה"
 
 #: src/define.in:663
 msgid "Nigerian Naira"
@@ -603,7 +603,7 @@ msgstr "בוליבר ונצואלי"
 
 #: src/define.in:837
 msgid "Special Drawing Rights"
-msgstr ""
+msgstr "סל המטבעות"
 
 #: src/define.in:843
 msgid "Sri Lankan Rupee"
@@ -611,11 +611,11 @@ msgstr "רופי סרי לנקי"
 
 #: src/define.in:849
 msgid "Sudanese pound"
-msgstr ""
+msgstr "לירה סודאנית"
 
 #: src/define.in:861
 msgid "Surinamese Dollar"
-msgstr ""
+msgstr "דולר סורינאמי"
 
 #: src/define.in:867
 msgid "Swazi Lilangeni"
@@ -631,7 +631,7 @@ msgstr "פרנק שווייצרי"
 
 #: src/define.in:885
 msgid "Tajikistani Somoni"
-msgstr ""
+msgstr "סומוני טג׳יקי"
 
 #: src/define.in:891
 msgid "Tanzanian Shilling"
@@ -699,7 +699,7 @@ msgstr "ריאל תימני"
 
 #: src/define.in:993
 msgid "Zambian Kwacha"
-msgstr ""
+msgstr "קוואצ׳ה זמבי"
 
 #: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
