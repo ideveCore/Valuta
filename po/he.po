@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-11-06 08:00+0000\n"
+"PO-Revision-Date: 2024-11-28 14:00+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/he/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Weblate 5.8.2\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
@@ -215,11 +215,11 @@ msgstr "אסקודו של כף ורדה"
 
 #: src/define.in:225
 msgid "Cayman Islands Dollar"
-msgstr ""
+msgstr "דולר של איי קיימן"
 
 #: src/define.in:231
 msgid "Central African CFA franc"
-msgstr ""
+msgstr "פרנק CFA מרכז אפריקני"
 
 #: src/define.in:237
 msgid "Chilean Peso"
@@ -243,15 +243,15 @@ msgstr "פסו קולומביאני"
 
 #: src/define.in:267
 msgid "Comorian franc"
-msgstr ""
+msgstr "פרנק קומורואי"
 
 #: src/define.in:273
 msgid "Congolese Franc"
-msgstr ""
+msgstr "פרנק קונגולי"
 
 #: src/define.in:279
 msgid "Costa Rican Colón"
-msgstr ""
+msgstr "קולון קוסטה ריקאי"
 
 #: src/define.in:285
 msgid "Croatian Kuna"
@@ -271,7 +271,7 @@ msgstr "כתר דני"
 
 #: src/define.in:309
 msgid "Djiboutian Franc"
-msgstr ""
+msgstr "פרנק ג׳יבוטי"
 
 #: src/define.in:315
 msgid "Dominican Peso"
@@ -279,7 +279,7 @@ msgstr "פסו דומיניקני"
 
 #: src/define.in:321
 msgid "East Caribbean Dollar"
-msgstr ""
+msgstr "דולר מזרח קריבי"
 
 #: src/define.in:327
 msgid "Egyptian Pound"
@@ -299,11 +299,11 @@ msgstr "אירו"
 
 #: src/define.in:351
 msgid "Fijian Dollar"
-msgstr ""
+msgstr "דולר פיג׳י"
 
 #: src/define.in:357
 msgid "Gambian dalasi"
-msgstr ""
+msgstr "דלסי גמבי"
 
 #: src/define.in:363
 msgid "Georgian Lari"
@@ -311,7 +311,7 @@ msgstr "לארי גאורגי"
 
 #: src/define.in:369
 msgid "Ghanaian Cedi"
-msgstr ""
+msgstr "סדי גאני"
 
 #: src/define.in:381
 msgid "Gibraltar Pound"
@@ -327,7 +327,7 @@ msgstr "פרנק גינאי"
 
 #: src/define.in:399
 msgid "Guyanaese Dollar"
-msgstr ""
+msgstr "דולר גיאני"
 
 #: src/define.in:405
 msgid "Haitian Gourde"
@@ -387,7 +387,7 @@ msgstr "טנגה קזחסטני"
 
 #: src/define.in:489
 msgid "Kenyan Shilling"
-msgstr ""
+msgstr "שילינג קנייתי"
 
 #: src/define.in:495
 msgid "Kuwaiti Dinar"
@@ -399,7 +399,7 @@ msgstr "סום קירגיזי"
 
 #: src/define.in:507
 msgid "Laotian Kip"
-msgstr ""
+msgstr "קיפ לאי"
 
 #: src/define.in:513
 msgid "Lebanese pound"
@@ -407,11 +407,11 @@ msgstr "לירה לבנונית"
 
 #: src/define.in:519
 msgid "Lesotho loti"
-msgstr ""
+msgstr "לוטי לסותי"
 
 #: src/define.in:525
 msgid "Liberian Dollar"
-msgstr ""
+msgstr "דולר ליברי"
 
 #: src/define.in:531
 msgid "Libyan Dinar"
@@ -423,19 +423,19 @@ msgstr "לייטקוין"
 
 #: src/define.in:543
 msgid "Macanese Pataca"
-msgstr ""
+msgstr "פטאקה של מקאו"
 
 #: src/define.in:549
 msgid "Macedonian Denar"
-msgstr ""
+msgstr "דינר מקדוני"
 
 #: src/define.in:555
 msgid "Malagasy Ariary"
-msgstr ""
+msgstr "אריארי מלגשי"
 
 #: src/define.in:561
 msgid "Malawian Kwacha"
-msgstr ""
+msgstr "קוואצ׳ה מלאווי‏"
 
 #: src/define.in:567
 msgid "Malaysian Ringgit"
@@ -443,7 +443,7 @@ msgstr "רינגיט מלזי"
 
 #: src/define.in:573
 msgid "Maldivian Rufiyaa"
-msgstr ""
+msgstr "רופייה מלדיבית‏"
 
 #: src/define.in:579
 msgid "Mauritanian Ouguiya (1973–2017)"
@@ -459,7 +459,7 @@ msgstr "פזו מקסיקני"
 
 #: src/define.in:597
 msgid "Moldovan Leu"
-msgstr ""
+msgstr "לאו מולדובני"
 
 #: src/define.in:603
 msgid "Moroccan Dirham"
@@ -475,7 +475,7 @@ msgstr "צ׳אט מיאנמרי"
 
 #: src/define.in:627
 msgid "New Taiwan dollar"
-msgstr ""
+msgstr "דולר טייוואני חדש"
 
 #: src/define.in:633
 msgid "Namibian dollar"
@@ -487,7 +487,7 @@ msgstr "רופי נפאלי"
 
 #: src/define.in:645
 msgid "Netherlands Antillean Guilder"
-msgstr ""
+msgstr "גילדר האנטילים ההולנדיים"
 
 #: src/define.in:651
 msgid "New Zealand Dollar"
@@ -519,11 +519,11 @@ msgstr "בלבואה"
 
 #: src/define.in:693
 msgid "Papua New Guinean Kina"
-msgstr ""
+msgstr "קינה של פפואה גינאה החדשה"
 
 #: src/define.in:699
 msgid "Paraguayan Guarani"
-msgstr ""
+msgstr "גוואראני פרגוואי"
 
 #: src/define.in:705
 msgid "Philippine Piso"
@@ -555,7 +555,7 @@ msgstr "פרנק רואנדי"
 
 #: src/define.in:759
 msgid "Salvadoran Colón"
-msgstr ""
+msgstr "קולון סלבדורי"
 
 #: src/define.in:765
 msgid "Saudi Riyal"
@@ -567,7 +567,7 @@ msgstr "דינר סרבי"
 
 #: src/define.in:783
 msgid "Seychellois Rupee"
-msgstr ""
+msgstr "רופי סיישלי"
 
 #: src/define.in:789
 msgid "Sierra Leonean Leone"
@@ -647,7 +647,7 @@ msgstr "פאנגה טונגאית"
 
 #: src/define.in:909
 msgid "Trinidad & Tobago Dollar"
-msgstr ""
+msgstr "דולר טרינידד וטובגו‏"
 
 #: src/define.in:915
 msgid "Tunisian Dinar"
@@ -659,7 +659,7 @@ msgstr "לירה טורקית"
 
 #: src/define.in:927
 msgid "Turkmenistan manat"
-msgstr ""
+msgstr "מנאט טורקמני"
 
 #: src/define.in:939
 msgid "Ugandan Shilling"
@@ -687,11 +687,11 @@ msgstr "סום אוזבקי"
 
 #: src/define.in:975
 msgid "Vietnamese dong"
-msgstr ""
+msgstr "דונג וייטנאמי"
 
 #: src/define.in:981
 msgid "West African CFA franc"
-msgstr ""
+msgstr "פרנק CFA מערב אפריקני"
 
 #: src/define.in:987
 msgid "Yemeni Rial"
