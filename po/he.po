@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-11-28 14:00+0000\n"
+"PO-Revision-Date: 2024-11-29 15:00+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/he/>\n"
@@ -235,7 +235,7 @@ msgstr "יואן סיני"
 
 #: src/define.in:255
 msgid "Chinese Yuan (offshore)"
-msgstr ""
+msgstr "יואן סיני (מחוץ לסין)"
 
 #: src/define.in:261
 msgid "Colombian Peso"
@@ -287,7 +287,7 @@ msgstr "לירה מצרית"
 
 #: src/define.in:333
 msgid "Ether"
-msgstr ""
+msgstr "Ether"
 
 #: src/define.in:339
 msgid "Ethiopian Birr"
@@ -447,7 +447,7 @@ msgstr "רופייה מלדיבית‏"
 
 #: src/define.in:579
 msgid "Mauritanian Ouguiya (1973–2017)"
-msgstr ""
+msgstr "אוגייה מאוריטנית (1973–2017)"
 
 #: src/define.in:585
 msgid "Mauritian Rupee"
