@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2025-01-22 10:00+0000\n"
+"PO-Revision-Date: 2025-01-25 11:01+0000\n"
 "Last-Translator: Himmel <Himmel@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/ja/>\n"
@@ -215,7 +215,7 @@ msgstr "カーボベルデ・エスクード"
 
 #: src/define.in:225
 msgid "Cayman Islands Dollar"
-msgstr "ケイマン諸島・ドル"
+msgstr "ケイマン諸島ドル"
 
 #: src/define.in:231
 msgid "Central African CFA franc"
@@ -499,240 +499,240 @@ msgstr "ニカラグア・コルドバ"
 
 #: src/define.in:663
 msgid "Nigerian Naira"
-msgstr ""
+msgstr "ナイジェリア・ナイラ"
 
 #: src/define.in:669
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "ノルウェー・クローネ"
 
 #: src/define.in:675
 msgid "Omani Rial"
-msgstr ""
+msgstr "オマーン・リアル"
 
 #: src/define.in:681
 msgid "Pakistani Rupee"
-msgstr ""
+msgstr "パキスタン・ルピー"
 
 #: src/define.in:687
 msgid "Panamanian Balboa"
-msgstr ""
+msgstr "パナマ・バルボア"
 
 #: src/define.in:693
 msgid "Papua New Guinean Kina"
-msgstr ""
+msgstr "パプアニューギニア・キナ"
 
 #: src/define.in:699
 msgid "Paraguayan Guarani"
-msgstr ""
+msgstr "パラグアイ・グアラニー"
 
 #: src/define.in:705
 msgid "Philippine Piso"
-msgstr ""
+msgstr "フィリピン・ペソ"
 
 #: src/define.in:711
 msgid "Poland złoty"
-msgstr ""
+msgstr "ポーランド・ズウォティ"
 
 #: src/define.in:717
 msgid "Pound sterling"
-msgstr ""
+msgstr "スターリング・ポンド"
 
 #: src/define.in:723
 msgid "Qatari Rial"
-msgstr ""
+msgstr "カタール・リアル"
 
 #: src/define.in:729
 msgid "Romanian Leu"
-msgstr ""
+msgstr "ルーマニア・レウ"
 
 #: src/define.in:741
 msgid "Russian Ruble"
-msgstr ""
+msgstr "ロシア・ルーブル"
 
 #: src/define.in:753
 msgid "Rwandan franc"
-msgstr ""
+msgstr "ルワンダ・フラン"
 
 #: src/define.in:759
 msgid "Salvadoran Colón"
-msgstr ""
+msgstr "サルバドール・コロン"
 
 #: src/define.in:765
 msgid "Saudi Riyal"
-msgstr ""
+msgstr "サウジアラビア・リヤル"
 
 #: src/define.in:771
 msgid "Serbian Dinar"
-msgstr ""
+msgstr "セルビア・ディナール"
 
 #: src/define.in:783
 msgid "Seychellois Rupee"
-msgstr ""
+msgstr "セーシェル・ルピー"
 
 #: src/define.in:789
 msgid "Sierra Leonean Leone"
-msgstr ""
+msgstr "シエラレオネ・レオン"
 
 #: src/define.in:795
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "シンガポール・ドル"
 
 #: src/define.in:801
 msgid "Sol"
-msgstr ""
+msgstr "Sol"
 
 #: src/define.in:807
 msgid "Solomon Islands Dollar"
-msgstr ""
+msgstr "ソロモン諸島ドル"
 
 #: src/define.in:813
 msgid "Somali Shilling"
-msgstr ""
+msgstr "ソマリア・シリング"
 
 #: src/define.in:819
 msgid "South African Rand"
-msgstr ""
+msgstr "南アフリカ・ランド"
 
 #: src/define.in:825
 msgid "South Korean won"
-msgstr ""
+msgstr "大韓民国ウォン"
 
 #: src/define.in:831
 msgid "Sovereign Bolivar"
-msgstr ""
+msgstr "ベネズエラ・ボリバル"
 
 #: src/define.in:837
 msgid "Special Drawing Rights"
-msgstr ""
+msgstr "特別引出権"
 
 #: src/define.in:843
 msgid "Sri Lankan Rupee"
-msgstr ""
+msgstr "スリランカ・ルピー"
 
 #: src/define.in:849
 msgid "Sudanese pound"
-msgstr ""
+msgstr "スーダン・ポンド"
 
 #: src/define.in:861
 msgid "Surinamese Dollar"
-msgstr ""
+msgstr "スリナム・ドル"
 
 #: src/define.in:867
 msgid "Swazi Lilangeni"
-msgstr ""
+msgstr "スワジ・リランゲニ"
 
 #: src/define.in:873
 msgid "Swedish Krona"
-msgstr ""
+msgstr "スウェーデン・クローナ"
 
 #: src/define.in:879
 msgid "Swiss Franc"
-msgstr ""
+msgstr "スイス・フラン"
 
 #: src/define.in:885
 msgid "Tajikistani Somoni"
-msgstr ""
+msgstr "タジキスタン・ソモニ"
 
 #: src/define.in:891
 msgid "Tanzanian Shilling"
-msgstr ""
+msgstr "タンザニア・シリング"
 
 #: src/define.in:897
 msgid "Thai Baht"
-msgstr ""
+msgstr "タイ・バーツ"
 
 #: src/define.in:903
 msgid "Tongan Paʻanga"
-msgstr ""
+msgstr "トンガ・パアンガ"
 
 #: src/define.in:909
 msgid "Trinidad & Tobago Dollar"
-msgstr ""
+msgstr "トリニダード・トバゴ・ドル"
 
 #: src/define.in:915
 msgid "Tunisian Dinar"
-msgstr ""
+msgstr "チュニジア・ディナール"
 
 #: src/define.in:921
 msgid "Turkish lira"
-msgstr ""
+msgstr "トルコ・リラ"
 
 #: src/define.in:927
 msgid "Turkmenistan manat"
-msgstr ""
+msgstr "トルクメニスタン・マナト"
 
 #: src/define.in:939
 msgid "Ugandan Shilling"
-msgstr ""
+msgstr "ウガンダ・シリング"
 
 #: src/define.in:945
 msgid "Ukrainian hryvnia"
-msgstr ""
+msgstr "ウクライナ・フリヴニャ"
 
 #: src/define.in:951
 msgid "United Arab Emirates Dirham"
-msgstr ""
+msgstr "UAE ディルハム"
 
 #: src/define.in:957
 msgid "United States Dollar"
-msgstr ""
+msgstr "アメリカ合衆国ドル"
 
 #: src/define.in:963
 msgid "Uruguayan Peso"
-msgstr ""
+msgstr "ウルグアイ・ペソ"
 
 #: src/define.in:969
 msgid "Uzbekistani Som"
-msgstr ""
+msgstr "ウズベキスタン・ソム"
 
 #: src/define.in:975
 msgid "Vietnamese dong"
-msgstr ""
+msgstr "ベトナム・ドン"
 
 #: src/define.in:981
 msgid "West African CFA franc"
-msgstr ""
+msgstr "西アフリカ CFA フラン"
 
 #: src/define.in:987
 msgid "Yemeni Rial"
-msgstr ""
+msgstr "イエメン・リアル"
 
 #: src/define.in:993
 msgid "Zambian Kwacha"
-msgstr ""
+msgstr "ザンビア・クワチャ"
 
 #: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
-msgstr ""
+msgstr "通貨の換算ができません。Google からの結果の取得に失敗しました。"
 
 #: src/window.blp:18
 msgid "Main menu"
-msgstr ""
+msgstr "メインメニュー"
 
 #: src/window.blp:34
 msgid "Source"
-msgstr ""
+msgstr "出典"
 
 #: src/window.blp:43
 msgid "Providers"
-msgstr ""
+msgstr "プロバイダー"
 
 #: src/window.blp:46
 msgid "ECB"
-msgstr ""
+msgstr "ECB"
 
 #: src/window.blp:51
 msgid "Google (unstable)"
-msgstr ""
+msgstr "Google (不安定)"
 
 #: src/window.blp:56
 msgid "Moeda.info"
-msgstr ""
+msgstr "Moeda.info"
 
 #: src/window.blp:64
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "キーボードショートカット"
 
 #: src/window.blp:68
 msgid "About Valuta"
-msgstr ""
+msgstr "Valuta について"
