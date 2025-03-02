@@ -1,5 +1,5 @@
 project('valuta',
-          version: '1.3.2',
+          version: '1.4.0',
     meson_version: '>= 0.64.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
 )
