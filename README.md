@@ -8,7 +8,6 @@ Convert currencies with ease. Valuta provides an intuitive and fast experience f
 
 ## Providers
 - [European Central Bank conversion provider through the API (Frankfurter).](https://www.frankfurter.app/)
-- [Google finance conversion provider.](https://google.com)
 - [Moeda.info conversion provider.](https://moeda.info/)
 
 ## Features

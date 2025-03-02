@@ -90,19 +90,25 @@ class Convertion:
     def convert(self, from_currency_value: int, from_currency: str, to_currency: str, provider: int) -> Dict[str, Union[str, int]]:
         if not from_currency == to_currency:
             if not self.match_data(from_currency, to_currency, provider) or not self.converted_data["converted"]:
-                response = Requests(provider, from_currency, to_currency, 1).get()
-                if isinstance(response, str):
-                    self.converted_data["converted"] = False
-                    return self.__event('converted', self.converted_data)
-                self.converted_data = response
-                self.converted_data["converted"] = True
+                try:
+                  response = Requests(provider, from_currency, to_currency, 1).get()
+                  if isinstance(response, str):
+                      self.converted_data["converted"] = False
+                      return self.__event('converted', self.converted_data)
+                  self.converted_data = response
+                  self.converted_data["converted"] = True
 
-            from_currency = from_currency_value
-            base_currency = self.converted_data["base"]
+                  from_currency = from_currency_value
+                  base_currency = self.converted_data["base"]
 
-            data = {**self.converted_data, "amount": from_currency * base_currency}
-            self.__event('converted', data)
-            return data
+                  data = {**self.converted_data, "amount": from_currency * base_currency}
+                  self.__event('converted', data)
+                  return data
+                except Exception as error:
+                  self.converted_data["converted"] = False
+                  data = {**self.converted_data, "amount": 0}
+                  self.__event('converted', data)
+                  return data
         else:
             self.converted_data["converted"] = False
 

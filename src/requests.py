@@ -25,7 +25,6 @@ from gi.repository import Soup, GLib
 from .define import BASE_URL_LANG_PREFIX, CODES
 
 class Providers:
-    GOOGLE_BASE_URL: str = 'https://www.google.com/search?q=convert'
     ECB_BASE_URL: str = 'https://api.frankfurter.app/latest'
     MI_BASE_URL: str = 'https://cdn.moeda.info/api/latest.json'
     response = {
@@ -57,7 +56,6 @@ class Providers:
         time = time.split(":")
         date_time = GLib.DateTime.new_local(float(date[0]), float(date[1]), float(date[2]), float(time[0]), float(time[1]), float(time[2]))
         return date_time.format("%B %e, %Y")
-        # return f"{_('Results for')} {date_time.format('%d')} {date_time.format('%B')} {date_time.format('%Y')} {date_time.format('%H:%M')}"
 
 class ECB(Providers):
     def mount_url(self):
@@ -74,40 +72,6 @@ class ECB(Providers):
         self.response["info"] = self.create_info(data["date"])
         self.response["disclaimer"] = self.mount_url()
         self.response["provider"] = 0
-        return self.response
-
-class Google(Providers):
-    def mount_url(self):
-        return f'{self.GOOGLE_BASE_URL}+{self.from_currency_value}+{self.from_currency}+to+{self.to_currency}{BASE_URL_LANG_PREFIX}'
-
-    def serializer(self, data: bytes):
-        data = data.decode('utf-8', errors="replace")
-        try:
-            results = re.findall(rf'[\d*\,]*\.\d* {CODES[self.to_currency]["name"]}', data)
-            if results.__len__() > 0:
-                converted_amount_str = results[0]
-                converted_currency = re.findall(r'[\d*\,]*\.\d*', converted_amount_str)[0]
-                return self.default_response({
-                    "amount": converted_currency,
-                    "converted": True,
-                })
-            else:
-                raise Exception(_("Unable to convert currency, failed to fetch results from Google."))
-        except Exception as error:
-            print(error)
-            return self.default_response
-
-    def default_response(self, data: Dict[str, str]):
-        url = self.mount_url()
-        current_date = GLib.DateTime.new_now_local()
-        time = current_date.format("%H:%M:%S")
-        self.response["base"] = float(data['amount'])
-        self.response["from"] = self.from_currency
-        self.response["to"] = self.to_currency
-        self.response["amount"] = 0
-        self.response['info'] = self.create_info(current_date.format("%F"), time)
-        self.response['disclaimer'] = url
-        self.response["provider"] = 1
         return self.response
 
 class MI(Providers):
@@ -130,8 +94,7 @@ class MI(Providers):
 
 providers = {
     0 : ECB,
-    1 : Google,
-    2 : MI,
+    1 : MI,
 }
 
 class SoupSession(Soup.Session):
@@ -160,7 +123,6 @@ class SoupSession(Soup.Session):
 class Requests:
     HEADERS: Dict[str, str] = {
         'User-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0',
-        'Referer': 'https://www.google.com',
     }
     def __init__(self, provider: int, from_currency: str, to_currency: str, from_currency_value: int):
         self.__provider = providers[provider](from_currency, to_currency, from_currency_value)
