@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-11-29 15:00+0000\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"PO-Revision-Date: 2025-03-10 20:00+0000\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/he/>\n"
 "Language: he\n"
@@ -18,20 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
 msgid "Convert between currencies"
-msgstr "המרה בין מטבעות"
+msgstr "מחשבון המרת מטבע"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
 "Valuta is a simple and fast conversion tool, ideal for those who need to convert between different currencies repeatedly. Use it while traveling, budgeting, or anytime else you need to quickly convert between two currencies."
 msgstr ""
-"‏Valuta הוא כלי פשוט ומהיר להמרת מטבעות, מתאים במיוחד למי שצריך להמיר בין "
-"מטבעות שונים לעתים קרובות. ניתן להשתמש בו בזמן שמטיילים, עורכים תקציב או בכל "
-"זמן אחר בו יש צורך להמיר במהירות בין שני מטבעות."
+"‏Valuta הוא כלי פשוט ומהיר לחישוב המרת מטבעות, מתאים במיוחד למי שצריך להמיר "
+"בין מטבעות שונים לעתים קרובות. ניתן להשתמש בו בזמן שקונים ברשת, מטיילים, "
+"עורכים תקציב או בכל זמן אחר בו יש צורך להמיר במהירות בין שני מטבעות."
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
