@@ -6,7 +6,7 @@
   </enum>
   <schema id="@app-id@" path="/io/github/idevecore/Valuta/">
     <key name="providers" enum="@app-id@.Window">
-      <default>'ecb'</default>
+      <default>'mi'</default>
     </key>
     <key name="width" type="i">
 			<default>420</default>

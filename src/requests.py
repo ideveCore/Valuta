@@ -71,7 +71,7 @@ class ECB(Providers):
         self.response["amount"] = 0
         self.response["info"] = self.create_info(data["date"])
         self.response["disclaimer"] = self.mount_url()
-        self.response["provider"] = 0
+        self.response["provider"] = 1
         return self.response
 
 class MI(Providers):
@@ -89,12 +89,12 @@ class MI(Providers):
         self.response["amount"] = 0
         self.response["info"] = self.create_info(f'{date_time.date()}', f'{date_time.time()}')
         self.response["disclaimer"] = self.mount_url()
-        self.response["provider"] = 2
+        self.response["provider"] = 0
         return self.response
 
 providers = {
-    0 : ECB,
-    1 : MI,
+    0 : MI,
+    1 : ECB,
 }
 
 class SoupSession(Soup.Session):

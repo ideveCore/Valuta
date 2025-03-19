@@ -101,14 +101,17 @@ class Convertion:
                   from_currency = from_currency_value
                   base_currency = self.converted_data["base"]
 
-                  data = {**self.converted_data, "amount": from_currency * base_currency}
-                  self.__event('converted', data)
-                  return data
+                  self.converted_data = {**self.converted_data, "amount": from_currency * base_currency}
+                  self.__event('converted', self.converted_data)
+                  return self.converted_data
                 except Exception as error:
                   self.converted_data["converted"] = False
-                  data = {**self.converted_data, "amount": 0}
-                  self.__event('converted', data)
-                  return data
+                  self.converted_data = {**self.converted_data, "amount": 0}
+                  self.__event('converted', self.converted_data)
+                  return self.converted_data
+            else:
+              self.converted_data = {**self.converted_data, "amount": from_currency_value * self.converted_data["base"]}
+              self.__event('converted', self.converted_data)
         else:
             self.converted_data["converted"] = False
 
@@ -153,9 +156,8 @@ class Utils:
         self.locale = GLib.get_locale_variants(GLib.get_language_names()[0])
         self.currencies = CODES
         self.providers = {
-          "0": "ECB",
-          "1": "Google",
-          "2": "Moeda.info"
+          "0": "Moeda.info",
+          "1": "ECB"
         }
     def format_number(self, number):
         try:
