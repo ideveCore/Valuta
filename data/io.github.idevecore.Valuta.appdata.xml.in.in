@@ -101,6 +101,12 @@
       <image type="source">https://raw.githubusercontent.com/ideveCore/valuta/main/data/screenshots/02.png</image>
     </screenshot>
   </screenshots>
+  <keywords>
+    <keyword>Valuta</keyword>
+    <keyword>Converter</keyword>
+    <keyword>Currency</keyword>
+    <keyword>ExchangeRate</keyword>
+  </keywords>
   <developer_name>Ideve Core</developer_name>
   <content_rating type="oars-1.0"/>
   <branding>
