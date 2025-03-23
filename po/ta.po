@@ -8,724 +8,730 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-03-24 09:02+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/currency-converter/"
+"currency-converter/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
 msgid "Convert between currencies"
-msgstr ""
+msgstr "நாணயங்களுக்கு இடையில் மாற்றவும்"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
 "Valuta is a simple and fast conversion tool, ideal for those who need to convert between different currencies repeatedly. Use it while traveling, budgeting, or anytime else you need to quickly convert between two currencies."
 msgstr ""
+"வலுடா ஒரு எளிய மற்றும் வேகமான மாற்று கருவியாகும், இது வெவ்வேறு நாணயங்களுக்கு இடையில் "
+"மீண்டும் மீண்டும் மாற்ற வேண்டியவர்களுக்கு ஏற்றது. பயணம், பட்செட் அல்லது வேறு எந்த நேரத்திலும் "
+"நீங்கள் இரண்டு நாணயங்களுக்கு இடையில் விரைவாக மாற்ற வேண்டும்."
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "தேடல்"
 
 #: src/components/currency_selector/index.blp:41
 msgid "Search Currencies"
-msgstr ""
+msgstr "நாணயங்களைத் தேடுங்கள்"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
-msgstr ""
+msgstr "பொது"
 
 #: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #: src/components/shortcuts/shortcuts.blp:15
 msgctxt "shortcuts window"
 msgid "Switch currencies"
-msgstr ""
+msgstr "நாணயங்களை மாற்றவும்"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
-msgstr ""
+msgstr "வெளியேறு"
 
 #: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
-msgstr ""
+msgstr "மாற்றுவதில் பிழை, தயவுசெய்து மீண்டும் முயற்சிக்கவும்."
 
 #: src/pages/convertion/index.blp:13
 msgid "From"
-msgstr ""
+msgstr "இருந்து"
 
 #: src/pages/convertion/index.blp:30
 msgid "Switch"
-msgstr ""
+msgstr "ஆளி, நிலைமாறி"
 
 #: src/pages/convertion/index.blp:39
 msgid "To"
-msgstr ""
+msgstr "பெறுநர்"
 
 #: src/pages/convertion/index.blp:87
 msgid "Reload"
-msgstr ""
+msgstr "ஏற்றவும்"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
-msgstr ""
+msgstr "படி"
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
-msgstr ""
+msgstr "நகலெடு"
 
 #: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
-msgstr ""
+msgstr "இடைநிலைப்பலகைக்கு மாற்றத்தை நகலெடுக்கவும்"
 
 #: src/define.in:39
 msgid "Afghan Afghani"
-msgstr ""
+msgstr "ஆப்கானிய ஆப்கானிச்தான்"
 
 #: src/define.in:45
 msgid "Albanian Lek"
-msgstr ""
+msgstr "அல்பேனிய லெக்"
 
 #: src/define.in:51
 msgid "Algerian Dinar"
-msgstr ""
+msgstr "அல்சீரிய தினார்"
 
 #: src/define.in:57
 msgid "Angolan Kwanza"
-msgstr ""
+msgstr "அங்கோலன் ரான்சம்"
 
 #: src/define.in:63
 msgid "Argentine Peso"
-msgstr ""
+msgstr "அர்சென்டினா பெசோ"
 
 #: src/define.in:69
 msgid "Armenian Dram"
-msgstr ""
+msgstr "ஆர்மீனிய டிராம்"
 
 #: src/define.in:75
 msgid "Aruban Florin"
-msgstr ""
+msgstr "அருபன் ஃப்ளோரின்"
 
 #: src/define.in:81
 msgid "Australian Dollar"
-msgstr ""
+msgstr "ஆச்திரேலிய டாலர்"
 
 #: src/define.in:87
 msgid "Azerbaijani Manat"
-msgstr ""
+msgstr "அசர்பைசான் மனாட்"
 
 #: src/define.in:93
 msgid "Bahamian Dollar"
-msgstr ""
+msgstr "பஉாமியன் டாலர்"
 
 #: src/define.in:99
 msgid "Bahraini Dinar"
-msgstr ""
+msgstr "பஉரைன் தினார்"
 
 #: src/define.in:105
 msgid "Bajan dollar"
-msgstr ""
+msgstr "டாலர் கீழே வாருங்கள்"
 
 #: src/define.in:111
 msgid "Bangladeshi Taka"
-msgstr ""
+msgstr "பங்களாதேசி"
 
 #: src/define.in:117
 msgid "Belarusian Ruble"
-msgstr ""
+msgstr "பெலாரூசியன் ரூபிள்"
 
 #: src/define.in:129
 msgid "Belize Dollar"
-msgstr ""
+msgstr "பெலிச் டாலர்"
 
 #: src/define.in:135
 msgid "Bermudan Dollar"
-msgstr ""
+msgstr "பெர்முடன் டாலர்"
 
 #: src/define.in:141
 msgid "Bhutan currency"
-msgstr ""
+msgstr "பூட்டான் நாணயம்"
 
 #: src/define.in:147
 msgid "Bitcoin"
-msgstr ""
+msgstr "பிட்காயின்"
 
 #: src/define.in:153
 msgid "Bitcoin Cash"
-msgstr ""
+msgstr "பிட்காயின் முழுத்தொகை"
 
 #: src/define.in:159
 msgid "Bolivian Boliviano"
-msgstr ""
+msgstr "பொலிவியன் பொலிவியானோ"
 
 #: src/define.in:165
 msgid "Bosnia-Herzegovina Convertible Mark"
-msgstr ""
+msgstr "போச்னியா-எர்சகோவினா மாற்றத்தக்க குறி"
 
 #: src/define.in:171
 msgid "Botswanan Pula"
-msgstr ""
+msgstr "போட்ச்வானா மழை"
 
 #: src/define.in:177
 msgid "Brazilian Real"
-msgstr ""
+msgstr "பிரேசிலிய உண்மையான"
 
 #: src/define.in:183
 msgid "Brunei Dollar"
-msgstr ""
+msgstr "புருனே டாலர்"
 
 #: src/define.in:189
 msgid "Bulgarian Lev"
-msgstr ""
+msgstr "பல்கேரிய லெவ்"
 
 #: src/define.in:195
 msgid "Burundian Franc"
-msgstr ""
+msgstr "புருண்டியன் ஃபிராங்க்"
 
 #: src/define.in:201
 msgid "CFP Franc"
-msgstr ""
+msgstr "சி.எஃப்.பி ஃபிராங்க்"
 
 #: src/define.in:207
 msgid "Cambodian riel"
-msgstr ""
+msgstr "கம்போடியன் ரியல்"
 
 #: src/define.in:213
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "கனடிய டாலர்"
 
 #: src/define.in:219
 msgid "Cape Verdean Escudo"
-msgstr ""
+msgstr "கேப் கிரீன் சீல்ட்"
 
 #: src/define.in:225
 msgid "Cayman Islands Dollar"
-msgstr ""
+msgstr "கேமன் தீவுகள் டாலர்"
 
 #: src/define.in:231
 msgid "Central African CFA franc"
-msgstr ""
+msgstr "நடு ஆப்பிரிக்க சி.எஃப்.ஏ ஃபிராங்க்"
 
 #: src/define.in:237
 msgid "Chilean Peso"
-msgstr ""
+msgstr "சிலி பெசோ"
 
 #: src/define.in:243
 msgid "Chilean Unit of Account (UF)"
-msgstr ""
+msgstr "சிலி பிரிவு (யுஎஃப்)"
 
 #: src/define.in:249
 msgid "Chinese Yuan"
-msgstr ""
+msgstr "சீன யுவான்"
 
 #: src/define.in:255
 msgid "Chinese Yuan (offshore)"
-msgstr ""
+msgstr "சீன யுவான் (கடல்)"
 
 #: src/define.in:261
 msgid "Colombian Peso"
-msgstr ""
+msgstr "கொலம்பிய பெசோ"
 
 #: src/define.in:267
 msgid "Comorian franc"
-msgstr ""
+msgstr "கொமோரியன் ஃபிராங்க்"
 
 #: src/define.in:273
 msgid "Congolese Franc"
-msgstr ""
+msgstr "காங்கோ ஃபிராங்க்"
 
 #: src/define.in:279
 msgid "Costa Rican Colón"
-msgstr ""
+msgstr "கோச்டாரிகன் கோலன்"
 
 #: src/define.in:285
 msgid "Croatian Kuna"
-msgstr ""
+msgstr "அங்கு குரோசியன்"
 
 #: src/define.in:291
 msgid "Cuban Peso"
-msgstr ""
+msgstr "கியூபன் பெசோ"
 
 #: src/define.in:297
 msgid "Czech Koruna"
-msgstr ""
+msgstr "செக் கொருனா"
 
 #: src/define.in:303
 msgid "Danish Krone"
-msgstr ""
+msgstr "டேனிச் க்ரோன்"
 
 #: src/define.in:309
 msgid "Djiboutian Franc"
-msgstr ""
+msgstr "சிபூட்டியன் ஃபிராங்க்"
 
 #: src/define.in:315
 msgid "Dominican Peso"
-msgstr ""
+msgstr "டொமினிகன் பெசோ"
 
 #: src/define.in:321
 msgid "East Caribbean Dollar"
-msgstr ""
+msgstr "கிழக்கு கரீபியன் டாலர்"
 
 #: src/define.in:327
 msgid "Egyptian Pound"
-msgstr ""
+msgstr "எகிப்திய பவுண்ட்"
 
 #: src/define.in:333
 msgid "Ether"
-msgstr ""
+msgstr "அமுதியம்"
 
 #: src/define.in:339
 msgid "Ethiopian Birr"
-msgstr ""
+msgstr "எத்தியோப்பியன் பிர்ர்"
 
 #: src/define.in:345
 msgid "Euro"
-msgstr ""
+msgstr "யூரோ"
 
 #: src/define.in:351
 msgid "Fijian Dollar"
-msgstr ""
+msgstr "டாலரை அமைக்கவும்"
 
 #: src/define.in:357
 msgid "Gambian dalasi"
-msgstr ""
+msgstr "காம்பியன் தலேச்"
 
 #: src/define.in:363
 msgid "Georgian Lari"
-msgstr ""
+msgstr "சார்சியன் ரன்கள்"
 
 #: src/define.in:369
 msgid "Ghanaian Cedi"
-msgstr ""
+msgstr "கானா செடி"
 
 #: src/define.in:381
 msgid "Gibraltar Pound"
-msgstr ""
+msgstr "சிப்ரால்டர் பவுண்ட்"
 
 #: src/define.in:387
 msgid "Guatemalan Quetzal"
-msgstr ""
+msgstr "இளம் குவாத்தமாலன்"
 
 #: src/define.in:393
 msgid "Guinean Franc"
-msgstr ""
+msgstr "கினியன் ஃபிராங்க்"
 
 #: src/define.in:399
 msgid "Guyanaese Dollar"
-msgstr ""
+msgstr "கயனீச் டாலர்"
 
 #: src/define.in:405
 msgid "Haitian Gourde"
-msgstr ""
+msgstr "ஐட்டிய சுரைக்காய்"
 
 #: src/define.in:411
 msgid "Honduran Lempira"
-msgstr ""
+msgstr "ஓண்டுரான் லெம்பிரா"
 
 #: src/define.in:417
 msgid "Hong Kong Dollar"
-msgstr ""
+msgstr "ஆங்காங் டாலர்"
 
 #: src/define.in:423
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "அங்கேரியன்"
 
 #: src/define.in:429
 msgid "Icelandic Króna"
-msgstr ""
+msgstr "ஐச்லாந்திய கிரானா"
 
 #: src/define.in:435
 msgid "Indian Rupee"
-msgstr ""
+msgstr "இந்திய ரூபாய்"
 
 #: src/define.in:441
 msgid "Indonesian Rupiah"
-msgstr ""
+msgstr "இந்தோனேசிய ரூபியா"
 
 #: src/define.in:447
 msgid "Iranian Rial"
-msgstr ""
+msgstr "ஈரானிய ரியால்"
 
 #: src/define.in:453
 msgid "Iraqi Dinar"
-msgstr ""
+msgstr "ஈராக் தினார்"
 
 #: src/define.in:459
 msgid "Israeli New Shekel"
-msgstr ""
+msgstr "இச்ரேலிய புதிய செகல்"
 
 #: src/define.in:465
 msgid "Jamaican Dollar"
-msgstr ""
+msgstr "சமைக்கா டாலர்"
 
 #: src/define.in:471
 msgid "Japanese Yen"
-msgstr ""
+msgstr "சப்பானிய யென்"
 
 #: src/define.in:477
 msgid "Jordanian Dinar"
-msgstr ""
+msgstr "சோர்டானிய தினார்"
 
 #: src/define.in:483
 msgid "Kazakhstani Tenge"
-msgstr ""
+msgstr "குத்தகைதாரரை எவ்வாறு வைத்திருப்பது"
 
 #: src/define.in:489
 msgid "Kenyan Shilling"
-msgstr ""
+msgstr "கென்ய சில்லிங்"
 
 #: src/define.in:495
 msgid "Kuwaiti Dinar"
-msgstr ""
+msgstr "குவைத் தினார்"
 
 #: src/define.in:501
 msgid "Kyrgyzstani Som"
-msgstr ""
+msgstr "கிர்கிச்தானி நான்"
 
 #: src/define.in:507
 msgid "Laotian Kip"
-msgstr ""
+msgstr "லாவோடியன் கிப்"
 
 #: src/define.in:513
 msgid "Lebanese pound"
-msgstr ""
+msgstr "லெபனான் பவுண்டு"
 
 #: src/define.in:519
 msgid "Lesotho loti"
-msgstr ""
+msgstr "லெசோதோ லோடி"
 
 #: src/define.in:525
 msgid "Liberian Dollar"
-msgstr ""
+msgstr "லைபீரியன் டாலர்"
 
 #: src/define.in:531
 msgid "Libyan Dinar"
-msgstr ""
+msgstr "லிபிய தினார்"
 
 #: src/define.in:537
 msgid "Litecoin"
-msgstr ""
+msgstr "லிட்காயின்"
 
 #: src/define.in:543
 msgid "Macanese Pataca"
-msgstr ""
+msgstr "அகாகனீச் படாக்கா"
 
 #: src/define.in:549
 msgid "Macedonian Denar"
-msgstr ""
+msgstr "மாசிடோனிய டெனார்"
 
 #: src/define.in:555
 msgid "Malagasy Ariary"
-msgstr ""
+msgstr "மலகாசி அரியரி"
 
 #: src/define.in:561
 msgid "Malawian Kwacha"
-msgstr ""
+msgstr "சலன்"
 
 #: src/define.in:567
 msgid "Malaysian Ringgit"
-msgstr ""
+msgstr "மலேசிய ரிங்கிட்"
 
 #: src/define.in:573
 msgid "Maldivian Rufiyaa"
-msgstr ""
+msgstr "மால்டிவியன் ரூஃபியா"
 
 #: src/define.in:579
 msgid "Mauritanian Ouguiya (1973–2017)"
-msgstr ""
+msgstr "மவுரித்தானிய ஓகுயா (1973–2017)"
 
 #: src/define.in:585
 msgid "Mauritian Rupee"
-msgstr ""
+msgstr "மொரீசிய ரூபாய்"
 
 #: src/define.in:591
 msgid "Mexican Peso"
-msgstr ""
+msgstr "மெக்சிகன் பெசோ"
 
 #: src/define.in:597
 msgid "Moldovan Leu"
-msgstr ""
+msgstr "மால்டோவன் லியு"
 
 #: src/define.in:603
 msgid "Moroccan Dirham"
-msgstr ""
+msgstr "மொராக்கோ திர்உாம்"
 
 #: src/define.in:609
 msgid "Mozambican metical"
-msgstr ""
+msgstr "மொசாம்பிகன் மெட்டிகல்"
 
 #: src/define.in:621
 msgid "Myanmar Kyat"
-msgstr ""
+msgstr "மியான்மர் கியாட்"
 
 #: src/define.in:627
 msgid "New Taiwan dollar"
-msgstr ""
+msgstr "புதிய தைவான் டாலர்"
 
 #: src/define.in:633
 msgid "Namibian dollar"
-msgstr ""
+msgstr "நமீபியன் டாலர்"
 
 #: src/define.in:639
 msgid "Nepalese Rupee"
-msgstr ""
+msgstr "நேபாள ரூபாய்"
 
 #: src/define.in:645
 msgid "Netherlands Antillean Guilder"
-msgstr ""
+msgstr "நெதர்லாந்து ஆன்டிலியன் கில்டர்"
 
 #: src/define.in:651
 msgid "New Zealand Dollar"
-msgstr ""
+msgstr "நியூசிலாந்து டாலர்"
 
 #: src/define.in:657
 msgid "Nicaraguan Córdoba"
-msgstr ""
+msgstr "நிகரகுவான் கோர்டோபா"
 
 #: src/define.in:663
 msgid "Nigerian Naira"
-msgstr ""
+msgstr "நைசீரிய நைரா"
 
 #: src/define.in:669
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "நோர்வே க்ரோன்"
 
 #: src/define.in:675
 msgid "Omani Rial"
-msgstr ""
+msgstr "ஓமானி ரியல்"
 
 #: src/define.in:681
 msgid "Pakistani Rupee"
-msgstr ""
+msgstr "என் பேக் தொடங்குகிறது"
 
 #: src/define.in:687
 msgid "Panamanian Balboa"
-msgstr ""
+msgstr "பனமேனிய பால்போவா"
 
 #: src/define.in:693
 msgid "Papua New Guinean Kina"
-msgstr ""
+msgstr "பப்புவா நியூ கினியன் கினா"
 
 #: src/define.in:699
 msgid "Paraguayan Guarani"
-msgstr ""
+msgstr "பராகுவேய குரணி"
 
 #: src/define.in:705
 msgid "Philippine Piso"
-msgstr ""
+msgstr "பிலிப்பைன்ச் பிசோ"
 
 #: src/define.in:711
 msgid "Poland złoty"
-msgstr ""
+msgstr "போலந்து கோல்டன்"
 
 #: src/define.in:717
 msgid "Pound sterling"
-msgstr ""
+msgstr "பவுண்ட் ச்டெர்லிங்"
 
 #: src/define.in:723
 msgid "Qatari Rial"
-msgstr ""
+msgstr "கட்டாரி ரியல்"
 
 #: src/define.in:729
 msgid "Romanian Leu"
-msgstr ""
+msgstr "ருமேனிய லியு"
 
 #: src/define.in:741
 msgid "Russian Ruble"
-msgstr ""
+msgstr "ரச்ய ரூபிள்"
 
 #: src/define.in:753
 msgid "Rwandan franc"
-msgstr ""
+msgstr "ருவாண்டன் ஃபிராங்க்"
 
 #: src/define.in:759
 msgid "Salvadoran Colón"
-msgstr ""
+msgstr "சால்வடோர் கோலன்"
 
 #: src/define.in:765
 msgid "Saudi Riyal"
-msgstr ""
+msgstr "சவுதி ரியால்"
 
 #: src/define.in:771
 msgid "Serbian Dinar"
-msgstr ""
+msgstr "செர்பிய தினார்"
 
 #: src/define.in:783
 msgid "Seychellois Rupee"
-msgstr ""
+msgstr "சீசெல்லோயிச் விரைகிறார்"
 
 #: src/define.in:789
 msgid "Sierra Leonean Leone"
-msgstr ""
+msgstr "சியரா லியோனியன் லியோன்"
 
 #: src/define.in:795
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "சிங்கப்பூர் டாலர்"
 
 #: src/define.in:801
 msgid "Sol"
-msgstr ""
+msgstr "நீர்மக்கூழ்"
 
 #: src/define.in:807
 msgid "Solomon Islands Dollar"
-msgstr ""
+msgstr "சாலமன் தீவுகள் டாலர்"
 
 #: src/define.in:813
 msgid "Somali Shilling"
-msgstr ""
+msgstr "சோமாலிய சில்லிங்"
 
 #: src/define.in:819
 msgid "South African Rand"
-msgstr ""
+msgstr "தென்னாப்பிரிக்க ரேண்ட்"
 
 #: src/define.in:825
 msgid "South Korean won"
-msgstr ""
+msgstr "தென் கொரியன் வென்றார்"
 
 #: src/define.in:831
 msgid "Sovereign Bolivar"
-msgstr ""
+msgstr "இறையாண்மை பொலிவார்"
 
 #: src/define.in:837
 msgid "Special Drawing Rights"
-msgstr ""
+msgstr "சிறப்பு வரைதல் உரிமைகள்"
 
 #: src/define.in:843
 msgid "Sri Lankan Rupee"
-msgstr ""
+msgstr "இலங்கை தொடங்குகிறது"
 
 #: src/define.in:849
 msgid "Sudanese pound"
-msgstr ""
+msgstr "சூடான் பவுண்டு"
 
 #: src/define.in:861
 msgid "Surinamese Dollar"
-msgstr ""
+msgstr "சுரினாமி டாலர்"
 
 #: src/define.in:867
 msgid "Swazi Lilangeni"
-msgstr ""
+msgstr "ச்லாவாசி வெயிலில் இருக்கிறார்"
 
 #: src/define.in:873
 msgid "Swedish Krona"
-msgstr ""
+msgstr "ச்வீடிச் க்ரோனா"
 
 #: src/define.in:879
 msgid "Swiss Franc"
-msgstr ""
+msgstr "சுவிச் ஃபிராங்க்"
 
 #: src/define.in:885
 msgid "Tajikistani Somoni"
-msgstr ""
+msgstr "தாசிசிகா தாசோனி"
 
 #: src/define.in:891
 msgid "Tanzanian Shilling"
-msgstr ""
+msgstr "தான்சானிய சில்லிங்"
 
 #: src/define.in:897
 msgid "Thai Baht"
-msgstr ""
+msgstr "தாய் பாட்"
 
 #: src/define.in:903
 msgid "Tongan Paʻanga"
-msgstr ""
+msgstr "டோங்கன் கட்டணம்"
 
 #: src/define.in:909
 msgid "Trinidad & Tobago Dollar"
-msgstr ""
+msgstr "டிரினிடாட் & டொபாகோ டாலர்"
 
 #: src/define.in:915
 msgid "Tunisian Dinar"
-msgstr ""
+msgstr "துனிசிய தினார்"
 
 #: src/define.in:921
 msgid "Turkish lira"
-msgstr ""
+msgstr "துருக்கிய லிரா"
 
 #: src/define.in:927
 msgid "Turkmenistan manat"
-msgstr ""
+msgstr "துர்க்மெனிச்தான் மனாட்"
 
 #: src/define.in:939
 msgid "Ugandan Shilling"
-msgstr ""
+msgstr "உகாண்டா சில்லிங்"
 
 #: src/define.in:945
 msgid "Ukrainian hryvnia"
-msgstr ""
+msgstr "உக்ரேனிய இரிவ்னியா"
 
 #: src/define.in:951
 msgid "United Arab Emirates Dirham"
-msgstr ""
+msgstr "ஐக்கிய அரபு எமிரேட்ச் திர்ஆம்"
 
 #: src/define.in:957
 msgid "United States Dollar"
-msgstr ""
+msgstr "ஒன்றுபட்டது ச்டேட்ச் டாலர்"
 
 #: src/define.in:963
 msgid "Uruguayan Peso"
-msgstr ""
+msgstr "உருகுவேய எடை"
 
 #: src/define.in:969
 msgid "Uzbekistani Som"
-msgstr ""
+msgstr "உச்பெகிச்தான் நான்"
 
 #: src/define.in:975
 msgid "Vietnamese dong"
-msgstr ""
+msgstr "வியட்நாமிய டோங்"
 
 #: src/define.in:981
 msgid "West African CFA franc"
-msgstr ""
+msgstr "மேற்கு ஆப்பிரிக்க சி.எஃப்.ஏ ஃபிராங்க்"
 
 #: src/define.in:987
 msgid "Yemeni Rial"
-msgstr ""
+msgstr "யேமனி ரியல்"
 
 #: src/define.in:993
 msgid "Zambian Kwacha"
-msgstr ""
+msgstr "சாம்பியன் குவாச்சா"
 
 #: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
-msgstr ""
+msgstr "நாணயத்தை மாற்ற முடியாமல், கூகிளின் முடிவுகளைப் பெறத் தவறிவிட்டது."
 
 #: src/window.blp:18
 msgid "Main menu"
-msgstr ""
+msgstr "பட்டியல் விளையாடுங்கள்"
 
 #: src/window.blp:34
 msgid "Source"
-msgstr ""
+msgstr "மூலம்"
 
 #: src/window.blp:43
 msgid "Providers"
-msgstr ""
+msgstr "வழங்குநர்கள்"
 
 #: src/window.blp:46
 msgid "ECB"
-msgstr ""
+msgstr "ஈ.சி.பி."
 
 #: src/window.blp:51
 msgid "Google (unstable)"
-msgstr ""
+msgstr "கூகிள் (நிலையற்றது)"
 
 #: src/window.blp:56
 msgid "Moeda.info"
-msgstr ""
+msgstr "Moeda.info"
 
 #: src/window.blp:64
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #: src/window.blp:68
 msgid "About Valuta"
-msgstr ""
+msgstr "வலுடா பற்றி"
