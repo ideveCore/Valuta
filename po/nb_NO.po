@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Currency Converter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2024-03-10 21:05+0000\n"
-"Last-Translator: Ideve Core <ideve.cconverter@proton.me>\n"
+"PO-Revision-Date: 2025-03-27 21:01+0000\n"
+"Last-Translator: Christoffer Mikalsen <resuschrisus@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "Søk"
 
 #: src/components/currency_selector/index.blp:41
 #, fuzzy
