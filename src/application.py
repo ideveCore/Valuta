@@ -47,7 +47,10 @@ class Application(Adw.Application):
                              GLib.OptionArg.STRING, 'Value to convert currencies', None)
 
     def do_activate(self):
-        create_main_window(self, self.from_currency_value).present()
+        if self.get_active_window() is not None:
+            self.get_active_window().present()
+        else:
+            create_main_window(self, self.from_currency_value).present()
 
     def do_command_line(self, command_line):
         options = command_line.get_options_dict()
