@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: 2025-08-12 01:00+0000\n"
+"PO-Revision-Date: 2025-08-12 22:15+0000\n"
 "Last-Translator: Yauheni Liavontsyeu <Evgeniy_Leontyev@proton.me>\n"
 "Language-Team: Belarusian <https://hosted.weblate.org/projects/"
 "currency-converter/currency-converter/be/>\n"
@@ -55,7 +55,7 @@ msgstr "Спалучэнні клавіш"
 #: src/components/shortcuts/shortcuts.blp:15
 msgctxt "shortcuts window"
 msgid "Switch currencies"
-msgstr "Пераключэнне валют"
+msgstr "Пераключыць валюту"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
@@ -732,7 +732,7 @@ msgstr "Moeda.info"
 
 #: src/window.blp:64
 msgid "Keyboard shortcuts"
-msgstr "Камбінацыі клавіш"
+msgstr "Спалучэнні клавіш"
 
 #: src/window.blp:68
 msgid "About Valuta"
