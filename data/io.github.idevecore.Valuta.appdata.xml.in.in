@@ -15,6 +15,16 @@
   <url type="translate">https://hosted.weblate.org/engage/currency-converter/</url>
   <url type="donation">https://ko-fi.com/idevecore</url>
   <releases>
+     <release version="1.4.2" date="2025-10-18">
+      <description translate="no">
+        <p>In this version we bring:</p>
+        <ul>
+          <li>Translation updates.</li>
+          <li>Moeda.info removed.</li>
+          <li>Small problems resolved.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.0" date="2025-03-02">
       <description translate="no">
         <p>In this version we bring:</p>

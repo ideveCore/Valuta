@@ -2,11 +2,10 @@
 <schemalist gettext-domain="valuta">
   <enum id="@app-id@.Window">
     <value nick="ecb" value="0"/>
-     <value nick="mi" value="1"/>
   </enum>
   <schema id="@app-id@" path="/io/github/idevecore/Valuta/">
     <key name="providers" enum="@app-id@.Window">
-      <default>'mi'</default>
+      <default>'ecb'</default>
     </key>
     <key name="width" type="i">
 			<default>420</default>

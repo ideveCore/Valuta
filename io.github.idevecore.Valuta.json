@@ -1,55 +1,63 @@
 {
-  "app-id" : "io.github.idevecore.Valuta",
-  "runtime" : "org.gnome.Platform",
-  "runtime-version" : "47",
-  "sdk" : "org.gnome.Sdk",
-  "command" : "valuta",
-  "finish-args" : [
-    "--share=network",
-    "--share=ipc",
-    "--device=dri",
-    "--socket=fallback-x11",
-    "--socket=wayland"
-  ],
-  "modules" : [
-    {
-      "name": "blueprint",
-      "buildsystem": "meson",
-      "cleanup": ["*"],
-      "sources": [
+    "app-id" : "io.github.idevecore.Valuta",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "48",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "valuta",
+    "finish-args" : [
+        "--share=network",
+        "--share=ipc",
+        "--device=dri",
+        "--socket=fallback-x11",
+        "--socket=wayland"
+    ],
+    "modules" : [
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-          "tag": "v0.16.0",
-          "commit": "04ef0944db56ab01307a29aaa7303df6067cb3c0"
-        }
-      ]
-    },
-    {
-      "name": "babel",
-      "buildsystem": "simple",
-      "build-commands": [
-        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"babel\" --no-build-isolation"
-      ],
-      "sources": [
+            "name" : "blueprint",
+            "buildsystem" : "meson",
+            "cleanup" : [
+                "*"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+                    "tag" : "v0.18.0",
+                    "commit" : "04ef0944db56ab01307a29aaa7303df6067cb3c0"
+                }
+            ]
+        },
         {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/27/45/377f7e32a5c93d94cd56542349b34efab5ca3f9e2fd5a68c5e93169aa32d/Babel-2.15.0-py3-none-any.whl",
-          "sha256": "08706bdad8d0a3413266ab61bd6c34d0c28d6e1e7badf40a2cebe67644e2e1fb"
+            "name" : "babel",
+            "buildsystem" : "simple",
+            "build-commands" : [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"babel\" --no-build-isolation"
+            ],
+            "sources" : [
+                {
+                    "type" : "file",
+                    "url" : "https://files.pythonhosted.org/packages/27/45/377f7e32a5c93d94cd56542349b34efab5ca3f9e2fd5a68c5e93169aa32d/Babel-2.15.0-py3-none-any.whl",
+                    "sha256" : "08706bdad8d0a3413266ab61bd6c34d0c28d6e1e7badf40a2cebe67644e2e1fb"
+                }
+            ]
+        },
+        {
+            "name" : "valuta",
+            "builddir" : true,
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dprofile=default",
+                "--libdir=lib"
+            ],
+            "sources" : [
+                {
+                    "type" : "dir",
+                    "path" : "."
+                }
+            ]
         }
-      ]
-    },
-    {
-      "name" : "valuta",
-      "builddir" : true,
-      "buildsystem" : "meson",
-      "config-opts": [ "-Dprofile=default" ],
-      "sources" : [
-          {
-            "type" : "dir",
-            "path" : "."
-          }
-      ]
+    ],
+    "build-options" : {
+        "env" : {        }
     }
-  ]
 }

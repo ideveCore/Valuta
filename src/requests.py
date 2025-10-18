@@ -26,7 +26,6 @@ from .define import BASE_URL_LANG_PREFIX, CODES
 
 class Providers:
     ECB_BASE_URL: str = 'https://api.frankfurter.app/latest'
-    MI_BASE_URL: str = 'https://cdn.moeda.info/api/latest.json'
     response = {
         "from": "",
         "to": "",
@@ -71,30 +70,11 @@ class ECB(Providers):
         self.response["amount"] = 0
         self.response["info"] = self.create_info(data["date"])
         self.response["disclaimer"] = self.mount_url()
-        self.response["provider"] = 1
-        return self.response
-
-class MI(Providers):
-    def mount_url(self):
-        return self.MI_BASE_URL
-
-    def serializer(self, data: bytes) -> Dict[str, Union[str, int]]:
-        return self.default_response(json.loads(data))
-
-    def default_response(self, data: Dict[str, str]):
-        date_time = datetime.fromisoformat(data["lastupdate"])
-        self.response["base"] = data["rates"][self.to_currency]/data["rates"][self.from_currency]
-        self.response["from"] = self.from_currency
-        self.response["to"] = self.to_currency
-        self.response["amount"] = 0
-        self.response["info"] = self.create_info(f'{date_time.date()}', f'{date_time.time()}')
-        self.response["disclaimer"] = self.mount_url()
         self.response["provider"] = 0
         return self.response
 
 providers = {
-    0 : MI,
-    1 : ECB,
+    0 : ECB,
 }
 
 class SoupSession(Soup.Session):

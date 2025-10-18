@@ -134,6 +134,7 @@ class Convertion:
             return False
         else:
             return True
+
     def connect(self, event: str, callback: Callable):
         self.__events[event].append(callback)
 
@@ -156,8 +157,7 @@ class Utils:
         self.locale = GLib.get_locale_variants(GLib.get_language_names()[0])
         self.currencies = CODES
         self.providers = {
-          "0": "Moeda.info",
-          "1": "ECB"
+          "0": "ECB"
         }
     def format_number(self, number):
         try:
