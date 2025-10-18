@@ -10,5 +10,6 @@ Type=Application
 Keywords=Valuta;Converter;Currency;ExchangeRate;
 Categories=Utility;GTK;GNOME;
 StartupNotify=true
+DBusActivatable=true
 X-Purism-FormFactor=Workstation;Mobile;
 X-GNOME-SingleWindow=true
