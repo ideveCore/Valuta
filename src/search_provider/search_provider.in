@@ -129,6 +129,8 @@ class ConvertionService:
               results.append(CLIPBOARD_PREFIX + value)
             callback(results)
 
+    callback([])
+
   def GetSubsearchResultSet(self, _previous_results, new_terms, callback):
     return self.GetInitialResultSet(new_terms, callback)
 
@@ -188,10 +190,10 @@ class ConvertionService:
 
   def ActivateResult(self, result_id, terms, timestamp, callback):
     if not result_id.startswith(CLIPBOARD_PREFIX):
-      self.LaunchSearch(terms, timestamp)
-    callback((None,))
+      self.LaunchSearch(terms, timestamp, callback)
+    callback(None)
 
-  def LaunchSearch(self, terms, _timestamp):
+  def LaunchSearch(self, terms, _timestamp, callback):
     value = ' '.join(terms)
     splited_value = value.split(' ')
     if len(splited_value) == 4:
@@ -204,6 +206,7 @@ class ConvertionService:
         None, ['@BIN@', '--src-currency-value', value], None,
         GLib.SpawnFlags.SEARCH_PATH, None
       )
+    callback(None)
 
   def convertion(self, from_currency_value=None):
    if not self.from_currency == self.to_currency:
