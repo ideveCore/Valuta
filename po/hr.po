@@ -8,726 +8,733 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-10-27 11:02+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/"
+"currency-converter/currency-converter/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural="
+"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
 msgid "Convert between currencies"
-msgstr ""
+msgstr "Konvertiranje valuta"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
 "Valuta is a simple and fast conversion tool, ideal for those who need to convert between different currencies repeatedly. Use it while traveling, budgeting, or anytime else you need to quickly convert between two currencies."
 msgstr ""
+"Valuta je jednostavan i brz alat za konverziju, idealan za one koji stalno "
+"moraju konvertirati iznose između različitih valuta. Koristan tijekom "
+"putovanja, budžetiranja ili kada god je potrebno brzo konvertirati valute."
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "Traži"
 
 #: src/components/currency_selector/index.blp:41
 msgid "Search Currencies"
-msgstr ""
+msgstr "Traži valute"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
-msgstr ""
+msgstr "Općenito"
 
 #: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Tipkovni prečaci"
 
 #: src/components/shortcuts/shortcuts.blp:15
 msgctxt "shortcuts window"
 msgid "Switch currencies"
-msgstr ""
+msgstr "Zamijeni valute"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
-msgstr ""
+msgstr "Zatvori aplikaciju"
 
 #: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
-msgstr ""
+msgstr "Greška pri konverziji, pokušaj ponovo."
 
 #: src/pages/convertion/index.blp:13
 msgid "From"
-msgstr ""
+msgstr "Iz"
 
 #: src/pages/convertion/index.blp:30
 msgid "Switch"
-msgstr ""
+msgstr "Zamijeni"
 
 #: src/pages/convertion/index.blp:39
 msgid "To"
-msgstr ""
+msgstr "U"
 
 #: src/pages/convertion/index.blp:87
 msgid "Reload"
-msgstr ""
+msgstr "Učitaj ponovo"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
-msgstr ""
+msgstr "Prema"
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
-msgstr ""
+msgstr "Kopiraj"
 
 #: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
-msgstr ""
+msgstr "Kopiraj konverziju u međuspremnik"
 
 #: src/define.in:39
 msgid "Afghan Afghani"
-msgstr ""
+msgstr "Afganistanski afgani"
 
 #: src/define.in:45
 msgid "Albanian Lek"
-msgstr ""
+msgstr "Albanski lek"
 
 #: src/define.in:51
 msgid "Algerian Dinar"
-msgstr ""
+msgstr "Alžirski dinar"
 
 #: src/define.in:57
 msgid "Angolan Kwanza"
-msgstr ""
+msgstr "Angolska kvanza"
 
 #: src/define.in:63
 msgid "Argentine Peso"
-msgstr ""
+msgstr "Argentinski pezos"
 
 #: src/define.in:69
 msgid "Armenian Dram"
-msgstr ""
+msgstr "Armenski dram"
 
 #: src/define.in:75
 msgid "Aruban Florin"
-msgstr ""
+msgstr "Arupski florin"
 
 #: src/define.in:81
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Australski dolar"
 
 #: src/define.in:87
 msgid "Azerbaijani Manat"
-msgstr ""
+msgstr "Azerbejdžanski manat"
 
 #: src/define.in:93
 msgid "Bahamian Dollar"
-msgstr ""
+msgstr "Bahamski dolar"
 
 #: src/define.in:99
 msgid "Bahraini Dinar"
-msgstr ""
+msgstr "Bahreinski dinar"
 
 #: src/define.in:105
 msgid "Bajan dollar"
-msgstr ""
+msgstr "Bajanski dolar"
 
 #: src/define.in:111
 msgid "Bangladeshi Taka"
-msgstr ""
+msgstr "Bangladeški taka"
 
 #: src/define.in:117
 msgid "Belarusian Ruble"
-msgstr ""
+msgstr "Bjeloruski rubalj"
 
 #: src/define.in:129
 msgid "Belize Dollar"
-msgstr ""
+msgstr "Bilezanski dolar"
 
 #: src/define.in:135
 msgid "Bermudan Dollar"
-msgstr ""
+msgstr "Bermudski dolar"
 
 #: src/define.in:141
 msgid "Bhutan currency"
-msgstr ""
+msgstr "Butanska valuta"
 
 #: src/define.in:147
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
 #: src/define.in:153
 msgid "Bitcoin Cash"
-msgstr ""
+msgstr "Bitcoin gotovina"
 
 #: src/define.in:159
 msgid "Bolivian Boliviano"
-msgstr ""
+msgstr "Bolivijski boliviano"
 
 #: src/define.in:165
 msgid "Bosnia-Herzegovina Convertible Mark"
-msgstr ""
+msgstr "Bosanskohercegovačka konvertibilna marka"
 
 #: src/define.in:171
 msgid "Botswanan Pula"
-msgstr ""
+msgstr "Bocvanska pula"
 
 #: src/define.in:177
 msgid "Brazilian Real"
-msgstr ""
+msgstr "Brazilski real"
 
 #: src/define.in:183
 msgid "Brunei Dollar"
-msgstr ""
+msgstr "Brunejski dolar"
 
 #: src/define.in:189
 msgid "Bulgarian Lev"
-msgstr ""
+msgstr "Bugarski lev"
 
 #: src/define.in:195
 msgid "Burundian Franc"
-msgstr ""
+msgstr "Burundijski franak"
 
 #: src/define.in:201
 msgid "CFP Franc"
-msgstr ""
+msgstr "CFP franak"
 
 #: src/define.in:207
 msgid "Cambodian riel"
-msgstr ""
+msgstr "Kambodžanski riel"
 
 #: src/define.in:213
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "Kanadski dolar"
 
 #: src/define.in:219
 msgid "Cape Verdean Escudo"
-msgstr ""
+msgstr "Zelenortski eskudo"
 
 #: src/define.in:225
 msgid "Cayman Islands Dollar"
-msgstr ""
+msgstr "Kajmanski dolar"
 
 #: src/define.in:231
 msgid "Central African CFA franc"
-msgstr ""
+msgstr "Srednjoafrički CFA franak"
 
 #: src/define.in:237
 msgid "Chilean Peso"
-msgstr ""
+msgstr "Čileanski pezo"
 
 #: src/define.in:243
 msgid "Chilean Unit of Account (UF)"
-msgstr ""
+msgstr "Čileanska obračunska jedinica (UF)"
 
 #: src/define.in:249
 msgid "Chinese Yuan"
-msgstr ""
+msgstr "Kineski juan"
 
 #: src/define.in:255
 msgid "Chinese Yuan (offshore)"
-msgstr ""
+msgstr "Kineski juan (na moru)"
 
 #: src/define.in:261
 msgid "Colombian Peso"
-msgstr ""
+msgstr "Kolumbijski pezo"
 
 #: src/define.in:267
 msgid "Comorian franc"
-msgstr ""
+msgstr "Komorski franak"
 
 #: src/define.in:273
 msgid "Congolese Franc"
-msgstr ""
+msgstr "Kongoanski franak"
 
 #: src/define.in:279
 msgid "Costa Rican Colón"
-msgstr ""
+msgstr "Kostarikanski kolon"
 
 #: src/define.in:285
 msgid "Croatian Kuna"
-msgstr ""
+msgstr "Hrvatska kuna"
 
 #: src/define.in:291
 msgid "Cuban Peso"
-msgstr ""
+msgstr "Kubanski pezo"
 
 #: src/define.in:297
 msgid "Czech Koruna"
-msgstr ""
+msgstr "Češka kruna"
 
 #: src/define.in:303
 msgid "Danish Krone"
-msgstr ""
+msgstr "Danska kruna"
 
 #: src/define.in:309
 msgid "Djiboutian Franc"
-msgstr ""
+msgstr "Džibutski franak"
 
 #: src/define.in:315
 msgid "Dominican Peso"
-msgstr ""
+msgstr "Dominikanski pezo"
 
 #: src/define.in:321
 msgid "East Caribbean Dollar"
-msgstr ""
+msgstr "Istočnokaripski dolar"
 
 #: src/define.in:327
 msgid "Egyptian Pound"
-msgstr ""
+msgstr "Egipatska funta"
 
 #: src/define.in:333
 msgid "Ether"
-msgstr ""
+msgstr "Eter"
 
 #: src/define.in:339
 msgid "Ethiopian Birr"
-msgstr ""
+msgstr "Etiopski bir"
 
 #: src/define.in:345
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: src/define.in:351
 msgid "Fijian Dollar"
-msgstr ""
+msgstr "Fidžijski dolar"
 
 #: src/define.in:357
 msgid "Gambian dalasi"
-msgstr ""
+msgstr "Gambijski dalasi"
 
 #: src/define.in:363
 msgid "Georgian Lari"
-msgstr ""
+msgstr "Gruzijski lari"
 
 #: src/define.in:369
 msgid "Ghanaian Cedi"
-msgstr ""
+msgstr "Ganski cedi"
 
 #: src/define.in:381
 msgid "Gibraltar Pound"
-msgstr ""
+msgstr "Gibraltarska funta"
 
 #: src/define.in:387
 msgid "Guatemalan Quetzal"
-msgstr ""
+msgstr "Gvatemalski kvecal"
 
 #: src/define.in:393
 msgid "Guinean Franc"
-msgstr ""
+msgstr "Gvinejski franak"
 
 #: src/define.in:399
 msgid "Guyanaese Dollar"
-msgstr ""
+msgstr "Gvajanski dolar"
 
 #: src/define.in:405
 msgid "Haitian Gourde"
-msgstr ""
+msgstr "Haićanski tikv"
 
 #: src/define.in:411
 msgid "Honduran Lempira"
-msgstr ""
+msgstr "Honduraška lempira"
 
 #: src/define.in:417
 msgid "Hong Kong Dollar"
-msgstr ""
+msgstr "Hongkonški dolar"
 
 #: src/define.in:423
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "Mađarska forinta"
 
 #: src/define.in:429
 msgid "Icelandic Króna"
-msgstr ""
+msgstr "Islandska krona"
 
 #: src/define.in:435
 msgid "Indian Rupee"
-msgstr ""
+msgstr "Indijska rupija"
 
 #: src/define.in:441
 msgid "Indonesian Rupiah"
-msgstr ""
+msgstr "Indonezijska rupija"
 
 #: src/define.in:447
 msgid "Iranian Rial"
-msgstr ""
+msgstr "Iranski rijal"
 
 #: src/define.in:453
 msgid "Iraqi Dinar"
-msgstr ""
+msgstr "Irački dinar"
 
 #: src/define.in:459
 msgid "Israeli New Shekel"
-msgstr ""
+msgstr "Izraelski novi šekel"
 
 #: src/define.in:465
 msgid "Jamaican Dollar"
-msgstr ""
+msgstr "Jamajčanski dolar"
 
 #: src/define.in:471
 msgid "Japanese Yen"
-msgstr ""
+msgstr "Japanski jen"
 
 #: src/define.in:477
 msgid "Jordanian Dinar"
-msgstr ""
+msgstr "Jordanski dinar"
 
 #: src/define.in:483
 msgid "Kazakhstani Tenge"
-msgstr ""
+msgstr "Kazahstanski tenge"
 
 #: src/define.in:489
 msgid "Kenyan Shilling"
-msgstr ""
+msgstr "Kenijski šiling"
 
 #: src/define.in:495
 msgid "Kuwaiti Dinar"
-msgstr ""
+msgstr "Kuvajtski dinar"
 
 #: src/define.in:501
 msgid "Kyrgyzstani Som"
-msgstr ""
+msgstr "Kirgistani Som"
 
 #: src/define.in:507
 msgid "Laotian Kip"
-msgstr ""
+msgstr "Laoski kip"
 
 #: src/define.in:513
 msgid "Lebanese pound"
-msgstr ""
+msgstr "Libanonska funta"
 
 #: src/define.in:519
 msgid "Lesotho loti"
-msgstr ""
+msgstr "Lesoto loti"
 
 #: src/define.in:525
 msgid "Liberian Dollar"
-msgstr ""
+msgstr "Liberijski dolar"
 
 #: src/define.in:531
 msgid "Libyan Dinar"
-msgstr ""
+msgstr "Libijski dinar"
 
 #: src/define.in:537
 msgid "Litecoin"
-msgstr ""
+msgstr "Litecoin"
 
 #: src/define.in:543
 msgid "Macanese Pataca"
-msgstr ""
+msgstr "Pataka iz Makaa"
 
 #: src/define.in:549
 msgid "Macedonian Denar"
-msgstr ""
+msgstr "Makedonski denar"
 
 #: src/define.in:555
 msgid "Malagasy Ariary"
-msgstr ""
+msgstr "Madagaskarski arijari"
 
 #: src/define.in:561
 msgid "Malawian Kwacha"
-msgstr ""
+msgstr "Malavijska kvača"
 
 #: src/define.in:567
 msgid "Malaysian Ringgit"
-msgstr ""
+msgstr "Malezijski ringit"
 
 #: src/define.in:573
 msgid "Maldivian Rufiyaa"
-msgstr ""
+msgstr "Maldivijska rufija"
 
 #: src/define.in:579
 msgid "Mauritanian Ouguiya (1973–2017)"
-msgstr ""
+msgstr "Mauritanijska ogija (1973. – 2017.)"
 
 #: src/define.in:585
 msgid "Mauritian Rupee"
-msgstr ""
+msgstr "Mauricijuška rupija"
 
 #: src/define.in:591
 msgid "Mexican Peso"
-msgstr ""
+msgstr "Meksički pezo"
 
 #: src/define.in:597
 msgid "Moldovan Leu"
-msgstr ""
+msgstr "Moldavski lej"
 
 #: src/define.in:603
 msgid "Moroccan Dirham"
-msgstr ""
+msgstr "Marokanski dirham"
 
 #: src/define.in:609
 msgid "Mozambican metical"
-msgstr ""
+msgstr "Mozambička metička"
 
 #: src/define.in:621
 msgid "Myanmar Kyat"
-msgstr ""
+msgstr "Mjanmarski kjat"
 
 #: src/define.in:627
 msgid "New Taiwan dollar"
-msgstr ""
+msgstr "Novotajvanski dolar"
 
 #: src/define.in:633
 msgid "Namibian dollar"
-msgstr ""
+msgstr "Namibijski dolar"
 
 #: src/define.in:639
 msgid "Nepalese Rupee"
-msgstr ""
+msgstr "Nepalska rupija"
 
 #: src/define.in:645
 msgid "Netherlands Antillean Guilder"
-msgstr ""
+msgstr "Nizozemskoantilski gulden"
 
 #: src/define.in:651
 msgid "New Zealand Dollar"
-msgstr ""
+msgstr "Novozelandski dolar"
 
 #: src/define.in:657
 msgid "Nicaraguan Córdoba"
-msgstr ""
+msgstr "Nikaragvanska Córdoba"
 
 #: src/define.in:663
 msgid "Nigerian Naira"
-msgstr ""
+msgstr "Nigerijski nair"
 
 #: src/define.in:669
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "Norveška kruna"
 
 #: src/define.in:675
 msgid "Omani Rial"
-msgstr ""
+msgstr "Omanski rijal"
 
 #: src/define.in:681
 msgid "Pakistani Rupee"
-msgstr ""
+msgstr "Pakistanska rupija"
 
 #: src/define.in:687
 msgid "Panamanian Balboa"
-msgstr ""
+msgstr "Panamska balboa"
 
 #: src/define.in:693
 msgid "Papua New Guinean Kina"
-msgstr ""
+msgstr "Papua Nova Gvinejska Kina"
 
 #: src/define.in:699
 msgid "Paraguayan Guarani"
-msgstr ""
+msgstr "Paragvajski guarani"
 
 #: src/define.in:705
 msgid "Philippine Piso"
-msgstr ""
+msgstr "Filipinski piso"
 
 #: src/define.in:711
 msgid "Poland złoty"
-msgstr ""
+msgstr "Poljska zloty"
 
 #: src/define.in:717
 msgid "Pound sterling"
-msgstr ""
+msgstr "Britanska funta"
 
 #: src/define.in:723
 msgid "Qatari Rial"
-msgstr ""
+msgstr "Katarski rijal"
 
 #: src/define.in:729
 msgid "Romanian Leu"
-msgstr ""
+msgstr "Rumunjski lej"
 
 #: src/define.in:741
 msgid "Russian Ruble"
-msgstr ""
+msgstr "Ruska rublja"
 
 #: src/define.in:753
 msgid "Rwandan franc"
-msgstr ""
+msgstr "Ruandski franak"
 
 #: src/define.in:759
 msgid "Salvadoran Colón"
-msgstr ""
+msgstr "Salvadorski Colón"
 
 #: src/define.in:765
 msgid "Saudi Riyal"
-msgstr ""
+msgstr "Saudijski rijal"
 
 #: src/define.in:771
 msgid "Serbian Dinar"
-msgstr ""
+msgstr "Srpski dinar"
 
 #: src/define.in:783
 msgid "Seychellois Rupee"
-msgstr ""
+msgstr "Sejšelska rupija"
 
 #: src/define.in:789
 msgid "Sierra Leonean Leone"
-msgstr ""
+msgstr "Sijeraleonski leone"
 
 #: src/define.in:795
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "Singapurski dolar"
 
 #: src/define.in:801
 msgid "Sol"
-msgstr ""
+msgstr "Peruanski novi sol"
 
 #: src/define.in:807
 msgid "Solomon Islands Dollar"
-msgstr ""
+msgstr "Solomonskootočni dolar"
 
 #: src/define.in:813
 msgid "Somali Shilling"
-msgstr ""
+msgstr "Somalijski šiling"
 
 #: src/define.in:819
 msgid "South African Rand"
-msgstr ""
+msgstr "Južnoafrički rand"
 
 #: src/define.in:825
 msgid "South Korean won"
-msgstr ""
+msgstr "Južnokorejski won"
 
 #: src/define.in:831
 msgid "Sovereign Bolivar"
-msgstr ""
+msgstr "Suvereni Bolivar"
 
 #: src/define.in:837
 msgid "Special Drawing Rights"
-msgstr ""
+msgstr "Posebna prava"
 
 #: src/define.in:843
 msgid "Sri Lankan Rupee"
-msgstr ""
+msgstr "Šrilanska rupija"
 
 #: src/define.in:849
 msgid "Sudanese pound"
-msgstr ""
+msgstr "Sudanska funta"
 
 #: src/define.in:861
 msgid "Surinamese Dollar"
-msgstr ""
+msgstr "Surinamski dolar"
 
 #: src/define.in:867
 msgid "Swazi Lilangeni"
-msgstr ""
+msgstr "Svazi lilangeni"
 
 #: src/define.in:873
 msgid "Swedish Krona"
-msgstr ""
+msgstr "Švedska kruna"
 
 #: src/define.in:879
 msgid "Swiss Franc"
-msgstr ""
+msgstr "Švicarski franak"
 
 #: src/define.in:885
 msgid "Tajikistani Somoni"
-msgstr ""
+msgstr "Tadžikistanski somoni"
 
 #: src/define.in:891
 msgid "Tanzanian Shilling"
-msgstr ""
+msgstr "Tanzanijski šiling"
 
 #: src/define.in:897
 msgid "Thai Baht"
-msgstr ""
+msgstr "Tajlandski bat"
 
 #: src/define.in:903
 msgid "Tongan Paʻanga"
-msgstr ""
+msgstr "Tonganska Paʻanga"
 
 #: src/define.in:909
 msgid "Trinidad & Tobago Dollar"
-msgstr ""
+msgstr "Trinidadtobaški dolar"
 
 #: src/define.in:915
 msgid "Tunisian Dinar"
-msgstr ""
+msgstr "Tuniški dinar"
 
 #: src/define.in:921
 msgid "Turkish lira"
-msgstr ""
+msgstr "Turska lira"
 
 #: src/define.in:927
 msgid "Turkmenistan manat"
-msgstr ""
+msgstr "Turkmenistan manat"
 
 #: src/define.in:939
 msgid "Ugandan Shilling"
-msgstr ""
+msgstr "Ugandski šiling"
 
 #: src/define.in:945
 msgid "Ukrainian hryvnia"
-msgstr ""
+msgstr "Ukrajinska grivna"
 
 #: src/define.in:951
 msgid "United Arab Emirates Dirham"
-msgstr ""
+msgstr "Ujedinjeni Arapski Emirati dirham"
 
 #: src/define.in:957
 msgid "United States Dollar"
-msgstr ""
+msgstr "Američki dolar"
 
 #: src/define.in:963
 msgid "Uruguayan Peso"
-msgstr ""
+msgstr "Urugvajski pezo"
 
 #: src/define.in:969
 msgid "Uzbekistani Som"
-msgstr ""
+msgstr "Uzbekistanski som"
 
 #: src/define.in:975
 msgid "Vietnamese dong"
-msgstr ""
+msgstr "Vijetnamski dong"
 
 #: src/define.in:981
 msgid "West African CFA franc"
-msgstr ""
+msgstr "Zapadnoafrički CFA franak"
 
 #: src/define.in:987
 msgid "Yemeni Rial"
-msgstr ""
+msgstr "Jemenski rijal"
 
 #: src/define.in:993
 msgid "Zambian Kwacha"
-msgstr ""
+msgstr "Zambijska kvača"
 
 #: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr ""
+"Nije moguće konvertirati valutu, neuspjelo dohvaćacnje rezultata od Googlea."
 
 #: src/window.blp:18
 msgid "Main menu"
-msgstr ""
+msgstr "Glavni izbornik"
 
 #: src/window.blp:34
 msgid "Source"
-msgstr ""
+msgstr "Izvor"
 
 #: src/window.blp:43
 msgid "Providers"
-msgstr ""
+msgstr "Pružatelji usluge"
 
 #: src/window.blp:46
 msgid "ECB"
-msgstr ""
+msgstr "ECB"
 
 #: src/window.blp:51
 msgid "Google (unstable)"
-msgstr ""
+msgstr "Google (nestabilno)"
 
 #: src/window.blp:56
 msgid "Moeda.info"
-msgstr ""
+msgstr "Moeda.info"
 
 #: src/window.blp:64
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Tipkovni prečaci"
 
 #: src/window.blp:68
 msgid "About Valuta"
-msgstr ""
+msgstr "O aplikaciji Valuta"
