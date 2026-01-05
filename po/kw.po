@@ -8,9 +8,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-01-06 13:01+0000\n"
+"Last-Translator: Flynn <cirilla@tuta.io>\n"
+"Language-Team: Cornish <https://hosted.weblate.org/projects/currency-"
+"converter/currency-converter/kw/>\n"
 "Language: kw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,717 +23,723 @@ msgstr ""
 "1000000 == 100000) ? 2 : ((n % 100 == 3 || n % 100 == 23 || n % 100 == 43 || "
 "n % 100 == 63 || n % 100 == 83) ? 3 : ((n != 1 && (n % 100 == 1 || n % 100 "
 "== 21 || n % 100 == 41 || n % 100 == 61 || n % 100 == 81)) ? 4 : 5))));\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
 msgid "Convert between currencies"
-msgstr ""
+msgstr "Treylya tredh mona kemmyn dyffrans"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:9
 msgid ""
 "Valuta is a simple and fast conversion tool, ideal for those who need to convert between different currencies repeatedly. Use it while traveling, budgeting, or anytime else you need to quickly convert between two currencies."
 msgstr ""
+"Valuta yw unn toul sempel hag uskis, delvrysek rag tus neb a res treylya "
+"tredh mona kemmyn dyffrans arta hag arta. Devnydhya y'n ha viajya, devisya, "
+"po peskytter ty res treylya uskis tredh dew mona kemmyn."
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "Hwilas"
 
 #: src/components/currency_selector/index.blp:41
 msgid "Search Currencies"
-msgstr ""
+msgstr "Hwilas Mona Kemmyn"
 
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
-msgstr ""
+msgstr "Ollgemmyn"
 
 #: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Kesunyansow Bysowek"
 
 #: src/components/shortcuts/shortcuts.blp:15
 msgctxt "shortcuts window"
 msgid "Switch currencies"
-msgstr ""
+msgstr "Skwychella mona kemmyn"
 
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
-msgstr ""
+msgstr "Kwytya"
 
 #: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
-msgstr ""
+msgstr "Error dres treylyans, dassaya mar pleg."
 
 #: src/pages/convertion/index.blp:13
 msgid "From"
-msgstr ""
+msgstr "Dhyworth"
 
 #: src/pages/convertion/index.blp:30
 msgid "Switch"
-msgstr ""
+msgstr "Skwychella"
 
 #: src/pages/convertion/index.blp:39
 msgid "To"
-msgstr ""
+msgstr "Dhe"
 
 #: src/pages/convertion/index.blp:87
 msgid "Reload"
-msgstr ""
+msgstr "Daskarga"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
-msgstr ""
+msgstr "Herwydh"
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
-msgstr ""
+msgstr "Kopia"
 
 #: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
-msgstr ""
+msgstr "Kopia treylyans war astel glypp"
 
 #: src/define.in:39
 msgid "Afghan Afghani"
-msgstr ""
+msgstr "Afghani afganek"
 
 #: src/define.in:45
 msgid "Albanian Lek"
-msgstr ""
+msgstr "Lek albaniek"
 
 #: src/define.in:51
 msgid "Algerian Dinar"
-msgstr ""
+msgstr "Dinar aljieriek"
 
 #: src/define.in:57
 msgid "Angolan Kwanza"
-msgstr ""
+msgstr "Kwanza angolek"
 
 #: src/define.in:63
 msgid "Argentine Peso"
-msgstr ""
+msgstr "Peso arghantinek"
 
 #: src/define.in:69
 msgid "Armenian Dram"
-msgstr ""
+msgstr "Dram armeniek"
 
 #: src/define.in:75
 msgid "Aruban Florin"
-msgstr ""
+msgstr "Florin arubiek"
 
 #: src/define.in:81
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Dollar ostralek"
 
 #: src/define.in:87
 msgid "Azerbaijani Manat"
-msgstr ""
+msgstr "Manat azerbayjanek"
 
 #: src/define.in:93
 msgid "Bahamian Dollar"
-msgstr ""
+msgstr "Dollar bahamek"
 
 #: src/define.in:99
 msgid "Bahraini Dinar"
-msgstr ""
+msgstr "Dinar bahrainek"
 
 #: src/define.in:105
 msgid "Bajan dollar"
-msgstr ""
+msgstr "Dollar bajanek"
 
 #: src/define.in:111
 msgid "Bangladeshi Taka"
-msgstr ""
+msgstr "Taka bangladeshek"
 
 #: src/define.in:117
 msgid "Belarusian Ruble"
-msgstr ""
+msgstr "Ruble belarussek"
 
 #: src/define.in:129
 msgid "Belize Dollar"
-msgstr ""
+msgstr "Dollar belizek"
 
 #: src/define.in:135
 msgid "Bermudan Dollar"
-msgstr ""
+msgstr "Dollar bermudek"
 
 #: src/define.in:141
 msgid "Bhutan currency"
-msgstr ""
+msgstr "Ngultrum bhutanek"
 
 #: src/define.in:147
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
 #: src/define.in:153
 msgid "Bitcoin Cash"
-msgstr ""
+msgstr "Mona Bitcoin"
 
 #: src/define.in:159
 msgid "Bolivian Boliviano"
-msgstr ""
+msgstr "Boliviano boliviek"
 
 #: src/define.in:165
 msgid "Bosnia-Herzegovina Convertible Mark"
-msgstr ""
+msgstr "Merk Treyladow bosniek"
 
 #: src/define.in:171
 msgid "Botswanan Pula"
-msgstr ""
+msgstr "Pula botswanek"
 
 #: src/define.in:177
 msgid "Brazilian Real"
-msgstr ""
+msgstr "Real brasilek"
 
 #: src/define.in:183
 msgid "Brunei Dollar"
-msgstr ""
+msgstr "Dollar bruneiek"
 
 #: src/define.in:189
 msgid "Bulgarian Lev"
-msgstr ""
+msgstr "Lev bulgarek"
 
 #: src/define.in:195
 msgid "Burundian Franc"
-msgstr ""
+msgstr "Franc burundiek"
 
 #: src/define.in:201
 msgid "CFP Franc"
-msgstr ""
+msgstr "Franc CFP"
 
 #: src/define.in:207
 msgid "Cambodian riel"
-msgstr ""
+msgstr "Riel kambodiek"
 
 #: src/define.in:213
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "Dollar kanadek"
 
 #: src/define.in:219
 msgid "Cape Verdean Escudo"
-msgstr ""
+msgstr "Escudo a Gabo Verde"
 
 #: src/define.in:225
 msgid "Cayman Islands Dollar"
-msgstr ""
+msgstr "Dollar kaymanek"
 
 #: src/define.in:231
 msgid "Central African CFA franc"
-msgstr ""
+msgstr "Franc CFA kres afrikanek"
 
 #: src/define.in:237
 msgid "Chilean Peso"
-msgstr ""
+msgstr "Peso chilek"
 
 #: src/define.in:243
 msgid "Chilean Unit of Account (UF)"
-msgstr ""
+msgstr "Unsys a Reken chilek"
 
 #: src/define.in:249
 msgid "Chinese Yuan"
-msgstr ""
+msgstr "Yuan chinek"
 
 #: src/define.in:255
 msgid "Chinese Yuan (offshore)"
-msgstr ""
+msgstr "Yuan chinek (tramor)"
 
 #: src/define.in:261
 msgid "Colombian Peso"
-msgstr ""
+msgstr "Peso kolombian"
 
 #: src/define.in:267
 msgid "Comorian franc"
-msgstr ""
+msgstr "Franc komorosek"
 
 #: src/define.in:273
 msgid "Congolese Franc"
-msgstr ""
+msgstr "Franc kongolesek"
 
 #: src/define.in:279
 msgid "Costa Rican Colón"
-msgstr ""
+msgstr "Colón kosta rikek"
 
 #: src/define.in:285
 msgid "Croatian Kuna"
-msgstr ""
+msgstr "Kuna kroatek"
 
 #: src/define.in:291
 msgid "Cuban Peso"
-msgstr ""
+msgstr "Peso koubek"
 
 #: src/define.in:297
 msgid "Czech Koruna"
-msgstr ""
+msgstr "Koruna chek"
 
 #: src/define.in:303
 msgid "Danish Krone"
-msgstr ""
+msgstr "Krone danek"
 
 #: src/define.in:309
 msgid "Djiboutian Franc"
-msgstr ""
+msgstr "Franc djiboutiek"
 
 #: src/define.in:315
 msgid "Dominican Peso"
-msgstr ""
+msgstr "Peso dominikanek"
 
 #: src/define.in:321
 msgid "East Caribbean Dollar"
-msgstr ""
+msgstr "Dollar karibbeanek est"
 
 #: src/define.in:327
 msgid "Egyptian Pound"
-msgstr ""
+msgstr "Pound ejyptek"
 
 #: src/define.in:333
 msgid "Ether"
-msgstr ""
+msgstr "Ether"
 
 #: src/define.in:339
 msgid "Ethiopian Birr"
-msgstr ""
+msgstr "Birr ethiopek"
 
 #: src/define.in:345
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: src/define.in:351
 msgid "Fijian Dollar"
-msgstr ""
+msgstr "Dollar fijiek"
 
 #: src/define.in:357
 msgid "Gambian dalasi"
-msgstr ""
+msgstr "Dalasi gambiek"
 
 #: src/define.in:363
 msgid "Georgian Lari"
-msgstr ""
+msgstr "Lari jorjiek"
 
 #: src/define.in:369
 msgid "Ghanaian Cedi"
-msgstr ""
+msgstr "Cedi ganek"
 
 #: src/define.in:381
 msgid "Gibraltar Pound"
-msgstr ""
+msgstr "Pound jibraltek"
 
 #: src/define.in:387
 msgid "Guatemalan Quetzal"
-msgstr ""
+msgstr "Quetzal gwatemalek"
 
 #: src/define.in:393
 msgid "Guinean Franc"
-msgstr ""
+msgstr "Franc gyniek"
 
 #: src/define.in:399
 msgid "Guyanaese Dollar"
-msgstr ""
+msgstr "Dollar gyanesek"
 
 #: src/define.in:405
 msgid "Haitian Gourde"
-msgstr ""
+msgstr "Gourde haytiek"
 
 #: src/define.in:411
 msgid "Honduran Lempira"
-msgstr ""
+msgstr "Lempira hondurek"
 
 #: src/define.in:417
 msgid "Hong Kong Dollar"
-msgstr ""
+msgstr "Dollar hongkongek"
 
 #: src/define.in:423
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "Forint hungarek"
 
 #: src/define.in:429
 msgid "Icelandic Króna"
-msgstr ""
+msgstr "Króna rewenysek"
 
 #: src/define.in:435
 msgid "Indian Rupee"
-msgstr ""
+msgstr "Rupee eyndek"
 
 #: src/define.in:441
 msgid "Indonesian Rupiah"
-msgstr ""
+msgstr "Rupiah indonesek"
 
 #: src/define.in:447
 msgid "Iranian Rial"
-msgstr ""
+msgstr "Rial iranek"
 
 #: src/define.in:453
 msgid "Iraqi Dinar"
-msgstr ""
+msgstr "Dinar irakek"
 
 #: src/define.in:459
 msgid "Israeli New Shekel"
-msgstr ""
+msgstr "Shekel Nowydh israelyek"
 
 #: src/define.in:465
 msgid "Jamaican Dollar"
-msgstr ""
+msgstr "Dollar jamekek"
 
 #: src/define.in:471
 msgid "Japanese Yen"
-msgstr ""
+msgstr "Yen japanek"
 
 #: src/define.in:477
 msgid "Jordanian Dinar"
-msgstr ""
+msgstr "Dinar jordanek"
 
 #: src/define.in:483
 msgid "Kazakhstani Tenge"
-msgstr ""
+msgstr "Tenge kazakstanek"
 
 #: src/define.in:489
 msgid "Kenyan Shilling"
-msgstr ""
+msgstr "Shilling kenyek"
 
 #: src/define.in:495
 msgid "Kuwaiti Dinar"
-msgstr ""
+msgstr "Dinar kuweytek"
 
 #: src/define.in:501
 msgid "Kyrgyzstani Som"
-msgstr ""
+msgstr "Som kyrgyzek"
 
 #: src/define.in:507
 msgid "Laotian Kip"
-msgstr ""
+msgstr "Kip laosek"
 
 #: src/define.in:513
 msgid "Lebanese pound"
-msgstr ""
+msgstr "Pound lebanek"
 
 #: src/define.in:519
 msgid "Lesotho loti"
-msgstr ""
+msgstr "Loti lesothek"
 
 #: src/define.in:525
 msgid "Liberian Dollar"
-msgstr ""
+msgstr "Dollar liberiek"
 
 #: src/define.in:531
 msgid "Libyan Dinar"
-msgstr ""
+msgstr "Dinar lybiek"
 
 #: src/define.in:537
 msgid "Litecoin"
-msgstr ""
+msgstr "Litecoin"
 
 #: src/define.in:543
 msgid "Macanese Pataca"
-msgstr ""
+msgstr "Pataca macanek"
 
 #: src/define.in:549
 msgid "Macedonian Denar"
-msgstr ""
+msgstr "Denar macedoniek"
 
 #: src/define.in:555
 msgid "Malagasy Ariary"
-msgstr ""
+msgstr "Ariary malagasiek"
 
 #: src/define.in:561
 msgid "Malawian Kwacha"
-msgstr ""
+msgstr "Kwacha malawiek"
 
 #: src/define.in:567
 msgid "Malaysian Ringgit"
-msgstr ""
+msgstr "Ringgit malaysiek"
 
 #: src/define.in:573
 msgid "Maldivian Rufiyaa"
-msgstr ""
+msgstr "Rufiyaa maldiviek"
 
 #: src/define.in:579
 msgid "Mauritanian Ouguiya (1973–2017)"
-msgstr ""
+msgstr "Ouguiya mauritaniek (1973-2017)"
 
 #: src/define.in:585
 msgid "Mauritian Rupee"
-msgstr ""
+msgstr "Rupee morrisiek"
 
 #: src/define.in:591
 msgid "Mexican Peso"
-msgstr ""
+msgstr "Peso meksikan"
 
 #: src/define.in:597
 msgid "Moldovan Leu"
-msgstr ""
+msgstr "Leu moldavek"
 
 #: src/define.in:603
 msgid "Moroccan Dirham"
-msgstr ""
+msgstr "Dirham morockek"
 
 #: src/define.in:609
 msgid "Mozambican metical"
-msgstr ""
+msgstr "Metical mozambikek"
 
 #: src/define.in:621
 msgid "Myanmar Kyat"
-msgstr ""
+msgstr "Kyat myanmar"
 
 #: src/define.in:627
 msgid "New Taiwan dollar"
-msgstr ""
+msgstr "Dollar Nowydh taiwanek"
 
 #: src/define.in:633
 msgid "Namibian dollar"
-msgstr ""
+msgstr "Dollar namibiek"
 
 #: src/define.in:639
 msgid "Nepalese Rupee"
-msgstr ""
+msgstr "Rupee nepalek"
 
 #: src/define.in:645
 msgid "Netherlands Antillean Guilder"
-msgstr ""
+msgstr "Guilder antilliek iseldiryek"
 
 #: src/define.in:651
 msgid "New Zealand Dollar"
-msgstr ""
+msgstr "Dollar kiwi"
 
 #: src/define.in:657
 msgid "Nicaraguan Córdoba"
-msgstr ""
+msgstr "Córdoba nikaragwan"
 
 #: src/define.in:663
 msgid "Nigerian Naira"
-msgstr ""
+msgstr "Naira nijeriek"
 
 #: src/define.in:669
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "Krone norgaghek"
 
 #: src/define.in:675
 msgid "Omani Rial"
-msgstr ""
+msgstr "Rial omanek"
 
 #: src/define.in:681
 msgid "Pakistani Rupee"
-msgstr ""
+msgstr "Rupee pakistanek"
 
 #: src/define.in:687
 msgid "Panamanian Balboa"
-msgstr ""
+msgstr "Balboa panamaek"
 
 #: src/define.in:693
 msgid "Papua New Guinean Kina"
-msgstr ""
+msgstr "Kina gyniek papwa nowydh"
 
 #: src/define.in:699
 msgid "Paraguayan Guarani"
-msgstr ""
+msgstr "Guarani paragwayek"
 
 #: src/define.in:705
 msgid "Philippine Piso"
-msgstr ""
+msgstr "Piso felypinek"
 
 #: src/define.in:711
 msgid "Poland złoty"
-msgstr ""
+msgstr "złoty polonek"
 
 #: src/define.in:717
 msgid "Pound sterling"
-msgstr ""
+msgstr "Pound bretennek"
 
 #: src/define.in:723
 msgid "Qatari Rial"
-msgstr ""
+msgstr "Rial katarek"
 
 #: src/define.in:729
 msgid "Romanian Leu"
-msgstr ""
+msgstr "Leu romaniek"
 
 #: src/define.in:741
 msgid "Russian Ruble"
-msgstr ""
+msgstr "Ruble russek"
 
 #: src/define.in:753
 msgid "Rwandan franc"
-msgstr ""
+msgstr "Franc rwandek"
 
 #: src/define.in:759
 msgid "Salvadoran Colón"
-msgstr ""
+msgstr "Colón salvadorek"
 
 #: src/define.in:765
 msgid "Saudi Riyal"
-msgstr ""
+msgstr "Riyal saudi"
 
 #: src/define.in:771
 msgid "Serbian Dinar"
-msgstr ""
+msgstr "Dinar serbek"
 
 #: src/define.in:783
 msgid "Seychellois Rupee"
-msgstr ""
+msgstr "Rupee seyshellyek"
 
 #: src/define.in:789
 msgid "Sierra Leonean Leone"
-msgstr ""
+msgstr "Leone sierra leonek"
 
 #: src/define.in:795
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "Dollar singaporek"
 
 #: src/define.in:801
 msgid "Sol"
-msgstr ""
+msgstr "Sol"
 
 #: src/define.in:807
 msgid "Solomon Islands Dollar"
-msgstr ""
+msgstr "Dollar enesow solomon"
 
 #: src/define.in:813
 msgid "Somali Shilling"
-msgstr ""
+msgstr "Shilling somaliek"
 
 #: src/define.in:819
 msgid "South African Rand"
-msgstr ""
+msgstr "Rand afrikanek dyghow"
 
 #: src/define.in:825
 msgid "South Korean won"
-msgstr ""
+msgstr "Won koreek dyghow"
 
 #: src/define.in:831
 msgid "Sovereign Bolivar"
-msgstr ""
+msgstr "Bolivar Sovran"
 
 #: src/define.in:837
 msgid "Special Drawing Rights"
-msgstr ""
+msgstr "Gwiryow Delinyans Arbennik"
 
 #: src/define.in:843
 msgid "Sri Lankan Rupee"
-msgstr ""
+msgstr "Rupee sri lankek"
 
 #: src/define.in:849
 msgid "Sudanese pound"
-msgstr ""
+msgstr "Pound sudanek"
 
 #: src/define.in:861
 msgid "Surinamese Dollar"
-msgstr ""
+msgstr "Dollar surinamek"
 
 #: src/define.in:867
 msgid "Swazi Lilangeni"
-msgstr ""
+msgstr "Lilangeni swazi"
 
 #: src/define.in:873
 msgid "Swedish Krona"
-msgstr ""
+msgstr "Krona swedek"
 
 #: src/define.in:879
 msgid "Swiss Franc"
-msgstr ""
+msgstr "Franc swis"
 
 #: src/define.in:885
 msgid "Tajikistani Somoni"
-msgstr ""
+msgstr "Somoni tajikistanek"
 
 #: src/define.in:891
 msgid "Tanzanian Shilling"
-msgstr ""
+msgstr "Shilling tanzaniek"
 
 #: src/define.in:897
 msgid "Thai Baht"
-msgstr ""
+msgstr "Baht tai"
 
 #: src/define.in:903
 msgid "Tongan Paʻanga"
-msgstr ""
+msgstr "Pa'anga tonganek"
 
 #: src/define.in:909
 msgid "Trinidad & Tobago Dollar"
-msgstr ""
+msgstr "Dollar Trinidad ha Tobago"
 
 #: src/define.in:915
 msgid "Tunisian Dinar"
-msgstr ""
+msgstr "Dinar tunisiek"
 
 #: src/define.in:921
 msgid "Turkish lira"
-msgstr ""
+msgstr "Lira turkek"
 
 #: src/define.in:927
 msgid "Turkmenistan manat"
-msgstr ""
+msgstr "Manat turkmenek"
 
 #: src/define.in:939
 msgid "Ugandan Shilling"
-msgstr ""
+msgstr "Shilling ugandek"
 
 #: src/define.in:945
 msgid "Ukrainian hryvnia"
-msgstr ""
+msgstr "Hryvnia ukraynek"
 
 #: src/define.in:951
 msgid "United Arab Emirates Dirham"
-msgstr ""
+msgstr "Dirham emiratiek"
 
 #: src/define.in:957
 msgid "United States Dollar"
-msgstr ""
+msgstr "Dollar amerikanek"
 
 #: src/define.in:963
 msgid "Uruguayan Peso"
-msgstr ""
+msgstr "Peso urugwayek"
 
 #: src/define.in:969
 msgid "Uzbekistani Som"
-msgstr ""
+msgstr "Som uzbek"
 
 #: src/define.in:975
 msgid "Vietnamese dong"
-msgstr ""
+msgstr "Dong vietnamek"
 
 #: src/define.in:981
 msgid "West African CFA franc"
-msgstr ""
+msgstr "Franc CFA afrikan west"
 
 #: src/define.in:987
 msgid "Yemeni Rial"
-msgstr ""
+msgstr "Rial yemenek"
 
 #: src/define.in:993
 msgid "Zambian Kwacha"
-msgstr ""
+msgstr "Kwacha zambiek"
 
 #: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
 msgstr ""
+"Anabel dhe treylya mona kemmyn, y fyllis dhe kerghes sewyansow dhyworth "
+"Google."
 
 #: src/window.blp:18
 msgid "Main menu"
-msgstr ""
+msgstr "Menu chif"
 
 #: src/window.blp:34
 msgid "Source"
-msgstr ""
+msgstr "Devedhyans"
 
 #: src/window.blp:43
 msgid "Providers"
-msgstr ""
+msgstr "Provioryon"
 
 #: src/window.blp:46
 msgid "ECB"
-msgstr ""
+msgstr "ECB"
 
 #: src/window.blp:51
 msgid "Google (unstable)"
-msgstr ""
+msgstr "Google (diantel)"
 
 #: src/window.blp:56
 msgid "Moeda.info"
-msgstr ""
+msgstr "Moeda.info"
 
 #: src/window.blp:64
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Kesunyansow Bysowek"
 
 #: src/window.blp:68
 msgid "About Valuta"
-msgstr ""
+msgstr "A-dro Valuta"
