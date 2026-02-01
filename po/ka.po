@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-25 04:47+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-02-02 15:01+0000\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://hosted.weblate.org/projects/currency-"
+"converter/currency-converter/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: data/io.github.idevecore.Valuta.appdata.xml.in.in:7
 #: data/io.github.idevecore.Valuta.desktop.in.in:6
@@ -29,7 +31,7 @@ msgstr ""
 
 #: src/components/currency_selector/index.blp:19
 msgid "Search"
-msgstr ""
+msgstr "ძებნა"
 
 #: src/components/currency_selector/index.blp:41
 msgid "Search Currencies"
@@ -38,12 +40,12 @@ msgstr ""
 #: src/components/shortcuts/shortcuts.blp:9
 msgctxt "shortcuts window"
 msgid "General"
-msgstr ""
+msgstr "ზოგადი"
 
 #: src/components/shortcuts/shortcuts.blp:11
 msgctxt "shortcuts window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "კლავიატურის მალსახმობები"
 
 #: src/components/shortcuts/shortcuts.blp:15
 msgctxt "shortcuts window"
@@ -53,7 +55,7 @@ msgstr ""
 #: src/components/shortcuts/shortcuts.blp:19
 msgctxt "shortcuts window"
 msgid "Quit"
-msgstr ""
+msgstr "გასვლა"
 
 #: src/pages/convertion/convertion.py:106
 msgid "Error converting, please try again."
@@ -61,19 +63,19 @@ msgstr ""
 
 #: src/pages/convertion/index.blp:13
 msgid "From"
-msgstr ""
+msgstr "ვისგან"
 
 #: src/pages/convertion/index.blp:30
 msgid "Switch"
-msgstr ""
+msgstr "გადართვა"
 
 #: src/pages/convertion/index.blp:39
 msgid "To"
-msgstr ""
+msgstr "ვის"
 
 #: src/pages/convertion/index.blp:87
 msgid "Reload"
-msgstr ""
+msgstr "თავიდან ჩატვირთვა"
 
 #: src/search_provider/search_provider.in:128
 msgid "According to"
@@ -81,7 +83,7 @@ msgstr ""
 
 #: src/search_provider/search_provider.in:138
 msgid "Copy"
-msgstr ""
+msgstr "კოპირება"
 
 #: src/search_provider/search_provider.in:139
 msgid "Copy convertion to clipboard"
@@ -89,47 +91,47 @@ msgstr ""
 
 #: src/define.in:39
 msgid "Afghan Afghani"
-msgstr ""
+msgstr "ავღანური აფგანი"
 
 #: src/define.in:45
 msgid "Albanian Lek"
-msgstr ""
+msgstr "ალბანური ლეკი"
 
 #: src/define.in:51
 msgid "Algerian Dinar"
-msgstr ""
+msgstr "ალჟირის დინარი"
 
 #: src/define.in:57
 msgid "Angolan Kwanza"
-msgstr ""
+msgstr "ანგოლური კვანზა"
 
 #: src/define.in:63
 msgid "Argentine Peso"
-msgstr ""
+msgstr "არგენტინური პესო"
 
 #: src/define.in:69
 msgid "Armenian Dram"
-msgstr ""
+msgstr "სომხური დრამი"
 
 #: src/define.in:75
 msgid "Aruban Florin"
-msgstr ""
+msgstr "არუბან ფლორინი"
 
 #: src/define.in:81
 msgid "Australian Dollar"
-msgstr ""
+msgstr "ავსტრალიური დოლარი"
 
 #: src/define.in:87
 msgid "Azerbaijani Manat"
-msgstr ""
+msgstr "აზერბაიჯანული მანატი"
 
 #: src/define.in:93
 msgid "Bahamian Dollar"
-msgstr ""
+msgstr "ბაჰამის დოლარი"
 
 #: src/define.in:99
 msgid "Bahraini Dinar"
-msgstr ""
+msgstr "ბაჰრეინი დინარი"
 
 #: src/define.in:105
 msgid "Bajan dollar"
@@ -137,15 +139,15 @@ msgstr ""
 
 #: src/define.in:111
 msgid "Bangladeshi Taka"
-msgstr ""
+msgstr "ბანგლადეშური ტაკა"
 
 #: src/define.in:117
 msgid "Belarusian Ruble"
-msgstr ""
+msgstr "ბელორუსული რუბლი"
 
 #: src/define.in:129
 msgid "Belize Dollar"
-msgstr ""
+msgstr "ბელიზი დოლარი"
 
 #: src/define.in:135
 msgid "Bermudan Dollar"
@@ -157,15 +159,15 @@ msgstr ""
 
 #: src/define.in:147
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
 #: src/define.in:153
 msgid "Bitcoin Cash"
-msgstr ""
+msgstr "Bitcoin Cash"
 
 #: src/define.in:159
 msgid "Bolivian Boliviano"
-msgstr ""
+msgstr "ბოლივიური ბოლივიანო"
 
 #: src/define.in:165
 msgid "Bosnia-Herzegovina Convertible Mark"
@@ -177,23 +179,23 @@ msgstr ""
 
 #: src/define.in:177
 msgid "Brazilian Real"
-msgstr ""
+msgstr "ბრაზილიური რეალური"
 
 #: src/define.in:183
 msgid "Brunei Dollar"
-msgstr ""
+msgstr "ბრუნეი დოლარი"
 
 #: src/define.in:189
 msgid "Bulgarian Lev"
-msgstr ""
+msgstr "ბულგარელი ლევი"
 
 #: src/define.in:195
 msgid "Burundian Franc"
-msgstr ""
+msgstr "ბურუნდიული ფრანკი"
 
 #: src/define.in:201
 msgid "CFP Franc"
-msgstr ""
+msgstr "CFP ფრანკი"
 
 #: src/define.in:207
 msgid "Cambodian riel"
@@ -201,7 +203,7 @@ msgstr ""
 
 #: src/define.in:213
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "კანადური დოლარი"
 
 #: src/define.in:219
 msgid "Cape Verdean Escudo"
@@ -209,15 +211,15 @@ msgstr ""
 
 #: src/define.in:225
 msgid "Cayman Islands Dollar"
-msgstr ""
+msgstr "კაიმანის კუნძულების დოლარი"
 
 #: src/define.in:231
 msgid "Central African CFA franc"
-msgstr ""
+msgstr "ცენტრალური აფრიკული CFA ფრანკი"
 
 #: src/define.in:237
 msgid "Chilean Peso"
-msgstr ""
+msgstr "ჩილეური პესო"
 
 #: src/define.in:243
 msgid "Chilean Unit of Account (UF)"
@@ -225,7 +227,7 @@ msgstr ""
 
 #: src/define.in:249
 msgid "Chinese Yuan"
-msgstr ""
+msgstr "ჩინური იანი"
 
 #: src/define.in:255
 msgid "Chinese Yuan (offshore)"
@@ -233,7 +235,7 @@ msgstr ""
 
 #: src/define.in:261
 msgid "Colombian Peso"
-msgstr ""
+msgstr "კოლუმბიური პესსო"
 
 #: src/define.in:267
 msgid "Comorian franc"
@@ -241,7 +243,7 @@ msgstr ""
 
 #: src/define.in:273
 msgid "Congolese Franc"
-msgstr ""
+msgstr "კონგოური ფრანკი"
 
 #: src/define.in:279
 msgid "Costa Rican Colón"
@@ -249,35 +251,35 @@ msgstr ""
 
 #: src/define.in:285
 msgid "Croatian Kuna"
-msgstr ""
+msgstr "ხორვატული კუნა"
 
 #: src/define.in:291
 msgid "Cuban Peso"
-msgstr ""
+msgstr "კუბის პესო"
 
 #: src/define.in:297
 msgid "Czech Koruna"
-msgstr ""
+msgstr "ჩეხური კორუნა"
 
 #: src/define.in:303
 msgid "Danish Krone"
-msgstr ""
+msgstr "დანიის კრონი"
 
 #: src/define.in:309
 msgid "Djiboutian Franc"
-msgstr ""
+msgstr "ჯიბუტის ფრანკი"
 
 #: src/define.in:315
 msgid "Dominican Peso"
-msgstr ""
+msgstr "დომინიკ პესო"
 
 #: src/define.in:321
 msgid "East Caribbean Dollar"
-msgstr ""
+msgstr "აღმოსავლეთ კარიბული დოლარი"
 
 #: src/define.in:327
 msgid "Egyptian Pound"
-msgstr ""
+msgstr "ეგვიპტური ფუნტი"
 
 #: src/define.in:333
 msgid "Ether"
@@ -285,15 +287,15 @@ msgstr ""
 
 #: src/define.in:339
 msgid "Ethiopian Birr"
-msgstr ""
+msgstr "ეთიოპიური ბირი"
 
 #: src/define.in:345
 msgid "Euro"
-msgstr ""
+msgstr "ევრო"
 
 #: src/define.in:351
 msgid "Fijian Dollar"
-msgstr ""
+msgstr "ფიჯიური დოლარი"
 
 #: src/define.in:357
 msgid "Gambian dalasi"
@@ -301,23 +303,23 @@ msgstr ""
 
 #: src/define.in:363
 msgid "Georgian Lari"
-msgstr ""
+msgstr "ქართული ლარი"
 
 #: src/define.in:369
 msgid "Ghanaian Cedi"
-msgstr ""
+msgstr "განური ცედი"
 
 #: src/define.in:381
 msgid "Gibraltar Pound"
-msgstr ""
+msgstr "გიბრალტარის ფუნტი"
 
 #: src/define.in:387
 msgid "Guatemalan Quetzal"
-msgstr ""
+msgstr "გვატემალური კვეცელი"
 
 #: src/define.in:393
 msgid "Guinean Franc"
-msgstr ""
+msgstr "გვინეა ფრანკი"
 
 #: src/define.in:399
 msgid "Guyanaese Dollar"
@@ -325,19 +327,19 @@ msgstr ""
 
 #: src/define.in:405
 msgid "Haitian Gourde"
-msgstr ""
+msgstr "ჰაიტიური გურდი"
 
 #: src/define.in:411
 msgid "Honduran Lempira"
-msgstr ""
+msgstr "ჰონდურასული ლემპირა"
 
 #: src/define.in:417
 msgid "Hong Kong Dollar"
-msgstr ""
+msgstr "ჰონგ კონგის დოლარი"
 
 #: src/define.in:423
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "უნგრული ფორინტი"
 
 #: src/define.in:429
 msgid "Icelandic Króna"
@@ -345,51 +347,51 @@ msgstr ""
 
 #: src/define.in:435
 msgid "Indian Rupee"
-msgstr ""
+msgstr "ინდური რუპი"
 
 #: src/define.in:441
 msgid "Indonesian Rupiah"
-msgstr ""
+msgstr "ინდონეზიური რუპია"
 
 #: src/define.in:447
 msgid "Iranian Rial"
-msgstr ""
+msgstr "ირანული რიალი"
 
 #: src/define.in:453
 msgid "Iraqi Dinar"
-msgstr ""
+msgstr "ერაყული დინარი"
 
 #: src/define.in:459
 msgid "Israeli New Shekel"
-msgstr ""
+msgstr "ისრაელის ახალი შეკელი"
 
 #: src/define.in:465
 msgid "Jamaican Dollar"
-msgstr ""
+msgstr "იამაიკური დოლარი"
 
 #: src/define.in:471
 msgid "Japanese Yen"
-msgstr ""
+msgstr "იაპონური იენი"
 
 #: src/define.in:477
 msgid "Jordanian Dinar"
-msgstr ""
+msgstr "იორდანიის დინარი"
 
 #: src/define.in:483
 msgid "Kazakhstani Tenge"
-msgstr ""
+msgstr "ყაზახური ტენგე"
 
 #: src/define.in:489
 msgid "Kenyan Shilling"
-msgstr ""
+msgstr "კენიის შილინგი"
 
 #: src/define.in:495
 msgid "Kuwaiti Dinar"
-msgstr ""
+msgstr "ქუვეითი დინარი"
 
 #: src/define.in:501
 msgid "Kyrgyzstani Som"
-msgstr ""
+msgstr "ყირგიზული სომი"
 
 #: src/define.in:507
 msgid "Laotian Kip"
@@ -405,39 +407,39 @@ msgstr ""
 
 #: src/define.in:525
 msgid "Liberian Dollar"
-msgstr ""
+msgstr "ლიბერიული დოლარი"
 
 #: src/define.in:531
 msgid "Libyan Dinar"
-msgstr ""
+msgstr "ლიბიური დინარი"
 
 #: src/define.in:537
 msgid "Litecoin"
-msgstr ""
+msgstr "Litecoin"
 
 #: src/define.in:543
 msgid "Macanese Pataca"
-msgstr ""
+msgstr "მაკანეზური პატაკა"
 
 #: src/define.in:549
 msgid "Macedonian Denar"
-msgstr ""
+msgstr "მაკედონიური დენარი"
 
 #: src/define.in:555
 msgid "Malagasy Ariary"
-msgstr ""
+msgstr "არიარი"
 
 #: src/define.in:561
 msgid "Malawian Kwacha"
-msgstr ""
+msgstr "მალავიური კვაჩა"
 
 #: src/define.in:567
 msgid "Malaysian Ringgit"
-msgstr ""
+msgstr "მალაიზიური რინგგიტი"
 
 #: src/define.in:573
 msgid "Maldivian Rufiyaa"
-msgstr ""
+msgstr "მალდივიური რუფიაა"
 
 #: src/define.in:579
 msgid "Mauritanian Ouguiya (1973–2017)"
@@ -445,27 +447,27 @@ msgstr ""
 
 #: src/define.in:585
 msgid "Mauritian Rupee"
-msgstr ""
+msgstr "მავრიტანული რუპია"
 
 #: src/define.in:591
 msgid "Mexican Peso"
-msgstr ""
+msgstr "მექსიკური პესო"
 
 #: src/define.in:597
 msgid "Moldovan Leu"
-msgstr ""
+msgstr "მოლდოვური ლევი"
 
 #: src/define.in:603
 msgid "Moroccan Dirham"
-msgstr ""
+msgstr "მაროკოული დირჰემი"
 
 #: src/define.in:609
 msgid "Mozambican metical"
-msgstr ""
+msgstr "მოზამბიკური მეტიკალი"
 
 #: src/define.in:621
 msgid "Myanmar Kyat"
-msgstr ""
+msgstr "მიანმური კიატი"
 
 #: src/define.in:627
 msgid "New Taiwan dollar"
@@ -477,15 +479,15 @@ msgstr ""
 
 #: src/define.in:639
 msgid "Nepalese Rupee"
-msgstr ""
+msgstr "ნეპალური რუპია"
 
 #: src/define.in:645
 msgid "Netherlands Antillean Guilder"
-msgstr ""
+msgstr "ნიდერლანდების ანტილეის გილდერი"
 
 #: src/define.in:651
 msgid "New Zealand Dollar"
-msgstr ""
+msgstr "ახალზელანდიური დოლარი"
 
 #: src/define.in:657
 msgid "Nicaraguan Córdoba"
@@ -493,31 +495,31 @@ msgstr ""
 
 #: src/define.in:663
 msgid "Nigerian Naira"
-msgstr ""
+msgstr "ნიგერიული ნაირა"
 
 #: src/define.in:669
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "ნორვეგიული კრონი"
 
 #: src/define.in:675
 msgid "Omani Rial"
-msgstr ""
+msgstr "ომანური რიალი"
 
 #: src/define.in:681
 msgid "Pakistani Rupee"
-msgstr ""
+msgstr "პაკისტანური რუპია"
 
 #: src/define.in:687
 msgid "Panamanian Balboa"
-msgstr ""
+msgstr "პანამანული ბალბოა"
 
 #: src/define.in:693
 msgid "Papua New Guinean Kina"
-msgstr ""
+msgstr "პაპუა ახალი გვინეური კინა"
 
 #: src/define.in:699
 msgid "Paraguayan Guarani"
-msgstr ""
+msgstr "პარაგვაული გუარანი"
 
 #: src/define.in:705
 msgid "Philippine Piso"
@@ -533,15 +535,15 @@ msgstr ""
 
 #: src/define.in:723
 msgid "Qatari Rial"
-msgstr ""
+msgstr "კატარის რიალი"
 
 #: src/define.in:729
 msgid "Romanian Leu"
-msgstr ""
+msgstr "რუმინული ლევი"
 
 #: src/define.in:741
 msgid "Russian Ruble"
-msgstr ""
+msgstr "რუსული რუბლი"
 
 #: src/define.in:753
 msgid "Rwandan franc"
@@ -553,43 +555,43 @@ msgstr ""
 
 #: src/define.in:765
 msgid "Saudi Riyal"
-msgstr ""
+msgstr "საუდის რიალი"
 
 #: src/define.in:771
 msgid "Serbian Dinar"
-msgstr ""
+msgstr "სერბული დინარი"
 
 #: src/define.in:783
 msgid "Seychellois Rupee"
-msgstr ""
+msgstr "სეიშელების რუპია"
 
 #: src/define.in:789
 msgid "Sierra Leonean Leone"
-msgstr ""
+msgstr "სიერა ლეონური ლეონე"
 
 #: src/define.in:795
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "სინგაპურის დოლარი"
 
 #: src/define.in:801
 msgid "Sol"
-msgstr ""
+msgstr "პერუული ახალი სოლი"
 
 #: src/define.in:807
 msgid "Solomon Islands Dollar"
-msgstr ""
+msgstr "სოლომონის კუნძულების დოლარი"
 
 #: src/define.in:813
 msgid "Somali Shilling"
-msgstr ""
+msgstr "სომალის შილინგი"
 
 #: src/define.in:819
 msgid "South African Rand"
-msgstr ""
+msgstr "სამხრეთ აფრიკული რენდი"
 
 #: src/define.in:825
 msgid "South Korean won"
-msgstr ""
+msgstr "ჩრდილოეთ კორეული ვონი"
 
 #: src/define.in:831
 msgid "Sovereign Bolivar"
@@ -601,7 +603,7 @@ msgstr ""
 
 #: src/define.in:843
 msgid "Sri Lankan Rupee"
-msgstr ""
+msgstr "შრი-ლანკური რუპია"
 
 #: src/define.in:849
 msgid "Sudanese pound"
@@ -609,31 +611,31 @@ msgstr ""
 
 #: src/define.in:861
 msgid "Surinamese Dollar"
-msgstr ""
+msgstr "სურინამური დოლარი"
 
 #: src/define.in:867
 msgid "Swazi Lilangeni"
-msgstr ""
+msgstr "სვაზური ლილეანგენი"
 
 #: src/define.in:873
 msgid "Swedish Krona"
-msgstr ""
+msgstr "შვედური კრონა"
 
 #: src/define.in:879
 msgid "Swiss Franc"
-msgstr ""
+msgstr "შვეიცარიული ფრანკი"
 
 #: src/define.in:885
 msgid "Tajikistani Somoni"
-msgstr ""
+msgstr "ტაჯიკური სომონი"
 
 #: src/define.in:891
 msgid "Tanzanian Shilling"
-msgstr ""
+msgstr "ტანზანიის შილინგი"
 
 #: src/define.in:897
 msgid "Thai Baht"
-msgstr ""
+msgstr "ტაილანდური ბაჰტი"
 
 #: src/define.in:903
 msgid "Tongan Paʻanga"
@@ -645,11 +647,11 @@ msgstr ""
 
 #: src/define.in:915
 msgid "Tunisian Dinar"
-msgstr ""
+msgstr "ტუნისური დინარი"
 
 #: src/define.in:921
 msgid "Turkish lira"
-msgstr ""
+msgstr "თურქული ლირა"
 
 #: src/define.in:927
 msgid "Turkmenistan manat"
@@ -657,7 +659,7 @@ msgstr ""
 
 #: src/define.in:939
 msgid "Ugandan Shilling"
-msgstr ""
+msgstr "უგანდური შილინგი"
 
 #: src/define.in:945
 msgid "Ukrainian hryvnia"
@@ -665,15 +667,15 @@ msgstr ""
 
 #: src/define.in:951
 msgid "United Arab Emirates Dirham"
-msgstr ""
+msgstr "არაბთა გაერთიანებული საამიროების დირჰემი"
 
 #: src/define.in:957
 msgid "United States Dollar"
-msgstr ""
+msgstr "შეერთებული შტატები დოლარი"
 
 #: src/define.in:963
 msgid "Uruguayan Peso"
-msgstr ""
+msgstr "ურუგვაული პესო"
 
 #: src/define.in:969
 msgid "Uzbekistani Som"
@@ -685,15 +687,15 @@ msgstr ""
 
 #: src/define.in:981
 msgid "West African CFA franc"
-msgstr ""
+msgstr "დასავლეთ აფრიკული CFA ფრანკი"
 
 #: src/define.in:987
 msgid "Yemeni Rial"
-msgstr ""
+msgstr "იემენის რიალი"
 
 #: src/define.in:993
 msgid "Zambian Kwacha"
-msgstr ""
+msgstr "ზამბიური კვაჩა"
 
 #: src/requests.py:95
 msgid "Unable to convert currency, failed to fetch results from Google."
@@ -701,19 +703,19 @@ msgstr ""
 
 #: src/window.blp:18
 msgid "Main menu"
-msgstr ""
+msgstr "მთავარი მენიუ"
 
 #: src/window.blp:34
 msgid "Source"
-msgstr ""
+msgstr "წყარო"
 
 #: src/window.blp:43
 msgid "Providers"
-msgstr ""
+msgstr "მომწოდებლები"
 
 #: src/window.blp:46
 msgid "ECB"
-msgstr ""
+msgstr "ECB"
 
 #: src/window.blp:51
 msgid "Google (unstable)"
@@ -725,7 +727,7 @@ msgstr ""
 
 #: src/window.blp:64
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "კლავიატურის მალსახმობები"
 
 #: src/window.blp:68
 msgid "About Valuta"
