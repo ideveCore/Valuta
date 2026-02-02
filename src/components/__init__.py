@@ -18,4 +18,3 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from .currency_selector.currency_selector import CurrencySelector
-from .shortcuts.shortcuts import Shortcuts
