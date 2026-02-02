@@ -54,7 +54,7 @@ dependency('glib-2.0')
 dependency('gobject-introspection-1.0', version: '>= 1.35.0')
 dependency('gstreamer-1.0', version: '>= 1.18')
 dependency('gtk4', version: '>= 4.6')
-dependency('libadwaita-1', version: '>= 1.0')
+dependency('libadwaita-1', version: '>= 1.8')
 dependency('libsoup-3.0')
 dependency('pygobject-3.0', version: '>= 3.40')
 
