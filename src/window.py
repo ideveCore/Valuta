@@ -28,7 +28,6 @@ from typing import Union, Any, Dict
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk
 from .define import RES_PATH
 from .pages import convertion_page
-from .components import Shortcuts
 
 resource = f"{RES_PATH}/window.ui"
 
@@ -78,7 +77,6 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
             property="fullscreened",
             flags=Gio.SettingsBindFlags.DEFAULT,
         )
-        window.set_help_overlay(Shortcuts())
 
     def converted(data: Dict[str, Union[str, int]]):
         info.set_text(f'{data["info"]} -')

@@ -21,7 +21,7 @@ Convert currencies with ease. Valuta provides an intuitive and fast experience f
 - Python 3 `python` 
 - PyGObject `python-gobject` 
 - GTK4 `gtk4` 
-- libadwaita (>= 1.2.0) `libadwaita`
+- libadwaita (>= 1.8.0) `libadwaita`
 - Meson `meson` 
 - Ninja `ninja` 
 - D-Bus `python-dbus`

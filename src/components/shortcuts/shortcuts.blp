@@ -1,24 +1,20 @@
 using Gtk 4.0;
+using Adw 1;
 
-template $Shortcuts : ShortcutsWindow {
-  modal: true;
-  ShortcutsSection {
-    section-name: "shortcuts";
-    max-height: 10;
-    ShortcutsGroup {
-      title: C_("shortcuts window", "General");
-      ShortcutsShortcut {
-        title: C_("shortcuts window", "Keyboard shortcuts");
-        action-name: "win.show-help-overlay";
-      }
-      ShortcutsShortcut {
-        title: C_("shortcuts window", "Switch currencies");
-        action-name: "app.switch-currencies";
-      }
-      ShortcutsShortcut {
-        title: C_("shortcuts window", "Quit");
-        action-name: "app.quit";
-      }
+Adw.ShortcutsDialog shortcuts_dialog {
+  Adw.ShortcutsSection {
+    title: C_("shortcuts window", "General");
+    Adw.ShortcutsItem {
+      title: C_("shortcuts window", "Keyboard shortcuts");
+      action-name: "app.shortcuts";
+    }
+    Adw.ShortcutsItem {
+      title: C_("shortcuts window", "Switch currencies");
+      action-name: "app.switch-currencies";
+    }
+    Adw.ShortcutsItem {
+      title: C_("shortcuts window", "Quit");
+      action-name: "app.quit";
     }
   }
 }
