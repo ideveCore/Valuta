@@ -50,6 +50,8 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
     info = builder.get_object("info")
     source = builder.get_object("source")
     provider_warning = builder.get_object("provider_warning")
+    info_source_revealer = builder.get_object("info_source_revealer")
+    provider_warning_revealer = builder.get_object("provider_warning_revealer")
     providers_action_group = Gio.SimpleActionGroup.new();
     window.insert_action_group("window", providers_action_group);
     providers_action_group.add_action(settings.create_action('providers'));
@@ -86,8 +88,9 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
         source.set_label(application.utils.settings.get_string("providers").upper())
         source.set_uri(convertion.get_convertion()['disclaimer'])
         source.set_visible(True)
+        info_source_revealer.set_reveal_child(True)
         provider_warning.set_label(data["warning"])
-        provider_warning.set_visible(bool(data["warning"]))
+        provider_warning_revealer.set_reveal_child(bool(data["warning"]))
 
     def load_convertion_page(from_currency_value: int = 0):
         content.set_child(convertion_page(application, from_currency_value))

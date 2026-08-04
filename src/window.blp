@@ -27,26 +27,35 @@ Adw.ApplicationWindow window {
       margin-top: 6;
       margin-bottom: 6;
 
-      Gtk.Box {
-        orientation: horizontal;
-        halign: center;
+      Gtk.Revealer info_source_revealer {
+        reveal-child: false;
+        transition-type: slide_down;
+        
+        Gtk.Box {
+          orientation: horizontal;
+          halign: center;
 
-        Gtk.Label info {
-          styles ["dim-label"]
-          label: _("");
-        }
+          Gtk.Label info {
+            styles ["dim-label"]
+            label: _("");
+          }
 
-        Gtk.LinkButton source {
-          tooltip-text: _("Source");
-          visible: false;
+          Gtk.LinkButton source {
+            tooltip-text: _("Source");
+            visible: false;
+          }
         }
       }
 
-      Gtk.Label provider_warning {
-        styles ["dim-label"]
-        halign: center;
-        visible: false;
-        label: _("");
+      Gtk.Revealer provider_warning_revealer {
+        reveal-child: false;
+        transition-type: slide_down;
+        
+        Gtk.Label provider_warning {
+          styles ["dim-label"]
+          halign: center;
+          label: _("");
+        }
       }
     }
   };
