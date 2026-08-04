@@ -49,12 +49,6 @@ class Providers:
     def default_response(self):
         pass
 
-    def create_info(self, date: str, time: str = "00:00:00"):
-        date = date.split("-")
-        time = time.split(":")
-        date_time = GLib.DateTime.new_local(float(date[0]), float(date[1]), float(date[2]), float(time[0]), float(time[1]), float(time[2]))
-        return date_time.format("%B %e, %Y")
-
 class ECB(Providers):
     ECB_BASE_URL: str = 'https://api.frankfurter.app/latest'
     def mount_url(self):
@@ -72,6 +66,12 @@ class ECB(Providers):
         self.response["disclaimer"] = self.mount_url()
         self.response["provider"] = 0
         return self.response
+
+    def create_info(self, date: str, time: str = "00:00:00"):
+        date = date.split("-")
+        time = time.split(":")
+        date_time = GLib.DateTime.new_local(float(date[0]), float(date[1]), float(date[2]), float(time[0]), float(time[1]), float(time[2]))
+        return date_time.format("%B %e, %Y")
 
 class InforEuro(Providers):
     INFORMEURO_BASE_URL = (
