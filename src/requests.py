@@ -32,6 +32,7 @@ class Providers:
         "converted": False,
         "info": "",
         "disclaimer": "",
+        "warning": "",
         "provider": "",
     }
 
@@ -64,6 +65,7 @@ class ECB(Providers):
         self.response["amount"] = 0
         self.response["info"] = self.create_info(data["date"])
         self.response["disclaimer"] = self.mount_url()
+        self.response["warning"] = ""
         self.response["provider"] = 0
         return self.response
 
@@ -71,7 +73,7 @@ class ECB(Providers):
         date = date.split("-")
         time = time.split(":")
         date_time = GLib.DateTime.new_local(float(date[0]), float(date[1]), float(date[2]), float(time[0]), float(time[1]), float(time[2]))
-        return date_time.format("%B %e, %Y")
+        return date_time.format("%B%e, %Y")
 
 class InforEuro(Providers):
     INFORMEURO_BASE_URL = (
@@ -122,6 +124,7 @@ class InforEuro(Providers):
 
         self.response["info"] = now.strftime("%B %Y")
         self.response["disclaimer"] = self.mount_url()
+        self.response["warning"] = "InforEuro rates are updated monthly."
         self.response["provider"] = 1
 
         return self.response

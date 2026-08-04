@@ -22,17 +22,31 @@ Adw.ApplicationWindow window {
     [bottom]
     Gtk.Box {
       styles ["toolbar"]
-      orientation: horizontal;
-      halign: center;
+      orientation: vertical;
+      spacing: 1;
       margin-top: 6;
       margin-bottom: 6;
-      Gtk.Label info {
-        styles ["dim-label"]
-        label: _("");
+
+      Gtk.Box {
+        orientation: horizontal;
+        halign: center;
+
+        Gtk.Label info {
+          styles ["dim-label"]
+          label: _("");
+        }
+
+        Gtk.LinkButton source {
+          tooltip-text: _("Source");
+          visible: false;
+        }
       }
-      Gtk.LinkButton source {
-        tooltip-text: _("Source");
+
+      Gtk.Label provider_warning {
+        styles ["dim-label"]
+        halign: center;
         visible: false;
+        label: _("");
       }
     }
   };
