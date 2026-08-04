@@ -18,14 +18,13 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from typing import Any, Dict, Union
-from datetime import datetime
+from datetime import datetime, UTC
 import gi, json, re
 gi.require_version('Soup', '3.0')
 from gi.repository import Soup, GLib
 from .define import BASE_URL_LANG_PREFIX, CODES
 
 class Providers:
-    ECB_BASE_URL: str = 'https://api.frankfurter.app/latest'
     response = {
         "from": "",
         "to": "",
@@ -57,6 +56,7 @@ class Providers:
         return date_time.format("%B %e, %Y")
 
 class ECB(Providers):
+    ECB_BASE_URL: str = 'https://api.frankfurter.app/latest'
     def mount_url(self):
         return f'{self.ECB_BASE_URL}?amount={self.from_currency_value}&from={self.from_currency}&to={self.to_currency}'
 
@@ -73,8 +73,62 @@ class ECB(Providers):
         self.response["provider"] = 0
         return self.response
 
+class InforEuro(Providers):
+    INFORMEURO_BASE_URL = (
+        "https://ec.europa.eu/budg/inforeuro/api/public"
+    )
+
+    def mount_url(self):
+        now = datetime.now(UTC)
+
+        return (
+            f"{self.INFORMEURO_BASE_URL}/monthly-rates"
+            f"?year={now.year}&month={now.month}"
+        )
+
+    def serializer(self, data: bytes):
+        return self.default_response(json.loads(data))
+
+    def get_rate(self, data, currency):
+        """
+        InforEuro rates are quoted as:
+        1 EUR = value * currency
+        """
+
+        if currency == "EUR":
+            return 1.0
+
+        for item in data:
+            if item["isoA3Code"] == currency:
+                return float(item["value"])
+
+        raise ValueError(f"Currency '{currency}' not found")
+
+    def default_response(self, data):
+        from_rate = self.get_rate(data, self.from_currency)
+        to_rate = self.get_rate(data, self.to_currency)
+
+        # EUR pivot conversion
+        eur_amount = float(self.from_currency_value) / from_rate
+        converted_amount = eur_amount * to_rate
+
+        self.response["base"] = converted_amount
+        self.response["from"] = self.from_currency
+        self.response["to"] = self.to_currency
+        self.response["amount"] = self.from_currency_value
+        self.response["converted"] = True
+
+        now = datetime.now(UTC)
+
+        self.response["info"] = now.strftime("%B %Y")
+        self.response["disclaimer"] = self.mount_url()
+        self.response["provider"] = 1
+
+        return self.response
+
 providers = {
     0 : ECB,
+    1 : InforEuro
 }
 
 class SoupSession(Soup.Session):
