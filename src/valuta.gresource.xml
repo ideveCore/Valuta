@@ -9,12 +9,15 @@
     <file alias="icons/scalable/status/refresh-large-symbolic.svg" preprocess="xml-stripblanks">assets/icons/refresh-large-symbolic.svg</file>
     <file alias="icons/scalable/status/sonar-symbolic.svg" preprocess="xml-stripblanks">assets/icons/sonar-symbolic.svg</file>
     <file alias="icons/scalable/status/vertical-arrows-symbolic.svg" preprocess="xml-stripblanks">assets/icons/vertical-arrows-symbolic.svg</file>
+    <file alias="icons/scalable/status/coin-symbolic.svg" preprocess="xml-stripblanks">assets/icons/coin-symbolic.svg</file>
+    <file alias="icons/scalable/status/history-undo-symbolic.svg" preprocess="xml-stripblanks">assets/icons/history-undo-symbolic.svg</file>
     <file compressed="true" alias="style.css">assets/style.css</file>
     <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector/index.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector_row/index.ui</file>
     <file preprocess="xml-stripblanks" alias="shortcuts-dialog.ui">components/shortcuts/shortcuts.ui</file>
     <file preprocess="xml-stripblanks">pages/convertion/index.ui</file>
+    <file preprocess="xml-stripblanks">pages/history/index.ui</file>
   </gresource>
 </gresources>
 

@@ -18,7 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from typing import Any, Dict, Union
-from datetime import datetime, UTC
+from datetime import datetime, UTC, timedelta
 import gi, json, re
 gi.require_version('Soup', '3.0')
 from gi.repository import Soup, GLib
@@ -171,3 +171,75 @@ class Requests:
       return self.__provider.serializer(session.get_response(message))
     except Exception as error:
       return error.message
+
+class HistoryRequest:
+  HEADERS: Dict[str, str] = {
+      'User-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0',
+  }
+  def __init__(self, provider: int, from_currency: str, to_currency: str, days: int = 30):
+    self.provider = provider
+    self.from_currency = from_currency
+    self.to_currency = to_currency
+    self.days = days
+
+  def get(self) -> Dict[str, Any]:
+    if self.provider != 0:
+      return {"supported": False, "error": "Provider not supported for history"}
+
+    if self.from_currency == self.to_currency:
+      now_str = datetime.now(UTC).strftime("%Y-%m-%d")
+      points = [{"date": now_str, "rate": 1.0}]
+      return {
+        "supported": True,
+        "from": self.from_currency,
+        "to": self.to_currency,
+        "points": points,
+        "latest": 1.0,
+        "first": 1.0,
+        "change": 0.0,
+        "change_pct": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "avg": 1.0,
+      }
+
+    start_date = (datetime.now(UTC) - timedelta(days=self.days)).strftime("%Y-%m-%d")
+    url = f"https://api.frankfurter.app/{start_date}..?from={self.from_currency}&to={self.to_currency}"
+
+    session = SoupSession()
+    message = session.create_request("GET", url, self.HEADERS)
+    try:
+      raw_data = session.get_response(message)
+      data = json.loads(raw_data)
+      rates = data.get("rates", {})
+      points = []
+      for d_str in sorted(rates.keys()):
+        r_map = rates[d_str]
+        if self.to_currency in r_map:
+          points.append({"date": d_str, "rate": float(r_map[self.to_currency])})
+
+      if not points:
+        return {"supported": True, "error": "No historical data found"}
+
+      first = points[0]["rate"]
+      latest = points[-1]["rate"]
+      change = latest - first
+      change_pct = (change / first * 100) if first != 0 else 0
+      vals = [p["rate"] for p in points]
+
+      return {
+        "supported": True,
+        "from": self.from_currency,
+        "to": self.to_currency,
+        "points": points,
+        "latest": latest,
+        "first": first,
+        "change": change,
+        "change_pct": change_pct,
+        "min": min(vals),
+        "max": max(vals),
+        "avg": sum(vals) / len(vals),
+      }
+    except Exception as error:
+      return {"supported": True, "error": str(error)}
+

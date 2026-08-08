@@ -7,9 +7,15 @@ Adw.ApplicationWindow window {
   default-width: 420;
   default-height: 600;
   title: _("Valuta");
+
   content: Adw.ToolbarView {
     [top]
     Adw.HeaderBar {
+      title-widget: Adw.ViewSwitcher switcher_title {
+        stack: stack;
+        policy: wide;
+      };
+
       [end]
       MenuButton menu_button {
         primary: true;
@@ -18,10 +24,46 @@ Adw.ApplicationWindow window {
         tooltip-text: _("Main menu");
       }
     }
-    content: Adw.Bin content {};
+
+    content: Gtk.Box content {
+      vexpand: true;
+      hexpand: true;
+      orientation: vertical;
+
+      Adw.ViewStack stack {
+        vexpand: true;
+        hexpand: true;
+
+        Adw.ViewStackPage convertion_page {
+          name: "convertion_page";
+          title: _("Conversion");
+          icon-name: "coin-symbolic";
+          use-underline: true;
+
+          child: Adw.Bin convertion_page_content {};
+        }
+
+        Adw.ViewStackPage history_page {
+          name: "history_page";
+          title: _("History");
+          icon-name: "history-undo-symbolic";
+          use-underline: true;
+
+          child: Adw.Bin history_page_content {};
+        }
+      }
+
+      Adw.ViewSwitcherBar switcher_bar {
+        stack: stack;
+      }
+    };
+
     [bottom]
     Gtk.Box {
-      styles ["toolbar"]
+      styles [
+        "toolbar",
+      ]
+
       orientation: vertical;
       spacing: 1;
       margin-top: 6;
@@ -30,13 +72,16 @@ Adw.ApplicationWindow window {
       Gtk.Revealer info_source_revealer {
         reveal-child: false;
         transition-type: slide_down;
-        
+
         Gtk.Box {
           orientation: horizontal;
           halign: center;
 
           Gtk.Label info {
-            styles ["dim-label"]
+            styles [
+              "dim-label",
+            ]
+
             label: _("");
           }
 
@@ -50,9 +95,12 @@ Adw.ApplicationWindow window {
       Gtk.Revealer provider_warning_revealer {
         reveal-child: false;
         transition-type: slide_down;
-        
+
         Gtk.Label provider_warning {
-          styles ["dim-label"]
+          styles [
+            "dim-label",
+          ]
+
           halign: center;
           label: _("");
         }
@@ -64,12 +112,14 @@ Adw.ApplicationWindow window {
 menu primary_menu {
   section {
     label: _('Providers');
+
     section {
       item {
         label: _("ECB");
         action: 'window.providers';
         target: 'ecb';
       }
+
       item {
         label: _("InforEuro");
         action: "window.providers";
@@ -77,11 +127,13 @@ menu primary_menu {
       }
     }
   }
+
   section {
     item {
       label: _("Keyboard shortcuts");
       action: "app.shortcuts";
     }
+
     item {
       label: _("About Valuta");
       action: "app.about";

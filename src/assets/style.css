@@ -6,16 +6,16 @@ selection {
 }
 
 .pd {
-   padding: 0.5rem;
- }
+  padding: 0.5rem;
+}
 
- .rounded {
-    border-radius: 6px;
- }
+.rounded {
+  border-radius: 6px;
+}
 
- .text-light {
-    color: rgb(255, 255, 255);
- }
+.text-light {
+  color: rgb(255, 255, 255);
+}
 
 .f-l {
   font-size: 2rem;
@@ -32,7 +32,6 @@ selection {
 .large-button {
   padding: 0.5rem;
 }
-
 
 .search-box {
   background: @popover_bg_color;

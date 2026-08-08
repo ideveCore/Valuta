@@ -27,7 +27,7 @@ gi.require_version("Gtk", "4.0")
 from typing import Union, Any, Dict
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk
 from .define import RES_PATH
-from .pages import convertion_page
+from .pages import convertion_page, history_page
 
 resource = f"{RES_PATH}/window.ui"
 
@@ -44,8 +44,8 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
   settings = application.utils.settings
   convertion = application.utils.convertion
   window = builder.get_object("window")
-  content = builder.get_object("content")
-  menu_button = builder.get_object("menu_button")
+  convertion_page_content = builder.get_object("convertion_page_content")
+  history_page_content = builder.get_object("history_page_content")
   info = builder.get_object("info")
   source = builder.get_object("source")
   provider_warning = builder.get_object("provider_warning")
@@ -91,14 +91,15 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
     provider_warning_revealer.set_reveal_child(bool(data["warning"]))
 
   def load_convertion_page(from_currency_value: int = 0):
-    content.set_child(convertion_page(application, from_currency_value))
+    convertion_page_content.set_child(convertion_page(application, from_currency_value))
+    history_page_content.set_child(history_page(application, from_currency_value))
 
   def open_uri(link: str):
     Gtk.show_uri(
       window,
       link,
       Gdk.CURRENT_TIME
-    );
+    )
 
   load_window_state()
   convertion.connect("converted", converted)

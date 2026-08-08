@@ -1,1 +1,6 @@
 .flatpak-builder
+build-dir
+builddir
+.vscode
+run.sh
+.venv

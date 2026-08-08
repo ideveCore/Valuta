@@ -18,3 +18,4 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from .convertion.convertion import convertion_page
+from .history.history import history_page

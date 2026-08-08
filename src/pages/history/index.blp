@@ -1,0 +1,225 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ToastOverlay toast_overlay {
+  Gtk.Box {
+    orientation: vertical;
+    spacing: 12;
+
+    Adw.Clamp {
+      maximum-size: 600;
+      tightening-threshold: 400;
+
+      Gtk.Box {
+        orientation: vertical;
+        spacing: 16;
+        margin-top: 16;
+        margin-bottom: 16;
+        margin-start: 16;
+        margin-end: 16;
+
+        /* Currencies Selection Bar */
+        Gtk.Box {
+          orientation: horizontal;
+          spacing: 8;
+          halign: center;
+          valign: center;
+
+          $CurrencySelector from_currency_selector {}
+
+          Gtk.Button invert_currencies {
+            styles ["circular", "flat"]
+            tooltip-text: _("Switch");
+            icon-name: "vertical-arrows-symbolic";
+          }
+
+          $CurrencySelector to_currency_selector {}
+        }
+
+        /* Period Switcher Bar */
+        Gtk.Box {
+          orientation: horizontal;
+          halign: center;
+          spacing: 6;
+          styles ["linked"]
+
+          Gtk.ToggleButton btn_1w {
+            label: "1W";
+          }
+          Gtk.ToggleButton btn_1m {
+            label: "1M";
+            active: true;
+          }
+          Gtk.ToggleButton btn_3m {
+            label: "3M";
+          }
+          Gtk.ToggleButton btn_1y {
+            label: "1Y";
+          }
+          Gtk.ToggleButton btn_5y {
+            label: "5Y";
+          }
+        }
+
+        /* Stack for content states */
+        Gtk.Stack stack {
+          transition-type: crossfade;
+
+          Gtk.StackPage {
+            name: "result";
+            child: Gtk.Box {
+              orientation: vertical;
+              spacing: 16;
+
+              /* Rate Summary Header */
+              Gtk.Box {
+                orientation: vertical;
+                halign: center;
+                spacing: 4;
+
+                Gtk.Label rate_summary_label {
+                  styles ["title-1"]
+                  selectable: true;
+                }
+
+                Gtk.Box {
+                  orientation: horizontal;
+                  spacing: 8;
+                  halign: center;
+
+                  Gtk.Label change_label {
+                    styles ["caption", "bold"]
+                  }
+
+                  Gtk.Label date_label {
+                    styles ["caption", "dim-label"]
+                  }
+                }
+              }
+
+              /* Chart Card Container */
+              Gtk.Frame chart_frame {
+                styles ["card"]
+                height-request: 220;
+
+                Gtk.DrawingArea chart_area {
+                  hexpand: true;
+                  vexpand: true;
+                }
+              }
+
+              /* Stats Grid */
+              Gtk.Box {
+                orientation: horizontal;
+                homogeneous: true;
+                spacing: 12;
+
+                Gtk.Box {
+                  orientation: vertical;
+                  spacing: 4;
+                  styles ["card"]
+                  margin-top: 4;
+                  margin-bottom: 4;
+                  margin-start: 4;
+                  margin-end: 4;
+
+                  Gtk.Label {
+                    label: _("Minimum");
+                    styles ["caption", "dim-label"]
+                  }
+                  Gtk.Label stat_min_label {
+                    styles ["body", "bold"]
+                  }
+                }
+
+                Gtk.Box {
+                  orientation: vertical;
+                  spacing: 4;
+                  styles ["card"]
+                  margin-top: 4;
+                  margin-bottom: 4;
+                  margin-start: 4;
+                  margin-end: 4;
+
+                  Gtk.Label {
+                    label: _("Average");
+                    styles ["caption", "dim-label"]
+                  }
+                  Gtk.Label stat_avg_label {
+                    styles ["body", "bold"]
+                  }
+                }
+
+                Gtk.Box {
+                  orientation: vertical;
+                  spacing: 4;
+                  styles ["card"]
+                  margin-top: 4;
+                  margin-bottom: 4;
+                  margin-start: 4;
+                  margin-end: 4;
+
+                  Gtk.Label {
+                    label: _("Maximum");
+                    styles ["caption", "dim-label"]
+                  }
+                  Gtk.Label stat_max_label {
+                    styles ["body", "bold"]
+                  }
+                }
+              }
+            };
+          }
+
+          Gtk.StackPage {
+            name: "loading";
+            child: Gtk.Box {
+              orientation: vertical;
+              halign: center;
+              valign: center;
+              height-request: 250;
+
+              Gtk.Spinner {
+                spinning: true;
+                width-request: 32;
+                height-request: 32;
+              }
+            };
+          }
+
+          Gtk.StackPage {
+            name: "error";
+            child: Gtk.Box {
+              orientation: vertical;
+              halign: center;
+              valign: center;
+              spacing: 12;
+              height-request: 250;
+
+              Gtk.Label {
+                label: _("Failed to load historical data.");
+                styles ["dim-label"]
+              }
+
+              Gtk.Button reload_btn {
+                styles ["circular"]
+                icon-name: "refresh-large-symbolic";
+                tooltip-text: _("Reload");
+              }
+            };
+          }
+
+          Gtk.StackPage {
+            name: "unsupported";
+            child: Adw.StatusPage {
+              icon-name: "dialog-information-symbolic";
+              title: _("History Unavailable");
+              description: _("Exchange rate history is currently only available for the ECB provider.");
+              height-request: 280;
+            };
+          }
+        }
+      }
+    }
+  }
+}
