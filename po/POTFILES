@@ -6,7 +6,6 @@ src/components/currency_selector/currency_selector.py
 src/components/currency_selector_row/index.blp
 src/components/currency_selector_row/currency_selector_row.py
 src/components/shortcuts/shortcuts.blp
-src/components/shortcuts/shortcuts.py
 src/pages/convertion/convertion.py
 src/pages/convertion/index.blp
 src/search_provider/search_provider.in
