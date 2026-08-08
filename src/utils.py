@@ -157,7 +157,8 @@ class Utils:
         self.locale = GLib.get_locale_variants(GLib.get_language_names()[0])
         self.currencies = CODES
         self.providers = {
-          "0": "ECB"
+          "0": "ECB",
+          "1": "InforEuro"
         }
     def format_number(self, number):
         try:
