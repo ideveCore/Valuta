@@ -44,4 +44,3 @@ def application_actions(application: Adw.Application):
   application.set_accels_for_action('app.quit', ['<primary>q'])
   application.set_accels_for_action('app.quit', ['<primary>w'])
   application.set_accels_for_action('app.switch-currencies', ['<primary>s'])
-  application.set_accels_for_action('win.show-help-overlay', ['<Primary>question'])
