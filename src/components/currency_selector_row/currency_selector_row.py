@@ -23,20 +23,19 @@ from ...define import CODES
 
 @Gtk.Template(resource_path='/io/github/idevecore/Valuta/components/currency_selector_row/index.ui')
 class CurrencySelectorRow(Gtk.ListBoxRow):
-    __gtype_name__ = 'CurrencySelectorRow'
+  __gtype_name__ = 'CurrencySelectorRow'
 
-    name = Gtk.Template.Child()
-    selection = Gtk.Template.Child()
-    
-    def __init__(self, currency):
-        super().__init__()
-        self.currency = currency
-        #self.name.props.label = f'{CODES[str(self.currency)]["flag"]}   {self.currency} – {self.currency.name}'
-        self.name.props.label = f'{self.currency} – {textwrap.shorten(self.currency.name, width=30, placeholder="...")}'
+  name = Gtk.Template.Child()
+  selection = Gtk.Template.Child()
 
-        self.currency.bind_property(
-            'selected',
-            self.selection,
-            'visible',
-            GObject.BindingFlags.SYNC_CREATE
-        )
+  def __init__(self, currency):
+    super().__init__()
+    self.currency = currency
+    self.name.props.label = f'{self.currency} – {textwrap.shorten(self.currency.name, width=30, placeholder="...")}'
+
+    self.currency.bind_property(
+      'selected',
+      self.selection,
+      'visible',
+      GObject.BindingFlags.SYNC_CREATE
+    )

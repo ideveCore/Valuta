@@ -6,20 +6,20 @@
   </enum>
   <schema id="@app-id@" path="/io/github/idevecore/Valuta/">
     <key name="providers" enum="@app-id@.Window">
-      <default>'ecb'</default>
+      <default>'inforeuro'</default>
     </key>
     <key name="width" type="i">
-			<default>420</default>
-		</key>
-		<key name="height" type="i">
-			<default>600</default>
-		</key>
-		<key name="is-maximized" type="b">
-			<default>false</default>
-		</key>
-		<key name="is-fullscreen" type="b">
-			<default>false</default>
-		</key>
+      <default>420</default>
+    </key>
+    <key name="height" type="i">
+      <default>600</default>
+    </key>
+    <key name="is-maximized" type="b">
+      <default>false</default>
+    </key>
+    <key name="is-fullscreen" type="b">
+      <default>false</default>
+    </key>
     <key type="s" name="src-currency">
         <default>'USD'</default>
     </key>
