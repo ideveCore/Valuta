@@ -21,7 +21,7 @@ import gi
 
 gi.require_version('Adw', '1')
 
-from gi.repository import Adw, Gio, GLib, Gtk, GObject
+from gi.repository import Adw, GLib, Gtk, GObject
 from .define import APP_ID, VERSION
 
 def about(application: Adw.Application):

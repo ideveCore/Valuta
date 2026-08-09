@@ -23,12 +23,12 @@ import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 
-from gi.repository import Adw, GObject, Gio, GLib, Gtk
+from gi.repository import Adw, Gio, GLib, Gtk
 from .utils import Utils
 from .window import create_main_window
 from .actions import application_actions
 
-from .define import APP_ID, VERSION, RES_PATH
+from .define import APP_ID, RES_PATH
 
 class Application(Adw.Application):
   """The main application singleton class."""

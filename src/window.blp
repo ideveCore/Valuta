@@ -26,14 +26,9 @@ Adw.ApplicationWindow window {
     }
 
     content: Gtk.Box content {
-      vexpand: true;
-      hexpand: true;
       orientation: vertical;
 
       Adw.ViewStack stack {
-        vexpand: true;
-        hexpand: true;
-
         Adw.ViewStackPage convertion_page {
           name: "convertion_page";
           title: _("Conversion");
@@ -111,7 +106,7 @@ Adw.ApplicationWindow window {
 
 menu primary_menu {
   section {
-    label: _('Providers');
+    label: _("Providers");
 
     section {
       item {

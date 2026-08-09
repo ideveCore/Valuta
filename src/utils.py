@@ -17,8 +17,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from typing import Any, Dict, Union, Callable
-from gi.repository import Adw, Gio, GObject, GLib
+from typing import Dict, Union, Callable
+from gi.repository import Gio, GObject, GLib
 from babel.numbers import format_number, parse_decimal
 from .requests import Requests
 from .define import CODES

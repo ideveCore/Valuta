@@ -4,3 +4,5 @@ builddir
 .vscode
 run.sh
 .venv
+*/__pycache__/
+*.pyc

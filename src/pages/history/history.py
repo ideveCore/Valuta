@@ -131,9 +131,6 @@ def history_page(application: Adw.Application, from_currency_value: int = 1):
   def fetch_history(force: bool = False):
     nonlocal history_data, hover_index, is_loading
     provider = settings.get_enum("providers")
-    if provider != 0:
-      stack.set_visible_child_name("unsupported")
-      return
 
     from_code = from_currency_selector.selected
     to_code = to_currency_selector.selected

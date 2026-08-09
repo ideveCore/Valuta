@@ -1,6 +1,6 @@
 project('valuta',
-          version: '1.4.2',
-    meson_version: '>= 0.64.0',
+          version: '1.4.3',
+    meson_version: '>= 1.0.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
 )
 
