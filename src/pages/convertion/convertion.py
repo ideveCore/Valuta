@@ -26,6 +26,8 @@ gi.require_version("Gtk", "4.0")
 from gi.repository import Adw, Gio, Gtk
 from ...components import CurrencySelector
 from ...utils import CurrenciesListModel
+
+# pyrefly: ignore [missing-import]
 from ...define import RES_PATH, CODES
 
 resource = f"{RES_PATH}/pages/convertion/index.ui"
@@ -42,12 +44,11 @@ def convertion_page(application: Adw.Application, from_currency_value):
   stack = builder.get_object("stack")
   reload = builder.get_object("reload")
   toast_overlay = builder.get_object("toast_overlay")
-  to_currency_value = 0
 
   def load_currencies(provider: int):
     codes = {currency: details for currency, details in CODES.items() if str(provider) in details['providers']}
-    from_currency_model = CurrenciesListModel(currency_names_func)
-    to_currency_model = CurrenciesListModel(currency_names_func)
+    from_currency_model = CurrenciesListModel(application, currency_names_func)
+    to_currency_model = CurrenciesListModel(application, currency_names_func)
     from_currency_selector.bind_models(from_currency_model)
     from_currency_model.set_currencies(codes)
     to_currency_selector.bind_models(to_currency_model)

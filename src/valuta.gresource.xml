@@ -11,6 +11,8 @@
     <file alias="icons/scalable/status/vertical-arrows-symbolic.svg" preprocess="xml-stripblanks">assets/icons/vertical-arrows-symbolic.svg</file>
     <file alias="icons/scalable/status/coin-symbolic.svg" preprocess="xml-stripblanks">assets/icons/coin-symbolic.svg</file>
     <file alias="icons/scalable/status/history-undo-symbolic.svg" preprocess="xml-stripblanks">assets/icons/history-undo-symbolic.svg</file>
+    <file alias="icons/scalable/status/star-large-symbolic.svg" preprocess="xml-stripblanks">assets/icons/star-large-symbolic.svg</file>
+    <file alias="icons/scalable/status/star-outline-rounded-symbolic.svg" preprocess="xml-stripblanks">assets/icons/star-outline-rounded-symbolic.svg</file>
     <file compressed="true" alias="style.css">assets/style.css</file>
     <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">components/currency_selector/index.ui</file>

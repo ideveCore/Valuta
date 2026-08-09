@@ -20,7 +20,7 @@
 
 
 import re
-from gi.repository import Adw, Gdk, GObject, Gtk
+from gi.repository import Adw, Gdk, Gio, GObject, Gtk
 from ..currency_selector_row.currency_selector_row import CurrencySelectorRow
 
 @Gtk.Template(resource_path='/io/github/idevecore/Valuta/components/currency_selector/index.ui')
@@ -42,6 +42,7 @@ class CurrencySelector(Adw.Bin):
   def __init__(self, **kwargs):
     super().__init__(**kwargs)
     self.model = None
+    self.sorter = None
     self.search.set_key_capture_widget(self.popover)
     key_events = Gtk.EventControllerKey.new()
     key_events.connect('key-pressed', self.on_key_pressed)
@@ -51,10 +52,20 @@ class CurrencySelector(Adw.Bin):
     self.model = currencies
     self.filter = Gtk.CustomFilter()
     self.filter.set_filter_func(self.filter_currencies)
-    sorter = Gtk.CustomSorter.new(self.sort_currencies)
-    sorted_model = Gtk.SortListModel.new(model=self.model, sorter=sorter)
+    self.sorter = Gtk.CustomSorter.new(self.sort_currencies)
+    sorted_model = Gtk.SortListModel.new(model=self.model, sorter=self.sorter)
     filter_model = Gtk.FilterListModel.new(sorted_model, self.filter)
     self.currency_list.bind_model(filter_model, self.create_currency_row)
+
+    app = Gio.Application.get_default()
+    if app and hasattr(app, 'utils'):
+      app.utils.settings.connect('changed::favorite-currencies', self._on_favorites_changed)
+
+  def _on_favorites_changed(self, _settings, _key):
+    if self.model is not None:
+      self.model.update_favorites()
+      if self.sorter is not None:
+        self.sorter.changed(Gtk.SorterChange.DIFFERENT)
 
   def set_insight(self, code):
     if self.selected == 'auto':
@@ -99,6 +110,8 @@ class CurrencySelector(Adw.Bin):
     return bool(re.search(search, f'{item} - {item.name}', re.IGNORECASE))
 
   def sort_currencies(self, currency_a, currency_b, _data):
+    if currency_a.is_favorite != currency_b.is_favorite:
+      return -1 if currency_a.is_favorite else 1
     a = currency_a.name.lower()
     b = currency_b.name.lower()
     return (a > b) - (a < b)

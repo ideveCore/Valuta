@@ -26,6 +26,9 @@
     <key type="s" name="dest-currency">
         <default>'EUR'</default>
     </key>
+    <key name="favorite-currencies" type="as">
+      <default>[]</default>
+    </key>
   </schema>
 </schemalist>
 

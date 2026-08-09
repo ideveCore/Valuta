@@ -1,13 +1,24 @@
 using Gtk 4.0;
 
-template $CurrencySelectorRow : ListBoxRow {
-  child: Box {
+template $CurrencySelectorRow: ListBoxRow {
+  child: Gtk.Box {
     spacing: 6;
+
+    Gtk.Button favorite_button {
+      icon-name: "star-outline-rounded-symbolic";
+      tooltip-text: _("Favorite currency");
+      clicked => $on_favorite_currency();
+
+      styles [
+        "flat",
+      ]
+    }
+
     Label name {
       xalign: 0;
     }
 
-    Image selection {
+    Gtk.Image selection {
       icon-name: "object-select-symbolic";
       visible: false;
     }

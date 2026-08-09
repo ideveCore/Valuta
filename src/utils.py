@@ -18,9 +18,10 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from typing import Dict, Union, Callable
-from gi.repository import Gio, GObject, GLib
+from gi.repository import Adw, Gio, GObject, GLib
 from babel.numbers import format_number, parse_decimal
 from .requests import Requests
+# pyrefly: ignore [missing-import]
 from .define import CODES
 
 class CurrencyObject(GObject.Object):
@@ -29,12 +30,14 @@ class CurrencyObject(GObject.Object):
   code = GObject.Property(type=str)
   name = GObject.Property(type=str)
   selected = GObject.Property(type=bool, default=False)
+  is_favorite = GObject.Property(type=bool, default=False)
 
-  def __init__(self, code, name, selected=False):
+  def __init__(self, code, name, selected=False, is_favorite=False):
     super().__init__()
     self.code = code
     self.name = name
     self.selected = selected
+    self.is_favorite = is_favorite
 
   def __str__(self):
     return self.code
@@ -42,8 +45,9 @@ class CurrencyObject(GObject.Object):
 class CurrenciesListModel(GObject.GObject, Gio.ListModel):
   __gtype_name__ = 'CurrenciesListModel'
 
-  def __init__(self, names_func):
+  def __init__(self, application: Adw.Application, names_func):
     super().__init__()
+    self.application = application
     self.names_func = names_func
     self.currencies = []
 
@@ -62,9 +66,17 @@ class CurrenciesListModel(GObject.GObject, Gio.ListModel):
   def set_currencies(self, currencies):
     removed = len(self.currencies)
     self.currencies.clear()
+    app = Gio.Application.get_default()
+    favorites = set(app.utils.settings.get_strv('favorite-currencies')) if app and hasattr(app, 'utils') else set()
     for code in currencies:
-      self.currencies.append(CurrencyObject(code, self.names_func(code)))
+      self.currencies.append(CurrencyObject(code, self.names_func(code), is_favorite=(code in favorites)))
     self.items_changed(0, removed, len(self.currencies))
+
+  def update_favorites(self):
+    app = Gio.Application.get_default()
+    favorites = set(app.utils.settings.get_strv('favorite-currencies')) if app and hasattr(app, 'utils') else set()
+    for item in self.currencies:
+      item.is_favorite = (item.code in favorites)
 
   def set_selected(self, code):
     for item in self.currencies:

@@ -26,6 +26,7 @@ gi.require_version("Gtk", "4.0")
 
 from typing import Union, Dict
 from gi.repository import Adw, Gdk, Gio, Gtk
+# pyrefly: ignore [missing-import]
 from .define import RES_PATH
 from .pages import convertion_page, history_page
 
