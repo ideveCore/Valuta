@@ -57,18 +57,44 @@ class Providers:
         return date_time.format("%B %e, %Y")
 
 class ECB(Providers):
+    # Currencies the ECB/Frankfurter feed does not quote, but which are
+    # officially pegged to a currency it does quote. Each entry maps a
+    # currency to (api_currency, units_of_currency_per_api_currency).
+    # The Nepalese rupee has been pegged to the Indian rupee at
+    # 1 INR = 1.6 NPR since 1993.
+    PEGGED = {
+        "NPR": ("INR", 1.6),
+    }
+
+    def _api_currency(self, code: str) -> str:
+        return self.PEGGED[code][0] if code in self.PEGGED else code
+
+    def _peg_factor(self, code: str) -> float:
+        """Units of ``code`` per 1 unit of its underlying API currency."""
+        return self.PEGGED[code][1] if code in self.PEGGED else 1.0
+
     def mount_url(self):
-        return f'{self.ECB_BASE_URL}?amount={self.from_currency_value}&from={self.from_currency}&to={self.to_currency}'
+        return f'{self.ECB_BASE_URL}?amount={self.from_currency_value}&from={self._api_currency(self.from_currency)}&to={self._api_currency(self.to_currency)}'
 
     def serializer(self, data: bytes) -> Dict[str, Union[str, int]]:
         return self.default_response(json.loads(data))
 
     def default_response(self, data: Dict[str, str]):
-        self.response["base"] = data["rates"][self.to_currency]
+        api_from = self._api_currency(self.from_currency)
+        api_to = self._api_currency(self.to_currency)
+        if api_from == api_to:
+            # e.g. NPR <-> INR: both resolve to the same API currency, so the
+            # feed can't quote the pair. The rate is purely the peg ratio.
+            api_rate = 1.0
+            info_date = data.get("date") if isinstance(data, dict) else None
+        else:
+            api_rate = data["rates"][api_to]
+            info_date = data["date"]
+        self.response["base"] = api_rate * self._peg_factor(self.to_currency) / self._peg_factor(self.from_currency)
         self.response["from"] = self.from_currency
         self.response["to"] = self.to_currency
         self.response["amount"] = 0
-        self.response["info"] = self.create_info(data["date"])
+        self.response["info"] = self.create_info(info_date or datetime.now().strftime("%Y-%m-%d"))
         self.response["disclaimer"] = self.mount_url()
         self.response["provider"] = 0
         return self.response

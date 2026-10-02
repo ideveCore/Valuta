@@ -737,7 +737,7 @@ CODES = {
   "NPR": {
     "name": _("Nepalese Rupee"),
     "flag": "🇳🇵",
-    "providers": "1,2",
+    "providers": "0,1,2",
     "symbol": "NPR",
     "about": "https://en.wikipedia.org/wiki/Nepalese_rupee",
   },
