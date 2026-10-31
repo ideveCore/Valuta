@@ -84,7 +84,7 @@ def create_main_window(application: Adw.Application, from_currency_value: int):
 
   def converted(data: Dict[str, Union[str, int]]):
     info.set_text(f'{data["info"]} - ')
-    source.set_label(application.utils.settings.get_string("providers").upper())
+    source.set_label(data.get("source_label") or application.utils.settings.get_string("providers").upper())
     source.set_uri(convertion.get_convertion()['disclaimer'])
     source.set_visible(True)
     info_source_revealer.set_reveal_child(True)
