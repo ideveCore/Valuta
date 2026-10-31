@@ -46,6 +46,9 @@ class Providers:
   def mount_url(self):
     pass
 
+  def fallback_urls(self):
+    return []
+
   def serializer(self):
     pass
 
@@ -54,8 +57,15 @@ class Providers:
 
 class ECB(Providers):
   ECB_BASE_URL: str = 'https://api.frankfurter.app/latest'
-  def mount_url(self):
-    return f'{self.ECB_BASE_URL}?amount={self.from_currency_value}&from={self.from_currency}&to={self.to_currency}'
+  # Same ECB reference rates in the Frankfurter format, used only when Frankfurter fails.
+  FALLBACK_BASE_URL: str = 'https://allratestoday.com/api/compat/frankfurter/latest'
+  source_url: str = ''
+
+  def mount_url(self, base_url: str = ''):
+    return f'{base_url or self.ECB_BASE_URL}?amount={self.from_currency_value}&from={self.from_currency}&to={self.to_currency}'
+
+  def fallback_urls(self):
+    return [self.mount_url(self.FALLBACK_BASE_URL)]
 
   def serializer(self, data: bytes) -> Dict[str, Union[str, int]]:
     return self.default_response(json.loads(data))
@@ -66,7 +76,8 @@ class ECB(Providers):
     self.response["to"] = self.to_currency
     self.response["amount"] = 0
     self.response["info"] = self.create_info(data["date"])
-    self.response["disclaimer"] = self.mount_url()
+    self.response["disclaimer"] = self.source_url or self.mount_url()
+    self.response["source_label"] = "ECB · AllRatesToday" if self.source_url.startswith("https://allratestoday.com") else ""
     self.response["warning"] = ""
     self.response["provider"] = 0
     return self.response
@@ -126,6 +137,7 @@ class InforEuro(Providers):
 
     self.response["info"] = now.strftime("%B %Y")
     self.response["disclaimer"] = self.mount_url()
+    self.response["source_label"] = ""
     self.response["warning"] = "InforEuro rates are updated monthly."
     self.response["provider"] = 1
 
@@ -168,11 +180,15 @@ class Requests:
     self.__url = self.__provider.mount_url()
   def get(self):
     session = SoupSession()
-    message = session.create_request("GET", self.__url, self.HEADERS)
-    try:
-      return self.__provider.serializer(session.get_response(message))
-    except Exception as error:
-      return error.message
+    urls = [self.__url, *self.__provider.fallback_urls()]
+    for index, url in enumerate(urls):
+      message = session.create_request("GET", url, self.HEADERS)
+      self.__provider.source_url = url
+      try:
+        return self.__provider.serializer(session.get_response(message))
+      except Exception as error:
+        if index == len(urls) - 1:
+          return getattr(error, "message", str(error))
 
 class BaseHistoryProvider:
   def __init__(self, from_currency: str, to_currency: str, days: int = 30, headers: Dict[str, str] = {}):
